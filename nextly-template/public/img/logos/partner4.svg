@@ -1,0 +1,7 @@
+<svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="80" fill="white"/>
+  <rect x="45" y="25" width="60" height="30" rx="5" stroke="#F59E0B" stroke-width="3"/>
+  <circle cx="60" cy="40" r="8" stroke="#F59E0B" stroke-width="2"/>
+  <circle cx="90" cy="40" r="8" stroke="#F59E0B" stroke-width="2"/>
+  <text x="75" y="70" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">DACH TECH</text>
+</svg>

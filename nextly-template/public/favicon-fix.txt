@@ -1,0 +1,16 @@
+Für das Favicon-Problem:
+
+1. Bitte stellen Sie sicher, dass eine gültige favicon.ico-Datei im public-Verzeichnis vorhanden ist.
+2. Falls die aktuelle Datei beschädigt ist, können Sie eine neue favicon.ico-Datei erstellen:
+   - Verwenden Sie einen Online-Konverter wie https://convertio.co/webp-ico/
+   - Laden Sie die favicon.webp-Datei hoch und konvertieren Sie sie ins ICO-Format
+   - Speichern Sie die konvertierte Datei als favicon.ico im public-Verzeichnis
+
+3. Alternativ können Sie auch ein einfaches Favicon mit einem Favicon-Generator erstellen:
+   - Besuchen Sie https://favicon.io/
+   - Erstellen Sie ein einfaches Favicon mit den Initialen "SK" in den Unternehmensfarben
+   - Laden Sie das Paket herunter und kopieren Sie die favicon.ico-Datei ins public-Verzeichnis
+
+4. Nachdem Sie eine gültige favicon.ico-Datei haben, sollte der 500-Fehler behoben sein.
+
+Die aktuelle Konfiguration in layout.tsx ist korrekt und sollte beibehalten werden.

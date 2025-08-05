@@ -4,6 +4,7 @@ import { Faq } from "@/components/Faq";
 import { CtaSection } from "@/components/CtaSection";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Benefits from "@/components/Benefits";
 import LeistungenImUberblick from "@/components/LeistungenImUberblick";
 
@@ -95,22 +96,22 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero-Bereich */}
-      <div className="relative">
+      {/* Hero-Bereich - Layout von startseite2 */}
+      <div className="relative h-[80vh] min-h-[600px] w-full">
+        {/* Hintergrundbild mit Overlay */}
         <div className="absolute inset-0 z-0">
-          <Image
+          <Image 
             src="/img/flux/team-bei-der-arbeitwebp.webp"
-            alt="Solar Komfort Gebäudereinigung Team bei der Arbeit"
+            alt="Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
             fill
             className="object-cover brightness-[0.85]"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40"></div>
         </div>
-        
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40 z-10"></div>
-        
-        <Container className="relative z-20">
-          <div className="flex flex-col items-start justify-center min-h-screen py-20 text-white">
+        {/* Hero-Content */}
+        <Container className="relative z-10 h-full flex items-center">
+          <div className="max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 drop-shadow-lg">
               IHRE<br />
               GEBÄUDEREINIGUNG<br />
@@ -120,12 +121,18 @@ export default function Home() {
               Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#kontakt" className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all">
+              <Link 
+                href="/kontakt" 
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
+              >
                 Kostenloses Angebot erhalten
-              </a>
-              <a href="#leistungen" className="px-8 py-4 text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all">
+              </Link>
+              <Link 
+                href="#leistungen" 
+                className="px-8 py-4 text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all"
+              >
                 Unsere Leistungen
-              </a>
+              </Link>
             </div>
           </div>
         </Container>

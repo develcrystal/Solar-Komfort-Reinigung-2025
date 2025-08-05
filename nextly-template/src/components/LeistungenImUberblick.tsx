@@ -4,57 +4,57 @@ import Link from 'next/link';
 const services = [
   {
     title: "Unterhaltsreinigung",
-    image: "/img/flux/benefit-roof-cleaning.jpg",
+    image: "/img/flux/buero-reinigung.png",
     description: [
-      "Individuelle Konzepte",
-      "Qualitative Leistung",
-      "Nach Ihren Wünschen"
+      "Regelmäßige Büro- & Praxisreinigung",
+      "Individuelle Reinigungspläne",
+      "Qualitätskontrolle vor Ort"
     ],
-    buttonText: "Jetzt mehr erfahren",
+    buttonText: "Mehr erfahren",
     link: "/dienstleistungen/unterhaltsreinigung"
   },
   {
     title: "Glas & Fassadenreinigung",
-    image: "/img/flux/benefit-roof-coating.jpg",
+    image: "/img/flux/fassaden-reinigung.png",
     description: [
-      "Jegliche Art von Glas",
-      "Modernste Technik",
-      "Wirksame Methoden"
+      "Streifenfreie Glasreinigung",
+      "Fassadenreinigung aller Art",
+      "Moderne Reinigungstechnik"
     ],
-    buttonText: "Jetzt mehr erfahren",
+    buttonText: "Mehr erfahren",
     link: "/dienstleistungen/glas-fassadenreinigung"
   },
   {
-    title: "Baureinigung",
-    image: "/img/flux/benefit-roof-cleaning.jpg",
+    title: "Industriereinigung",
+    image: "/img/flux/industriereinigung.png",
     description: [
-      "Vor-Ort-Begehung",
-      "Jahrelange Erfahrung",
-      "Terminliche Flexibilität"
+      "Industriehallen & Produktionsstätten",
+      "Spezialreinigungsverfahren",
+      "Termingerechte Ausführung"
     ],
-    buttonText: "Jetzt mehr erfahren",
-    link: "/dienstleistungen/baureinigung"
+    buttonText: "Mehr erfahren",
+    link: "/dienstleistungen/industriereinigung"
   },
   {
     title: "Grundreinigung",
-    image: "/img/flux/benefit-roof-coating.jpg",
+    image: "/img/flux/professionelle-ausruestung3.webp",
     description: [
-      "Full-Service",
-      "Diverse Methoden",
-      "Gesetzliche Vorgaben"
+      "Intensive Tiefenreinigung",
+      "Neubezug & Renovierung",
+      "Spezialreinigungsverfahren"
     ],
-    buttonText: "Jetzt mehr erfahren",
+    buttonText: "Mehr erfahren",
     link: "/dienstleistungen/grundreinigung"
   },
   {
     title: "Objektbetreuung",
-    image: "/img/flux/benefit-roof-cleaning.jpg",
+    image: "/img/flux/team-beratung1.webp",
     description: [
       "Hausmeisterservice",
-      "Gartenpflege",
-      "Reinigungsservice"
+      "Facility Management",
+      "Ganzheitliche Betreuung"
     ],
-    buttonText: "Jetzt mehr erfahren",
+    buttonText: "Mehr erfahren",
     link: "/dienstleistungen/objektbetreuung"
   }
 ];

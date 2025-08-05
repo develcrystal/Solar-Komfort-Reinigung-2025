@@ -7,28 +7,52 @@ import Image from "next/image";
 import Benefits from "@/components/Benefits";
 import LeistungenImUberblick from "@/components/LeistungenImUberblick";
 
+const testimonials = [
+  {
+    rating: "★★★★★",
+    text: "Solar Komfort reinigt seit 3 Jahren unsere Büroräume. Immer pünktlich, gründlich und freundlich. Die Qualität stimmt einfach!",
+    name: "Andreas Müller",
+    role: "Geschäftsführer, IT-Consulting Berlin",
+    initial: "A"
+  },
+  {
+    rating: "★★★★★", 
+    text: "Hervorragende Fassadenreinigung! Das Ergebnis war beeindruckend und der Service sehr professionell. Gerne wieder!",
+    name: "Bettina Klein",
+    role: "Facility Managerin, Bürokomplex Mitte",
+    initial: "B"
+  },
+  {
+    rating: "★★★★★",
+    text: "Zuverlässige Objektbetreuung seit Jahren. Probleme werden schnell gelöst und die Kommunikation ist immer transparent.",
+    name: "Christian Weber",
+    role: "Hausverwaltung, Wohnanlage Charlottenburg",
+    initial: "C"
+  }
+];
+
 const Testimonials = () => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {[1, 2, 3].map((i) => (
-      <div key={i} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition-shadow">
+    {testimonials.map((testimonial, index) => (
+      <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
         <div className="flex items-center mb-4">
-          <div className="text-yellow-400 text-2xl">★★★★★</div>
+          <div className="text-yellow-400 text-xl">{testimonial.rating}</div>
         </div>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          "Hervorragender Service! Das Team von Solar Komfort hat unsere Büroräume gründlich und zuverlässig gereinigt."
+        <p className="text-gray-600 dark:text-gray-300 mb-4 italic">
+          "{testimonial.text}"
         </p>
         <div className="flex items-center">
           <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
             <span className="text-blue-600 dark:text-blue-400 font-medium">
-              {i === 1 ? 'A' : i === 2 ? 'B' : 'C'}
+              {testimonial.initial}
             </span>
           </div>
           <div>
             <p className="font-medium text-gray-900 dark:text-white">
-              {i === 1 ? 'Andreas M.' : i === 2 ? 'Bettina K.' : 'Christian W.'}
+              {testimonial.name}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              {i === 1 ? 'Geschäftsführer' : i === 2 ? 'Büroleiterin' : 'Hausverwaltung'}
+              {testimonial.role}
             </p>
           </div>
         </div>
@@ -38,33 +62,33 @@ const Testimonials = () => (
 );
 
 export const metadata: Metadata = {
-  title: "Solar Komfort GmbH - Professionelle Gebäudereinigung & Facility Management",
-  description: "Ihr zuverlässiger Partner für saubere, gepflegte und professionell verwaltete Gebäude in Berlin und Umgebung.",
-  keywords: "Gebäudereinigung, Facility Management, Hausmeisterservice, Gebäudeservice, Berlin, Reinigungsservice, Hausverwaltung, Gewerbereinigung",
+  title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+  description: "Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - Komplettlösungen aus einer Hand.",
+  keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
-    title: "Solar Komfort GmbH - Professionelle Gebäudereinigung & Facility Management",
-    description: "Ihr zuverlässiger Partner für saubere, gepflegte und professionell verwaltete Gebäude in Berlin und Umgebung.",
-    url: "https://solar-komfort.de",
-    siteName: "Solar Komfort GmbH",
+    title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+    description: "Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Komplettlösungen aus einer Hand.",
+    url: "https://komfort-gebaeudeservice24.de",
+    siteName: "Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
       {
-        url: "https://solar-komfort.de/img/flux/hero-gebaeudereinigung.webp",
+        url: "https://komfort-gebaeudeservice24.de/img/flux/kunden-dachreinigung-1.jpg",
         width: 1200,
         height: 630,
-        alt: "Solar Komfort - Professionelle Gebäudereinigung & Facility Management"
+        alt: "Komfort Gebäudeservice24 - Echte Kundenprojekte der Gebäudereinigung"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solar Komfort GmbH - Professionelle Gebäudereinigung & Facility Management",
-    description: "Ihr zuverlässiger Partner für saubere, gepflegte und professionell verwaltete Gebäude in Berlin und Umgebung.",
-    images: ["https://solar-komfort.de/img/flux/hero-gebaeudereinigung.webp"]
+    title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+    description: "Tochterfirma der Solar Komfort GmbH. Über 5.000 zufriedene Kunden. Komplettlösungen aus einer Hand.",
+    images: ["https://komfort-gebaeudeservice24.de/img/flux/kunden-dachreinigung-1.jpg"]
   },
   alternates: {
-    canonical: "https://solar-komfort.de"
+    canonical: "https://komfort-gebaeudeservice24.de"
   }
 };
 
@@ -75,8 +99,8 @@ export default function Home() {
       <div className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/flux/referenz-einfamilienhaus2.webp"
-            alt="Solar Komfort Dachreinigung"
+            src="/img/flux/team-bei-der-arbeitwebp.webp"
+            alt="Solar Komfort Gebäudereinigung Team bei der Arbeit"
             fill
             className="object-cover brightness-[0.85]"
             priority
@@ -88,16 +112,16 @@ export default function Home() {
         <Container className="relative z-20">
           <div className="flex flex-col items-start justify-center min-h-screen py-20 text-white">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 drop-shadow-lg">
-              PROFESSIONELLE<br />
+              IHRE<br />
               GEBÄUDEREINIGUNG<br />
-              & FACILITY MANAGEMENT
+              ALS KOMPLETTLÖSUNG
             </h1>
             <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
-              Ihr zuverlässiger Partner für saubere, gepflegte und professionell verwaltete Gebäude in Berlin und Umgebung.
+              Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#kontakt" className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all">
-                Kostenfreie Beratung
+                Kostenloses Angebot erhalten
               </a>
               <a href="#leistungen" className="px-8 py-4 text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all">
                 Unsere Leistungen
@@ -110,18 +134,107 @@ export default function Home() {
       {/* Unsere Leistungen im Überblick */}
       <LeistungenImUberblick />
 
-      {/* Einführung */}
+      {/* Unsere Vorteile */}
+      <div className="bg-gray-50 dark:bg-gray-800 py-16 sm:py-24">
+        <Container>
+          <SectionTitle
+            preTitle="Warum Komfort Gebäudeservice24?"
+            title="Unsere Vorteile auf einen Blick"
+          >
+            Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
+          </SectionTitle>
+          <div className="mt-16">
+            <Benefits />
+          </div>
+        </Container>
+      </div>
+
+      {/* Vorher/Nachher Galerie */}
       <div className="bg-white dark:bg-gray-900 py-16 sm:py-24">
         <Container>
-          <SectionTitle>Vorteile unserer Dienstleistungen</SectionTitle>
-          <Benefits />
-          <Testimonials />
-          <Faq />
-          <CtaSection
-            backgroundImage="/img/flux/hero-gebaeudereinigung.webp"
-            backgroundAlt="Gebäudereinigung"
-          />
+          <SectionTitle
+            preTitle="Unsere Arbeit"
+            title="Vorher/Nachher - Sehen Sie den Unterschied"
+          >
+            Überzeugen Sie sich selbst von der Qualität unserer Reinigungsarbeiten durch diese Beispiele unserer täglichen Arbeit.
+          </SectionTitle>
+          
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Dachreinigung & Beschichtung</h3>
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/img/flux/kunden-dachreinigung-1.jpg"
+                  alt="Echtes Kundenprojekt: Dachreinigung und Beschichtung Vorher/Nachher"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-80"
+                />
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                <strong>Echtes Kundenprojekt:</strong> Dramatischer Unterschied durch professionelle Dachreinigung und Nano-Beschichtung. Links verschmutzt, rechts wie neu!
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Weitere Kundenprojekte</h3>
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/img/flux/kunden-dachreinigung-2.jpg"
+                  alt="Weiteres echtes Kundenprojekt der Dachreinigung"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-80"
+                />
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                <strong>Authentische Referenz:</strong> Einer von über 5.000 zufriedenen Kunden. Sehen Sie selbst die Qualität unserer Arbeit!
+              </p>
+            </div>
+          </div>
         </Container>
+      </div>
+
+      {/* Kundenstimmen */}
+      <div className="bg-gray-50 dark:bg-gray-800 py-16 sm:py-24">
+        <Container>
+          <SectionTitle
+            preTitle="Kundenstimmen"
+            title="Das sagen unsere Kunden"
+          >
+            Überzeugen Sie sich von der Qualität unserer Arbeit durch die Erfahrungen zufriedener Kunden.
+          </SectionTitle>
+          <div className="mt-16">
+            <Testimonials />
+          </div>
+        </Container>
+      </div>
+
+      {/* FAQ */}
+      <div className="bg-white dark:bg-gray-900 py-16 sm:py-24">
+        <Container>
+          <SectionTitle
+            preTitle="Häufige Fragen"
+            title="Antworten auf Ihre Fragen"
+          >
+            Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Reinigungsdienstleistungen.
+          </SectionTitle>
+          <div className="mt-16 max-w-3xl mx-auto">
+            <Faq />
+          </div>
+        </Container>
+      </div>
+
+      {/* Call-to-Action */}
+      <div id="kontakt">
+        <CtaSection
+          backgroundImage="/img/flux/team-beratung2.webp"
+          backgroundAlt="Kontaktieren Sie uns für professionelle Gebäudereinigung"
+          title="Bereit für saubere Ergebnisse?"
+          description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin und lassen Sie sich von unserer Arbeit überzeugen."
+          buttonText="Jetzt Beratung anfordern"
+          buttonLink="/kontakt"
+        />
       </div>
     </>
   );

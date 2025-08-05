@@ -5,7 +5,8 @@
       "Bash(powershell:*)",
       "Bash(pkill:*)",
       "Bash(npm run dev:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

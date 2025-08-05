@@ -36,26 +36,27 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Wie lange hält eine Dachbeschichtung?",
-    answer: "Eine professionelle Dachbeschichtung von Solar Komfort hält in der Regel zwischen 10 und 15 Jahren, abhängig von den Wetterbedingungen und der Qualität der Dachziegel. Durch unsere hochwertige Nano-Beschichtung wird die Lebensdauer Ihres Daches deutlich verlängert.",
+    question: "Welche Reinigungsdienstleistungen bieten Sie an?",
+    answer: "Wir bieten ein komplettes Spektrum an Reinigungsdienstleistungen: Büroreinigung, Industriereinigung, Krankenhausreinigung, Grundreinigung, Bauabschlussreinigung, Fassadenreinigung, Dachreinigung, Treppenhausreinigung und vieles mehr. Kontaktieren Sie uns für eine individuelle Beratung."
   },
   {
-    question: "Wie oft sollte ein Dach gereinigt werden?",
-    answer: "Wir empfehlen eine gründliche Dachreinigung alle 3-5 Jahre. Bei starkem Bewuchs durch Moos, Flechten oder Algen kann auch eine frühere Reinigung sinnvoll sein. Eine regelmäßige Reinigung verhindert Schäden und verlängert die Lebensdauer Ihres Daches.",
+    question: "Wie oft sollte eine Büroreinigung durchgeführt werden?",
+    answer: "Das hängt von der Nutzung ab. Typischerweise empfehlen wir täglich bis wöchentliche Unterhaltsreinigung für Büros. Wir erstellen individuelle Reinigungspläne basierend auf Ihren Bedürfnissen und dem Nutzungsgrad Ihrer Räumlichkeiten."
   },
   {
-    question: "Welche Vorteile bietet die Nano-Beschichtung?",
-    answer:
-      "Unsere Nano-Beschichtung bietet mehrere Vorteile: Sie ist wasserabweisend, schmutzabweisend und verhindert das Wachstum von Moos und Algen. Zudem schützt sie vor UV-Strahlung und extremen Wetterbedingungen, was die Lebensdauer Ihres Daches erheblich verlängert.",
+    question: "Sind Ihre Reinigungsmittel umweltfreundlich?",
+    answer: "Ja, wir arbeiten ausschließlich mit TÜV-geprüften und umweltfreundlichen Reinigungsmitteln unseres ISO-zertifizierten Partners. Diese sind sowohl effektiv als auch schonend für Umwelt und Gesundheit."
   },
   {
-    question: "Wie lange dauert eine Dachbeschichtung?",
-    answer:
-      "Die Dauer einer Dachbeschichtung hängt von der Größe und dem Zustand Ihres Daches ab. In der Regel dauert der gesamte Prozess (Reinigung, Grundierung und Beschichtung) zwischen 2 und 5 Tagen. Wir arbeiten effizient, um die Beeinträchtigung für Sie so gering wie möglich zu halten.",
+    question: "Wie sind Ihre Mitarbeiter versichert?",
+    answer: "Alle unsere Mitarbeiter sind festangestellt, sozialversichert und erhalten tariflichen Lohn. Zusätzlich haben wir einen Versicherungsschutz von bis zu 3.000.000 € je Schadensfall für maximale Sicherheit."
   },
   {
-    question: "Bieten Sie auch Fassadenreinigung an?",
-    answer:
-      "Ja, neben der Dachbeschichtung und Dachreinigung bieten wir auch professionelle Fassadenreinigung an. Wir entfernen Schmutz, Algen und Verfärbungen von Ihrer Fassade und sorgen dafür, dass Ihr Haus wieder in neuem Glanz erstrahlt.",
+    question: "Können Sie Referenzen vorweisen?",
+    answer: "Selbstverständlich! Wir haben bereits über 5.000 zufriedene Kunden betreut. Gerne stellen wir Ihnen auf Anfrage entsprechende Referenzen und Beispiele unserer Arbeit zur Verfügung."
   },
+  {
+    question: "Wie schnell können Sie mit der Reinigung beginnen?",
+    answer: "Nach einem kostenlosen Beratungstermin und Angebotsannahme können wir in der Regel innerhalb von 1-2 Wochen mit der Reinigung beginnen. Bei Notfällen sind auch kurzfristige Termine möglich."
+  }
 ];

@@ -142,7 +142,7 @@ export default function Home() {
       <LeistungenImUberblick />
 
       {/* Unsere Vorteile */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-16 sm:py-24">
+      <div className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
         <Container>
           <SectionTitle
             preTitle="Warum Komfort Gebäudeservice24?"
@@ -157,7 +157,7 @@ export default function Home() {
       </div>
 
       {/* Vorher/Nachher Galerie */}
-      <div className="bg-white dark:bg-gray-900 py-16 sm:py-24">
+      <div className="bg-white dark:bg-gray-900 py-20 sm:py-28">
         <Container>
           <SectionTitle
             preTitle="Unsere Arbeit"
@@ -203,7 +203,7 @@ export default function Home() {
       </div>
 
       {/* Kundenstimmen */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-16 sm:py-24">
+      <div className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
         <Container>
           <SectionTitle
             preTitle="Kundenstimmen"
@@ -218,7 +218,7 @@ export default function Home() {
       </div>
 
       {/* FAQ */}
-      <div className="bg-white dark:bg-gray-900 py-16 sm:py-24">
+      <div className="bg-white dark:bg-gray-900 py-20 sm:py-28">
         <Container>
           <SectionTitle
             preTitle="Häufige Fragen"

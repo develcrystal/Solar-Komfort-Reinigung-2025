@@ -61,36 +61,62 @@ const services = [
 
 export default function LeistungenImUberblick() {
   return (
-    <section id="leistungen" className="bg-white dark:bg-gray-900 py-16 sm:py-24">
+    <section id="leistungen" className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
             Unsere Leistungen im Überblick
           </h2>
+          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300">
+            Von der täglichen Unterhaltsreinigung bis zur kompletten Objektbetreuung - 
+            wir bieten Ihnen professionelle Reinigungsdienstleistungen aus einer Hand.
+          </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        <div className="space-y-20">
           {services.map((service, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <div className="mb-4">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={120}
-                  height={120}
-                  className="rounded-lg"
-                />
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                {/* Image Section */}
+                <div className="md:w-1/2 relative">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={800}
+                    height={600}
+                    className="w-full h-80 object-cover"
+                  />
+                </div>
+                
+                {/* Content Section */}
+                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                  <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6">
+                    {service.title}
+                  </h3>
+                  
+                  <div className="grid grid-cols-1 gap-4 mb-8">
+                    {service.description.map((feature, i) => (
+                      <div key={i} className="flex items-start">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-600 dark:text-gray-300">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Link 
+                    href={service.link} 
+                    className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all self-start"
+                  >
+                    {service.buttonText}
+                    <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                {service.title}
-              </h3>
-              <ul className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                {service.description.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-              <Link href={service.link} className="mt-auto px-6 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
-                {service.buttonText}
-              </Link>
             </div>
           ))}
         </div>

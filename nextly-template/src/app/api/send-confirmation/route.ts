@@ -1,8 +1,34 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-// E-Mail-Versand mit Nodemailer
-async function sendEmail(to: string, name: string, data: any) {
+/**
+ * Interface for email data
+ */
+interface EmailData {
+  name: string;
+  email: string;
+  phone?: string;
+  message: string;
+  subject: string;
+  // Optional form steps for calculator
+  step_1?: string;
+  step_2?: string;
+  step_3?: string;
+  step_4?: string;
+  step_5?: string;
+  step_6?: string;
+  step_7?: string;
+}
+
+/**
+ * Send email using Nodemailer with proper error handling
+ * 
+ * @param to - Recipient email address
+ * @param name - Sender name
+ * @param data - Email data including message, subject, etc.
+ * @returns Promise<boolean> - Success status
+ */
+async function sendEmail(to: string, name: string, data: EmailData): Promise<boolean> {
   try {
     // In der Entwicklungsumgebung verwenden wir einen Test-Account
     // In der Produktion würden wir echte SMTP-Daten aus Umgebungsvariablen verwenden

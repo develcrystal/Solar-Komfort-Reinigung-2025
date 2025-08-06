@@ -4,6 +4,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 import Image from 'next/image';
 import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
+import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
   title: "Kontakt - Solar Komfort GmbH | Nehmen Sie Kontakt mit uns auf",
@@ -59,77 +60,7 @@ export default function Kontakt() {
           </SectionTitle>
 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
-                    placeholder="Ihr Name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">E-Mail</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
-                    placeholder="Ihre E-Mail-Adresse"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Telefon</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
-                    placeholder="Ihre Telefonnummer"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nachricht</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
-                    placeholder="Ihre Nachricht an uns"
-                  ></textarea>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="privacy"
-                      name="privacy"
-                      type="checkbox"
-                      required
-                      className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label htmlFor="privacy" className="font-medium text-gray-700 dark:text-gray-300">
-                      Ich stimme der <a href="#" className="text-blue-600 hover:underline">Datenschutzerklärung</a> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden.
-                    </label>
-                  </div>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-                >
-                  Nachricht senden
-                </button>
-              </form>
-            </div>
+            <ContactForm />
             
             <div>
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">

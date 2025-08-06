@@ -1,12 +1,27 @@
 "use client";
 import React, { useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { useForm, useWatch, SubmitHandler } from "react-hook-form";
 import {
   Disclosure,
   Transition,
   DisclosurePanel,
   DisclosureButton,
 } from "@headlessui/react";
+
+interface PopupFormData {
+  name: string;
+  email: string;
+  message: string;
+  apikey: string;
+  subject: string;
+  from_name: string;
+  botcheck: boolean;
+}
+
+interface ApiResponse {
+  success: boolean;
+  message: string;
+}
 
 export function PopupWidget() {
   const {
@@ -15,7 +30,7 @@ export function PopupWidget() {
     reset,
     control,
     formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm({
+  } = useForm<PopupFormData>({
     mode: "onTouched",
   });
 
@@ -24,7 +39,7 @@ export function PopupWidget() {
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data: any, e: any) => {
+  const onSubmit: SubmitHandler<PopupFormData> = async (data, event) => {
     console.log(data);
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -35,11 +50,13 @@ export function PopupWidget() {
       body: JSON.stringify(data, null, 2),
     })
       .then(async (response) => {
-        let json = await response.json();
+        const json: ApiResponse = await response.json();
         if (json.success) {
           setIsSuccess(true);
           setMessage(json.message);
-          e.target.reset();
+          if (event?.target) {
+            (event.target as HTMLFormElement).reset();
+          }
           reset();
         } else {
           setIsSuccess(false);
@@ -129,7 +146,7 @@ export function PopupWidget() {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
+                        value={process.env.NEXT_PUBLIC_ACCESS_KEY || ''}
                         {...register("apikey")}
                       />
                       <input

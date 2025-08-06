@@ -1,7 +1,13 @@
 import React from 'react';
 import { Container } from './Container';
 
-const benefits = [
+interface Benefit {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const benefits: Benefit[] = [
   {
     icon: "👥",
     title: "Festangestellte Mitarbeiter",

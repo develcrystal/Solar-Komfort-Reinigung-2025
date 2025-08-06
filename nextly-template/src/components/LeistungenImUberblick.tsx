@@ -1,7 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const services = [
+interface Service {
+  title: string;
+  image: string;
+  description: string[];
+  buttonText: string;
+  link: string;
+}
+
+const services: Service[] = [
   {
     title: "Unterhaltsreinigung",
     image: "/img/flux/buero-reinigung.png",

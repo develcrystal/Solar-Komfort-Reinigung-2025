@@ -61,6 +61,8 @@ export const ImageSlider = ({
               height={height}
               className="object-cover w-full h-full"
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
         ))}

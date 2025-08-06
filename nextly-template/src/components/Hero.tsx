@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import { ImageSlider } from "@/components/ImageSlider";
 
 export const Hero = () => {
   const heroImages = [

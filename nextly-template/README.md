@@ -6,9 +6,9 @@
  <br>
 </p>
 
-# Solar Komfort GmbH - Website
+# Komfort Gebäudeservice24 GmbH - Website
 
-Diese Website wurde für die Solar Komfort GmbH entwickelt, um ihre Dienstleistungen im Bereich Dachreinigung und Dachbeschichtung zu präsentieren.
+Diese Website wurde für die Komfort Gebäudeservice24 GmbH entwickelt, um ihre Dienstleistungen im Bereich Gebäudereinigung und Objektbetreuung zu präsentieren.
 
 ![Solar Komfort GmbH Website](https://user-images.githubusercontent.com/1884712/121497169-03228680-c990-11eb-975a-e77fddc43de0.png)
 
@@ -72,7 +72,7 @@ npm install
 npm run dev
 ```
 
-Die Website ist dann unter http://localhost:3000 erreichbar.
+Die Website ist dann unter http://localhost:3000 erreichbar (oder dem von Next.js automatisch gewählten Port).
 
 ## Changelog
 

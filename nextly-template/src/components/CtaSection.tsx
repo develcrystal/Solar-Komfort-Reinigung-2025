@@ -6,13 +6,17 @@ interface CtaSectionProps {
   backgroundAlt: string;
   title?: string;
   description?: string;
+  buttonText?: string;
+  buttonLink?: string;
 }
 
 export const CtaSection: React.FC<CtaSectionProps> = ({ 
   backgroundImage, 
   backgroundAlt,
   title = "Bereit für ein kostenloses Angebot?",
-  description = "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung."
+  description = "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung.",
+  buttonText = "Kontakt aufnehmen",
+  buttonLink = "/kontakt"
 }) => {
   return (
     <section className="relative py-24 w-full">
@@ -43,10 +47,10 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
               06151 15 465 92
             </a>
             <a
-              href="/kostenrechner"
+              href={buttonLink}
               className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg flex-1"
             >
-              Kostenrechner starten
+              {buttonText}
             </a>
           </div>
         </div>

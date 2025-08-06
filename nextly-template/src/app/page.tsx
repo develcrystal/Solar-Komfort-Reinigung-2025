@@ -235,7 +235,7 @@ export default function Home() {
       {/* Call-to-Action */}
       <div id="kontakt">
         <CtaSection
-          backgroundImage="/img/flux/team-beratung2.webp"
+          backgroundImage="/img/flux/team-beratung1.webp"
           backgroundAlt="Kontaktieren Sie uns für professionelle Gebäudereinigung"
           title="Bereit für saubere Ergebnisse?"
           description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin und lassen Sie sich von unserer Arbeit überzeugen."

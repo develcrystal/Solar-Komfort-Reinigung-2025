@@ -6,7 +6,14 @@
       "Bash(pkill:*)",
       "Bash(npm run dev:*)",
       "Bash(git add:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(npm run build:*)",
+      "Bash(rm:*)",
+      "Bash(npm run lint)",
+      "Bash(git checkout:*)",
+      "Bash(npx tsc:*)",
+      "Bash(dir:*)"
     ],
     "deny": []
   }

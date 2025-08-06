@@ -13,8 +13,18 @@
       "Bash(npm run lint)",
       "Bash(git checkout:*)",
       "Bash(npx tsc:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git branch:*)",
+      "Bash(curl:*)",
+      "Bash(echo $APPDATA)",
+      "Bash(npx @browsermcp/mcp@latest:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__browsermcp__browser_navigate"
     ],
     "deny": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "browsermcp"
+  ]
 }

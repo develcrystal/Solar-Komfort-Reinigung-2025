@@ -69,13 +69,13 @@ const services: Service[] = [
 
 export default function LeistungenImUberblick() {
   return (
-    <section id="leistungen" className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
+    <section id="leistungen" className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
             Unsere Leistungen im Überblick
           </h2>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-300">
             Von der täglichen Unterhaltsreinigung bis zur kompletten Objektbetreuung - 
             wir bieten Ihnen professionelle Reinigungsdienstleistungen aus einer Hand.
           </p>

@@ -24,47 +24,37 @@ export const Hero = () => {
         {/* Vollbreites Bild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/quer_Vorher-Nachher Dachreinigung.webp"
-            alt="Solar Komfort - Dachreinigung und Dachbeschichtung"
+            src="/img/flux/komfort-team-cleaning.webp"
+            alt="Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
             fill
             className="object-cover brightness-75"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         </div>
         
         {/* Hero-Content */}
         <Container className="relative z-10 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-snug tracking-tight text-white lg:leading-tight xl:leading-tight uppercase mb-4 drop-shadow-lg">
-              Die Zukunft auf Ihrem Dach
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white mb-4 drop-shadow-lg">
+              IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
-            <p className="py-5 text-xl leading-normal text-gray-100 lg:text-xl xl:text-2xl drop-shadow-md">
-              Gründliche Dachreinigung und langlebige Dachbeschichtung mit modernem Nano-Effekt. Wir bieten professionelle Lösungen für Reinigung, Versiegelung und Beschichtung.
+            <p className="py-4 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-100 drop-shadow-md">
+              Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
             </p>
 
-            <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row mt-6">
+            <div className="flex flex-col items-start space-y-4 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row mt-8">
               <a
-                href="tel:061511546592"
-                target="_blank"
-                rel="noopener"
-                className="px-8 py-4 text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex items-center"
+                href="/kontakt"
+                className="w-full sm:w-auto min-h-[48px] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center"
               >
-                <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                06151 15 465 92
+                Kostenloses Angebot erhalten
               </a>
               <a
-                href="mailto:info@solarkomfort.de"
-                target="_blank"
-                rel="noopener"
-                className="flex items-center space-x-2 text-white font-medium text-lg hover:text-blue-300 transition-colors"
+                href="#leistungen"
+                className="w-full sm:w-auto min-h-[48px] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-white border-2 border-white/30 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center"
               >
-                <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@solarkomfort.de
+                Unsere Leistungen
               </a>
             </div>
           </div>

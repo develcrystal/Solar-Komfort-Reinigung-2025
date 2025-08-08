@@ -7,14 +7,15 @@ import { CtaSection } from '@/components/CtaSection';
 import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
-  title: "Kontakt - Solar Komfort GmbH | Nehmen Sie Kontakt mit uns auf",
-  description: "Kontaktieren Sie die Solar Komfort GmbH für Ihre Anfragen zu Dachreinigung, Dachbeschichtung und Fassadenreinigung. Wir beraten Sie gerne persönlich.",
-  keywords: "Kontakt, Solar Komfort, Dachbeschichtung Anfrage, Dachreinigung Beratung, Darmstadt",
+  title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
+  description: "Kontaktieren Sie Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
+  viewport: "width=device-width, initial-scale=1",
+  keywords: "Kontakt, Komfort Gebäudeservice24, Gebäudereinigung Anfrage, Reinigung Beratung, Darmstadt",
   openGraph: {
-    title: "Kontakt - Solar Komfort GmbH | Nehmen Sie Kontakt mit uns auf",
-    description: "Kontaktieren Sie die Solar Komfort GmbH für Ihre Anfragen zu Dachreinigung, Dachbeschichtung und Fassadenreinigung. Wir beraten Sie gerne persönlich.",
-    url: "https://solar-komfort.de/kontakt",
-    siteName: "Solar Komfort GmbH",
+    title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
+    description: "Kontaktieren Sie Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
+    url: "https://komfort-gebaeudeservice24.de/kontakt",
+    siteName: "Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
   },

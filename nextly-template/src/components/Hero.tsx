@@ -20,7 +20,7 @@ export const Hero = () => {
   return (
     <>
       {/* Vollbreiter Hero mit Overlay-Text */}
-      <div className="relative h-[80vh] min-h-[600px] w-full">
+      <div className="relative h-[70vh] sm:h-[80vh] min-h-[500px] sm:min-h-[600px] w-full">
         {/* Vollbreites Bild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -36,23 +36,25 @@ export const Hero = () => {
         {/* Hero-Content */}
         <Container className="relative z-10 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white mb-4 drop-shadow-lg">
-              IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight tracking-tight text-white mb-3 sm:mb-4 drop-shadow-lg">
+              <span className="block sm:hidden">GEBÄUDE-<br/>REINIGUNG<br/>KOMPLETTLÖSUNG</span>
+              <span className="hidden sm:block">IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG</span>
             </h1>
-            <p className="py-4 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-100 drop-shadow-md">
-              Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
+            <p className="py-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-gray-100 drop-shadow-md">
+              <span className="block sm:hidden">Professionelle Gebäudereinigung von der Solar Komfort Tochterfirma. Komplettlösungen aus einer Hand.</span>
+              <span className="hidden sm:block">Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.</span>
             </p>
 
-            <div className="flex flex-col items-start space-y-4 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row mt-8">
+            <div className="flex flex-col items-stretch space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row mt-6 sm:mt-8">
               <a
                 href="/kontakt"
-                className="w-full sm:w-auto min-h-[48px] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto min-h-[50px] px-6 sm:px-8 py-4 text-sm sm:text-base font-bold text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-lg flex items-center justify-center touch-manipulation"
               >
                 Kostenloses Angebot erhalten
               </a>
               <a
                 href="#leistungen"
-                className="w-full sm:w-auto min-h-[48px] px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-white border-2 border-white/30 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-center"
+                className="w-full sm:w-auto min-h-[50px] px-6 sm:px-8 py-4 text-sm sm:text-base font-medium text-center text-white border-2 border-white/40 rounded-lg hover:bg-white/10 active:bg-white/20 transition-colors flex items-center justify-center touch-manipulation"
               >
                 Unsere Leistungen
               </a>

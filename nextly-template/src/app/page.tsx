@@ -64,21 +64,22 @@ const Testimonials = () => (
 
 export const metadata: Metadata = {
   title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
-  description: "Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - Komplettlösungen aus einer Hand.",
+  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH mit über 5.000 zufriedenen Kunden.",
+  viewport: "width=device-width, initial-scale=1",
   keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
     title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
-    description: "Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Komplettlösungen aus einer Hand.",
+    description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH.",
     url: "https://komfort-gebaeudeservice24.de",
     siteName: "Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
       {
-        url: "https://komfort-gebaeudeservice24.de/img/flux/kunden-dachreinigung-1.jpg",
+        url: "https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp",
         width: 1200,
         height: 630,
-        alt: "Komfort Gebäudeservice24 - Echte Kundenprojekte der Gebäudereinigung"
+        alt: "Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
       }
     ]
   },

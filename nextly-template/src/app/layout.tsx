@@ -12,8 +12,9 @@ import { LocalBusinessSchema, ServiceSchema, FAQSchema } from "./schema";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Solar Komfort GmbH - Professionelle Dachbeschichtung",
-  description: "Solar Komfort GmbH bietet professionelle Dachbeschichtung, Dachreinigung und Fassadenreinigung in Darmstadt und Umgebung.",
+  title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH.",
+  viewport: "width=device-width, initial-scale=1",
   icons: [
     {
       rel: "icon",

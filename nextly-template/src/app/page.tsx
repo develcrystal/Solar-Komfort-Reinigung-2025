@@ -33,26 +33,26 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
     {testimonials.map((testimonial, index) => (
-      <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
-        <div className="flex items-center mb-4">
-          <div className="text-yellow-400 text-xl">{testimonial.rating}</div>
+      <div key={index} className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+        <div className="flex items-center mb-3 sm:mb-4">
+          <div className="text-yellow-400 text-lg sm:text-xl">{testimonial.rating}</div>
         </div>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 italic">
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 italic">
           "{testimonial.text}"
         </p>
         <div className="flex items-center">
-          <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
-            <span className="text-blue-600 dark:text-blue-400 font-medium">
+          <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
+            <span className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium">
               {testimonial.initial}
             </span>
           </div>
           <div>
-            <p className="font-medium text-gray-900 dark:text-white">
+            <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
               {testimonial.name}
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               {testimonial.role}
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
   return (
     <>
       {/* Hero-Bereich - Layout von startseite2 */}
-      <div className="relative h-[80vh] min-h-[600px] w-full">
+      <div className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] w-full">
         {/* Hintergrundbild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -113,24 +113,24 @@ export default function Home() {
         {/* Hero-Content */}
         <Container className="relative z-10 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
               IHRE<br />
               GEBÄUDEREINIGUNG<br />
               ALS KOMPLETTLÖSUNG
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
               Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link 
                 href="/kontakt" 
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
               >
                 Kostenloses Angebot erhalten
               </Link>
               <Link 
                 href="#leistungen" 
-                className="px-8 py-4 text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all"
               >
                 Unsere Leistungen
               </Link>
@@ -143,7 +143,7 @@ export default function Home() {
       <LeistungenImUberblick />
 
       {/* Unsere Vorteile */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
+      <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
             preTitle="Warum Komfort Gebäudeservice24?"
@@ -151,14 +151,14 @@ export default function Home() {
           >
             Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
           </SectionTitle>
-          <div className="mt-16">
+          <div className="mt-10 sm:mt-12 md:mt-16">
             <Benefits />
           </div>
         </Container>
       </div>
 
       {/* Vorher/Nachher Galerie */}
-      <div className="bg-white dark:bg-gray-900 py-20 sm:py-28">
+      <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
             preTitle="Unsere Arbeit"
@@ -167,35 +167,35 @@ export default function Home() {
             Überzeugen Sie sich selbst von der Qualität unserer Reinigungsarbeiten durch diese Beispiele unserer täglichen Arbeit.
           </SectionTitle>
           
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Dachreinigung & Beschichtung</h3>
+          <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Dachreinigung & Beschichtung</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src="/img/flux/kunden-dachreinigung-1.jpg"
                   alt="Echtes Kundenprojekt: Dachreinigung und Beschichtung Vorher/Nachher"
                   width={600}
                   height={400}
-                  className="object-cover w-full h-80"
+                  className="object-cover w-full h-64 sm:h-80"
                 />
               </div>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 <strong>Echtes Kundenprojekt:</strong> Dramatischer Unterschied durch professionelle Dachreinigung und Nano-Beschichtung. Links verschmutzt, rechts wie neu!
               </p>
             </div>
             
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Weitere Kundenprojekte</h3>
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Weitere Kundenprojekte</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
                   src="/img/flux/kunden-dachreinigung-2.jpg"
                   alt="Weiteres echtes Kundenprojekt der Dachreinigung"
                   width={600}
                   height={400}
-                  className="object-cover w-full h-80"
+                  className="object-cover w-full h-64 sm:h-80"
                 />
               </div>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 <strong>Authentische Referenz:</strong> Einer von über 5.000 zufriedenen Kunden. Sehen Sie selbst die Qualität unserer Arbeit!
               </p>
             </div>
@@ -204,7 +204,7 @@ export default function Home() {
       </div>
 
       {/* Kundenstimmen */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-20 sm:py-28">
+      <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
             preTitle="Kundenstimmen"
@@ -212,14 +212,14 @@ export default function Home() {
           >
             Überzeugen Sie sich von der Qualität unserer Arbeit durch die Erfahrungen zufriedener Kunden.
           </SectionTitle>
-          <div className="mt-16">
+          <div className="mt-10 sm:mt-12 md:mt-16">
             <Testimonials />
           </div>
         </Container>
       </div>
 
       {/* FAQ */}
-      <div className="bg-white dark:bg-gray-900 py-20 sm:py-28">
+      <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
             preTitle="Häufige Fragen"
@@ -227,7 +227,7 @@ export default function Home() {
           >
             Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Reinigungsdienstleistungen.
           </SectionTitle>
-          <div className="mt-16 max-w-3xl mx-auto">
+          <div className="mt-10 sm:mt-12 md:mt-16 max-w-3xl mx-auto">
             <Faq />
           </div>
         </Container>

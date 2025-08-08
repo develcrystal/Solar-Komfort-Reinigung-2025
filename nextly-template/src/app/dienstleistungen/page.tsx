@@ -5,6 +5,7 @@ import { Section } from '@/components/Section';
 import Image from 'next/image';
 import { ImageSlider } from '@/components/ImageSlider';
 import { CtaSection } from '@/components/CtaSection';
+import { ExtendedProcessSteps } from '@/components/ExtendedProcessSteps';
 
 export default function Dienstleistungen() {
   // Bildslider für Dachreinigung
@@ -68,6 +69,58 @@ export default function Dienstleistungen() {
     { 
       src: "/img/flux/solaranlagenreinigung-prozess.jpg", 
       alt: "Solaranlagenreinigung Prozess - Professionelle Reinigung" 
+    }
+  ];
+
+  // 6-Schritte Komplett-Prozess für Reinigung + Beschichtung + Solarpanels
+  const completeProcessSteps = [
+    {
+      step: 1,
+      title: "Kostenlose Vor-Ort-Analyse",
+      description: "Unser Experte begutachtet Ihr Dach, prüft den Zustand der Ziegel und erstellt eine detaillierte Analyse. Wir dokumentieren Verschmutzungsgrad und mögliche Schäden.",
+      imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
+      imageAlt: "Dachanalyse und Begutachtung vor Ort",
+      bgColor: "bg-blue-600"
+    },
+    {
+      step: 2,
+      title: "Professionelle Dachreinigung",
+      description: "Gründliche Entfernung von Moos, Flechten, Algen und Verschmutzungen mit schonenden Niederdruckverfahren. Wir arbeiten ohne aggressive Chemikalien.",
+      imageSrc: "/img/flux/dach-reinigung-prozess2.webp",
+      imageAlt: "Professionelle Dachreinigung im Gange",
+      bgColor: "bg-green-600"
+    },
+    {
+      step: 3,
+      title: "Grundierung & Vorbereitung",
+      description: "Nach der Reinigung wird das Dach vollständig getrocknet und eine spezielle Grundierung aufgetragen. Diese sorgt für optimale Haftung der Beschichtung.",
+      imageSrc: "/img/flux/dach-beschichtung-prozess2.webp",
+      imageAlt: "Grundierung des Daches vor Beschichtung",
+      bgColor: "bg-orange-600"
+    },
+    {
+      step: 4,
+      title: "Nano-Beschichtung auftragen",
+      description: "Aufbringung der hochwertigen Nano-Beschichtung in zwei Schichten. Diese schützt vor UV-Strahlung, Witterung und verhindert Neubefall von Moos und Algen.",
+      imageSrc: "/img/flux/dach-beschichtung-prozess3.webp",
+      imageAlt: "Aufbringung der Nano-Beschichtung",
+      bgColor: "bg-purple-600"
+    },
+    {
+      step: 5,
+      title: "Solarpanel-Integration",
+      description: "Optional: Reinigung und Wartung vorhandener Solaranlagen oder Vorbereitung für neue Solarpanel-Installation. Optimale Energieausbeute durch saubere Module.",
+      imageSrc: "/img/flux/solaranlagenreinigung-prozess.jpg",
+      imageAlt: "Solarpanel-Reinigung und Integration",
+      bgColor: "bg-yellow-600"
+    },
+    {
+      step: 6,
+      title: "Qualitätskontrolle & Garantie",
+      description: "Abschließende Qualitätsprüfung, Dokumentation der Arbeiten und Übergabe mit umfassender Garantie. Wir räumen alles sauber auf und bieten Nachservice.",
+      imageSrc: "/img/flux/team-beratung1.webp",
+      imageAlt: "Qualitätskontrolle und Projektübergabe",
+      bgColor: "bg-red-600"
     }
   ];
 
@@ -297,6 +350,15 @@ export default function Dienstleistungen() {
           </div>
         </Section>
       </Container>
+
+      {/* Erweiterte Prozess-Schritte - 6 Schritte für Komplett-Service */}
+      <div className="bg-white dark:bg-gray-800">
+        <ExtendedProcessSteps 
+          steps={completeProcessSteps}
+          title="Unser 6-Stufen Komplett-Service"
+          subtitle="Von der Analyse bis zur Solarpanel-Integration - so arbeiten wir für maximale Werterhaltung Ihrer Immobilie"
+        />
+      </div>
       
       {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection 

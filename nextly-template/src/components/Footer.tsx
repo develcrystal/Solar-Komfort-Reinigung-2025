@@ -22,9 +22,9 @@ export function Footer() {
   return (
     <div className="relative">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <div>
+        <div className="grid max-w-screen-xl grid-cols-1 gap-8 sm:gap-10 pt-8 sm:pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-2 text-center sm:text-left">
+            <div className="flex justify-center sm:justify-start">
               {" "}
               <Link
                 href="/"
@@ -40,13 +40,13 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400 text-center sm:text-left mx-auto sm:mx-0">
               Professionelle Dachreinigung und Dachbeschichtung mit modernem Nano-Effekt.
               Wir bieten umfassende Dienstleistungen für Ihr Dach - von der gründlichen 
               Reinigung bis zur langlebigen Beschichtung.
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 text-center sm:text-left">
               <div className="text-gray-500 dark:text-gray-400">
                 <p>Telefon: <a href="tel:061511546592" className="hover:text-blue-500">06151 15 465 92</a></p>
                 <p>E-Mail: <a href="mailto:info@solarkomfort.de" className="hover:text-blue-500">info@solarkomfort.de</a></p>
@@ -55,37 +55,37 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <div className="flex flex-col w-full -mt-2 -ml-3 lg:ml-0">
-              <h3 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Navigation</h3>
+          <div className="text-center sm:text-left">
+            <div className="flex flex-col w-full">
+              <h3 className="mb-3 sm:mb-4 font-semibold text-gray-800 dark:text-gray-200">Navigation</h3>
               {navigation.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-gray-700"
+                  className="w-full px-2 py-2 sm:px-3 sm:py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-gray-700 transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
           </div>
-          <div>
-            <div className="flex flex-col w-full -mt-2 -ml-3 lg:ml-0">
-              <h3 className="mb-2 font-semibold text-gray-800 dark:text-gray-200">Dienstleistungen</h3>
+          <div className="text-center sm:text-left">
+            <div className="flex flex-col w-full">
+              <h3 className="mb-3 sm:mb-4 font-semibold text-gray-800 dark:text-gray-200">Dienstleistungen</h3>
               {services.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-gray-700"
+                  className="w-full px-2 py-2 sm:px-3 sm:py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-gray-700 transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="">
-            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-4">Folgen Sie uns</div>
-            <div className="flex mt-3 space-x-5 text-gray-400 dark:text-gray-500">
+          <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-3 sm:mb-4">Folgen Sie uns</div>
+            <div className="flex justify-center sm:justify-start mt-3 space-x-4 sm:space-x-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://facebook.com/"
                 target="_blank"

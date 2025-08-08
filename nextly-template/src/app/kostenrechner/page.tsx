@@ -185,11 +185,11 @@ export default function Kostenrechner() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         </div>
         
-        <Container className="relative z-10 h-full flex items-center justify-center">
+        <Container className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">KOSTENRECHNER</h1>
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-100 drop-shadow-md">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight uppercase text-white drop-shadow-lg">KOSTENRECHNER</h1>
+            <div className="max-w-3xl mx-auto px-4">
+              <p className="text-lg sm:text-xl text-gray-100 drop-shadow-md">
                 Erhalten Sie in nur 2 Minuten ein kostenloses und unverbindliches Angebot für Ihre Dachpflege.
               </p>
             </div>

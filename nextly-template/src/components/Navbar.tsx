@@ -69,29 +69,29 @@ export const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1 z-50 max-w-screen-2xl">
+      <nav className="container relative flex flex-wrap items-center justify-between px-4 py-6 sm:px-6 md:px-8 mx-auto lg:justify-between xl:px-1 z-50 max-w-screen-2xl">
         {/* Logo  */}
         <Link href="/">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+          <span className="flex items-center space-x-2 text-xl sm:text-2xl font-medium text-indigo-500 dark:text-gray-100">
               <span>
                 <Image
                   src="/img/flux/solar-komfort-logo.png"
                   width="150"
                   alt="Solar Komfort"
                   height="37"
-                  className="w-auto h-9"
+                  className="w-auto h-8 sm:h-9"
                 />
               </span>
           </span>
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-            <div className="flex items-center mr-3">
+        <div className="gap-2 sm:gap-3 nav__item mr-1 sm:mr-2 xl:flex ml-auto xl:ml-0 xl:order-2">
+            <div className="flex items-center mr-2 sm:mr-3">
               <ThemeChanger />
             </div>
-            <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/kostenrechner" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5 hover:bg-indigo-700 transition-colors">
+            <div className="hidden mr-2 sm:mr-3 xl:flex nav__item">
+              <Link href="/kostenrechner" className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md md:ml-5 hover:bg-indigo-700 transition-colors">
                 Kostenrechner
               </Link>
             </div>
@@ -102,7 +102,7 @@ export const Navbar = () => {
             <>
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
+                  className="px-2 py-1 text-gray-500 rounded-md xl:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation">
                   <svg
                     className="w-6 h-6 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ export const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+                <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5 xl:hidden">
                   <>
                     {navigation.map((item, index) => (
                       <div key={index} className="w-full">
@@ -131,7 +131,7 @@ export const Navbar = () => {
                           <>
                             <button 
                               onClick={() => toggleDropdown(item.name)}
-                              className="w-full px-4 py-2 -ml-4 text-left text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between"
+                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
                             >
                               {item.name}
                               <svg 
@@ -145,12 +145,12 @@ export const Navbar = () => {
                               </svg>
                             </button>
                             {activeDropdown === item.name && (
-                              <div className="pl-4 max-w-[280px]">
+                              <div className="pl-3 sm:pl-4 max-w-[280px]">
                                 {item.submenu.map((subItem, subIndex) => (
                                   <Link 
                                     key={subIndex} 
                                     href={subItem.href} 
-                                    className="block w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words"
+                                    className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
                                     onClick={(e) => e.stopPropagation()}
                                   >
                                     {subItem.name}
@@ -162,14 +162,14 @@ export const Navbar = () => {
                         ) : (
                           <Link 
                             href={item.href} 
-                            className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block"
+                            className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
                           >
                             {item.name}
                           </Link>
                         )}
                       </div>
                     ))}
-                    <Link href="/kostenrechner" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5 hover:bg-indigo-700 transition-colors">         
+                    <Link href="/kostenrechner" className="w-full px-4 sm:px-6 py-3 mt-3 text-center text-white bg-indigo-600 rounded-md xl:ml-5 hover:bg-indigo-700 transition-colors touch-manipulation">         
                         Kostenrechner
                     </Link>
                   </>
@@ -179,8 +179,8 @@ export const Navbar = () => {
         </Disclosure>
         
         {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-center flex-1 pt-6 list-none lg:pt-0 lg:flex">
+        <div className="hidden text-center xl:flex xl:items-center">
+          <ul className="items-center justify-center flex-1 pt-6 list-none xl:pt-0 xl:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 {menu.submenu ? (

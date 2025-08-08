@@ -25,7 +25,7 @@ export default function Kontakt() {
   return (
     <>
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
-      <div className="relative h-[40vh] min-h-[300px] w-full">
+      <div className="relative h-[35vh] sm:h-[40vh] md:h-[45vh] min-h-[280px] sm:min-h-[300px] md:min-h-[350px] w-full">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/img/flux/team-gruppenfoto1.webp"
@@ -37,11 +37,11 @@ export default function Kontakt() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         </div>
         
-        <Container className="relative z-10 h-full flex items-center justify-center">
+        <Container className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">KONTAKT</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight uppercase text-white drop-shadow-lg">KONTAKT</h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-100 drop-shadow-md">
+              <p className="text-base sm:text-lg md:text-xl text-gray-100 drop-shadow-md">
                 Haben Sie Fragen zu unseren Dienstleistungen oder möchten Sie ein unverbindliches Angebot? 
                 Kontaktieren Sie uns - wir beraten Sie gerne persönlich.
               </p>
@@ -60,33 +60,33 @@ export default function Kontakt() {
             Wir melden uns schnellstmöglich bei Ihnen zurück.
           </SectionTitle>
 
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-8 sm:mt-12">
             <ContactForm />
             
             <div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-8">
-                <div className="flex flex-col items-center mb-8">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 mb-6 sm:mb-8">
+                <div className="flex flex-col items-center mb-6 sm:mb-8">
                   <Image 
                     src="/img/flux/illustration-standort.webp"
                     alt="Standort Solar Komfort GmbH"
                     width={200}
                     height={200}
-                    className="mb-6"
+                    className="mb-4 sm:mb-6 w-32 h-32 sm:w-48 sm:h-48 object-contain"
                   />
-                  <h3 className="text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
                 </div>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-2">Solar Komfort GmbH</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">Musterstraße 123</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">12345 Musterstadt</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Solar Komfort GmbH</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Musterstraße 123</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">12345 Musterstadt</p>
                 
-                <h3 className="text-xl font-semibold mb-3">Kontaktdaten</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">Telefon: +49 123 456789</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">E-Mail: info@solar-komfort.de</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3">Kontaktdaten</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Telefon: +49 123 456789</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">E-Mail: info@solar-komfort.de</p>
                 
-                <h3 className="text-xl font-semibold mb-3">Öffnungszeiten</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">Montag - Freitag: 8:00 - 17:00 Uhr</p>
-                <p className="text-gray-600 dark:text-gray-300">Samstag & Sonntag: Geschlossen</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-3">Öffnungszeiten</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Montag - Freitag: 8:00 - 17:00 Uhr</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Samstag & Sonntag: Geschlossen</p>
               </div>
             </div>
           </div>
@@ -101,26 +101,26 @@ export default function Kontakt() {
             Besuchen Sie uns gerne persönlich an unserem Standort. Wir freuen uns auf Ihren Besuch!
           </SectionTitle>
           
-          <div className="max-w-5xl mx-auto mt-8">
+          <div className="max-w-5xl mx-auto mt-6 sm:mt-8">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-gray-200 dark:bg-gray-700 flex items-center justify-center" style={{ height: 400 }}>
-                <p className="text-gray-500 dark:text-gray-400">Google Maps wird hier eingebunden</p>
+              <div className="bg-gray-200 dark:bg-gray-700 flex items-center justify-center" style={{ height: "300px" }}>
+                <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">Google Maps wird hier eingebunden</p>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Anfahrt</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Anfahrt</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
                   Unser Büro befindet sich in zentraler Lage und ist sowohl mit dem Auto als auch mit öffentlichen Verkehrsmitteln gut zu erreichen.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Mit dem Auto</h4>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <h4 className="text-base sm:text-lg font-semibold mb-2">Mit dem Auto</h4>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                       Parkmöglichkeiten stehen direkt vor unserem Gebäude zur Verfügung.
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">Mit öffentlichen Verkehrsmitteln</h4>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <h4 className="text-base sm:text-lg font-semibold mb-2">Mit öffentlichen Verkehrsmitteln</h4>
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                       Die nächste Bushaltestelle ist nur 2 Gehminuten entfernt.
                     </p>
                   </div>
@@ -139,10 +139,10 @@ export default function Kontakt() {
             Bei uns steht der persönliche Kontakt im Mittelpunkt. Unser Team ist für Sie da, um Ihre Fragen zu beantworten und Sie kompetent zu beraten.
           </SectionTitle>
 
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
             {/* Persönlicher Ansprechpartner */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-              <div className="relative h-64">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden sm:col-span-2 lg:col-span-1">
+              <div className="relative h-48 sm:h-56 md:h-64">
                 <Image 
                   src="/img/flux/team-geschaeftsfuehrerteam1.webp"
                   alt="Max Mustermann - Ihr Ansprechpartner"
@@ -150,62 +150,62 @@ export default function Kontakt() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Max Mustermann</h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">Kundenberatung & Vertrieb</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Max Mustermann</h3>
+                <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium mb-3">Kundenberatung & Vertrieb</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
                   Mit über 10 Jahren Erfahrung in der Dachsanierung berät Max Sie kompetent zu allen Fragen rund um Ihr Projekt.
                 </p>
                 <div className="flex items-center space-x-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  <span className="text-gray-600 dark:text-gray-300">+49 123 456789</span>
+                  <span className="text-sm sm:text-base text-gray-600 dark:text-gray-300">+49 123 456789</span>
                 </div>
               </div>
             </div>
 
             {/* Vertrauenswürdigkeit */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <div className="flex justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-600 dark:text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 sm:h-16 sm:w-16 text-blue-600 dark:text-blue-400" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-center">Vertrauenswürdigkeit</h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 text-center">Vertrauenswürdigkeit</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                 Wir legen großen Wert auf Transparenz und Zuverlässigkeit. Unsere Kunden schätzen unsere ehrliche Beratung und die Einhaltung von Terminen und Vereinbarungen.
               </p>
-              <div className="mt-4 bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+              <div className="mt-3 sm:mt-4 bg-blue-50 dark:bg-blue-900/30 p-3 sm:p-4 rounded-lg">
                 <div className="flex items-center mb-2">
-                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 dark:text-gray-300">Kostenlose Erstberatung</span>
+                  <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Kostenlose Erstberatung</span>
                 </div>
                 <div className="flex items-center mb-2">
-                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 dark:text-gray-300">Transparente Preisgestaltung</span>
+                  <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Transparente Preisgestaltung</span>
                 </div>
                 <div className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 dark:text-gray-300">Garantierte Termintreue</span>
+                  <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Garantierte Termintreue</span>
                 </div>
               </div>
             </div>
 
             {/* Kundenbewertungen */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <div className="flex justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-600 dark:text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6">
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 sm:h-16 sm:w-16 text-blue-600 dark:text-blue-400" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-center">Kundenbewertungen</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 text-center">Kundenbewertungen</h3>
               <div className="space-y-4">
                 <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
                   <div className="flex items-center mb-2">

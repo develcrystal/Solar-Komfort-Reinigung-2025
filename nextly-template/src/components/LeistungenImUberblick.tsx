@@ -96,8 +96,8 @@ export default function LeistungenImUberblick() {
                 </div>
                 
                 {/* Content Section */}
-                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                  <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6">
+                <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 break-words">
                     {service.title}
                   </h3>
                   

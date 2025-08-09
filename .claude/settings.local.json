@@ -19,7 +19,17 @@
       "Bash(echo $APPDATA)",
       "Bash(npx @browsermcp/mcp@latest:*)",
       "WebFetch(domain:docs.anthropic.com)",
-      "mcp__browsermcp__browser_navigate"
+      "mcp__browsermcp__browser_navigate",
+      "Bash(git commit:*)",
+      "mcp__browsermcp__browser_screenshot",
+      "mcp__browsermcp__browser_click",
+      "mcp__browsermcp__browser_snapshot",
+      "mcp__browsermcp__browser_press_key",
+      "mcp__browsermcp__browser_wait",
+      "Bash(tasklist:*)",
+      "Bash(cmd //C:*)",
+      "Bash(set PORT=3000)",
+      "WebFetch(domain:solar-komfort.de)"
     ],
     "deny": []
   },

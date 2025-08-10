@@ -15,46 +15,168 @@ export const Navbar = () => {
     },
     {
       name: "Gebäudereinigung",
+      isMega: true,
       submenu: [
-        { name: "Dachreinigung & Beschichtung", href: "/dachreinigung" },
-        { name: "Fassadenreinigung & Impregnierung", href: "/fassadenreinigung" },
-        { name: "Pflaster- & Steinreinigung", href: "/pflasterreinigung" },
-        { name: "Büroreinigung", href: "/bueroeinigung" },
-        { name: "Baubeschlussreinigung", href: "/baubeschlussreinigung" },
-        { name: "Grundreinigung", href: "/grundreinigung" },
-        { name: "Haushaltsreinigung", href: "/haushaltsreinigung" },
-        { name: "Industriereinigung", href: "/industriereinigung" },
-        { name: "Treppenhausreinigung", href: "/treppenhausreinigung" },
-        { name: "Krankenausreinigung", href: "/krankenausreinigung" },
-        { name: "Hotellerie & Gastronomie", href: "/hotellerie-gastronomie" },
-        { name: "Fenster- & Glasreinigung", href: "/fensterreinigung" },
-        { name: "Schul- & Kindergartenreinigung", href: "/schulreinigung" }
+        {
+          name: "Dachreinigung & Beschichtung",
+          href: "/dachreinigung",
+          description: "Professionelle Dachreinigung und langlebige Beschichtung",
+          icon: "🏠"
+        },
+        {
+          name: "Fassadenreinigung & Impregnierung",
+          href: "/fassadenreinigung",
+          description: "Schonende Fassadenreinigung und Schutzimprägnierung",
+          icon: "🏢"
+        },
+        { 
+          name: "Pflaster- & Steinreinigung", 
+          href: "/pflasterreinigung",
+          description: "Gründliche Reinigung von Pflaster und Naturstein",
+          icon: "🧱"
+        },
+        { 
+          name: "Büroreinigung", 
+          href: "/bueroeinigung",
+          description: "Professionelle Reinigung für Büroräume",
+          icon: "🏢"
+        },
+        { 
+          name: "Baubeschlussreinigung", 
+          href: "/baubeschlussreinigung",
+          description: "Gründliche Endreinigung nach Bauarbeiten",
+          icon: "🔨"
+        },
+        { 
+          name: "Grundreinigung", 
+          href: "/grundreinigung",
+          description: "Intensive Grundreinigung aller Bereiche",
+          icon: "✨"
+        },
+        { 
+          name: "Haushaltsreinigung", 
+          href: "/haushaltsreinigung",
+          description: "Zuverlässige Reinigung für Privathaushalte",
+          icon: "🏠"
+        },
+        { 
+          name: "Industriereinigung", 
+          href: "/industriereinigung",
+          description: "Spezialisierte Reinigung für Industrieanlagen",
+          icon: "🏭"
+        },
+        { 
+          name: "Treppenhausreinigung", 
+          href: "/treppenhausreinigung",
+          description: "Regelmäßige Treppenhausreinigung",
+          icon: "🪜"
+        },
+        { 
+          name: "Krankenausreinigung", 
+          href: "/krankenausreinigung",
+          description: "Hygienische Reinigung für medizinische Einrichtungen",
+          icon: "🏥"
+        },
+        { 
+          name: "Hotellerie & Gastronomie", 
+          href: "/hotellerie-gastronomie",
+          description: "Professionelle Reinigung für Hotels und Restaurants",
+          icon: "🍽️"
+        },
+        { 
+          name: "Fenster- & Glasreinigung", 
+          href: "/fensterreinigung",
+          description: "Streifenfreie Fenster- und Glasreinigung",
+          icon: "🪟"
+        },
+        { 
+          name: "Schul- & Kindergartenreinigung", 
+          href: "/schulreinigung",
+          description: "Kindgerechte Reinigung für Bildungseinrichtungen",
+          icon: "🎓"
+        }
       ]
     },
     {
       name: "Gebäudeservice",
+      isMega: true,
       submenu: [
-        { name: "Hausmeisterservice", href: "/hausmeisterservice" },
-        { name: "Gartenpflege & Außenanlagen", href: "/gartenpflege" },
-        { name: "Entrümpelung & Haushaltsauflösungen", href: "/entruempelung" },
-        { name: "Winterdienst", href: "/winterdienst" },
-        { name: "Außenpflege & saisonale Dienste", href: "/aussenpflege" }
+        { 
+          name: "Hausmeisterservice", 
+          href: "/hausmeisterservice",
+          description: "Umfassender Hausmeisterservice für Ihre Immobilie",
+          icon: "🔧"
+        },
+        { 
+          name: "Gartenpflege & Außenanlagen", 
+          href: "/gartenpflege",
+          description: "Professionelle Garten- und Außenanlagenpflege",
+          icon: "🌿"
+        },
+        { 
+          name: "Entrümpelung & Haushaltsauflösungen", 
+          href: "/entruempelung",
+          description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
+          icon: "📦"
+        },
+        { 
+          name: "Winterdienst", 
+          href: "/winterdienst",
+          description: "Zuverlässiger Winterdienst und Streupflicht",
+          icon: "❄️"
+        },
+        { 
+          name: "Außenpflege & saisonale Dienste", 
+          href: "/aussenpflege",
+          description: "Saisonale Außenpflege das ganze Jahr über",
+          icon: "🍂"
+        }
       ]
     },
     {
       name: "Facility Management",
       submenu: [
-        { name: "Angebot", href: "/angebot" },
-        { name: "Unternehmen", href: "/unternehmen" },
-        { name: "Kontakt", href: "/kontakt-facility" }
+        { 
+          name: "Angebot", 
+          href: "/angebot",
+          description: "Unser Facility Management Leistungsspektrum",
+          icon: "📋"
+        },
+        { 
+          name: "Unternehmen", 
+          href: "/unternehmen",
+          description: "Über unser Facility Management Team",
+          icon: "🏢"
+        },
+        { 
+          name: "Kontakt", 
+          href: "/kontakt-facility",
+          description: "Kontakt für Facility Management Anfragen",
+          icon: "📞"
+        }
       ]
     },
     {
       name: "Über uns",
       submenu: [
-        { name: "Über uns", href: "/ueber-uns" },
-        { name: "Referenzen", href: "/referenzen" },
-        { name: "Bildergalerie", href: "/galerie" }
+        { 
+          name: "Über uns", 
+          href: "/ueber-uns",
+          description: "Lernen Sie unser erfahrenes Team kennen",
+          icon: "👥"
+        },
+        { 
+          name: "Referenzen", 
+          href: "/referenzen",
+          description: "Erfolgreiche Projekte und Kundenstimmen",
+          icon: "⭐"
+        },
+        { 
+          name: "Bildergalerie", 
+          href: "/galerie",
+          description: "Impressionen unserer Arbeiten",
+          icon: "📸"
+        }
       ]
     },
     {
@@ -178,19 +300,19 @@ export const Navbar = () => {
           )}
         </Disclosure>
         
-        {/* menu  */}
-        <div className="hidden text-center xl:flex xl:items-center">
+        {/* Desktop Mega Menu */}
+        <div className="hidden xl:flex xl:items-center">
           <ul className="items-center justify-center flex-1 pt-6 list-none xl:pt-0 xl:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 {menu.submenu ? (
                   <div className="relative group">
                     <button 
-                      className="inline-block px-3 py-2 text-base font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 flex items-center"
+                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
                     >
                       {menu.name}
                       <svg 
-                        className="w-4 h-4 ml-1" 
+                        className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24" 
@@ -199,25 +321,101 @@ export const Navbar = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                       </svg>
                     </button>
-                    <div className="absolute left-0 z-50 hidden pt-4 group-hover:block">
-                      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-md py-2 w-72 max-h-[80vh] overflow-y-auto">
-                        {menu.submenu.map((subItem, subIndex) => (
-                          <Link 
-                            key={subIndex} 
-                            href={subItem.href} 
-                            className="block px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-indigo-500 hover:bg-indigo-50 dark:hover:bg-gray-700 whitespace-normal break-words min-w-[280px]"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                    
+                    {/* Mega Menu Dropdown */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 z-50 hidden pt-4 group-hover:block">
+                      <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300">
+                        {/* Mega Menu for "Gebäudereinigung" and "Gebäudeservice" */}
+                        {menu.isMega ? (
+                          <div className="w-[800px] p-8">
+                            <div className="mb-6">
+                              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-left">
+                                {menu.name}
+                              </h3>
+                              <p className="text-sm text-gray-600 dark:text-gray-400 text-left">
+                                Entdecken Sie unser umfassendes Leistungsspektrum
+                              </p>
+                            </div>
+                            
+                            <div className="grid grid-cols-3 gap-6">
+                              {menu.submenu.map((subItem, subIndex) => (
+                                <Link 
+                                  key={subIndex} 
+                                  href={subItem.href} 
+                                  className="group/item p-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-200 border border-transparent hover:border-blue-200 dark:hover:border-gray-700"
+                                >
+                                  <div className="flex items-start space-x-3">
+                                    <div className="text-2xl flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
+                                      {subItem.icon}
+                                    </div>
+                                    <div className="flex-1 min-w-0">
+                                      <div className="text-sm font-medium text-gray-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
+                                        {subItem.name}
+                                      </div>
+                                      {subItem.description && (
+                                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight text-left">
+                                          {subItem.description}
+                                        </div>
+                                      )}
+                                    </div>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                            
+                            <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
+                              <div className="flex items-center justify-between">
+                                <div>
+                                  <p className="text-sm font-medium text-gray-900 dark:text-white text-left">
+                                    Benötigen Sie eine Beratung?
+                                  </p>
+                                  <p className="text-xs text-gray-500 dark:text-gray-400 text-left">
+                                    Kontaktieren Sie uns für ein kostenloses Angebot
+                                  </p>
+                                </div>
+                                <Link 
+                                  href="/kontakt"
+                                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                >
+                                  Kontakt aufnehmen
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        ) : (
+                          /* Regular Dropdown for smaller menus */
+                          <div className="w-80 py-4">
+                            <div className="px-6 pb-4 mb-4 border-b border-gray-100 dark:border-gray-800">
+                              <h3 className="text-base font-semibold text-gray-900 dark:text-white text-left">
+                                {menu.name}
+                              </h3>
+                            </div>
+                            {menu.submenu.map((subItem, subIndex) => (
+                              <Link 
+                                key={subIndex} 
+                                href={subItem.href} 
+                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
+                              >
+                                <span className="text-lg mr-3">{subItem.icon}</span>
+                                <div className="flex-1">
+                                  <div className="text-sm font-medium text-left">{subItem.name}</div>
+                                  {subItem.description && (
+                                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">
+                                      {subItem.description}
+                                    </div>
+                                  )}
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
                 ) : (
                   <Link
                     href={menu.href}
-                    className="inline-block px-3 py-2 text-base font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
                   >
                     {menu.name}
                   </Link>

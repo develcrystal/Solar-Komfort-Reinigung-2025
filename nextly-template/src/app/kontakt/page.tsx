@@ -66,12 +66,12 @@ export default function Kontakt() {
             <div>
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 mb-6 sm:mb-8">
                 <div className="flex flex-col items-center mb-6 sm:mb-8">
-                  <Image 
-                    src="/img/flux/illustration-standort.webp"
-                    alt="Standort Solar Komfort GmbH"
-                    width={200}
-                    height={200}
-                    className="mb-4 sm:mb-6 w-32 h-32 sm:w-48 sm:h-48 object-contain"
+                  <Image
+                    src="/img/flux/team-beratung1.webp"
+                    alt="Team Solar Komfort GmbH"
+                    width={300}
+                    height={300}
+                    className="mb-4 sm:mb-6 w-48 h-48 sm:w-64 sm:h-64 object-contain"
                   />
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
                 </div>

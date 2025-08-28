@@ -169,7 +169,7 @@ export default function UeberUns() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <p className="text-white text-sm">
-                      "Qualität und Nachhaltigkeit sind keine Trends, sondern unsere Grundwerte."
+                      &ldquo;Qualität und Nachhaltigkeit sind keine Trends, sondern unsere Grundwerte.&rdquo;
                     </p>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function UeberUns() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <p className="text-white text-sm">
-                      "Jedes Projekt ist einzigartig und verdient eine maßgeschneiderte Lösung."
+                      &ldquo;Jedes Projekt ist einzigartig und verdient eine maßgeschneiderte Lösung.&rdquo;
                     </p>
                   </div>
                 </div>
@@ -233,7 +233,7 @@ export default function UeberUns() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <p className="text-white text-sm">
-                      "Innovation und Tradition im perfekten Gleichgewicht."
+                      &quot;Innovation und Tradition im perfekten Gleichgewicht.&quot;
                     </p>
                   </div>
                 </div>
@@ -412,7 +412,7 @@ export default function UeberUns() {
               <h2 className="text-4xl font-bold mb-8 uppercase tracking-wide text-center">UNSERE PHILOSOPHIE</h2>
               <div className="max-w-3xl mx-auto">
                 <p className="text-xl mb-6">
-                  Wir arbeiten nach dem Grundsatz: "Qualität ist kein Zufall, sondern das Ergebnis intelligenter Bemühungen."
+                  Wir arbeiten nach dem Grundsatz: &ldquo;Qualität ist kein Zufall, sondern das Ergebnis intelligenter Bemühungen.&rdquo;
                 </p>
                 <p className="text-xl mb-6">
                   Unser Ziel ist es, nicht nur die Erwartungen unserer Kunden zu erfüllen, sondern sie zu übertreffen. 

@@ -2,6 +2,7 @@ import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Krankenausreinigung() {
   return (
@@ -28,12 +29,12 @@ export default function Krankenausreinigung() {
               Hygienische Reinigung medizinischer Einrichtungen nach strengsten Sauberkeitsstandards.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
+              <Link href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
                 Kostenlos beraten lassen
-              </a>
-              <a href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
+              </Link>
+              <Link href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
                 Kosten berechnen
-              </a>
+              </Link>
             </div>
           </div>
         </Container>

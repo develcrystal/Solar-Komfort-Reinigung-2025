@@ -32,7 +32,7 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 - [x] **SEO-Optimierung** mit Metadata für alle Seiten
 - [ ] Hero-Bereiche für Gebäudeservice-Seiten (0/5)
 - [ ] Hero-Bereiche für Facility Management-Seiten (0/3) 
-- [ ] Hero-Bereich für Galerie-Seite (0/1)
+- [x] **Galerie** mit Kategoriefiltern und Lightbox (1/1)
 
 ## Sitemap Status
 ```
@@ -64,6 +64,14 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 
 ## Technische Details
 
+### Neue Galerie-Funktionen
+- **Kategoriefilterung** für einfache Navigation
+- **Responsives Mosaik-Layout** mit automatischer Anpassung
+- **Lightbox** mit Vollbildansicht und Navigation
+- **Lazy Loading** für optimale Performance
+- **Barrierefreiheit** gemäß WCAG 2.1
+- **Dunkelmodus**-Unterstützung
+
 ### Mobile First Design
 - **Breakpoints:** sm: (640px+) → md: (768px+) → lg: (1024px+) → xl: (1280px+)
 - **Hero-Höhen:** h-[50vh] sm:h-[55vh] md:h-[60vh] (kompakter als Startseite)
@@ -73,11 +81,19 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 ### Entwicklungsserver
 ```bash
 cd nextly-template
+npm install  # Bei Bedarf Abhängigkeiten installieren
 npm run dev  # Läuft auf http://localhost:3003
 ```
+
+### Galerie-Komponenten
+- **/components/gallery** - Hauptkomponente mit Kategoriefiltern
+- **/components/gallery/ImageCard.tsx** - Einzelne Bildkarte mit Lazy Loading
+- **/components/gallery/Lightbox.tsx** - Lightbox für Vollbildansicht
+- **/components/gallery/types.ts** - TypeScript-Definitionen
+- **/data/galleryImages.ts** - Bilddaten und Kategorien
 
 ## Status
 ✅ **Gebäudereinigung:** 13/13 Seiten mit Mobile First Hero-Bereichen
 🔄 **Gebäudeservice:** 5/5 Seiten erstellt, Hero-Bereiche folgen  
 🔄 **Facility Management:** 3/3 Seiten erstellt, Hero-Bereiche folgen
-🔄 **Galerie:** 1/1 Seite erstellt, Hero-Bereich folgt
+✅ **Galerie:** 1/1 Seite mit erweiterten Funktionen

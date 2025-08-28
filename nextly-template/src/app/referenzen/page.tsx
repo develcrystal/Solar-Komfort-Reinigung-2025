@@ -4,6 +4,7 @@ import { Container } from '@/components/Container';
 import Image from 'next/image';
 import { ImageSlider } from '@/components/ImageSlider';
 import { CtaSection } from '@/components/CtaSection';
+import Link from 'next/link';
 
 export default function Referenzen() {
   // Bildslider für Einfamilienhaus-Referenzen
@@ -343,18 +344,18 @@ export default function Referenzen() {
               Überzeugen Sie sich selbst von unserer Qualität und Professionalität. Kontaktieren Sie uns noch heute für eine unverbindliche Beratung.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
+              <Link
                 href="/kontakt"
                 className="px-8 py-4 text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg"
               >
                 Kontakt aufnehmen
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/kostenrechner"
                 className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg"
               >
                 Kostenrechner starten
-              </a>
+              </Link>
             </div>
           </div>
         </Container>

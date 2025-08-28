@@ -17,6 +17,7 @@ type Step = {
   inputType?: 'options' | 'text' | 'email' | 'tel' | 'number' | 'date' | 'textarea';
   placeholder?: string;
   isRequired?: boolean;
+  condition?: (data: FormData) => boolean;
 };
 
 type FormData = {
@@ -112,7 +113,14 @@ export const LeadFunnel: React.FC<LeadFunnelProps> = ({
     return true;
   };
 
-  const progressPercentage = ((currentStep + 1) / steps.length) * 100;
+  // Filtere die Schritte basierend auf der condition-Eigenschaft
+  const visibleSteps = steps.filter(step => !step.condition || step.condition(formData));
+  
+  // Bestimme den aktuellen Schritt im gefilterten Array
+  const currentStepData = visibleSteps[currentStep];
+  
+  // Berechne den Fortschritt basierend auf den sichtbaren Schritten
+  const progressPercentage = ((currentStep + 1) / visibleSteps.length) * 100;
 
   if (submitted) {
     return (
@@ -144,7 +152,7 @@ export const LeadFunnel: React.FC<LeadFunnelProps> = ({
     );
   }
 
-  const currentStepData = steps[currentStep];
+
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden">

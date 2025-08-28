@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Benefits from "@/components/Benefits";
 import LeistungenImUberblick from "@/components/LeistungenImUberblick";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const testimonials = [
   {
@@ -40,7 +41,7 @@ const Testimonials = () => (
           <div className="text-yellow-400 text-lg sm:text-xl">{testimonial.rating}</div>
         </div>
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 italic">
-          "{testimonial.text}"
+          &ldquo;{testimonial.text}&rdquo;
         </p>
         <div className="flex items-center">
           <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
@@ -65,7 +66,6 @@ const Testimonials = () => (
 export const metadata: Metadata = {
   title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
   description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH mit über 5.000 zufriedenen Kunden.",
-  viewport: "width=device-width, initial-scale=1",
   keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
     title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
@@ -102,10 +102,11 @@ export default function Home() {
         {/* Hintergrundbild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/team-bei-der-arbeitwebp.webp"
-            alt="Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
+            src="/img/flux/familie-vor-haus-mit-solaranlagen.webp"
+            alt="Zufriedene Familie vor ihrem gepflegten Haus mit Solaranlage - Komfort Gebäudeservice24"
             fill
             className="object-cover brightness-[0.85]"
+            style={{ transform: 'scaleX(-1)' }}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40"></div>
@@ -204,19 +205,7 @@ export default function Home() {
       </div>
 
       {/* Kundenstimmen */}
-      <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28">
-        <Container>
-          <SectionTitle
-            preTitle="Kundenstimmen"
-            title="Das sagen unsere Kunden"
-          >
-            Überzeugen Sie sich von der Qualität unserer Arbeit durch die Erfahrungen zufriedener Kunden.
-          </SectionTitle>
-          <div className="mt-10 sm:mt-12 md:mt-16">
-            <Testimonials />
-          </div>
-        </Container>
-      </div>
+      <TestimonialsSection />
 
       {/* FAQ */}
       <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-28">

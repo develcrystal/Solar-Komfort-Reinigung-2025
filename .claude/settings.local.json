@@ -29,7 +29,10 @@
       "Bash(tasklist:*)",
       "Bash(cmd //C:*)",
       "Bash(set PORT=3000)",
-      "WebFetch(domain:solar-komfort.de)"
+      "WebFetch(domain:solar-komfort.de)",
+      "Bash(python:*)",
+      "Bash(copy \"ideogram-images\\a-photograph-of-a-happy-family-consistin_R1m2M7EfSXCAC1yz367l_g_iWoyXpX2QXWra5RaiihRWQ.jpeg\" \"public\\img\\flux\\familie-vor-haus-mit-solaranlagen.webp\")",
+      "Bash(find:*)"
     ],
     "deny": []
   },

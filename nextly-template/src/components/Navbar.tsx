@@ -5,6 +5,39 @@ import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
 
+const renderIcon = (icon: string): JSX.Element | null => {
+  // If it's a path, render with Image
+  if (icon.startsWith('/')) {
+    return <Image src={icon} alt="" width={22} height={22} />;
+  }
+  // Map common emoji to consistent SVG icons
+  const emojiToIcon: Record<string, string> = {
+    "🏠": "/img/icons/einfamilienhaus.svg",
+    "🏢": "/img/icons/gebaeudereinigung.svg",
+    "🔨": "/img/icons/facility-management.svg",
+    "✨": "/img/icons/sonstiges.svg",
+    "🏭": "/img/icons/facility-management.svg",
+    "🪜": "/img/icons/treppenhausreinigung.svg",
+    "🏥": "/img/icons/sonstiges.svg",
+    "🍽️": "/img/icons/sonstiges.svg",
+    "🎓": "/img/icons/sonstiges.svg",
+    "👥": "/img/icons/einfamilienhaus.svg",
+    "⭐": "/img/icons/sonstiges.svg",
+    "📸": "/img/icons/sonstiges.svg",
+    "🔧": "/img/icons/facility-management.svg",
+    "🌿": "/img/icons/sonstiges.svg",
+    "📦": "/img/icons/sonstiges.svg",
+    "❄️": "/img/icons/facility-management.svg",
+    "🍂": "/img/icons/sonstiges.svg",
+    "🧱": "/img/icons/sonstiges.svg",
+  };
+  const mapped = emojiToIcon[icon];
+  if (mapped) {
+    return <Image src={mapped} alt="" width={22} height={22} />;
+  }
+  return <span>{icon}</span>;
+};
+
 export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -21,13 +54,13 @@ export const Navbar = () => {
           name: "Dachreinigung & Beschichtung",
           href: "/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
-          icon: "🏠"
+          icon: "/img/icons/gebaeudereinigung.svg"
         },
         {
           name: "Fassadenreinigung & Impregnierung",
           href: "/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
-          icon: "🏢"
+          icon: "/img/icons/gebaeudereinigung.svg"
         },
         { 
           name: "Pflaster- & Steinreinigung", 
@@ -69,7 +102,7 @@ export const Navbar = () => {
           name: "Treppenhausreinigung", 
           href: "/treppenhausreinigung",
           description: "Regelmäßige Treppenhausreinigung",
-          icon: "🪜"
+          icon: "/img/icons/treppenhausreinigung.svg"
         },
         { 
           name: "Krankenausreinigung", 
@@ -87,13 +120,13 @@ export const Navbar = () => {
           name: "Fenster- & Glasreinigung", 
           href: "/fensterreinigung",
           description: "Streifenfreie Fenster- und Glasreinigung",
-          icon: "🪟"
+          icon: "/img/icons/fensterreinigung.svg"
         },
         { 
           name: "Schul- & Kindergartenreinigung", 
           href: "/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
-          icon: "🎓"
+          icon: "/img/icons/fensterreinigung.svg"
         }
       ]
     },
@@ -136,23 +169,23 @@ export const Navbar = () => {
     {
       name: "Facility Management",
       submenu: [
-        { 
-          name: "Angebot", 
+        {
+          name: "Angebot",
           href: "/angebot",
           description: "Unser Facility Management Leistungsspektrum",
-          icon: "📋"
+          icon: "/img/icons/facility-management.svg"
         },
-        { 
-          name: "Unternehmen", 
+        {
+          name: "Unternehmen",
           href: "/unternehmen",
           description: "Über unser Facility Management Team",
-          icon: "🏢"
+          icon: "/img/icons/facility-management.svg"
         },
-        { 
-          name: "Kontakt", 
+        {
+          name: "Kontakt",
           href: "/kontakt-facility",
           description: "Kontakt für Facility Management Anfragen",
-          icon: "📞"
+          icon: "/img/icons/facility-management.svg"
         }
       ]
     },
@@ -269,13 +302,15 @@ export const Navbar = () => {
                             {activeDropdown === item.name && (
                               <div className="pl-3 sm:pl-4 max-w-[280px]">
                                 {item.submenu.map((subItem, subIndex) => (
-                                  <Link 
-                                    key={subIndex} 
-                                    href={subItem.href} 
+                                  <Link
+                                    key={subIndex}
+                                    href={subItem.href}
                                     className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
-                                    onClick={(e) => e.stopPropagation()}
                                   >
-                                    {subItem.name}
+                                    <span className="inline-flex items-center">
+                                      {renderIcon(subItem.icon)}
+                                      <span className="ml-2">{subItem.name}</span>
+                                    </span>
                                   </Link>
                                 ))}
                               </div>
@@ -346,7 +381,7 @@ export const Navbar = () => {
                                 >
                                   <div className="flex items-start space-x-3">
                                     <div className="text-2xl flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
-                                      {subItem.icon}
+                                      {renderIcon(subItem.icon)}
                                     </div>
                                     <div className="flex-1 min-w-0">
                                       <div className="text-sm font-medium text-gray-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
@@ -396,7 +431,7 @@ export const Navbar = () => {
                                 href={subItem.href} 
                                 className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
                               >
-                                <span className="text-lg mr-3">{subItem.icon}</span>
+                                <span className="text-lg mr-3">{renderIcon(subItem.icon)}</span>
                                 <div className="flex-1">
                                   <div className="text-sm font-medium text-left">{subItem.name}</div>
                                   {subItem.description && (

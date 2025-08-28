@@ -1,43 +1,71 @@
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
-import Image from 'next/image';
+import { SharedDienstleistungenHeader } from '@/components/SharedDienstleistungenHeader';
+import { ExtendedProcessSteps } from '@/components/ExtendedProcessSteps';
 
 export default function Dachreinigung() {
+  // 6-Schritte Komplett-Prozess für Dachreinigung
+  const dachreinigungProcessSteps = [
+    {
+      step: 1,
+      title: "Kostenlose Vor-Ort-Analyse",
+      description: "Unser Experte begutachtet Ihr Dach, prüft den Zustand der Ziegel und erstellt eine detaillierte Analyse. Wir dokumentieren Verschmutzungsgrad und mögliche Schäden.",
+      imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
+      imageAlt: "Dachanalyse und Begutachtung vor Ort",
+      bgColor: "bg-blue-600"
+    },
+    {
+      step: 2,
+      title: "Professionelle Dachreinigung",
+      description: "Gründliche Entfernung von Moos, Flechten, Algen und Verschmutzungen mit schonenden Niederdruckverfahren. Wir arbeiten ohne aggressive Chemikalien.",
+      imageSrc: "/img/flux/dach-reinigung-prozess2.webp",
+      imageAlt: "Professionelle Dachreinigung im Gange",
+      bgColor: "bg-green-600"
+    },
+    {
+      step: 3,
+      title: "Grundierung & Vorbereitung",
+      description: "Nach der Reinigung wird das Dach vollständig getrocknet und eine spezielle Grundierung aufgetragen. Diese sorgt für optimale Haftung der Beschichtung.",
+      imageSrc: "/img/flux/dach-beschichtung-prozess2.webp",
+      imageAlt: "Grundierung des Daches vor Beschichtung",
+      bgColor: "bg-orange-600"
+    },
+    {
+      step: 4,
+      title: "Nano-Beschichtung auftragen",
+      description: "Aufbringung der hochwertigen Nano-Beschichtung in zwei Schichten. Diese schützt vor UV-Strahlung, Witterung und verhindert Neubefall von Moos und Algen.",
+      imageSrc: "/img/flux/dach-beschichtung-prozess3.webp",
+      imageAlt: "Aufbringung der Nano-Beschichtung",
+      bgColor: "bg-purple-600"
+    },
+    {
+      step: 5,
+      title: "Dachrinnenreinigung",
+      description: "Gründliche Reinigung der Dachrinnen und Fallrohre. Entfernung von Laub, Schmutz und Verstopfungen für optimalen Wasserabfluss.",
+      imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
+      imageAlt: "Dachrinnenreinigung und Wartung",
+      bgColor: "bg-yellow-600"
+    },
+    {
+      step: 6,
+      title: "Qualitätskontrolle & Garantie",
+      description: "Abschließende Qualitätsprüfung, Dokumentation der Arbeiten und Übergabe mit umfassender Garantie. Wir räumen alles sauber auf und bieten Nachservice.",
+      imageSrc: "/img/flux/team-beratung1.webp",
+      imageAlt: "Qualitätskontrolle und Projektübergabe",
+      bgColor: "bg-red-600"
+    }
+  ];
+
   return (
     <>
       {/* Hero-Bereich */}
-      <div className="relative h-[60vh] min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/quer_Vorher-Nachher Dachreinigung.webp"
-            alt="Dachreinigung & Beschichtung - Professionelle Dachsanierung"
-            fill
-            className="object-cover brightness-[0.8]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50"></div>
-        </div>
-        
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              DACHREINIGUNG & BESCHICHTUNG
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
-              Professionelle Dachreinigung und langfristige Nano-Beschichtung für optimalen Schutz und Werterhaltung
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/kontakt" className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all">
-                Kostenlos beraten lassen
-              </a>
-              <a href="/kostenrechner" className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all">
-                Kosten berechnen
-              </a>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <SharedDienstleistungenHeader
+        title="DACHREINIGUNG & BESCHICHTUNG"
+        description="Professionelle Dachreinigung und Beschichtung für ein gepflegtes Erscheinungsbild und längere Haltbarkeit Ihres Daches."
+        imageSrc="/img/flux/dachreinigung-vorher-nachher.webp"
+        imageAlt="Dachreinigung Vorher/Nachher - Beeindruckende Transformation durch professionelle Dachreinigung"
+      />
 
       {/* Service-Details */}
       <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24">
@@ -107,6 +135,15 @@ export default function Dachreinigung() {
             </div>
           </div>
         </Container>
+      </div>
+
+      {/* 6-Stufen Komplett-Service für Dachreinigung */}
+      <div className="bg-white dark:bg-gray-800">
+        <ExtendedProcessSteps 
+          steps={dachreinigungProcessSteps}
+          title="Unser 6-Stufen Dachreinigung-Service"
+          subtitle="Von der Analyse bis zur Nano-Beschichtung - so arbeiten wir für maximale Werterhaltung Ihres Daches"
+        />
       </div>
 
       {/* Call-to-Action */}

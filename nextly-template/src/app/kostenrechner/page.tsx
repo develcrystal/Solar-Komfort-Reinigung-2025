@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Container } from '@/components/Container';
 import { LeadFunnel } from '@/components/LeadFunnel';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Kostenrechner() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,64 +52,49 @@ export default function Kostenrechner() {
   const funnelSteps = [
     {
       id: 1,
-      title: "Welche Dachform hat Ihr Haus?",
-      inputType: "options" as const,
-      isRequired: true,
-      options: [
-        {
-          id: "sattel",
-          label: "Satteldach",
-          icon: "/img/icons/satteldach.svg",
-          value: "satteldach"
-        },
-        {
-          id: "flach",
-          label: "Flachdach",
-          icon: "/img/icons/flachdach.svg",
-          value: "flachdach"
-        },
-        {
-          id: "pult",
-          label: "Pultdach",
-          icon: "/img/icons/pultdach.svg",
-          value: "pultdach"
-        },
-        {
-          id: "andere",
-          label: "Andere",
-          icon: "/img/icons/andere-dachform.svg",
-          value: "andere"
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "Wie groß ist Ihre Dachfläche?",
-      description: "Ungefähre Angabe in Quadratmetern",
-      inputType: "number" as const,
-      placeholder: "z.B. 150",
-      isRequired: true
-    },
-    {
-      id: 3,
       title: "Welche Dienstleistung benötigen Sie?",
       inputType: "options" as const,
       isRequired: true,
       options: [
         {
-          id: "reinigung",
+          id: "dachreinigung",
           label: "Dachreinigung",
           value: "dachreinigung"
         },
         {
-          id: "beschichtung",
+          id: "dachbeschichtung",
           label: "Dachbeschichtung",
           value: "dachbeschichtung"
         },
         {
           id: "beides",
-          label: "Beides",
+          label: "Dachreinigung & -beschichtung",
           value: "beides"
+        },
+        {
+          id: "fassadenreinigung",
+          label: "Fassadenreinigung",
+          value: "fassadenreinigung"
+        },
+        {
+          id: "fensterreinigung",
+          label: "Fensterreinigung",
+          value: "fensterreinigung"
+        },
+        {
+          id: "winterdienst",
+          label: "Winterdienst",
+          value: "winterdienst"
+        },
+        {
+          id: "gartenpflege",
+          label: "Gartenpflege",
+          value: "gartenpflege"
+        },
+        {
+          id: "wartungsvertrag",
+          label: "Wartungsvertrag (jährlich)",
+          value: "wartungsvertrag"
         },
         {
           id: "unsicher",
@@ -117,31 +103,36 @@ export default function Kostenrechner() {
         }
       ]
     },
+    // Allgemeine Frage für alle Dienstleistungen
     {
-      id: 4,
-      title: "Wie ist der aktuelle Zustand Ihres Daches?",
+      id: 2,
+      title: "Um was für ein Gebäude handelt es sich?",
       inputType: "options" as const,
       isRequired: true,
       options: [
         {
-          id: "neu",
-          label: "Neuwertig",
-          value: "neuwertig"
+          id: "einfamilienhaus",
+          label: "Einfamilienhaus",
+          icon: "/img/icons/einfamilienhaus.svg",
+          value: "einfamilienhaus"
         },
         {
-          id: "gut",
-          label: "Gut erhalten",
-          value: "gut"
+          id: "mehrfamilienhaus",
+          label: "Mehrfamilienhaus",
+          icon: "/img/icons/mehrfamilienhaus.svg",
+          value: "mehrfamilienhaus"
         },
         {
-          id: "verschmutzt",
-          label: "Verschmutzt",
-          value: "verschmutzt"
+          id: "gewerbeobjekt",
+          label: "Gewerbeobjekt",
+          icon: "/img/icons/gewerbeobjekt.svg",
+          value: "gewerbeobjekt"
         },
         {
-          id: "stark_verschmutzt",
-          label: "Stark verschmutzt",
-          value: "stark_verschmutzt"
+          id: "sonstiges",
+          label: "Sonstiges",
+          icon: "/img/icons/sonstiges.svg",
+          value: "sonstiges"
         }
       ]
     },
@@ -167,8 +158,75 @@ export default function Kostenrechner() {
       inputType: "tel" as const,
       placeholder: "z.B. 0123 456789",
       isRequired: false
+    },
+    {
+      id: 8,
+      title: "Wann möchten Sie Ihr Angebot erhalten?",
+      inputType: "options" as const,
+      isRequired: true,
+      options: [
+        {
+          id: "sofort",
+          label: "So schnell wie möglich",
+          value: "sofort"
+        },
+        {
+          id: "innerhalb_1_woche",
+          label: "Innerhalb einer Woche",
+          value: "innerhalb_1_woche"
+        },
+        {
+          id: "innerhalb_2_wochen",
+          label: "Innerhalb von zwei Wochen",
+          value: "innerhalb_2_wochen"
+        },
+        {
+          id: "flexibel",
+          label: "Flexibel, je nach Verfügbarkeit",
+          value: "flexibel"
+        }
+      ]
+    },
+    {
+      id: 9,
+      title: "Wie haben Sie von uns erfahren?",
+      inputType: "options" as const,
+      isRequired: false,
+      options: [
+        {
+          id: "google",
+          label: "Google-Suche",
+          value: "google"
+        },
+        {
+          id: "empfehlung",
+          label: "Empfehlung",
+          value: "empfehlung"
+        },
+        {
+          id: "social_media",
+          label: "Social Media",
+          value: "social_media"
+        },
+        {
+          id: "werbung",
+          label: "Werbung",
+          value: "werbung"
+        },
+        {
+          id: "anderes",
+          label: "Anderes",
+          value: "anderes"
+        }
+      ]
     }
   ];
+
+  // Aktualisierte Überschriften und Beschreibungen für eine breitere Dienstleistungspalette
+  const heroTitle = "KOSTENRECHNER";
+  const heroSubtitle = "Erhalten Sie in nur 2 Minuten ein kostenloses und unverbindliches Angebot für Ihre gewünschte Dienstleistung.";
+  const mainTitle = "Kostenloses Angebot anfordern";
+  const mainSubtitle = "In nur 2 Minuten zu Ihrem individuellen Angebot";
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
@@ -187,10 +245,10 @@ export default function Kostenrechner() {
         
         <Container className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight uppercase text-white drop-shadow-lg">KOSTENRECHNER</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight uppercase text-white drop-shadow-lg">{heroTitle}</h1>
             <div className="max-w-3xl mx-auto px-4">
               <p className="text-lg sm:text-xl text-gray-100 drop-shadow-md">
-                Erhalten Sie in nur 2 Minuten ein kostenloses und unverbindliches Angebot für Ihre Dachpflege.
+                {heroSubtitle}
               </p>
             </div>
           </div>
@@ -199,10 +257,10 @@ export default function Kostenrechner() {
 
       <Container>
         <div className="py-16 text-center">
-          <h2 className="text-4xl font-bold mb-6 tracking-tight">Kostenloses Angebot für Ihre Dachpflege anfordern</h2>
+          <h2 className="text-4xl font-bold mb-6 tracking-tight">{mainTitle}</h2>
           <div className="max-w-3xl mx-auto mb-10">
             <p className="text-2xl text-orange-500 dark:text-orange-400 font-bold">
-              In nur 2 Minuten zu Ihrem individuellen Angebot
+              {mainSubtitle}
             </p>
           </div>
 
@@ -426,12 +484,12 @@ export default function Kostenrechner() {
                   </svg>
                   06151 15 465 92
                 </a>
-                <a
+                <Link
                   href="/kontakt"
                   className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg"
                 >
                   Kontaktformular
-                </a>
+                </Link>
               </div>
             </div>
           </Container>

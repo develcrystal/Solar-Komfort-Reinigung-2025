@@ -9,7 +9,6 @@ import { ContactForm } from './ContactForm';
 export const metadata: Metadata = {
   title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
   description: "Kontaktieren Sie Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
-  viewport: "width=device-width, initial-scale=1",
   keywords: "Kontakt, Komfort Gebäudeservice24, Gebäudereinigung Anfrage, Reinigung Beratung, Darmstadt",
   openGraph: {
     title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
@@ -228,7 +227,7 @@ export default function Kontakt() {
                     </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 text-sm italic">
-                    "Sehr professionelles Team, pünktlich und zuverlässig. Die Dachbeschichtung wurde sauber ausgeführt und das Ergebnis überzeugt vollkommen."
+                    &ldquo;Sehr professionelles Team, pünktlich und zuverlässig. Die Dachbeschichtung wurde sauber ausgeführt und das Ergebnis überzeugt vollkommen.&rdquo;
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">- Familie Müller, Darmstadt</p>
                 </div>
@@ -253,7 +252,7 @@ export default function Kontakt() {
                     </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 text-sm italic">
-                    "Hervorragende Beratung und Top-Ergebnis bei der Reinigung unserer Solaranlage. Die Leistung hat sich deutlich verbessert."
+                    &ldquo;Hervorragende Beratung und Top-Ergebnis bei der Reinigung unserer Solaranlage. Die Leistung hat sich deutlich verbessert.&rdquo;
                   </p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">- Hans Schmidt, Frankfurt</p>
                 </div>

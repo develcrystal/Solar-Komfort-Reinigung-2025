@@ -6,12 +6,12 @@ import Image from 'next/image';
 export default function Fassadenreinigung() {
   return (
     <>
-      {/* Hero-Bereich */}
-      <div className="relative h-[60vh] min-h-[400px] w-full">
+      {/* Hero-Bereich - Mobile First */}
+      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/fassadenreinigung-vorher-nachher.webp"
-            alt="Fassadenreinigung & Impregnierung - Professionelle Fassadenpflege"
+            src="/img/flux/fassadenreinigung-prozess.webp"
+            alt="Fassadenreinigung & Impregnierung - Professioneller Arbeiter reinigt Fassade"
             fill
             className="object-cover brightness-[0.8]"
             priority
@@ -20,18 +20,18 @@ export default function Fassadenreinigung() {
         </div>
         
         <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
+          <div className="max-w-2xl sm:max-w-3xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
               FASSADENREINIGUNG & IMPREGNIERUNG
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
               Professionelle Fassadenreinigung und schützende Imprägnierung für langanhaltende Sauberkeit
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/kontakt" className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all">
+              <a href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
                 Kostenlos beraten lassen
               </a>
-              <a href="/kostenrechner" className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all">
+              <a href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
                 Kosten berechnen
               </a>
             </div>
@@ -104,6 +104,73 @@ export default function Fassadenreinigung() {
                   Transparente Kostenaufstellung
                 </li>
               </ul>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* Prozess-Darstellung mit neuem Bild */}
+      <div className="bg-gray-50 dark:bg-gray-800 py-8 sm:py-12 md:py-16 lg:py-20">
+        <Container>
+          <SectionTitle
+            preTitle="Unser Prozess"
+            title="Professionelle Fassadenreinigung in Aktion"
+          >
+            So arbeiten unsere Experten - sicher, effizient und mit modernster Ausrüstung.
+          </SectionTitle>
+          
+          <div className="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+            <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
+              <Image 
+                src="/img/flux/fassadenreinigung-prozess.webp"
+                alt="Fassadenreinigung Prozess - Arbeiter mit Schutzausrüstung reinigt Gebäudefassade"
+                fill
+                className="object-cover"
+              />
+            </div>
+            
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  1
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    Sicherheitsausrüstung
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                    Unsere Experten arbeiten mit kompletter Schutzausrüstung - Helm, Sicherheitsgurte und professionelle Arbeitskleidung.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  2
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    Gerüst & Hebebühne
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                    Sichere Arbeitsplätze durch stabile Gerüste oder Hebebühnen für optimalen Zugang zu allen Fassadenbereichen.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  3
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    Schonende Reinigung
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                    Präzise Hochdruckreinigung entfernt Verschmutzungen ohne die Fassadensubstanz zu beschädigen.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </Container>

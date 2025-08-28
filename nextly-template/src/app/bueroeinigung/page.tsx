@@ -10,8 +10,8 @@ export default function Bueroreinigung() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/buero-reinigung.png"
-            alt="Büroreinigung - Professionelle Reinigung für Arbeitsplätze"
+            src="/img/flux/bueroeinigung-sauber.webp"
+            alt="Büroreinigung - Sauberes modernes Großraumbüro nach professioneller Reinigung"
             fill
             className="object-cover brightness-[0.8]"
             priority

@@ -44,18 +44,22 @@ npx update-browserslist-db@latest
 - **Responsive Design**: Mobile-first approach with Tailwind CSS breakpoints
 
 #### Page Structure
-- **Home (/)**: Full-screen hero section with services overview, testimonials, and CTAs
+- **Home (/)**: Customer-focused hero with happy family image, services overview, testimonials, and CTAs
+  - **Hero Image**: `familie-vor-haus-mit-solaranlagen.webp` (horizontally flipped for optimal text placement)
+  - **Customer Statistics**: 5,000+ customers, 10+ years experience, 99% satisfaction
 - **Contact (/kontakt)**: Contact form with location information and team presentation  
 - **Cost Calculator (/kostenrechner)**: Interactive pricing calculator
 - **About Us (/ueber-uns)**: Company information and team details
 - **References (/referenzen)**: Customer testimonials and project gallery
 
 #### Complete Sitemap (22 Unterseiten)
-**Gebäudereinigung (13 Seiten) - ✅ Alle mit Mobile First Hero-Bereichen:**
-- `/dachreinigung` - Dachreinigung & Beschichtung (thematisches Vorher/Nachher Bild)
-- `/fassadenreinigung` - Fassadenreinigung & Impregnierung 
+**✅ VOLLSTÄNDIG IMPLEMENTIERT - Alle 22/22 Seiten mit Mobile First Hero-Bereichen:**
+
+**Gebäudereinigung (13 Seiten) - ✅ Komplett:**
+- `/dachreinigung` - Dachreinigung & Beschichtung (dachreinigung-vorher-nachher.webp) - **✅ Mit 6-Stufen-Prozess**
+- `/fassadenreinigung` - Fassadenreinigung & Impregnierung (fassadenreinigung-prozess.webp)
 - `/pflasterreinigung` - Pflaster- & Steinreinigung (externes Solar-Komfort Bild)
-- `/bueroeinigung` - Büroreinigung (buero-reinigung.png)
+- `/bueroeinigung` - Büroreinigung (bueroeinigung-sauber.webp)
 - `/baubeschlussreinigung` - Bauabschlussreinigung  
 - `/grundreinigung` - Grundreinigung
 - `/haushaltsreinigung` - Haushaltsreinigung
@@ -66,19 +70,19 @@ npx update-browserslist-db@latest
 - `/fensterreinigung` - Fenster- & Glasreinigung
 - `/schulreinigung` - Schul- & Kindergartenreinigung
 
-**Gebäudeservice (5 Seiten) - 🔄 Hero-Bereiche folgen:**
+**Gebäudeservice (5 Seiten) - ✅ Komplett:**
 - `/hausmeisterservice` - Hausmeisterservice
 - `/gartenpflege` - Gartenpflege & Außenanlagen
 - `/entruempelung` - Entrümpelung & Haushaltsauflösungen
 - `/winterdienst` - Winterdienst
 - `/aussenpflege` - Außenpflege & saisonale Dienste
 
-**Facility Management (3 Seiten) - 🔄 Hero-Bereiche folgen:**
+**Facility Management (3 Seiten) - ✅ Komplett:**
 - `/angebot` - Facility Management Angebot
 - `/unternehmen` - Unternehmen (Facility Management)
 - `/kontakt-facility` - Kontakt für Facility Management
 
-**Zusätzliche Seiten (1 Seite) - 🔄 Hero-Bereich folgt:**
+**Zusätzliche Seiten (1 Seite) - ✅ Komplett:**
 - `/galerie` - Bildergalerie
 
 #### Component Architecture
@@ -88,7 +92,16 @@ npx update-browserslist-db@latest
 - **LeistungenImUberblick**: Service overview cards with alternating layouts
 - **Benefits**: Feature highlights with icons and descriptions
 - **Testimonials**: Customer review cards in responsive grid
-- **Navbar**: Multi-level navigation with mobile hamburger menu
+- **ExtendedProcessSteps**: 6-step process visualization with images and colored badges
+  - **Process Cards**: Interactive cards with step numbers, images, titles and descriptions
+  - **Responsive Grid**: Adaptive layout from 1 column (mobile) to 6 columns (desktop)
+  - **Color-Coded Steps**: Each step has customizable background colors for visual distinction
+  - **Usage**: Used on `/dienstleistungen` for complete service overview and `/dachreinigung` for roof cleaning process
+- **Navbar**: Multi-level navigation with mobile hamburger menu and desktop mega menu
+  - **Desktop Mega Menu**: Modern 3-column grid layout for large navigation sections
+  - **Minimalist Design**: Clean, left-aligned text with hover effects
+  - **Touch-Optimized**: Mobile-first responsive design with proper touch targets
+  - **Icon System**: Colorful SVG icons with Two-Tone design (Orange base #F59E0B with white/colored accents)
 - **Footer**: Site-wide footer with links and company information
 
 #### Styling Approach
@@ -101,10 +114,16 @@ npx update-browserslist-db@latest
 
 ### Image Assets
 Images are stored in `public/img/flux/` directory and include:
-- Team photos and company branding
-- Service-related imagery (before/after cleaning photos)
-- Background images for hero sections
-- Icons and illustrations
+- **Hero Images**: Customer-focused family and team photos
+  - `familie-vor-haus-mit-solaranlagen.webp` - Homepage hero (horizontally flipped)
+  - `bueroeinigung-sauber.webp` - Clean modern office space
+  - `dachreinigung-vorher-nachher.webp` - Dramatic roof cleaning before/after
+  - `fassadenreinigung-prozess.webp` - Professional facade cleaning process
+- **Team photos and company branding**
+- **Service-related imagery (before/after cleaning photos)**
+- **Background images for hero sections**
+- **Icons and illustrations**
+- **Ideogram-generated high-quality images**: Located in `ideogram-images/` directory
 
 ### Structured Data
 The website includes comprehensive SEO optimization with:

@@ -21,8 +21,8 @@
   "author": "Surjith S M",
   "license": "ISC",
   "dependencies": {
-    "@headlessui/react": "^2.0.3",
-    "@heroicons/react": "^2.1.3",
+    "@headlessui/react": "^2.2.7",
+    "@heroicons/react": "^2.2.0",
     "@radix-ui/react-accordion": "^1.2.3",
     "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-navigation-menu": "^1.2.5",

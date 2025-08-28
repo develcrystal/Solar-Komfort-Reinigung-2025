@@ -4,7 +4,7 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure, Popover, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { MegaMenu } from "./MegaMenu";
 
 const renderIcon = (icon: string): JSX.Element | null => {
@@ -43,6 +43,7 @@ const renderIcon = (icon: string): JSX.Element | null => {
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     {
@@ -322,8 +323,5 @@ export const Navbar = () => {
         </Transition>
       </nav>
     </header>
-
-      </nav>
-    </div>
   );
 }

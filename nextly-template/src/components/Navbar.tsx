@@ -42,8 +42,6 @@ const renderIcon = (icon: string): JSX.Element | null => {
 
 export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     {
@@ -134,46 +132,48 @@ export const Navbar = () => {
     },
     {
       name: "Facility Management",
+      isMega: true,
       submenu: [
         {
-          name: "Angebot",
-          href: "/angebot",
-          description: "Unser Facility Management Leistungsspektrum",
-          icon: "/img/icons/facility-management.svg"
+          name: "Facility Management",
+          href: "/facility-management",
+          description: "Umfassendes Facility Management",
+          icon: "🏢"
         },
         {
           name: "Unternehmen",
           href: "/unternehmen",
-          description: "Über unser Facility Management Team",
-          icon: "/img/icons/facility-management.svg"
+          description: "Über unser Team",
+          icon: "👥"
         },
         {
           name: "Kontakt",
           href: "/kontakt-facility",
-          description: "Kontakt für Facility Management Anfragen",
-          icon: "/img/icons/facility-management.svg"
+          description: "Kontakt für Anfragen",
+          icon: "📞"
         }
       ]
     },
     {
       name: "Über uns",
+      isMega: true,
       submenu: [
         { 
           name: "Über uns", 
           href: "/ueber-uns",
-          description: "Lernen Sie unser erfahrenes Team kennen",
+          description: "Unser Team und Philosophie",
           icon: "👥"
         },
         { 
           name: "Referenzen", 
           href: "/referenzen",
-          description: "Erfolgreiche Projekte und Kundenstimmen",
+          description: "Erfolgreiche Projekte",
           icon: "⭐"
         },
         { 
           name: "Bildergalerie", 
           href: "/galerie",
-          description: "Impressionen unserer Arbeiten",
+          description: "Unsere Arbeiten",
           icon: "📸"
         }
       ]
@@ -184,9 +184,7 @@ export const Navbar = () => {
     }
   ];
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+  // Cleaned up toggle function
 
   return (
     <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50">
@@ -248,6 +246,7 @@ export const Navbar = () => {
                   <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                 ) : (
                   <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                )}
               </button>
             </div>
           </div>

@@ -45,7 +45,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           <Navbar />
-          <div>{children}</div>
+          <main className="pt-0">{children}</main>
           <Footer />
           <PopupWidget />
           <BackToTop />

@@ -35,6 +35,23 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# Windows-spezifische Dateien (IGNORIEREN!)
+desktop.ini
+Thumbs.db
+*.tmp
+.tmp.driveupload/
+
+# Entwicklungs-Müll
 nul
-src/nul
+src/nul 
 src/app/nul
+**/desktop.ini
+
+# Unnötige Ordner
+flux bilder/
+ideogram-images/
+*.md
+!README.md
+screencapture-*.png
+*.code-workspace

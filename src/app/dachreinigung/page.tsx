@@ -43,7 +43,7 @@ export default function Dachreinigung() {
       step: 5,
       title: "Dachrinnenreinigung",
       description: "Gründliche Reinigung der Dachrinnen und Fallrohre. Entfernung von Laub, Schmutz und Verstopfungen für optimalen Wasserabfluss.",
-      imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
+      imageSrc: "/img/flux/dach-reinigung-prozess5.webp",
       imageAlt: "Dachrinnenreinigung und Wartung",
       bgColor: "bg-yellow-600"
     },
@@ -51,7 +51,7 @@ export default function Dachreinigung() {
       step: 6,
       title: "Qualitätskontrolle & Garantie",
       description: "Abschließende Qualitätsprüfung, Dokumentation der Arbeiten und Übergabe mit umfassender Garantie. Wir räumen alles sauber auf und bieten Nachservice.",
-      imageSrc: "/img/flux/team-beratung1.webp",
+      imageSrc: "/img/flux/dach-reinigung-prozess6.jpg",
       imageAlt: "Qualitätskontrolle und Projektübergabe",
       bgColor: "bg-red-600"
     }

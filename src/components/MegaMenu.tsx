@@ -19,11 +19,15 @@ type MegaMenuProps = {
 };
 
 export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
-  const chunkedItems = [] as MenuItem[][];
-  const chunkSize = Math.ceil(items.length / columns);
+  // Vereinfachte Implementation ohne Array-Chunks
+  const itemsPerColumn = Math.ceil(items.length / columns);
+  const columnItems: MenuItem[][] = [];
   
-  for (let i = 0; i < items.length; i += chunkSize) {
-    chunkedItems.push(items.slice(i, i + chunkSize));
+  // Erstelle Spalten
+  for (let col = 0; col < columns; col++) {
+    const start = col * itemsPerColumn;
+    const end = start + itemsPerColumn;
+    columnItems.push(items.slice(start, end));
   }
 
   return (

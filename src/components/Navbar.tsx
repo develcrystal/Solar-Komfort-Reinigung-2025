@@ -213,7 +213,7 @@ export const Navbar = () => {
                       />
                     ) : (
                       <Link
-                        href={item.href}
+                        href={item.href as string}
                         className="text-base font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
                       >
                         {item.name}
@@ -297,7 +297,7 @@ export const Navbar = () => {
                     </Disclosure>
                   ) : (
                     <Link
-                      href={item.href}
+                      href={item.href as string}
                       className="block rounded-lg py-2 pl-3 pr-4 text-base font-medium text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-800"
                       onClick={() => setMobileMenuOpen(false)}
                     >

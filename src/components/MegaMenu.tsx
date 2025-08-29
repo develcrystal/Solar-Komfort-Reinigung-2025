@@ -19,7 +19,7 @@ type MegaMenuProps = {
 };
 
 export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
-  const chunkedItems = [];
+  const chunkedItems = [] as MenuItem[][];
   const chunkSize = Math.ceil(items.length / columns);
   
   for (let i = 0; i < items.length; i += chunkSize) {

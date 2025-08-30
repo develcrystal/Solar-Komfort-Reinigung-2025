@@ -115,9 +115,8 @@ export default function Home() {
         <Container className="relative z-10 h-full flex items-center">
           <div className="max-w-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              IHRE<br />
-              GEBÄUDEREINIGUNG<br />
-              ALS KOMPLETTLÖSUNG
+              IHRE GEBÄUDEREINIGUNG
+              <span className="whitespace-nowrap">ALS KOMPLETTLÖSUNG</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
               Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.

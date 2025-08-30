@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Faq } from "@/components/Faq";
 import { CtaSection } from "@/components/CtaSection";
+import { ExtendedProcessSteps } from "@/components/ExtendedProcessSteps";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -119,7 +120,7 @@ export default function Home() {
               <span className="whitespace-nowrap">ALS KOMPLETTLÖSUNG</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
-              Wir sind Ihre Tochterfirma von Solar Komfort GmbH - professionelle Dienstleister mit jahrelanger Erfahrung. Von der Dachreinigung bis zur Industriereinigung - wir bieten Ihnen Komplettlösungen aus einer Hand.
+              Als Tochterfirma der Solar Komfort GmbH sind wir Ihr professioneller Partner für Gebäudereinigung und Facility Management. Mit über 5.000 zufriedenen Kunden und jahrelanger Erfahrung bieten wir Ihnen dokumentierte, transparente Komplettlösungen aus einer Hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link 
@@ -139,20 +140,142 @@ export default function Home() {
         </Container>
       </div>
 
+      {/* Wer wir sind - Kurze Einleitung */}
+      <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20">
+        <Container>
+          <SectionTitle
+            preTitle="Über uns"
+            title="Wer wir sind"
+          >
+            Als Tochterfirma der renommierten Solar Komfort GmbH bringen wir jahrelange Erfahrung und Expertise in der Gebäudereinigung und im Facility Management mit. Mit über 5.000 zufriedenen Kunden haben wir uns als zuverlässiger Partner etabliert.
+          </SectionTitle>
+        </Container>
+      </div>
+
       {/* Unsere Leistungen im Überblick */}
       <LeistungenImUberblick />
 
-      {/* Unsere Vorteile */}
+      {/* Sie kennen das bestimmt... - Probleme ansprechen */}
       <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
-            preTitle="Warum Komfort Gebäudeservice24?"
-            title="Unsere Vorteile auf einen Blick"
+            preTitle="Sie kennen das bestimmt..."
+            title="Typische Probleme bei anderen Anbietern"
           >
-            Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
+            Unzuverlässige Termine, mangelhafte Dokumentation, versteckte Kosten oder schlechte Erreichbarkeit - wir machen es anders! Als professioneller Partner bieten wir Ihnen transparente, dokumentierte und zuverlässige Dienstleistungen.
           </SectionTitle>
           <div className="mt-10 sm:mt-12 md:mt-16">
             <Benefits />
+          </div>
+        </Container>
+      </div>
+
+      {/* Unser 6-Stufen-Ablauf */}
+      <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20">
+        <Container>
+          <SectionTitle
+            preTitle="Unser Arbeitsablauf"
+            title="So arbeiten wir für Sie"
+          >
+            Von der ersten Kontaktaufnahme bis zur finalen Qualitätskontrolle - unser bewährter 6-Stufen-Prozess garantiert Ihnen professionelle Ergebnisse und vollste Zufriedenheit.
+          </SectionTitle>
+        </Container>
+        <ExtendedProcessSteps 
+          steps={[
+            {
+              step: 1,
+              title: "Erste Kontaktaufnahme",
+              description: "Sie kontaktieren uns telefonisch oder über unser Kontaktformular. Wir besprechen Ihre Anforderungen und vereinbaren einen Termin für die Vor-Ort-Besichtigung.",
+              imageSrc: "/img/flux/team-beratung1.webp",
+              imageAlt: "Erste Beratung und Kontaktaufnahme",
+              bgColor: "bg-blue-600"
+            },
+            {
+              step: 2,
+              title: "Detaillierte Analyse vor Ort",
+              description: "Unser Experten-Team führt eine gründliche Analyse durch, dokumentiert den aktuellen Zustand und identifiziert alle Reinigungsbereiche und besonderen Anforderungen.",
+              imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
+              imageAlt: "Professionelle Vor-Ort-Analyse",
+              bgColor: "bg-green-600"
+            },
+            {
+              step: 3,
+              title: "Transparentes Angebot",
+              description: "Basierend auf der Analyse erstellen wir Ihnen ein detailliertes, transparentes Angebot ohne versteckte Kosten. Alle Leistungen und Preise sind klar aufgeschlüsselt.",
+              imageSrc: "/img/flux/bueroeinigung-sauber.webp",
+              imageAlt: "Detailliertes transparentes Angebot",
+              bgColor: "bg-orange-600"
+            },
+            {
+              step: 4,
+              title: "Terminvereinbarung",
+              description: "Nach Ihrer Auftragserteilung vereinbaren wir verbindliche Termine, die zu Ihrem Zeitplan passen. Pünktlichkeit und Zuverlässigkeit sind für uns selbstverständlich.",
+              imageSrc: "/img/flux/team-beratung2.webp",
+              imageAlt: "Zuverlässige Terminplanung",
+              bgColor: "bg-purple-600"
+            },
+            {
+              step: 5,
+              title: "Professionelle Durchführung",
+              description: "Unser geschultes Team führt die Arbeiten mit modernsten Geräten und umweltfreundlichen Reinigungsmitteln durch. Dabei dokumentieren wir jeden Arbeitsschritt.",
+              imageSrc: "/img/flux/fassadenreinigung-prozess.webp",
+              imageAlt: "Professionelle Reinigungsarbeiten",
+              bgColor: "bg-yellow-600"
+            },
+            {
+              step: 6,
+              title: "Qualitätskontrolle & Übergabe",
+              description: "Abschließende Qualitätsprüfung, ausführliche Dokumentation der durchgeführten Arbeiten und Übergabe mit umfassender Garantie. Ihre Zufriedenheit ist unser Ziel.",
+              imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
+              imageAlt: "Qualitätskontrolle und Projektübergabe",
+              bgColor: "bg-red-600"
+            }
+          ]}
+          title="Unser bewährter 6-Stufen-Prozess"
+          subtitle="Vom ersten Kontakt bis zur zufriedenen Übergabe - so garantieren wir Ihnen professionelle Ergebnisse"
+        />
+      </div>
+
+      {/* Facility Management - Warum so wichtig? */}
+      <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20">
+        <Container>
+          <SectionTitle
+            preTitle="Facility Management"
+            title="Warum professionelles Gebäudemanagement so wichtig ist"
+          >
+            Professionelles Facility Management spart Kosten, erhält den Wert Ihrer Immobilie und sorgt für ein angenehmes Arbeits- und Wohnumfeld. Als erfahrener Partner übernehmen wir die komplette Betreuung Ihrer Objekte.
+          </SectionTitle>
+          
+          <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Kosteneinsparung</h3>
+              <p className="text-gray-600 dark:text-gray-300">Vorbeugende Wartung und professionelle Pflege reduzieren langfristige Instandhaltungskosten erheblich.</p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Werterhaltung</h3>
+              <p className="text-gray-600 dark:text-gray-300">Regelmäßige Pflege und Instandhaltung erhalten den Wert Ihrer Immobilie und verhindern kostspielige Schäden.</p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Wohlbefinden</h3>
+              <p className="text-gray-600 dark:text-gray-300">Ein gepflegtes Umfeld steigert das Wohlbefinden von Bewohnern und Mitarbeitern und verbessert das Firmenimage.</p>
+            </div>
           </div>
         </Container>
       </div>
@@ -226,9 +349,9 @@ export default function Home() {
         <CtaSection
           backgroundImage="/img/flux/team-beratung1.webp"
           backgroundAlt="Kontaktieren Sie uns für professionelle Gebäudereinigung"
-          title="Bereit für saubere Ergebnisse?"
-          description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin und lassen Sie sich von unserer Arbeit überzeugen."
-          buttonText="Jetzt Beratung anfordern"
+          title="Bereit für professionelle Gebäudereinigung?"
+          description="Vereinbaren Sie noch heute Ihren kostenlosen Beratungstermin! Über 5.000 zufriedene Kunden vertrauen bereits auf unsere Expertise als Tochterfirma der Solar Komfort GmbH."
+          buttonText="Kostenloses Angebot anfordern"
           buttonLink="/kontakt"
         />
       </div>

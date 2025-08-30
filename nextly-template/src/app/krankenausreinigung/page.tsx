@@ -76,7 +76,7 @@ export default function Krankenausreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Krankenhausreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Krankenhausreinigung"
         title="Bereit für hygienische Sauberkeit?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

@@ -19,11 +19,15 @@ type MegaMenuProps = {
 };
 
 export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
-  const chunkedItems = [];
-  const chunkSize = Math.ceil(items.length / columns);
+  // Vereinfachte Implementation ohne Array-Chunks
+  const itemsPerColumn = Math.ceil(items.length / columns);
+  const columnItems: MenuItem[][] = [];
   
-  for (let i = 0; i < items.length; i += chunkSize) {
-    chunkedItems.push(items.slice(i, i + chunkSize));
+  // Erstelle Spalten
+  for (let col = 0; col < columns; col++) {
+    const start = col * itemsPerColumn;
+    const end = start + itemsPerColumn;
+    columnItems.push(items.slice(start, end));
   }
 
   return (
@@ -55,10 +59,10 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-4xl -translate-x-1/2 transform px-4 sm:px-0">
+            <Popover.Panel className={`absolute left-1/2 z-10 mt-3 w-screen ${columns === 4 ? 'max-w-6xl' : 'max-w-4xl'} -translate-x-1/2 transform px-4 sm:px-0`}>
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="relative grid gap-6 bg-white dark:bg-gray-800 p-6 lg:grid-cols-3">
-                  {chunkedItems.map((column, colIndex) => (
+                <div className={`relative grid gap-6 bg-white dark:bg-gray-800 p-6 ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
+                  {columnItems.map((column, colIndex) => (
                     <div key={colIndex} className="space-y-4">
                       {column.map((item) => (
                         <Link

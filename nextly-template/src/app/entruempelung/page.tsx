@@ -75,7 +75,7 @@ export default function Entruempelung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Entrümpelung.png"
         backgroundAlt="Kontaktieren Sie uns für Entrümpelung"
         title="Bereit für eine stressfreie Entrümpelung?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

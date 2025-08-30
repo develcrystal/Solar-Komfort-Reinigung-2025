@@ -135,7 +135,102 @@ Bilder, die das Thema Sauberkeit, Komfort und Kundenzufriedenheit aufgreifen.
 
 ---
 
+## 6. Fehlende Service-spezifische Hero-Bilder
+
+Basierend auf der Analyse der bestehenden Website benötigen wir thematisch passende Hero-Bilder für folgende Services:
+
+### 6.1. Haushaltsreinigung
+*   **Prompt 1 (Wohnzimmer-Reinigung):**
+    *   **Beschreibung:** Luxuriöses, modernes deutsches Wohnzimmer mit weißer Couch, Glastisch und großen Fenstern. Eine Frau in professioneller Reinigungskleidung reinigt sorgsam den Glastisch. Alles ist perfekt sauber und ordentlich. Warmes Tageslicht.
+    *   **Stil:** Gemütlich, sauber, häuslich, professionell.
+    *   **Ideogram Prompt:** `Luxurious modern German living room with white sofa, glass table and large windows. A woman in professional cleaning uniform carefully cleaning the glass table. Everything perfectly clean and tidy. Warm daylight. Cozy, clean, homely, professional style. --ar 16:9`
+
+### 6.2. Krankenhausreinigung
+*   **Prompt 1 (Medizinische Reinigung):**
+    *   **Beschreibung:** Steriler Krankenhausflur mit weißen Wänden und medizinischen Geräten. Zwei Personen in spezieller Schutzkleidung und Masken reinigen professionell den Boden mit Desinfektionsmitteln. Alles extrem sauber und hygienisch.
+    *   **Stil:** Steril, professionell, medizinisch, sauber.
+    *   **Ideogram Prompt:** `Sterile hospital corridor with white walls and medical equipment. Two people in special protective clothing and masks professionally cleaning the floor with disinfectants. Everything extremely clean and hygienic. Sterile, professional, medical, clean style. --ar 16:9`
+
+### 6.3. Winterdienst
+*   **Prompt 1 (Schneeräumung):**
+    *   **Beschreibung:** Verschneiter Parkplatz vor deutschem Bürogebäude am frühen Morgen. Ein Mann in oranger Winterkleidung räumt mit professioneller Schneeschieber den Schnee. Salzstreuer im Hintergrund. Klare Winterluft, noch leicht dunkel mit Straßenbeleuchtung.
+    *   **Stil:** Winterlich, professionell, früh am Morgen, effizient.
+    *   **Ideogram Prompt:** `Snow-covered parking lot in front of German office building in early morning. A man in orange winter clothing clearing snow with professional snow shovel. Salt spreader in background. Clear winter air, still slightly dark with street lighting. Winter, professional, early morning, efficient style. --ar 16:9`
+
+### 6.4. Schulreinigung
+*   **Prompt 1 (Klassenzimmer):**
+    *   **Beschreibung:** Sauberes, helles deutsches Klassenzimmer mit Schultafeln, Tischen und Stühlen. Eine freundliche Reinigungskraft in Uniform wischt sorgsam die Tische ab. Bunte Lernmaterialien an den Wänden. Nachmittagssonne durch große Fenster.
+    *   **Stil:** Hell, freundlich, bildungsfreundlich, sauber.
+    *   **Ideogram Prompt:** `Clean, bright German classroom with blackboards, tables and chairs. A friendly cleaning person in uniform carefully wiping the tables. Colorful learning materials on the walls. Afternoon sun through large windows. Bright, friendly, education-friendly, clean style. --ar 16:9`
+
+### 6.5. Treppenhausreinigung
+*   **Prompt 1 (Treppenhaus):**
+    *   **Beschreibung:** Elegantes Treppenhaus eines deutschen Mehrfamilienhauses mit Steinstufen und Metallgeländer. Eine Person reinigt professionell die Stufen mit einem Mopp. Natürliches Licht fällt durch ein Fenster. Glänzend saubere Oberflächen.
+    *   **Stil:** Elegant, sauber, architektonisch, professionell.
+    *   **Ideogram Prompt:** `Elegant staircase of German apartment building with stone steps and metal railing. A person professionally cleaning the steps with a mop. Natural light falling through a window. Shiny clean surfaces. Elegant, clean, architectural, professional style. --ar 1:1`
+
+---
+
+## 7. Process-Optimierung Bilder
+
+Für die ExtendedProcessSteps-Komponente benötigen wir service-spezifische Prozessbilder:
+
+### 7.1. Haushaltsreinigung-Prozess (6 Schritte)
+*   **Schritt 1 - Beratung:** Person mit Klemmbrett im Gespräch mit Familie in Wohnzimmer
+*   **Schritt 2 - Planung:** Reinigungsplan auf Tablet mit Grundriss
+*   **Schritt 3 - Vorbereitung:** Professionelle Reinigungsausrüstung wird vorbereitet
+*   **Schritt 4 - Reinigung:** Verschiedene Räume werden gereinigt (Küche, Bad, Wohnzimmer)
+*   **Schritt 5 - Kontrolle:** Qualitätskontrolle mit Checkliste
+*   **Schritt 6 - Übergabe:** Zufriedene Familie erhält sauberes Zuhause zurück
+
+### 7.2. Büroreinigung-Prozess Erweiterung
+*   **Nachtschicht:** Reinigung im Büro bei Nacht mit professioneller Beleuchtung
+*   **Großraumbüro:** Systematische Reinigung von Arbeitsplätzen
+*   **Sanitärbereiche:** Professionelle Desinfektion von Waschräumen
+
+### 7.3. Facility Management Visualisierung
+*   **Gebäude-Management:** Techniker mit Tablet vor modernem Bürogebäude
+*   **Wartung:** Professionelle Wartung von Haustechnik
+*   **Koordination:** Team-Meeting zur Projektplanung
+
+---
+
+## 8. Conversion-optimierte CTA Bilder
+
+### 8.1. Emotionale Kundenzufriedenheit
+*   **Prompt 1 (Glückliche Familie nach Reinigung):**
+    *   **Beschreibung:** Deutsche Familie (Vater, Mutter, zwei Kinder) steht entspannt in ihrem perfekt sauberen Wohnzimmer. Alle lächeln und wirken sehr zufrieden. Sonnenlicht fällt durch saubere Fenster. Alles glänzt und ist ordentlich.
+    *   **Stil:** Warm, glücklich, zufrieden, familiär.
+    *   **Ideogram Prompt:** `German family (father, mother, two children) standing relaxed in their perfectly clean living room. Everyone smiling and looking very satisfied. Sunlight falling through clean windows. Everything shining and tidy. Warm, happy, satisfied, family style. --ar 16:9`
+
+### 8.2. Professionelle Kompetenz
+*   **Prompt 1 (Expertenteam):**
+    *   **Beschreibung:** Fünf professionelle Reinigungskräfte in einheitlicher blauer Kleidung stehen selbstbewusst vor einem modernen deutschen Bürogebäude. Verschiedene Altersgruppen, freundlich lächelnd. Professionelle Reinigungsausrüstung sichtbar.
+    *   **Stil:** Professionell, kompetent, vertrauenswürdig, teamorientiert.
+    *   **Ideogram Prompt:** `Five professional cleaning staff in uniform blue clothing standing confidently in front of modern German office building. Different age groups, smiling friendly. Professional cleaning equipment visible. Professional, competent, trustworthy, team-oriented style. --ar 3:2`
+
+---
+
+## 9. SEO-optimierte Service-Icons
+
+Für die Navigations- und Service-Übersichten benötigen wir einheitliche, professionelle Icons:
+
+### 9.1. Gebäudeservice Icons
+*   **Hausmeisterservice:** Werkzeugkoffer mit Schraubenzieher und Hammer
+*   **Gartenpflege:** Rasenmäher und grüne Blätter
+*   **Entrümpelung:** LKW mit Möbeln wird beladen
+*   **Aussenpflege:** Hochdruckreiniger sprüht gegen Außenwand
+
+### 9.2. Facility Management Icons
+*   **Objektbetreuung:** Modernes Gebäude mit Checkliste
+*   **Wartung:** Zahnräder mit Schraubenschlüssel
+*   **Koordination:** Verbundene Kreise mit Team-Symbol
+
+---
+
 **Zusätzliche Tipps für Ideogram.ai:**
 *   Experimentieren Sie mit verschiedenen Stilen (z.B. `cinematic`, `photorealistic`, `illustration`, `minimalist`).
 *   Nutzen Sie negative Prompts (`--no`) um unerwünschte Elemente auszuschließen (z.B. `--no text, logos, watermarks`).
 *   Probieren Sie verschiedene Seitenverhältnisse (`--ar`) wie `1:1`, `16:9`, `9:16`, `3:2`, `2:3`.
+*   Verwenden Sie `--no people` für reine Objekt-/Architektur-Aufnahmen.
+*   Nutzen Sie `realistic photography style` für besonders authentische Ergebnisse.

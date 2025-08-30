@@ -76,7 +76,7 @@ export default function Pflasterreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Pflaster-stein-Reinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Pflasterreinigung"
         title="Bereit für saubere Außenflächen?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

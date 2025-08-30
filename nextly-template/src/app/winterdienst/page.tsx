@@ -76,7 +76,7 @@ export default function Winterdienst() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Gartenpflege (1).png"
         backgroundAlt="Kontaktieren Sie uns für Winterdienst"
         title="Bereit für einen sicheren Winter?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

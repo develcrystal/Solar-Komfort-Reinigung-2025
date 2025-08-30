@@ -31,11 +31,11 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-blue-500 dark:text-gray-100"
               >
                 <Image
-                  src="/img/flux/solar-komfort-logo.png"
-                  alt="Solar Komfort"
-                  width="150"
-                  height="37"
-                  className="w-auto h-9"
+                  src="/img/komfort-logo-cropped.png"
+                  alt="Komfort Gebäudeservice24"
+                  width="200"
+                  height="60"
+                  className="w-auto h-10"
                 />
               </Link>
             </div>

@@ -19,7 +19,7 @@ const services: Service[] = [
       "Qualitätskontrolle vor Ort"
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/unterhaltsreinigung"
+    link: "/dienstleistungen/bueroeinigung"
   },
   {
     title: "Glas & Fassadenreinigung",
@@ -30,7 +30,7 @@ const services: Service[] = [
       "Moderne Reinigungstechnik"
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/glas-fassadenreinigung"
+    link: "/dienstleistungen/fassadenreinigung"
   },
   {
     title: "Industriereinigung",
@@ -63,7 +63,7 @@ const services: Service[] = [
       "Ganzheitliche Betreuung"
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/objektbetreuung"
+    link: "/dienstleistungen/hausmeisterservice"
   }
 ];
 

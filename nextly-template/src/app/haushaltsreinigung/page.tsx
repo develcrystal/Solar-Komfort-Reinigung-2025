@@ -75,7 +75,7 @@ export default function Haushaltsreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Haushaltsreinigung"
         title="Bereit für ein sauberes Zuhause?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

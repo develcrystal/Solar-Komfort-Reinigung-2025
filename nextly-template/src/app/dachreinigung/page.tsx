@@ -9,50 +9,50 @@ export default function Dachreinigung() {
   const dachreinigungProcessSteps = [
     {
       step: 1,
-      title: "Kostenlose Vor-Ort-Analyse",
-      description: "Unser Experte begutachtet Ihr Dach, prüft den Zustand der Ziegel und erstellt eine detaillierte Analyse. Wir dokumentieren Verschmutzungsgrad und mögliche Schäden.",
-      imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
-      imageAlt: "Dachanalyse und Begutachtung vor Ort",
+      title: "Ausgangszustand dokumentieren",
+      description: "Dokumentation des verschmutzten Dachs vor der Reinigung. Das Dach zeigt deutliche Verschmutzung durch Moos, Algen und jahrelange Witterungseinflüsse.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg",
+      imageAlt: "Kundenprojekt: Dach vor der Reinigung mit sichtbaren Verschmutzungen",
       bgColor: "bg-blue-600"
     },
     {
       step: 2,
-      title: "Professionelle Dachreinigung",
-      description: "Gründliche Entfernung von Moos, Flechten, Algen und Verschmutzungen mit schonenden Niederdruckverfahren. Wir arbeiten ohne aggressive Chemikalien.",
-      imageSrc: "/img/flux/dach-reinigung-prozess2.webp",
-      imageAlt: "Professionelle Dachreinigung im Gange",
+      title: "Schonende Reinigung beginnt",
+      description: "Professionelle Reinigung mit schonenden Niederdruckverfahren. Die Verschmutzungen werden systematisch entfernt, ohne die Dachziegel zu beschädigen.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).jpg",
+      imageAlt: "Kundenprojekt: Dachreinigung in Arbeit mit professioneller Technik",
       bgColor: "bg-green-600"
     },
     {
       step: 3,
-      title: "Grundierung & Vorbereitung",
-      description: "Nach der Reinigung wird das Dach vollständig getrocknet und eine spezielle Grundierung aufgetragen. Diese sorgt für optimale Haftung der Beschichtung.",
-      imageSrc: "/img/flux/dach-beschichtung-prozess2.webp",
-      imageAlt: "Grundierung des Daches vor Beschichtung",
+      title: "Zwischenergebnis sichtbar",
+      description: "Deutlicher Fortschritt erkennbar - ein Großteil der Verschmutzungen ist bereits entfernt. Das Dach zeigt wieder seine ursprüngliche Farbe.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg",
+      imageAlt: "Kundenprojekt: Dachreinigung Zwischenergebnis mit deutlicher Verbesserung",
       bgColor: "bg-orange-600"
     },
     {
       step: 4,
-      title: "Nano-Beschichtung auftragen",
-      description: "Aufbringung der hochwertigen Nano-Beschichtung in zwei Schichten. Diese schützt vor UV-Strahlung, Witterung und verhindert Neubefall von Moos und Algen.",
-      imageSrc: "/img/flux/dach-beschichtung-prozess3.webp",
-      imageAlt: "Aufbringung der Nano-Beschichtung",
+      title: "Intensive Reinigung fortgesetzt",
+      description: "Intensive Nachbearbeitung hartnäckiger Stellen. Jeder Bereich wird gründlich behandelt, um ein gleichmäßig sauberes Ergebnis zu erzielen.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (4).jpg",
+      imageAlt: "Kundenprojekt: Intensive Nachbearbeitung der Dachreinigung",
       bgColor: "bg-purple-600"
     },
     {
       step: 5,
-      title: "Dachrinnenreinigung",
-      description: "Gründliche Reinigung der Dachrinnen und Fallrohre. Entfernung von Laub, Schmutz und Verstopfungen für optimalen Wasserabfluss.",
-      imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
-      imageAlt: "Dachrinnenreinigung und Wartung",
+      title: "Feinschliff und Details",
+      description: "Abschließende Feinarbeiten an schwer zugänglichen Stellen. Jede Ecke und jeder Winkel wird professionell gereinigt.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (5).jpg",
+      imageAlt: "Kundenprojekt: Feinschliff und Detailarbeit bei der Dachreinigung",
       bgColor: "bg-yellow-600"
     },
     {
       step: 6,
-      title: "Qualitätskontrolle & Garantie",
-      description: "Abschließende Qualitätsprüfung, Dokumentation der Arbeiten und Übergabe mit umfassender Garantie. Wir räumen alles sauber auf und bieten Nachservice.",
-      imageSrc: "/img/flux/team-beratung1.webp",
-      imageAlt: "Qualitätskontrolle und Projektübergabe",
+      title: "Perfektes Endergebnis",
+      description: "Das finale Ergebnis - ein makelloses, wie neues Dach! Der dramatische Unterschied zeigt die Qualität unserer professionellen Dachreinigung.",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (6).jpg",
+      imageAlt: "Kundenprojekt: Perfekt gereinigtes Dach - Endergebnis der professionellen Dachreinigung",
       bgColor: "bg-red-600"
     }
   ];
@@ -63,7 +63,7 @@ export default function Dachreinigung() {
       <SharedDienstleistungenHeader
         title="DACHREINIGUNG & BESCHICHTUNG"
         description="Professionelle Dachreinigung und Beschichtung für ein gepflegtes Erscheinungsbild und längere Haltbarkeit Ihres Daches."
-        imageSrc="/img/flux/dachreinigung-vorher-nachher.webp"
+        imageSrc="/img/kundenbilder/Dachreinigung Resultat!.png"
         imageAlt="Dachreinigung Vorher/Nachher - Beeindruckende Transformation durch professionelle Dachreinigung"
       />
 
@@ -148,7 +148,7 @@ export default function Dachreinigung() {
 
       {/* Call-to-Action */}
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Dachreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für professionelle Dachreinigung"
         title="Bereit für ein sauberes Dach?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin für Ihre Dachreinigung."

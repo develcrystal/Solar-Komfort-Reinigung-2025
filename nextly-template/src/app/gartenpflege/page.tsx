@@ -75,7 +75,7 @@ export default function Gartenpflege() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Gartenpflege.png"
         backgroundAlt="Kontaktieren Sie uns für Gartenpflege"
         title="Bereit für gepflegte Außenanlagen?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

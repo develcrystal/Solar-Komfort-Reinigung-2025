@@ -280,48 +280,79 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* Vorher/Nachher Galerie */}
+      {/* Echte Kundenprojekte - Vorher/Nachher */}
       <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-28">
         <Container>
           <SectionTitle
-            preTitle="Unsere Arbeit"
+            preTitle="Echte Kundenprojekte"
             title="Vorher/Nachher - Sehen Sie den Unterschied"
           >
-            Überzeugen Sie sich selbst von der Qualität unserer Reinigungsarbeiten durch diese Beispiele unserer täglichen Arbeit.
+            Überzeugen Sie sich selbst von der Qualität unserer Arbeit. Diese authentischen Vorher/Nachher-Bilder zeigen echte Kundenprojekte - dramatische Verbesserungen durch unsere professionelle Reinigung.
           </SectionTitle>
           
-          <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div className="space-y-3 sm:space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Dachreinigung & Beschichtung</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 1</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/img/flux/kunden-dachreinigung-1.jpg"
-                  alt="Echtes Kundenprojekt: Dachreinigung und Beschichtung Vorher/Nachher"
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-1.jpg"
+                  alt="Echtes Kundenprojekt: Dachreinigung Vorher/Nachher - dramatische Verbesserung"
                   width={600}
                   height={400}
-                  className="object-cover w-full h-64 sm:h-80"
+                  className="object-cover w-full h-64 sm:h-72"
                 />
               </div>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <strong>Echtes Kundenprojekt:</strong> Dramatischer Unterschied durch professionelle Dachreinigung und Nano-Beschichtung. Links verschmutzt, rechts wie neu!
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                <strong>Authentisches Kundenprojekt:</strong> Sehen Sie den dramatischen Unterschied durch unsere professionelle Dachreinigung.
               </p>
             </div>
             
             <div className="space-y-3 sm:space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Weitere Kundenprojekte</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 2</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/img/flux/kunden-dachreinigung-2.jpg"
-                  alt="Weiteres echtes Kundenprojekt der Dachreinigung"
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-2.jpg"
+                  alt="Weiteres echtes Kundenprojekt: Dachreinigung Vorher/Nachher"
                   width={600}
                   height={400}
-                  className="object-cover w-full h-64 sm:h-80"
+                  className="object-cover w-full h-64 sm:h-72"
                 />
               </div>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <strong>Authentische Referenz:</strong> Einer von über 5.000 zufriedenen Kunden. Sehen Sie selbst die Qualität unserer Arbeit!
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                <strong>Beeindruckendes Ergebnis:</strong> Von verschmutzt zu makelos - unsere Reinigung macht den Unterschied sichtbar.
               </p>
             </div>
+            
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 3</h3>
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-3.jpg"
+                  alt="Drittes echtes Kundenprojekt: Dachreinigung Vorher/Nachher"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-64 sm:h-72"
+                />
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                <strong>Einer von 5.000+ Kunden:</strong> Authentische Referenz - so arbeiten wir für zufriedene Kunden seit Jahren.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-8 sm:mt-10 text-center">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6">
+              <strong>Alle Bilder sind echte Kundenprojekte!</strong> Keine gestellten Fotos - das sind authentische Vorher/Nachher-Ergebnisse unserer täglichen Arbeit.
+            </p>
+            <Link 
+              href="/galerie" 
+              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
+            >
+              Mehr Kundenprojekte ansehen
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
         </Container>
       </div>

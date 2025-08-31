@@ -1,0 +1,45 @@
+# Fullwidth Hero Settings - Backup für spätere Wiederherstellung
+
+## Hero-Bereich (Zeilen 101-141):
+```jsx
+      {/* Hero-Bereich - Fullwidth Layout */}
+      <div className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] w-full">
+        {/* Hintergrundbild mit Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/img/flux/familie-vor-haus-mit-solaranlagen.webp"
+            alt="Zufriedene Familie vor ihrem gepflegten Haus mit Solaranlage - Komfort Gebäudeservice24"
+            fill
+            className="object-cover brightness-[0.85]"
+            style={{ transform: 'scaleX(-1)' }}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40"></div>
+        </div>
+        {/* Hero-Content - Fullwidth ohne Container */}
+        <div className="relative z-10 h-full flex items-center px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            ...Hero Content...
+          </div>
+        </div>
+      </div>
+```
+
+## CTA-Bereich (Zeilen 378-388):
+```jsx
+      {/* Call-to-Action - Fullwidth Layout */}
+      <div id="kontakt" className="w-full">
+        <CtaSection
+          backgroundImage="/img/flux/team-beratung1.webp"
+          backgroundAlt="Kontaktieren Sie uns für professionelle Gebäudereinigung"
+          title="Bereit für professionelle Gebäudereinigung?"
+          description="Vereinbaren Sie noch heute Ihren kostenlosen Beratungstermin! Über 5.000 zufriedene Kunden vertrauen bereits auf unsere Expertise als Tochterfirma der Solar Komfort GmbH."
+          buttonText="Kostenloses Angebot anfordern"
+          buttonLink="/kontakt"
+        />
+      </div>
+```
+
+## Key Changes for Fullwidth:
+1. Hero: Container entfernt → px-4 sm:px-6 lg:px-8
+2. CTA: w-full Klasse hinzugefügt

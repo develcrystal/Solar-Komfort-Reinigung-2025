@@ -176,8 +176,8 @@ export default function Home() {
       {/* Call-to-Action - Fullwidth Layout */}
       <div id="kontakt" className="w-full">
         <CtaSection
-          backgroundImage="/img/flux/team-beratung1.webp"
-          backgroundAlt="Kontaktieren Sie uns für professionelle Gebäudereinigung"
+          backgroundImage="/img/kundenbilder/buero-reinigung-profi.png"
+          backgroundAlt="Professionelle Büroreinigung - Kontaktieren Sie uns für Ihr kostenloses Angebot"
           title="Bereit für professionelle Gebäudereinigung?"
           description="Vereinbaren Sie noch heute Ihren kostenlosen Beratungstermin! Über 5.000 zufriedene Kunden vertrauen bereits auf unsere Expertise als Tochterfirma der Solar Komfort GmbH."
           buttonText="Kostenloses Angebot anfordern"

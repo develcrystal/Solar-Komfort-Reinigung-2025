@@ -50,8 +50,8 @@ export default function Pflasterreinigung() {
             Professionelle Reinigung von Pflastersteinen, Gehwegen und Außenflächen für ein gepflegtes Erscheinungsbild.
           </SectionTitle>
           
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
+          <div className="mt-12 mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                 <li>• Hochdruckreinigung von Pflastersteinen</li>
@@ -61,7 +61,7 @@ export default function Pflasterreinigung() {
                 <li>• Umweltschonende Verfahren</li>
               </ul>
             </div>
-            <div>
+            <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                 <li>✓ Gepflegtes Außenerscheinungsbild</li>

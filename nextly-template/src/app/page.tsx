@@ -74,14 +74,14 @@ const Testimonials = () => (
 );
 
 export const metadata: Metadata = {
-  title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+  title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
   description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH mit über 5.000 zufriedenen Kunden.",
   keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
-    title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+    title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
     description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH.",
     url: "https://komfort-gebaeudeservice24.de",
-    siteName: "Komfort Gebäudeservice24 GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
@@ -89,13 +89,13 @@ export const metadata: Metadata = {
         url: "https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp",
         width: 1200,
         height: 630,
-        alt: "Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
+        alt: "Clean Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
+    title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
     description: "Tochterfirma der Solar Komfort GmbH. Über 5.000 zufriedene Kunden. Komplettlösungen aus einer Hand.",
     images: ["https://komfort-gebaeudeservice24.de/img/flux/kunden-dachreinigung-1.jpg"]
   },
@@ -106,7 +106,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <div className="home-container">
       {/* Hero-Bereich - Fullwidth Layout */}
       <div className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] w-full">
         {/* Hintergrundbild mit Overlay */}
@@ -125,11 +125,11 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              IHRE GEBÄUDEREINIGUNG<br />
-              <span className="whitespace-nowrap">ALS KOMPLETTLÖSUNG</span>
+              CLEAN KOMFORT GEBÄUDESERVICE24 GMBH<br />
+              <span className="whitespace-nowrap">IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
-              Als Tochterfirma der Solar Komfort GmbH sind wir Ihr professioneller Partner für Gebäudereinigung und Facility Management. Mit über 5.000 zufriedenen Kunden und jahrelanger Erfahrung bieten wir Ihnen dokumentierte, transparente Komplettlösungen aus einer Hand.
+              Willkommen bei HK Komfort Facility & Gebäudeservice GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link 
@@ -149,68 +149,70 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Über uns - Firmenvorstellung nach Kundenwunsch */}
-      <section className="section section-light dark:bg-gray-900">
+      {/* Über uns - Firmenvorstellung */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
         <Container>
-          <SectionTitle
-            preTitle="Ihr zuverlässiger Partner"
-            title="Wer wir sind"
-          >
-            Willkommen bei Komfort Gebäudeservice24 GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
-          </SectionTitle>
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Ihr zuverlässiger Partner</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Clean Komfort Gebäudeservice24 GmbH</h3>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Willkommen bei Clean Komfort Gebäudeservice24 GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
+            </p>
+          </div>
           
-          <div className="mt-10 sm:mt-12 md:mt-16">
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 text-center max-w-4xl mx-auto">
+          <div className="mb-16 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center leading-relaxed">
               Ob privates Haus, Wohnanlage, Bürokomplex, Gewerbeobjekt oder öffentliche Einrichtung: Unser Ziel ist es, Ihre Immobilie in Top-Zustand zu halten – optisch, technisch und wirtschaftlich. Wir arbeiten mit eigenem Fachpersonal, modernster Technik und transparenten Abläufen.
             </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-20 h-20 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Eigene Fachkräfte</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Keine Subunternehmer - nur geschultes Personal</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Eigene Fachkräfte</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Keine Subunternehmer - nur geschultes, eigenes Personal</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Zertifizierungen</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Sachkunde für Dach, PV und Spezialbereiche</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Zertifizierungen</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Sachkunde für Dach, PV und Spezialbereiche</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m12-6V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-20 h-20 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m12-6V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5a2 2 0 002 2h2a2 2 0 002-2" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Strukturierte Prozesse</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Transparente Angebote & dokumentierte Abläufe</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Strukturierte Prozesse</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Transparente Angebote & dokumentierte Abläufe</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-20 h-20 bg-purple-50 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-9 h-9 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Liebe zum Detail</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Feste Ansprechpartner & persönliche Betreuung</p>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Persönliche Betreuung</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Feste Ansprechpartner & individuelle Beratung</p>
               </div>
             </div>
-          </div>
         </Container>
       </section>
 
       {/* 3 Hauptbereiche - Leistungen im Überblick */}
-      <section id="leistungen" className="section">
+      <section id="leistungen" className="py-20 bg-gray-50 dark:bg-gray-900">
         <Container>
           <SectionTitle
             preTitle="Unsere Expertise"
@@ -218,33 +220,37 @@ export default function Home() {
           >
             Mehr als nur Reinigung – wir bieten Ihnen Komplettlösungen für alle Gebäudebereiche: von der gründlichen Reinigung über technischen Service bis hin zum professionellen Facility Management.
           </SectionTitle>
+          <LeistungenImUberblick />
         </Container>
-        <LeistungenImUberblick />
       </section>
 
       {/* Problem & Lösung */}
-      <section className="section section-light dark:bg-gray-900">
-        <ProblemLoesungSection />
+      <section className="py-20 bg-blue-50 dark:bg-gray-800">
+        <Container>
+          <ProblemLoesungSection />
+        </Container>
       </section>
 
       {/* Unsere Vorteile */}
-      <section className="section section-light dark:bg-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <Container>
-          <SectionTitle
-            preTitle="Warum Komfort Gebäudeservice24?"
-            title="Unsere Vorteile auf einen Blick"
-          >
-            Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
-          </SectionTitle>
-          <div className="mt-10 sm:mt-12 md:mt-16">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Warum Clean Komfort Gebäudeservice24?</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Vorteile auf einen Blick</h3>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
+            </p>
+          </div>
+          <div className="mt-12">
             <Benefits />
           </div>
         </Container>
       </section>
 
       {/* Prozess */}
-      <section className="section">
-        <Container>
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <Container className="max-w-6xl">
           <ExtendedProcessSteps 
             steps={[
               {
@@ -363,22 +369,30 @@ export default function Home() {
         </Container>
       </section>
 
-
       {/* Kundenstimmen */}
-      <section className="section section-light dark:bg-gray-900">
-        <TestimonialsSection />
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Das sagen unsere Kunden</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Bewertungen & Erfahrungen</h3>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+          </div>
+          <Testimonials />
+        </Container>
       </section>
 
       {/* FAQ */}
-      <section className="section">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <Container>
-          <SectionTitle
-            preTitle="Häufige Fragen"
-            title="Antworten auf Ihre Fragen"
-          >
-            Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Reinigungsdienstleistungen.
-          </SectionTitle>
-          <div className="mt-10 sm:mt-12 md:mt-16 max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Häufige Fragen</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Antworten auf Ihre Fragen</h3>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Reinigungsdienstleistungen.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto">
             <Faq />
           </div>
         </Container>
@@ -395,6 +409,6 @@ export default function Home() {
           buttonLink="/kontakt"
         />
       </div>
-    </>
+    </div>
   );
 }

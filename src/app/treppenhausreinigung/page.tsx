@@ -76,7 +76,7 @@ export default function Treppenhausreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Treppenhausreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Treppenhausreinigung"
         title="Bereit für ein sauberes Treppenhaus?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

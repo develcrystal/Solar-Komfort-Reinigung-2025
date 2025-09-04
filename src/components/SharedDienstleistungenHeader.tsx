@@ -28,7 +28,7 @@ export const SharedDienstleistungenHeader: React.FC<SharedDienstleistungenHeader
     </div>
 
     <Container className="relative z-10 h-full flex items-center">
-      <div className="max-w-2xl sm:max-w-3xl">
+      <div className="max-w-2xl sm:max-w-3xl lg:max-w-4xl">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
           {title}
         </h1>

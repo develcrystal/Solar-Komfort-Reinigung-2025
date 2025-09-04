@@ -7,17 +7,26 @@ import { CtaSection } from '@/components/CtaSection';
 import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
-  title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
-  description: "Kontaktieren Sie Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
-  keywords: "Kontakt, Komfort Gebäudeservice24, Gebäudereinigung Anfrage, Reinigung Beratung, Darmstadt",
+  title: "Kontakt - Clean Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
+  description: "Kontaktieren Sie Clean Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
+  keywords: "Kontakt, Clean Komfort Gebäudeservice24, Gebäudereinigung Anfrage, Reinigung Beratung, Darmstadt",
   openGraph: {
-    title: "Kontakt - Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
-    description: "Kontaktieren Sie Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
+    title: "Kontakt - Clean Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
+    description: "Kontaktieren Sie Clean Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
     url: "https://komfort-gebaeudeservice24.de/kontakt",
-    siteName: "Komfort Gebäudeservice24 GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt - Clean Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
+    description: "Kontaktieren Sie Clean Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
+    images: ["https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp"]
+  },
+  alternates: {
+    canonical: "https://komfort-gebaeudeservice24.de/kontakt"
+  }
 };
 
 export default function Kontakt() {
@@ -28,7 +37,7 @@ export default function Kontakt() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/img/flux/team-gruppenfoto1.webp"
-            alt="Kontakt - Solar Komfort Team"
+            alt="Kontakt - Clean Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"
             priority
@@ -67,7 +76,7 @@ export default function Kontakt() {
                 <div className="flex flex-col items-center mb-6 sm:mb-8">
                   <Image
                     src="/img/flux/team-beratung1.webp"
-                    alt="Team Solar Komfort GmbH"
+                    alt="Team Clean Komfort Gebäudeservice24 GmbH"
                     width={300}
                     height={300}
                     className="mb-4 sm:mb-6 w-48 h-48 sm:w-64 sm:h-64 object-contain"
@@ -75,13 +84,13 @@ export default function Kontakt() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
                 </div>
                 
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Solar Komfort GmbH</p>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Musterstraße 123</p>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">12345 Musterstadt</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">HK Komfort Facility & Gebäudeservice GmbH</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Musterstraße 12</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">64283 Darmstadt</p>
                 
                 <h3 className="text-lg sm:text-xl font-semibold mb-3">Kontaktdaten</h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Telefon: +49 123 456789</p>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">E-Mail: info@solar-komfort.de</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Telefon: 06151 / 15 465 92</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">E-Mail: info@komfort-facility.de</p>
                 
                 <h3 className="text-lg sm:text-xl font-semibold mb-3">Öffnungszeiten</h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Montag - Freitag: 8:00 - 17:00 Uhr</p>
@@ -142,24 +151,24 @@ export default function Kontakt() {
             {/* Persönlicher Ansprechpartner */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden sm:col-span-2 lg:col-span-1">
               <div className="relative h-48 sm:h-56 md:h-64">
-                <Image 
+                <Image
                   src="/img/flux/team-geschaeftsfuehrerteam1.webp"
-                  alt="Max Mustermann - Ihr Ansprechpartner"
+                  alt="Mohamed Kaddouri - Ihr Ansprechpartner"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold mb-2">Max Mustermann</h3>
-                <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium mb-3">Kundenberatung & Vertrieb</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2">Mohamed Kaddouri</h3>
+                <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium mb-3">Geschäftsführung</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
-                  Mit über 10 Jahren Erfahrung in der Dachsanierung berät Max Sie kompetent zu allen Fragen rund um Ihr Projekt.
+                  Als Geschäftsführer der HK Komfort Facility & Gebäudeservice GmbH vereint Mohamed jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
                 </p>
                 <div className="flex items-center space-x-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  <span className="text-sm sm:text-base text-gray-600 dark:text-gray-300">+49 123 456789</span>
+                  <span className="text-sm sm:text-base text-gray-600 dark:text-gray-300">06151 / 15 465 92</span>
                 </div>
               </div>
             </div>

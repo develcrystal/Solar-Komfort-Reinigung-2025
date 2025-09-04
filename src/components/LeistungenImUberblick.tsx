@@ -64,6 +64,50 @@ const services: Service[] = [
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/hausmeisterservice"
+  },
+  {
+    title: "Entrümpelung & Haushaltsauflösungen",
+    image: "/img/flux/entruempelung-vorher-nachher.webp",
+    description: [
+      "Wohnungsauflösungen & Kellerentrümpelung",
+      "Fachgerechte Entsorgung & Trennung",
+      "Diskret & zuverlässig"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/entruempelung"
+  },
+  {
+    title: "Außenpflege & Saisonarbeiten",
+    image: "/img/flux/aussenpflege-prozess.webp",
+    description: [
+      "Terrassen- & Pflasterreinigung",
+      "Spielplatzkontrolle & Mülltonnendienst",
+      "Saisonale Arbeiten & Sonderaufträge"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/aussenpflege"
+  },
+  {
+    title: "Gartenpflege",
+    image: "/img/flux/gartenpflege-prozess.webp",
+    description: [
+      "Rasenmähen & Heckenschnitt",
+      "Laubentfernung & Beetpflege",
+      "Schnittgutentsorgung & Kompostierung"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/gartenpflege"
+  },
+  {
+    title: "Winterdienst",
+    image: "/img/flux/winterdienst-prozess.webp",
+    description: [
+      "Schneeräumung & Streudienst",
+      "24/7-Rufbereitschaft & Vertragssicherheit",
+      "Moderne Ausrüstung & Umweltfreundlichkeit"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/winterdienst"
   }
 ];
 

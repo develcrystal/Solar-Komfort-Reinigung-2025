@@ -75,7 +75,7 @@ export default function Industriereinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Industriereinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Industriereinigung"
         title="Bereit für professionelle Industriereinigung?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

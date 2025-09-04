@@ -75,7 +75,7 @@ export default function Hausmeisterservice() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Haus.png"
         backgroundAlt="Kontaktieren Sie uns für Hausmeisterservice"
         title="Bereit für professionellen Hausmeisterservice?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

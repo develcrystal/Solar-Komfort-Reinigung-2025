@@ -240,7 +240,7 @@ export const Navbar = () => {
             <div className="flex items-center mr-2 sm:mr-3">
               <ThemeChanger />
             </div>
-            <div className="hidden mr-2 sm:mr-3 xl:flex nav__item">
+            <div className="hidden mr-2 sm:mr-3 2xl:flex nav__item">
               <Link href="/kostenrechner" className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md md:ml-5 hover:bg-indigo-700 transition-colors">
                 Kostenrechner
               </Link>
@@ -252,7 +252,7 @@ export const Navbar = () => {
             <>
                 <Disclosure.Button
                   aria-label="Toggle Menu"
-                  className="px-2 py-1 text-gray-500 rounded-md xl:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation">
+                  className="px-2 py-1 text-gray-500 rounded-md 2xl:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation">
                   <svg
                     className="w-6 h-6 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +273,7 @@ export const Navbar = () => {
                   </svg>
                 </Disclosure.Button>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5 xl:hidden">
+                <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5 2xl:hidden">
                   <>
                     {navigation.map((item, index) => (
                       <div key={index} className="w-full">
@@ -331,8 +331,8 @@ export const Navbar = () => {
         </Disclosure>
         
         {/* Desktop Mega Menu */}
-        <div className="hidden xl:flex xl:items-center">
-          <ul className="items-center justify-center flex-1 pt-6 list-none xl:pt-0 xl:flex">
+        <div className="hidden 2xl:flex 2xl:items-center">
+          <ul className="items-center justify-center flex-1 pt-6 list-none 2xl:pt-0 2xl:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 {menu.submenu ? (

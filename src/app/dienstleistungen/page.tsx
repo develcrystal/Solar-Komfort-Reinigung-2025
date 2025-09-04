@@ -129,9 +129,9 @@ export default function Dienstleistungen() {
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
+          <Image
             src="/img/flux/dachbeschichtung-prozess.webp"
-            alt="Dienstleistungen - Solar Komfort"
+            alt="Dienstleistungen - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"
             priority
@@ -144,9 +144,8 @@ export default function Dienstleistungen() {
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">UNSERE DIENSTLEISTUNGEN</h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-100 drop-shadow-md">
-                Die Solar Komfort GmbH bietet Ihnen professionelle Dienstleistungen rund um Ihr Dach und Ihre Fassade. 
-                Mit unserer langjährigen Erfahrung und modernen Techniken sorgen wir für nachhaltige Ergebnisse, 
-                die nicht nur die Optik verbessern, sondern auch den Wert Ihrer Immobilie steigern.
+                Die HK Komfort Facility & Gebäudeservice GmbH bietet Ihnen professionelle Dienstleistungen rund um Gebäudereinigung, technischen Service und Facility Management.
+                Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
               </p>
             </div>
           </div>

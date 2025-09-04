@@ -1,66 +1,119 @@
 import { GalleryImage } from '@/components/gallery';
 
 export const galleryImages: GalleryImage[] = [
+  // Dachreinigung - Echte Kundenbilder
   {
-    src: '/img/flux/kunden-dachreinigung-1.jpg',
-    alt: 'Dachreinigung und Nano-Beschichtung',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg',
+    alt: 'Dachreinigung Kundenprojekt - Vorher/Nachher',
     category: 'Dachreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/kunden-dachreinigung-2.jpg',
-    alt: 'Weitere Dachreinigung Referenz',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).jpg',
+    alt: 'Dachbeschichtung Kundenprojekt',
     category: 'Dachreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/fassadenreinigung-vorher-nachher.webp',
-    alt: 'Fassadenreinigung Vorher/Nachher',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg',
+    alt: 'Professionelle Dachreinigung',
+    category: 'Dachreinigung',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/img/kundenbilder/Dachreinigung Resultat!.png',
+    alt: 'Dachreinigung Endergebnis',
+    category: 'Dachreinigung',
+    width: 800,
+    height: 600
+  },
+  
+  // Fassadenreinigung
+  {
+    src: '/img/kundenbilder/Fassaden-Reingung.png',
+    alt: 'Professionelle Fassadenreinigung',
     category: 'Fassadenreinigung',
     width: 800,
     height: 600
   },
+  
+  // Büroreinigung
   {
-    src: '/img/flux/team-beratung1.webp',
-    alt: 'Unser Team bei der Beratung',
-    category: 'Team',
+    src: '/img/kundenbilder/Büro-Reinigung (1).png',
+    alt: 'Büroreinigung - Moderne Büros',
+    category: 'Büroreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/referenz-gewerbeobjekt1.webp',
-    alt: 'Gewerbeobjekt nach der Reinigung',
-    category: 'Referenzen',
+    src: '/img/kundenbilder/Büro-Reinigung (2).png',
+    alt: 'Gewerbliche Büroreinigung',
+    category: 'Büroreinigung',
+    width: 800,
+    height: 600
+  },
+  
+  // Industriereinigung
+  {
+    src: '/img/kundenbilder/Industriereinigung (1).png',
+    alt: 'Industrielle Reinigungsarbeiten',
+    category: 'Industriereinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/ausruestung1.webp',
-    alt: 'Unsere moderne Ausrüstung',
-    category: 'Ausrüstung',
+    src: '/img/kundenbilder/Industriereinigung (2).png',
+    alt: 'Gewerbliche Industriereinigung',
+    category: 'Industriereinigung',
+    width: 800,
+    height: 600
+  },
+  
+  // Pflasterreinigung
+  {
+    src: '/img/kundenbilder/Pflaster-stein-Reinigung (2).png',
+    alt: 'Pflasterstein-Reinigung Vorher/Nachher',
+    category: 'Pflasterreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/solaranlagenreinigung1.webp',
-    alt: 'Solaranlagenreinigung',
-    category: 'Solaranlagenreinigung',
+    src: '/img/kundenbilder/Pflaster-stein-Reinigung (3).png',
+    alt: 'Professionelle Steinreinigung',
+    category: 'Pflasterreinigung',
+    width: 800,
+    height: 600
+  },
+  
+  // Weitere Services
+  {
+    src: '/img/kundenbilder/Grundreinigung.png',
+    alt: 'Umfassende Grundreinigung',
+    category: 'Grundreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/team-arbeitskleidung1.webp',
-    alt: 'Unser Team in Arbeitskleidung',
-    category: 'Team',
+    src: '/img/kundenbilder/Treppenhausreinigung.png',
+    alt: 'Treppenhausreinigung',
+    category: 'Treppenhausreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/flux/ausruestung2.webp',
-    alt: 'Hochdruckreiniger im Einsatz',
-    category: 'Ausrüstung',
+    src: '/img/kundenbilder/Krankenhausreinigung (1).png',
+    alt: 'Hygienische Krankenhausreinigung',
+    category: 'Krankenhausreinigung',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/img/kundenbilder/Gartenpflege (1).png',
+    alt: 'Professionelle Gartenpflege',
+    category: 'Gartenpflege',
     width: 800,
     height: 600
   }
@@ -70,8 +123,11 @@ export const galleryCategories = [
   'Alle',
   'Dachreinigung',
   'Fassadenreinigung',
-  'Solaranlagenreinigung',
-  'Referenzen',
-  'Team',
-  'Ausrüstung'
+  'Büroreinigung',
+  'Industriereinigung',
+  'Pflasterreinigung',
+  'Grundreinigung',
+  'Treppenhausreinigung',
+  'Krankenhausreinigung',
+  'Gartenpflege'
 ];

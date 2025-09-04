@@ -74,7 +74,7 @@ const TestimonialsSection = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/ideogram-images/happy-family.jpeg"
+              src="/img/flux/familie-zufrieden.webp"
               alt="Zufriedene Familie vor ihrem Haus nach professioneller Reinigung"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

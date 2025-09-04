@@ -75,7 +75,7 @@ export default function Grundreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Grundreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Grundreinigung"
         title="Bereit für eine Grundreinigung?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

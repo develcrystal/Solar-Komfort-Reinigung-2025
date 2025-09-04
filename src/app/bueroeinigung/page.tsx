@@ -75,7 +75,7 @@ export default function Bueroreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Büroreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Büroreinigung"
         title="Bereit für ein sauberes Büro?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

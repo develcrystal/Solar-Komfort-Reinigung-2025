@@ -75,7 +75,7 @@ export default function Fensterreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Büro-Reinigung (2).png"
         backgroundAlt="Kontaktieren Sie uns für Fensterreinigung"
         title="Bereit für klare Durchsicht?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

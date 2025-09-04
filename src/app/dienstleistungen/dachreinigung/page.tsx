@@ -78,11 +78,11 @@ export default function Dachreinigung() {
           </SectionTitle>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Unsere Leistungen
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+              <ul className="space-y-3 text-gray-600 dark:text-gray-300 flex-grow">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3">•</span>
                   Gründliche Dachreinigung mit Hochdrucktechnik
@@ -106,11 +106,11 @@ export default function Dachreinigung() {
               </ul>
             </div>
             
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Ihre Vorteile
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+              <ul className="space-y-3 text-gray-600 dark:text-gray-300 flex-grow">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-3">✓</span>
                   Werterhaltung der Immobilie
@@ -148,7 +148,7 @@ export default function Dachreinigung() {
 
       {/* Call-to-Action */}
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Dachreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für professionelle Dachreinigung"
         title="Bereit für ein sauberes Dach?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin für Ihre Dachreinigung."

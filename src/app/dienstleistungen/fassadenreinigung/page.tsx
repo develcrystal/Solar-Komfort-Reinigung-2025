@@ -178,7 +178,7 @@ export default function Fassadenreinigung() {
 
       {/* Call-to-Action */}
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Fassaden-Reingung.png"
         backgroundAlt="Kontaktieren Sie uns für professionelle Fassadenreinigung"
         title="Bereit für eine saubere Fassade?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin für Ihre Fassadenreinigung."

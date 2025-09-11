@@ -24,7 +24,7 @@ const testimonials = [
     rating: "★★★★★", 
     text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Absolute Empfehlung!",
     name: "Dr. Michael Schmidt",
-    role: "Zahnarztpraxis Berlin-Mitte",
+    role: "Zahnarztpraxis Groß-Gerau",
     initial: "M"
   },
   {
@@ -122,11 +122,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40"></div>
         </div>
         {/* Hero-Content - Fullwidth ohne Container */}
-        <div className="relative z-10 h-full flex items-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              CLEAN KOMFORT GEBÄUDESERVICE24 GMBH<br />
-              <span className="whitespace-nowrap">IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG</span>
+        <div className="relative z-10 h-full flex items-center">
+          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+            <div className="max-w-4xl ml-4 sm:ml-8 lg:ml-48">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.2] tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
+              KOMFORT GEBÄUDESERVICE24 GMBH<br />
+              IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
               Willkommen bei HK Komfort Facility & Gebäudeservice GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
@@ -145,111 +146,370 @@ export default function Home() {
                 Unsere Leistungen
               </Link>
             </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Über uns - Firmenvorstellung */}
-      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Ihr zuverlässiger Partner</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Clean Komfort Gebäudeservice24 GmbH</h3>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Willkommen bei Clean Komfort Gebäudeservice24 GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Komfort Gebäudeservice24 GmbH</h3>
+            <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              Willkommen bei Komfort Gebäudeservice24 GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
             </p>
           </div>
           
-          <div className="mb-16 max-w-4xl mx-auto">
-            <p className="text-lg text-gray-600 dark:text-gray-300 text-center leading-relaxed">
+          <div className="mb-12 sm:mb-16 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 text-center leading-relaxed">
               Ob privates Haus, Wohnanlage, Bürokomplex, Gewerbeobjekt oder öffentliche Einrichtung: Unser Ziel ist es, Ihre Immobilie in Top-Zustand zu halten – optisch, technisch und wirtschaftlich. Wir arbeiten mit eigenem Fachpersonal, modernster Technik und transparenten Abläufen.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
-                <div className="w-20 h-20 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
-                  <svg className="w-9 h-9 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-8 sm:w-9 h-8 sm:h-9 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Eigene Fachkräfte</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Keine Subunternehmer - nur geschultes, eigenes Personal</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Eigene Fachkräfte</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Keine Subunternehmer - nur geschultes, eigenes Personal</p>
               </div>
               
-              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
-                <div className="w-20 h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
-                  <svg className="w-9 h-9 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-8 sm:w-9 h-8 sm:h-9 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Zertifizierungen</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Sachkunde für Dach, PV und Spezialbereiche</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Zertifizierungen</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Sachkunde für Dach, PV und Spezialbereiche</p>
               </div>
               
-              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
-                <div className="w-20 h-20 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
-                  <svg className="w-9 h-9 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-8 sm:w-9 h-8 sm:h-9 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m12-6V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 5a2 2 0 002 2h2a2 2 0 002-2" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Strukturierte Prozesse</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Transparente Angebote & dokumentierte Abläufe</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Strukturierte Prozesse</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Transparente Angebote & dokumentierte Abläufe</p>
               </div>
               
-              <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
-                <div className="w-20 h-20 bg-purple-50 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110">
-                  <svg className="w-9 h-9 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                <div className="w-16 sm:w-20 h-16 sm:h-20 bg-purple-50 dark:bg-purple-900/20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-transform duration-300 group-hover:scale-110">
+                  <svg className="w-8 sm:w-9 h-8 sm:h-9 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Persönliche Betreuung</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">Feste Ansprechpartner & individuelle Beratung</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">Persönliche Betreuung</h3>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Feste Ansprechpartner & individuelle Beratung</p>
               </div>
             </div>
         </Container>
       </section>
 
-      {/* 3 Hauptbereiche - Leistungen im Überblick */}
-      <section id="leistungen" className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* Service Grid - 6-Service Komplettlösung */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <SectionTitle
-            preTitle="Unsere Expertise"
-            title="Drei Hauptbereiche aus einer Hand"
-          >
-            Mehr als nur Reinigung – wir bieten Ihnen Komplettlösungen für alle Gebäudebereiche: von der gründlichen Reinigung über technischen Service bis hin zum professionellen Facility Management.
-          </SectionTitle>
-          <LeistungenImUberblick />
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Ihre Gebäudereinigung als Komplettlösung
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Professionelle Reinigungsdienstleistungen für jeden Bereich - von der Fassade bis zum Innenraum.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Service 1: Fassadenreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Fassaden-Reingung.png" 
+                  alt="Professionelle Fassadenreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Fassadenreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Wir sorgen dafür, dass Ihre Fassade richtig wieder strahlt. Entfernung von Algen und Schmutz ebenso effektiv wie professionell.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 2: Fensterreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Büroreinigung.png" 
+                  alt="Professionelle Fensterreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Fensterreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Sie brauchen einen klaren Durchblick? Unsere Experten übernehmen gern die professionelle Reinigung von Fenstern und Glasflächen in bester Qualität.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 3: Sanitärreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Krankenhausreinigung.png" 
+                  alt="Hygienische Sanitärreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Sanitärreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Durch die hygienische Reinigung der sanitären Anlagen erreichen diese immer einen optimalen und sauberen Zustand für alle.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 4: Bodenreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Grundreinigung.png" 
+                  alt="Professionelle Bodenreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Bodenreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Egal welcher Bodenbelag, wir haben stets passende Reinigungsmittel und kennen die richtige Reinigungstechnik für gepflegten Boden.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 5: Hausmeisterservice */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Haus.png" 
+                  alt="Zuverlässiger Hausmeisterservice"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Hausmeisterservice
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Mit dem Hausmeisterservice ist alles geregelt. Kleine Reparaturen, Energieabrechnung und gepflegte Instandhaltung.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 6: Teppichreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Pflaster-stein-Reinigung.png" 
+                  alt="Professionelle Teppichreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Teppichreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Wir übernehmen die Tiefenreinigung sämtlicher Bodenbeläge - materialschonend und hygienisch. Teppiche wie neu.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-8 sm:mt-12">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Link 
+                href="/kontakt" 
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
+              >
+                Kostenlose Beratung anfragen
+              </Link>
+              <Link 
+                href="/kostenrechner" 
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation"
+              >
+                Kosten berechnen
+              </Link>
+            </div>
+          </div>
         </Container>
       </section>
 
-      {/* Problem & Lösung */}
-      <section className="py-20 bg-blue-50 dark:bg-gray-800">
+      {/* Problem vs. Lösung - Vergleich */}
+      <section className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-0 bg-gradient-to-b from-red-50 to-green-50">
         <Container>
-          <ProblemLoesungSection />
+          <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+              Der Unterschied ist offensichtlich
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              Warum über 5.000 Kunden von anderen Reinigungsfirmen zu uns gewechselt sind
+            </p>
+          </div>
+
+            {/* Vergleichstabelle */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                {/* Header Row */}
+                <div className="bg-gray-100 p-6 font-semibold text-gray-800">
+                  Das Problem
+                </div>
+                <div className="bg-red-100 p-6 font-semibold text-red-800">
+                  ❌ Andere Reinigungsfirmen
+                </div>
+                <div className="bg-green-100 p-6 font-semibold text-green-800">
+                  ✅ Komfort Gebäudeservice24
+                </div>
+
+                {/* Comparison Rows */}
+                <div className="p-6 border-t border-gray-200 bg-gray-50">
+                  <p className="font-medium text-gray-900">Reinigungsqualität schwankt trotz Beschwerden</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-red-50">
+                  <p className="text-red-700">Versprechen Besserung, aber keine Struktur</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-green-50">
+                  <p className="text-green-700 font-medium">Strukturierte Qualitätskontrolle mit Checklisten</p>
+                </div>
+
+                <div className="p-6 border-t border-gray-200 bg-gray-50">
+                  <p className="font-medium text-gray-900">Termine werden nicht eingehalten</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-red-50">
+                  <p className="text-red-700">Ausreden und Entschuldigungen</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-green-50">
+                  <p className="text-green-700 font-medium">Feste Terminpläne + Backup-Teams</p>
+                </div>
+
+                <div className="p-6 border-t border-gray-200 bg-gray-50">
+                  <p className="font-medium text-gray-900">Ständiges Nachfassen erforderlich</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-red-50">
+                  <p className="text-red-700">Reagieren nur auf Beschwerden</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-green-50">
+                  <p className="text-green-700 font-medium">Proaktive Kommunikation + feste Ansprechpartner</p>
+                </div>
+
+                <div className="p-6 border-t border-gray-200 bg-gray-50">
+                  <p className="font-medium text-gray-900">Unprofessionelles Personal</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-red-50">
+                  <p className="text-red-700">Wechselnde Subunternehmer</p>
+                </div>
+                <div className="p-6 border-t border-gray-200 bg-green-50">
+                  <p className="text-green-700 font-medium">Eigenes, geschultes Fachpersonal</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
+
+      {/* Unser Versprechen - Fullwidth Section */}
+      <div className="w-full mt-16 sm:mt-20 md:mt-24 lg:mt-28">
+        <section className="relative py-20 sm:py-24 md:py-28 lg:py-32 w-full">
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src="/img/kundenbilder/buero-reinigung-profi.png"
+              alt="Professionelle Gebäudereinigung - Unser Versprechen an Sie"
+              fill
+              className="object-cover brightness-50"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          </div>
+          
+          <div className="relative z-10 w-full px-4">
+            <div className="text-center max-w-5xl mx-auto">
+              <h3 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
+                Unser Versprechen an Sie:
+              </h3>
+              <p className="text-xl mb-8 text-gray-100 drop-shadow-md">
+                Konstante Qualität und zuverlässiger Service - oder Sie zahlen den ersten Monat nicht.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-3xl mx-auto">
+                <Link 
+                  href="/kontakt" 
+                  className="px-8 py-4 text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex-1"
+                >
+                  Jetzt kostenlos testen
+                </Link>
+                <Link 
+                  href="/galerie" 
+                  className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg flex-1"
+                >
+                  Referenzen anfordern
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Unsere Leistungen im Überblick - Fullwidth */}
+      <div id="leistungen" className="w-full">
+        <LeistungenImUberblick />
+      </div>
 
       {/* Unsere Vorteile */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Warum Clean Komfort Gebäudeservice24?</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Vorteile auf einen Blick</h3>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Warum Komfort Gebäudeservice24?</h2>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Unsere Vorteile auf einen Blick</h3>
+            <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               Als Tochterfirma der Solar Komfort GmbH bieten wir Ihnen Komplettlösungen aus einer Hand - besser, professioneller, dokumentierter und transparenter.
             </p>
           </div>
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <Benefits />
           </div>
         </Container>
       </section>
 
       {/* Prozess */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container className="max-w-6xl">
           <ExtendedProcessSteps 
             steps={[
@@ -257,7 +517,7 @@ export default function Home() {
                 step: 1,
                 title: "Beratung & Angebot",
                 description: "Unverbindliche Beratung, umfassende Bedarfsanalyse und maßgeschneidertes Angebot. Wir nehmen uns Zeit für Ihre individuellen Anforderungen und erstellen eine auf Sie zugeschnittene Lösung.",
-                imageSrc: "/img/flux/team-beratung1.webp",
+                imageSrc: "/img/flux/hero-ueber-uns1.webp",
                 imageAlt: "Persönliche Beratung und Angebotserstellung",
                 bgColor: "bg-blue-600"
               },
@@ -281,19 +541,35 @@ export default function Home() {
                 step: 4,
                 title: "Qualitätskontrolle & Übergabe",
                 description: "Abschließende Qualitätsprüfung, ausführliche Dokumentation der durchgeführten Arbeiten und Übergabe mit umfassender Garantie. Ihre Zufriedenheit ist unser Ziel.",
-                imageSrc: "/img/kundenbilder/Dachreinigung Resultat!.png",
+                imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
                 imageAlt: "Qualitätskontrolle und Projektübergabe",
                 bgColor: "bg-red-600"
+              },
+              {
+                step: 5,
+                title: "Nachbereitung & Feedback",
+                description: "Nach Abschluss der Arbeiten erfolgt eine finale Überprüfung und Einholung Ihres Feedbacks zur Sicherstellung Ihrer vollsten Zufriedenheit.",
+                imageSrc: "/img/flux/hero-kontakt1.webp",
+                imageAlt: "Nachbereitung und Feedback-Einholung",
+                bgColor: "bg-blue-500"
+              },
+              {
+                step: 6,
+                title: "Langfristige Betreuung & Wartung",
+                description: "Wir bieten optional langfristige Betreuungsverträge und regelmäßige Wartungsarbeiten, um den hohen Standard Ihrer Immobilie dauerhaft zu sichern.",
+                imageSrc: "/img/flux/familie-vor-haus-mit-solaranlagen.webp",
+                imageAlt: "Langfristige Betreuung und Wartung",
+                bgColor: "bg-green-500"
               }
             ]}
-            title="Unser bewährter 4-Stufen-Prozess"
+            title="Unser bewährter 6-Stufen-Prozess"
             subtitle="Vom ersten Kontakt bis zur zufriedenen Übergabe - so garantieren wir Ihnen professionelle Ergebnisse"
           />
         </Container>
       </section>
 
-      {/* Echte Kundenprojekte - Vorher/Nachher */}
-      <section className="section section-light dark:bg-gray-900">
+      {/* Le - Vorher/Nachher */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
           <SectionTitle
             preTitle="Echte Kundenprojekte"
@@ -354,13 +630,13 @@ export default function Home() {
           
           <div className="mt-8 sm:mt-10 text-center">
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6">
-              <strong>Alle Bilder sind echte Kundenprojekte!</strong> Keine gestellten Fotos - das sind authentische Vorher/Nachher-Ergebnisse unserer täglichen Arbeit.
+              Hier sehen Sie Beispiele unserer Dachreinigungsarbeiten mit deutlich sichtbaren Verbesserungen.
             </p>
             <Link 
               href="/galerie" 
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
             >
-              Mehr Kundenprojekte ansehen
+              Mehr Projekte ansehen
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -370,25 +646,25 @@ export default function Home() {
       </section>
 
       {/* Kundenstimmen */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Das sagen unsere Kunden</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Bewertungen & Erfahrungen</h3>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Bewertungen & Erfahrungen</h3>
+            <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
           </div>
           <Testimonials />
         </Container>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Häufige Fragen</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Antworten auf Ihre Fragen</h3>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Antworten auf Ihre Fragen</h3>
+            <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
               Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu unseren Reinigungsdienstleistungen.
             </p>
           </div>

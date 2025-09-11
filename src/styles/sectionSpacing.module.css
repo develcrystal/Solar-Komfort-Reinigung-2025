@@ -1,5 +1,5 @@
 .section {
-  @apply py-16 md:py-24 lg:py-28;
+  @apply py-16 sm:py-20 md:py-24 lg:py-28;
   
   /* Add smooth scrolling for anchor links */
   scroll-margin-top: 6rem;
@@ -22,7 +22,7 @@
 
 /* Section with top margin only */
 .section-mt {
-  @apply mt-16 md:mt-24 lg:mt-28;
+  @apply mt-16 sm:mt-20 md:mt-24 lg:mt-28;
 }
 
 /* Section with bottom margin only */

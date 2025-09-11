@@ -8,14 +8,6 @@
         "@browsermcp/mcp@latest"
       ]
     },
-    "serena": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "@serena-mcp/server@latest"
-      ]
-    },
     "puppeteer": {
       "command": "cmd",
       "args": [

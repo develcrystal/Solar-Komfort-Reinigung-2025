@@ -82,6 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       services: [
         'hausmeisterservice',
         'gartenpflege',
+        'entruempelung',
         'winterdienst',
         'aussenpflege'
       ]
@@ -96,8 +97,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ];
 
-  // Root-Level Service-Seiten
-  const rootServices = ['entruempelung', 'galerie'];
+  // Keine weiteren Services auf Root-Level - alle sind kategorisiert
+  const rootServices: string[] = [];
 
   // Generiere Service-Seiten mit hierarchischer Struktur
   const servicePages: SitemapEntry[] = [];

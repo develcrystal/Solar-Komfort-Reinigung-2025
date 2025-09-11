@@ -54,7 +54,15 @@
       "Bash(del nul)",
       "Read(d:\\Downloads von C/**)",
       "Bash(grep:*)",
-      "mcp__puppeteer__puppeteer_evaluate"
+      "mcp__puppeteer__puppeteer_evaluate",
+      "WebFetch(domain:nextly-template-as87tcx9k-develcrystals-projects.vercel.app)",
+      "Read(//f/108Coding/solar-komfort/nextly-template/src/app/dienstleistungen/**)",
+      "Read(//f/108Coding/solar-komfort/nextly-template/src/components/**)",
+      "mcp__browsermcp-cline__browser_screenshot",
+      "mcp__browsermcp-cline__browser_click",
+      "Bash(del /s /q .next)",
+      "mcp__browsermcp-cline__browser_press_key",
+      "WebFetch(domain:solar-komfort-reinigung-2025.vercel.app)"
     ],
     "deny": []
   },

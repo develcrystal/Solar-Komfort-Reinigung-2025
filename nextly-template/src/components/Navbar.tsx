@@ -144,7 +144,7 @@ export const Navbar = () => {
         },
         { 
           name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/entruempelung",
+          href: "/gebaeudeservice/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
           icon: "📦"
         },

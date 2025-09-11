@@ -382,7 +382,7 @@ export default function Home() {
               Der Unterschied ist offensichtlich
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              Warum über 5.000 Kunden von anderen Reinigungsfirmen zu uns gewechselt sind
+              Warum über 100 zufriedene Kunden von anderen Reinigungsfirmen zu uns gewechselt sind
             </p>
           </div>
 

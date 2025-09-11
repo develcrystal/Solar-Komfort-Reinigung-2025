@@ -141,7 +141,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/entruempelung"
+    link: "/gebaeudeservice/entruempelung"
   }
 ];
 

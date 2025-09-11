@@ -152,9 +152,9 @@ export default function Home() {
       </div>
 
       {/* Über uns - Firmenvorstellung */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Ihr zuverlässiger Partner</h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Komfort Gebäudeservice24 GmbH</h3>
             <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Service Grid - 6-Service Komplettlösung */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -374,7 +374,7 @@ export default function Home() {
       </section>
 
       {/* Problem vs. Lösung - Vergleich */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-red-50 to-green-50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-red-50 to-green-50">
         <Container>
           <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -442,38 +442,59 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
 
-            <div className="bg-blue-600 rounded-2xl p-6 sm:p-8 mt-8 sm:mt-12 text-center">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
+      {/* Unser Versprechen - Fullwidth Section */}
+      <div className="w-full mt-16 sm:mt-20 md:mt-24 lg:mt-28">
+        <section className="relative py-20 sm:py-24 md:py-28 lg:py-32 w-full">
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src="/img/kundenbilder/buero-reinigung-profi.png"
+              alt="Professionelle Gebäudereinigung - Unser Versprechen an Sie"
+              fill
+              className="object-cover brightness-50"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          </div>
+          
+          <div className="relative z-10 w-full px-4">
+            <div className="text-center max-w-5xl mx-auto">
+              <h3 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">
                 Unser Versprechen an Sie:
               </h3>
-              <p className="text-base sm:text-lg text-blue-100 mb-4 sm:mb-6">
+              <p className="text-xl mb-8 text-gray-100 drop-shadow-md">
                 Konstante Qualität und zuverlässiger Service - oder Sie zahlen den ersten Monat nicht.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Link href="/kontakt" className="bg-white text-blue-600 font-bold py-3 px-6 sm:px-8 rounded-lg hover:bg-gray-50 transition-colors text-sm sm:text-base">
+              <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-3xl mx-auto">
+                <Link 
+                  href="/kontakt" 
+                  className="px-8 py-4 text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex-1"
+                >
                   Jetzt kostenlos testen
                 </Link>
-                <Link href="/galerie" className="bg-blue-800 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg border-2 border-white hover:bg-blue-900 transition-colors text-sm sm:text-base">
+                <Link 
+                  href="/galerie" 
+                  className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg flex-1"
+                >
                   Referenzen anfordern
                 </Link>
               </div>
             </div>
           </div>
-        </Container>
-      </section>
+        </section>
+      </div>
 
-      {/* Unsere Leistungen im Überblick */}
-      <section id="leistungen" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
-        <Container>
-          <LeistungenImUberblick />
-        </Container>
-      </section>
+      {/* Unsere Leistungen im Überblick - Fullwidth */}
+      <div id="leistungen" className="w-full">
+        <LeistungenImUberblick />
+      </div>
 
       {/* Unsere Vorteile */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Warum Komfort Gebäudeservice24?</h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Unsere Vorteile auf einen Blick</h3>
             <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
@@ -488,7 +509,7 @@ export default function Home() {
       </section>
 
       {/* Prozess */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container className="max-w-6xl">
           <ExtendedProcessSteps 
             steps={[
@@ -496,7 +517,7 @@ export default function Home() {
                 step: 1,
                 title: "Beratung & Angebot",
                 description: "Unverbindliche Beratung, umfassende Bedarfsanalyse und maßgeschneidertes Angebot. Wir nehmen uns Zeit für Ihre individuellen Anforderungen und erstellen eine auf Sie zugeschnittene Lösung.",
-                imageSrc: "/img/flux/team-beratung1.webp",
+                imageSrc: "/img/flux/hero-ueber-uns1.webp",
                 imageAlt: "Persönliche Beratung und Angebotserstellung",
                 bgColor: "bg-blue-600"
               },
@@ -520,19 +541,35 @@ export default function Home() {
                 step: 4,
                 title: "Qualitätskontrolle & Übergabe",
                 description: "Abschließende Qualitätsprüfung, ausführliche Dokumentation der durchgeführten Arbeiten und Übergabe mit umfassender Garantie. Ihre Zufriedenheit ist unser Ziel.",
-                imageSrc: "/img/kundenbilder/Dachreinigung Resultat!.png",
+                imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
                 imageAlt: "Qualitätskontrolle und Projektübergabe",
                 bgColor: "bg-red-600"
+              },
+              {
+                step: 5,
+                title: "Nachbereitung & Feedback",
+                description: "Nach Abschluss der Arbeiten erfolgt eine finale Überprüfung und Einholung Ihres Feedbacks zur Sicherstellung Ihrer vollsten Zufriedenheit.",
+                imageSrc: "/img/flux/hero-kontakt1.webp",
+                imageAlt: "Nachbereitung und Feedback-Einholung",
+                bgColor: "bg-blue-500"
+              },
+              {
+                step: 6,
+                title: "Langfristige Betreuung & Wartung",
+                description: "Wir bieten optional langfristige Betreuungsverträge und regelmäßige Wartungsarbeiten, um den hohen Standard Ihrer Immobilie dauerhaft zu sichern.",
+                imageSrc: "/img/flux/familie-vor-haus-mit-solaranlagen.webp",
+                imageAlt: "Langfristige Betreuung und Wartung",
+                bgColor: "bg-green-500"
               }
             ]}
-            title="Unser bewährter 4-Stufen-Prozess"
+            title="Unser bewährter 6-Stufen-Prozess"
             subtitle="Vom ersten Kontakt bis zur zufriedenen Übergabe - so garantieren wir Ihnen professionelle Ergebnisse"
           />
         </Container>
       </section>
 
-      {/* Echte Kundenprojekte - Vorher/Nachher */}
-      <section className="section section-light dark:bg-gray-900">
+      {/* Le - Vorher/Nachher */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
           <SectionTitle
             preTitle="Echte Kundenprojekte"
@@ -609,9 +646,9 @@ export default function Home() {
       </section>
 
       {/* Kundenstimmen */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Das sagen unsere Kunden</h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Bewertungen & Erfahrungen</h3>
             <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
@@ -621,9 +658,9 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Häufige Fragen</h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Antworten auf Ihre Fragen</h3>
             <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>

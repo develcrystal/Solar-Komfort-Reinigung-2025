@@ -48,49 +48,49 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Dachreinigung & Beschichtung",
-          href: "/dienstleistungen/dachreinigung",
+          href: "/gebaeudereinigung/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         {
           name: "Fassadenreinigung & Impregnierung",
-          href: "/dienstleistungen/fassadenreinigung",
+          href: "/gebaeudereinigung/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         { 
           name: "Pflaster- & Steinreinigung", 
-          href: "/dienstleistungen/pflasterreinigung",
+          href: "/gebaeudereinigung/pflasterreinigung",
           description: "Gründliche Reinigung von Pflaster und Naturstein",
           icon: "🧱"
         },
         { 
           name: "Büroreinigung", 
-          href: "/dienstleistungen/bueroeinigung",
+          href: "/gebaeudereinigung/bueroeinigung",
           description: "Professionelle Reinigung für Büroräume",
           icon: "🏢"
         },
         { 
           name: "Baubeschlussreinigung", 
-          href: "/dienstleistungen/baubeschlussreinigung",
+          href: "/gebaeudereinigung/baubeschlussreinigung",
           description: "Gründliche Endreinigung nach Bauarbeiten",
           icon: "🔨"
         },
         { 
           name: "Grundreinigung", 
-          href: "/dienstleistungen/grundreinigung",
+          href: "/gebaeudereinigung/grundreinigung",
           description: "Intensive Grundreinigung aller Bereiche",
           icon: "✨"
         },
         { 
           name: "Haushaltsreinigung", 
-          href: "/dienstleistungen/haushaltsreinigung",
+          href: "/gebaeudereinigung/haushaltsreinigung",
           description: "Zuverlässige Reinigung für Privathaushalte",
           icon: "🏠"
         },
         { 
           name: "Industriereinigung", 
-          href: "/dienstleistungen/industriereinigung"
+          href: "/gebaeudereinigung/industriereinigung",
           description: "Spezialisierte Reinigung für Industrieanlagen",
           icon: "🏭"
         },
@@ -120,7 +120,7 @@ export const Navbar = () => {
         },
         { 
           name: "Schul- & Kindergartenreinigung", 
-          href: "/gebaeudereinigung/schulreinigung"
+          href: "/gebaeudereinigung/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
           icon: "/img/icons/fensterreinigung.svg"
         }
@@ -144,7 +144,7 @@ export const Navbar = () => {
         },
         { 
           name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/gebaeudeservice/entruempelung",
+          href: "/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
           icon: "📦"
         },
@@ -156,7 +156,7 @@ export const Navbar = () => {
         },
         { 
           name: "Außenpflege & saisonale Dienste", 
-          href: "/gebaeudeservice/aussenpflege"
+          href: "/gebaeudeservice/aussenpflege",
           description: "Saisonale Außenpflege das ganze Jahr über",
           icon: "🍂"
         }
@@ -168,19 +168,19 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Angebot",
-          href: "/angebot",
+          href: "/facility-management/angebot",
           description: "Unser Facility Management Leistungsspektrum",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Unternehmen",
-          href: "/unternehmen",
+          href: "/facility-management/unternehmen",
           description: "Über unser Facility Management Team",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Kontakt",
-          href: "/kontakt-facility",
+          href: "/facility-management/kontakt-facility",
           description: "Kontakt für Facility Management Anfragen",
           icon: "/img/icons/facility-management.svg"
         }

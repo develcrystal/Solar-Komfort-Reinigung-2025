@@ -57,51 +57,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ];
 
-  // Service-Seiten unter /dienstleistungen/ (existierende Struktur nutzen)
-  const dienstleistungenServices = [
-    'dachreinigung',
-    'fassadenreinigung', 
-    'bueroeinigung',
-    'baubeschlussreinigung',
-    'grundreinigung',
-    'haushaltsreinigung',
-    'industriereinigung',
-    'treppenhausreinigung',
-    'krankenausreinigung',
-    'hotellerie-gastronomie',
-    'fensterreinigung',
-    'schulreinigung',
-    'pflasterreinigung',
-    'hausmeisterservice',
-    'gartenpflege',
-    'winterdienst',
-    'aussenpflege'
+  // Hierarchische Kategorie-Struktur für SEO-optimierte URLs (ohne Kategorie-Landing-Pages)
+  const categories = [
+    {
+      slug: 'gebaeudereinigung',
+      services: [
+        'dachreinigung',
+        'fassadenreinigung', 
+        'bueroeinigung',
+        'baubeschlussreinigung',
+        'grundreinigung',
+        'haushaltsreinigung',
+        'industriereinigung',
+        'treppenhausreinigung',
+        'krankenausreinigung',
+        'hotellerie-gastronomie',
+        'fensterreinigung',
+        'schulreinigung',
+        'pflasterreinigung'
+      ]
+    },
+    {
+      slug: 'gebaeudeservice',
+      services: [
+        'hausmeisterservice',
+        'gartenpflege',
+        'winterdienst',
+        'aussenpflege'
+      ]
+    },
+    {
+      slug: 'facility-management',
+      services: [
+        'angebot',
+        'unternehmen',
+        'kontakt-facility'
+      ]
+    }
   ];
 
-  // Weitere Service-Seiten auf Root-Level
-  const rootServices = [
-    'entruempelung',
-    'angebot',
-    'unternehmen',
-    'kontakt-facility',
-    'galerie'
-  ];
+  // Root-Level Service-Seiten
+  const rootServices = ['entruempelung', 'galerie'];
 
-  // Generiere Service-Seiten unter /dienstleistungen/
-  const dienstleistungenPages: SitemapEntry[] = dienstleistungenServices.map(service => ({
-    url: `${baseUrl}/dienstleistungen/${service}`,
-    lastModified: lastMod,
-    changeFrequency: 'monthly',
-    priority: 0.7,
-  }));
-
-  // Dienstleistungen-Übersichtsseite
-  const dienstleistungenOverview: SitemapEntry = {
-    url: `${baseUrl}/dienstleistungen`,
-    lastModified: lastMod,
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  };
+  // Generiere Service-Seiten mit hierarchischer Struktur
+  const servicePages: SitemapEntry[] = [];
+  
+  categories.forEach(category => {
+    category.services.forEach(service => {
+      servicePages.push({
+        url: `${baseUrl}/${category.slug}/${service}`,
+        lastModified: lastMod,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    });
+  });
 
   // Root-Level Service-Seiten
   const rootServicePages: SitemapEntry[] = rootServices.map(service => ({
@@ -111,6 +121,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Kombiniere alle Seiten
-  return [...mainPages, dienstleistungenOverview, ...dienstleistungenPages, ...rootServicePages];
+  // Kombiniere alle Seiten (ohne Kategorie-Landing-Pages)
+  return [...mainPages, ...servicePages, ...rootServicePages];
 }

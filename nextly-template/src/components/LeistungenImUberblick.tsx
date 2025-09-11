@@ -41,7 +41,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/bueroeinigung"
+    link: "/gebaeudereinigung/bueroeinigung"
   },
   {
     title: "Glas & Fassadenreinigung",
@@ -61,7 +61,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/fassadenreinigung"
+    link: "/gebaeudereinigung/fassadenreinigung"
   },
   {
     title: "Industriereinigung",
@@ -81,7 +81,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/industriereinigung"
+    link: "/gebaeudereinigung/industriereinigung"
   },
   {
     title: "Grundreinigung",
@@ -101,7 +101,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/grundreinigung"
+    link: "/gebaeudereinigung/grundreinigung"
   },
   {
     title: "Objektbetreuung",
@@ -121,7 +121,7 @@ const services: Service[] = [
       }
     ],
     buttonText: "Mehr erfahren",
-    link: "/dienstleistungen/hausmeisterservice"
+    link: "/gebaeudeservice/hausmeisterservice"
   },
   {
     title: "Entrümpelung & Haushaltsauflösungen",

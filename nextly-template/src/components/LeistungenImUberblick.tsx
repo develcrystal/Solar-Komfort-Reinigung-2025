@@ -1,178 +1,245 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { ImageSlider } from '@/components/ImageSlider';
+import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
 
 interface Service {
   title: string;
-  image: string;
-  description: string[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
+  description: string;
+  features: {
+    title: string;
+    description: string;
+  }[];
   buttonText: string;
   link: string;
+  icon?: string;
 }
 
 const services: Service[] = [
   {
     title: "Unterhaltsreinigung",
-    image: "/img/kundenbilder/Büroreinigung.png",
-    description: [
-      "Regelmäßige Büro- & Praxisreinigung",
-      "Individuelle Reinigungspläne",
-      "Qualitätskontrolle vor Ort"
+    images: [
+      { src: "/img/kundenbilder/Büroreinigung.png", alt: "Professionelle Büroreinigung" },
+      { src: "/img/kundenbilder/buero-reinigung-profi.png", alt: "Büroreinigung Detail" }
+    ],
+    description: "Regelmäßige professionelle Büro- und Praxisreinigung für ein sauberes und gesundes Arbeitsumfeld. Unsere geschulten Fachkräfte sorgen für konstante Qualität nach individuellen Reinigungsplänen.",
+    features: [
+      {
+        title: "Individuelle Pläne",
+        description: "Maßgeschneiderte Reinigungspläne nach Ihren Bedürfnissen und Arbeitszeiten."
+      },
+      {
+        title: "Qualitätskontrolle",
+        description: "Regelmäßige Überprüfung und Dokumentation der Reinigungsqualität vor Ort."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/bueroeinigung"
   },
   {
     title: "Glas & Fassadenreinigung",
-    image: "/img/kundenbilder/Fassaden-Reingung.png",
-    description: [
-      "Streifenfreie Glasreinigung",
-      "Fassadenreinigung aller Art",
-      "Moderne Reinigungstechnik"
+    images: [
+      { src: "/img/kundenbilder/Fassaden-Reingung.png", alt: "Professionelle Fassadenreinigung" },
+      { src: "/img/flux/fassadenreinigung-prozess.webp", alt: "Fassadenreinigung Prozess" }
+    ],
+    description: "Streifenfreie Glasreinigung und schonende Fassadenreinigung für gepflegtes Erscheinungsbild. Mit modernster Niederdrucktechnik schonen wir Ihre Bausubstanz und erzielen perfekte Ergebnisse.",
+    features: [
+      {
+        title: "Niederdruckreinigung",
+        description: "Schonende Reinigung ohne Schäden am Mauerwerk mit speziellen Reinigungsmitteln."
+      },
+      {
+        title: "Langzeitschutz",
+        description: "Optional mit Imprägnierung für langanhaltende Sauberkeit und Witterungsschutz."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/fassadenreinigung"
   },
   {
     title: "Industriereinigung",
-    image: "/img/kundenbilder/Industriereinigung.png",
-    description: [
-      "Industriehallen & Produktionsstätten",
-      "Spezialreinigungsverfahren",
-      "Termingerechte Ausführung"
+    images: [
+      { src: "/img/kundenbilder/Industriereinigung.png", alt: "Professionelle Industriereinigung" },
+      { src: "/img/kundenbilder/Grundreinigung.png", alt: "Industriehallen Reinigung" }
+    ],
+    description: "Spezialisierte Reinigung von Industriehallen und Produktionsstätten mit modernsten Verfahren. Wir verstehen die besonderen Anforderungen industrieller Umgebungen und Sicherheitsbestimmungen.",
+    features: [
+      {
+        title: "Spezialverfahren",
+        description: "Angepasste Reinigungsmethoden für verschiedene Industriebereiche und Materialien."
+      },
+      {
+        title: "Termingenau",
+        description: "Pünktliche Ausführung auch bei laufendem Betrieb ohne Produktionsunterbrechung."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/industriereinigung"
   },
   {
     title: "Grundreinigung",
-    image: "/img/kundenbilder/Grundreinigung.png",
-    description: [
-      "Intensive Tiefenreinigung",
-      "Neubezug & Renovierung",
-      "Spezialreinigungsverfahren"
+    images: [
+      { src: "/img/kundenbilder/Grundreinigung.png", alt: "Intensive Grundreinigung" },
+      { src: "/img/kundenbilder/Krankenhausreinigung.png", alt: "Grundreinigung Detail" }
+    ],
+    description: "Intensive Tiefenreinigung für Neubezug, nach Renovierungen oder bei hartnäckigen Verschmutzungen. Mit speziellen Verfahren und Geräten erreichen wir auch schwer zugängliche Bereiche.",
+    features: [
+      {
+        title: "Tiefenreinigung",
+        description: "Entfernung hartnäckiger Verschmutzungen mit professionellen Spezialgeräten."
+      },
+      {
+        title: "Renovation Ready",
+        description: "Perfekte Vorbereitung für Neubezug oder nach umfangreichen Sanierungsarbeiten."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/grundreinigung"
   },
   {
     title: "Objektbetreuung",
-    image: "/img/kundenbilder/Haus.png",
-    description: [
-      "Hausmeisterservice",
-      "Facility Management",
-      "Ganzheitliche Betreuung"
+    images: [
+      { src: "/img/kundenbilder/Haus.png", alt: "Professionelle Objektbetreuung" },
+      { src: "/img/flux/hero-ueber-uns1.webp", alt: "Hausmeisterservice" }
+    ],
+    description: "Umfassende Objektbetreuung und Hausmeisterservice für Wohnanlagen, Gewerbeimmobilien und öffentliche Einrichtungen. Alles aus einer Hand für perfekte Gebäudeverwaltung.",
+    features: [
+      {
+        title: "Hausmeisterservice",
+        description: "Komplette technische Betreuung, Wartung und kleine Reparaturen vor Ort."
+      },
+      {
+        title: "Facility Management",
+        description: "Ganzheitliche Betreuung mit koordinierten Dienstleistungen und Kostenoptimierung."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/hausmeisterservice"
   },
   {
     title: "Entrümpelung & Haushaltsauflösungen",
-    image: "/img/kundenbilder/Entrümpelung.png",
-    description: [
-      "Wohnungsauflösungen & Kellerentrümpelung",
-      "Fachgerechte Entsorgung & Trennung",
-      "Diskret & zuverlässig"
+    images: [
+      { src: "/img/kundenbilder/Entrümpelung.png", alt: "Professionelle Entrümpelung" },
+      { src: "/img/flux/hero-kontakt1.webp", alt: "Haushaltsauflösung" }
+    ],
+    description: "Diskrete und zuverlässige Wohnungsauflösungen und Kellerentrümpelung mit fachgerechter Entsorgung. Wir übernehmen die komplette Abwicklung und Wertstofftrennung.",
+    features: [
+      {
+        title: "Fachgerechte Entsorgung",
+        description: "Umweltgerechte Trennung und Entsorgung mit entsprechenden Zertifikaten."
+      },
+      {
+        title: "Diskret & zuverlässig",
+        description: "Vertrauensvolle Abwicklung mit Respekt vor persönlichen Gegenständen."
+      }
     ],
     buttonText: "Mehr erfahren",
     link: "/entruempelung"
-  },
-  {
-    title: "Außenpflege & Saisonarbeiten",
-    image: "/img/kundenbilder/Pflaster-stein-Reinigung.png",
-    description: [
-      "Terrassen- & Pflasterreinigung",
-      "Spielplatzkontrolle & Mülltonnendienst",
-      "Saisonale Arbeiten & Sonderaufträge"
-    ],
-    buttonText: "Mehr erfahren",
-    link: "/aussenpflege"
-  },
-  {
-    title: "Gartenpflege",
-    image: "/img/kundenbilder/Gartenpflege.png",
-    description: [
-      "Rasenmähen & Heckenschnitt",
-      "Laubentfernung & Beetpflege",
-      "Schnittgutentsorgung & Kompostierung"
-    ],
-    buttonText: "Mehr erfahren",
-    link: "/gartenpflege"
-  },
-  {
-    title: "Winterdienst",
-    image: "/img/kundenbilder/Dachreinigung.png",
-    description: [
-      "Schneeräumung & Streudienst",
-      "24/7-Rufbereitschaft & Vertragssicherheit",
-      "Moderne Ausrüstung & Umweltfreundlichkeit"
-    ],
-    buttonText: "Mehr erfahren",
-    link: "/winterdienst"
   }
 ];
 
 export default function LeistungenImUberblick() {
   return (
-    <section id="leistungen" className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">
-            Unsere Leistungen im Überblick
-          </h2>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-300">
-            Von der täglichen Unterhaltsreinigung bis zur kompletten Objektbetreuung - 
-            wir bieten Ihnen professionelle Reinigungsdienstleistungen aus einer Hand.
-          </p>
-        </div>
-        <div className="space-y-20">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+    <div className="bg-gray-50 dark:bg-gray-900">
+      <Container>
+        {/* Header */}
+        <Section>
+          <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 dark:text-white uppercase mb-6">
+              Unsere Leistungen im Überblick
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              Von der täglichen Unterhaltsreinigung bis zur kompletten Objektbetreuung - 
+              wir bieten Ihnen professionelle Reinigungsdienstleistungen aus einer Hand.
+            </p>
+          </div>
+        </Section>
+
+        {/* Services */}
+        {services.map((service, index) => (
+          <Section key={index}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
               <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                {/* Image Section */}
+                {/* Image Section with Slider */}
                 <div className="md:w-1/2 relative">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
+                  <ImageSlider
+                    images={service.images}
                     width={800}
                     height={600}
-                    className="w-full h-80 object-cover"
+                    className="w-full h-full object-cover rounded-xl"
+                    autoPlay={true}
+                    interval={6000 + (index * 500)} // Staggered timing
                   />
                 </div>
                 
                 {/* Content Section */}
-                <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase tracking-wide text-gray-900 dark:text-white mb-6 break-words">
-                    {service.title}
-                  </h3>
+                <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                  {/* Title */}
+                  <div className="mb-6">
+                    <h3 className="text-4xl font-bold uppercase tracking-wide text-gray-900 dark:text-white">
+                      {service.title}
+                    </h3>
+                  </div>
                   
-                  <div className="grid grid-cols-1 gap-4 mb-8">
-                    {service.description.map((feature, i) => (
-                      <div key={i} className="flex items-start">
-                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600 dark:text-gray-300">
-                          {feature}
-                        </span>
+                  {/* Description */}
+                  <p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
+                    {service.description}
+                  </p>
+                  
+                  {/* Feature Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+                        <h4 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
+                          {feature.title}
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {feature.description}
+                        </p>
                       </div>
                     ))}
                   </div>
-                  
-                  <Link 
-                    href={service.link} 
-                    className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all self-start"
-                  >
-                    {service.buttonText}
-                    <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </Section>
+        ))}
+
+        {/* Bottom CTA */}
+        <Section>
+          <div className="text-center">
+            <div className="bg-blue-600 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                Benötigen Sie eine individuelle Lösung?
+              </h3>
+              <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
+                Sprechen Sie uns an! Wir entwickeln maßgeschneiderte Reinigungskonzepte für Ihre speziellen Anforderungen.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/kontakt" 
+                  className="px-8 py-4 text-lg font-bold text-blue-600 bg-white rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  Kostenlose Beratung
+                </Link>
+                <Link 
+                  href="/kostenrechner" 
+                  className="px-8 py-4 text-lg font-bold text-white bg-blue-800 rounded-lg border-2 border-white hover:bg-blue-900 transition-colors"
+                >
+                  Kosten berechnen
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Section>
+      </Container>
+    </div>
   );
 }

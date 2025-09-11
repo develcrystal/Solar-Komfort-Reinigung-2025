@@ -48,79 +48,79 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Dachreinigung & Beschichtung",
-          href: "/dachreinigung",
+          href: "/dienstleistungen/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         {
           name: "Fassadenreinigung & Impregnierung",
-          href: "/fassadenreinigung",
+          href: "/dienstleistungen/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         { 
           name: "Pflaster- & Steinreinigung", 
-          href: "/pflasterreinigung",
+          href: "/dienstleistungen/pflasterreinigung",
           description: "Gründliche Reinigung von Pflaster und Naturstein",
           icon: "🧱"
         },
         { 
           name: "Büroreinigung", 
-          href: "/bueroeinigung",
+          href: "/dienstleistungen/bueroeinigung",
           description: "Professionelle Reinigung für Büroräume",
           icon: "🏢"
         },
         { 
           name: "Baubeschlussreinigung", 
-          href: "/baubeschlussreinigung",
+          href: "/dienstleistungen/baubeschlussreinigung",
           description: "Gründliche Endreinigung nach Bauarbeiten",
           icon: "🔨"
         },
         { 
           name: "Grundreinigung", 
-          href: "/grundreinigung",
+          href: "/dienstleistungen/grundreinigung",
           description: "Intensive Grundreinigung aller Bereiche",
           icon: "✨"
         },
         { 
           name: "Haushaltsreinigung", 
-          href: "/haushaltsreinigung",
+          href: "/dienstleistungen/haushaltsreinigung",
           description: "Zuverlässige Reinigung für Privathaushalte",
           icon: "🏠"
         },
         { 
           name: "Industriereinigung", 
-          href: "/industriereinigung",
+          href: "/dienstleistungen/industriereinigung"
           description: "Spezialisierte Reinigung für Industrieanlagen",
           icon: "🏭"
         },
         { 
           name: "Treppenhausreinigung", 
-          href: "/treppenhausreinigung",
+          href: "/gebaeudereinigung/treppenhausreinigung",
           description: "Regelmäßige Treppenhausreinigung",
           icon: "/img/icons/treppenhausreinigung.svg"
         },
         { 
           name: "Krankenausreinigung", 
-          href: "/krankenausreinigung",
+          href: "/gebaeudereinigung/krankenausreinigung",
           description: "Hygienische Reinigung für medizinische Einrichtungen",
           icon: "🏥"
         },
         { 
           name: "Hotellerie & Gastronomie", 
-          href: "/hotellerie-gastronomie",
+          href: "/gebaeudereinigung/hotellerie-gastronomie",
           description: "Professionelle Reinigung für Hotels und Restaurants",
           icon: "🍽️"
         },
         { 
           name: "Fenster- & Glasreinigung", 
-          href: "/fensterreinigung",
+          href: "/gebaeudereinigung/fensterreinigung",
           description: "Streifenfreie Fenster- und Glasreinigung",
           icon: "/img/icons/fensterreinigung.svg"
         },
         { 
           name: "Schul- & Kindergartenreinigung", 
-          href: "/schulreinigung",
+          href: "/gebaeudereinigung/schulreinigung"
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
           icon: "/img/icons/fensterreinigung.svg"
         }
@@ -132,31 +132,31 @@ export const Navbar = () => {
       submenu: [
         { 
           name: "Hausmeisterservice", 
-          href: "/hausmeisterservice",
+          href: "/gebaeudeservice/hausmeisterservice",
           description: "Umfassender Hausmeisterservice für Ihre Immobilie",
           icon: "🔧"
         },
         { 
           name: "Gartenpflege & Außenanlagen", 
-          href: "/gartenpflege",
+          href: "/gebaeudeservice/gartenpflege",
           description: "Professionelle Garten- und Außenanlagenpflege",
           icon: "🌿"
         },
         { 
           name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/entruempelung",
+          href: "/gebaeudeservice/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
           icon: "📦"
         },
         { 
           name: "Winterdienst", 
-          href: "/winterdienst",
+          href: "/gebaeudeservice/winterdienst",
           description: "Zuverlässiger Winterdienst und Streupflicht",
           icon: "❄️"
         },
         { 
           name: "Außenpflege & saisonale Dienste", 
-          href: "/aussenpflege",
+          href: "/gebaeudeservice/aussenpflege"
           description: "Saisonale Außenpflege das ganze Jahr über",
           icon: "🍂"
         }

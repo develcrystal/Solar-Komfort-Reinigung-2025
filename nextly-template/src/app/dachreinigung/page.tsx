@@ -77,7 +77,7 @@ export default function Dachreinigung() {
             Von der gründlichen Reinigung bis zur schützenden Beschichtung - wir sorgen für langanhaltende Sauberkeit und Werterhaltung Ihres Daches.
           </SectionTitle>
           
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Unsere Leistungen

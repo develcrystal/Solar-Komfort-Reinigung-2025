@@ -24,7 +24,7 @@ const testimonials = [
     rating: "★★★★★", 
     text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Absolute Empfehlung!",
     name: "Dr. Michael Schmidt",
-    role: "Zahnarztpraxis Berlin-Mitte",
+    role: "Zahnarztpraxis Groß-Gerau",
     initial: "M"
   },
   {
@@ -123,9 +123,9 @@ export default function Home() {
         </div>
         {/* Hero-Content - Fullwidth ohne Container */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-normal tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
+          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+            <div className="max-w-4xl ml-4 sm:ml-8 lg:ml-48">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.2] tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
               KOMFORT GEBÄUDESERVICE24 GMBH<br />
               IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
@@ -210,6 +210,166 @@ export default function Home() {
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">Feste Ansprechpartner & individuelle Beratung</p>
               </div>
             </div>
+        </Container>
+      </section>
+
+      {/* Service Grid - 6-Service Komplettlösung */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <Container>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Ihre Gebäudereinigung als Komplettlösung
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Professionelle Reinigungsdienstleistungen für jeden Bereich - von der Fassade bis zum Innenraum.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Service 1: Fassadenreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Fassaden-Reingung.png" 
+                  alt="Professionelle Fassadenreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Fassadenreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Wir sorgen dafür, dass Ihre Fassade richtig wieder strahlt. Entfernung von Algen und Schmutz ebenso effektiv wie professionell.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 2: Fensterreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Büroreinigung.png" 
+                  alt="Professionelle Fensterreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Fensterreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Sie brauchen einen klaren Durchblick? Unsere Experten übernehmen gern die professionelle Reinigung von Fenstern und Glasflächen in bester Qualität.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 3: Sanitärreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Krankenhausreinigung.png" 
+                  alt="Hygienische Sanitärreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Sanitärreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Durch die hygienische Reinigung der sanitären Anlagen erreichen diese immer einen optimalen und sauberen Zustand für alle.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 4: Bodenreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Grundreinigung.png" 
+                  alt="Professionelle Bodenreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Bodenreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Egal welcher Bodenbelag, wir haben stets passende Reinigungsmittel und kennen die richtige Reinigungstechnik für gepflegten Boden.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 5: Hausmeisterservice */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Haus.png" 
+                  alt="Zuverlässiger Hausmeisterservice"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Hausmeisterservice
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Mit dem Hausmeisterservice ist alles geregelt. Kleine Reparaturen, Energieabrechnung und gepflegte Instandhaltung.
+                </p>
+              </div>
+            </div>
+
+            {/* Service 6: Teppichreinigung */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image 
+                  src="/img/kundenbilder/Pflaster-stein-Reinigung.png" 
+                  alt="Professionelle Teppichreinigung"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Teppichreinigung
+                </h3>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Wir übernehmen die Tiefenreinigung sämtlicher Bodenbeläge - materialschonend und hygienisch. Teppiche wie neu.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-8 sm:mt-12">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Link 
+                href="/kontakt" 
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
+              >
+                Kostenlose Beratung anfragen
+              </Link>
+              <Link 
+                href="/kostenrechner" 
+                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation"
+              >
+                Kosten berechnen
+              </Link>
+            </div>
+          </div>
         </Container>
       </section>
 
@@ -433,13 +593,13 @@ export default function Home() {
           
           <div className="mt-8 sm:mt-10 text-center">
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6">
-              <strong>Alle Bilder sind echte Kundenprojekte!</strong> Keine gestellten Fotos - das sind authentische Vorher/Nachher-Ergebnisse unserer täglichen Arbeit.
+              Hier sehen Sie Beispiele unserer Dachreinigungsarbeiten mit deutlich sichtbaren Verbesserungen.
             </p>
             <Link 
               href="/galerie" 
               className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
             >
-              Mehr Kundenprojekte ansehen
+              Mehr Projekte ansehen
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

@@ -47,7 +47,7 @@ export default function Referenzen() {
     },
     { 
       src: "/img/flux/referenz-mehrfamilienhaus5.webp", 
-      alt: "Mehrfamilienhaus in Hamburg - Dach- und Fassadenreinigung" 
+      alt: "Mehrfamilienhaus in Groß-Gerau - Dach- und Fassadenreinigung" 
     }
   ];
 
@@ -55,7 +55,7 @@ export default function Referenzen() {
   const gewerbeobjektImages = [
     { 
       src: "/img/flux/referenz-gewerbeobjekt1.webp", 
-      alt: "Gewerbeobjekt in Frankfurt - Dach- und Fassadenreinigung" 
+      alt: "Gewerbeobjekt in Wiesbaden - Dach- und Fassadenreinigung" 
     },
     { 
       src: "/img/flux/referenz-gewerbeobjekt2.webp", 

@@ -12,7 +12,7 @@ interface Service {
 const services: Service[] = [
   {
     title: "Unterhaltsreinigung",
-    image: "/img/flux/buero-reinigung.png",
+    image: "/img/kundenbilder/Büroreinigung.png",
     description: [
       "Regelmäßige Büro- & Praxisreinigung",
       "Individuelle Reinigungspläne",
@@ -23,7 +23,7 @@ const services: Service[] = [
   },
   {
     title: "Glas & Fassadenreinigung",
-    image: "/img/flux/fassaden-reinigung.png",
+    image: "/img/kundenbilder/Fassaden-Reingung.png",
     description: [
       "Streifenfreie Glasreinigung",
       "Fassadenreinigung aller Art",
@@ -34,7 +34,7 @@ const services: Service[] = [
   },
   {
     title: "Industriereinigung",
-    image: "/img/flux/industriereinigung.png",
+    image: "/img/kundenbilder/Industriereinigung.png",
     description: [
       "Industriehallen & Produktionsstätten",
       "Spezialreinigungsverfahren",
@@ -45,7 +45,7 @@ const services: Service[] = [
   },
   {
     title: "Grundreinigung",
-    image: "/img/flux/professionelle-ausruestung3.webp",
+    image: "/img/kundenbilder/Grundreinigung.png",
     description: [
       "Intensive Tiefenreinigung",
       "Neubezug & Renovierung",
@@ -56,7 +56,7 @@ const services: Service[] = [
   },
   {
     title: "Objektbetreuung",
-    image: "/img/flux/team-beratung1.webp",
+    image: "/img/kundenbilder/Haus.png",
     description: [
       "Hausmeisterservice",
       "Facility Management",
@@ -64,6 +64,50 @@ const services: Service[] = [
     ],
     buttonText: "Mehr erfahren",
     link: "/dienstleistungen/hausmeisterservice"
+  },
+  {
+    title: "Entrümpelung & Haushaltsauflösungen",
+    image: "/img/kundenbilder/Entrümpelung.png",
+    description: [
+      "Wohnungsauflösungen & Kellerentrümpelung",
+      "Fachgerechte Entsorgung & Trennung",
+      "Diskret & zuverlässig"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/entruempelung"
+  },
+  {
+    title: "Außenpflege & Saisonarbeiten",
+    image: "/img/kundenbilder/Pflaster-stein-Reinigung.png",
+    description: [
+      "Terrassen- & Pflasterreinigung",
+      "Spielplatzkontrolle & Mülltonnendienst",
+      "Saisonale Arbeiten & Sonderaufträge"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/aussenpflege"
+  },
+  {
+    title: "Gartenpflege",
+    image: "/img/kundenbilder/Gartenpflege.png",
+    description: [
+      "Rasenmähen & Heckenschnitt",
+      "Laubentfernung & Beetpflege",
+      "Schnittgutentsorgung & Kompostierung"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/gartenpflege"
+  },
+  {
+    title: "Winterdienst",
+    image: "/img/kundenbilder/Dachreinigung.png",
+    description: [
+      "Schneeräumung & Streudienst",
+      "24/7-Rufbereitschaft & Vertragssicherheit",
+      "Moderne Ausrüstung & Umweltfreundlichkeit"
+    ],
+    buttonText: "Mehr erfahren",
+    link: "/winterdienst"
   }
 ];
 

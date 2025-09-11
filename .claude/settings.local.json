@@ -51,7 +51,10 @@
       "Read(F:\\108Coding\\solar-komfort\\nextly-template/**)",
       "Read(F:\\108Coding\\solar-komfort\\nextly-template\\src\\app/**)",
       "Read(F:\\108Coding\\solar-komfort\\nextly-template\\src\\app\\referenzen\\galerie/**)",
-      "Bash(del nul)"
+      "Bash(del nul)",
+      "Read(d:\\Downloads von C/**)",
+      "Bash(grep:*)",
+      "mcp__puppeteer__puppeteer_evaluate"
     ],
     "deny": []
   },

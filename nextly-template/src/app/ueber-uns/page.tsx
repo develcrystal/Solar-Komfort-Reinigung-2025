@@ -5,17 +5,26 @@ import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
 
 export const metadata: Metadata = {
-  title: "Über uns - Solar Komfort GmbH | Ihr Experte für Dachbeschichtung",
-  description: "Lernen Sie das Team der Solar Komfort GmbH kennen. Erfahrene Experten für Dachreinigung und Dachbeschichtung mit modernster Ausrüstung in Darmstadt und Umgebung.",
-  keywords: "Solar Komfort Team, Dachexperten, Darmstadt, Dachbeschichtung Experten, Über uns, Unternehmensgeschichte",
+  title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
+  description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+  keywords: "HK Komfort Team, Facility Management, Darmstadt, Gebäudereinigung Experten, Über uns, Unternehmensgeschichte",
   openGraph: {
-    title: "Über uns - Solar Komfort GmbH | Ihr Experte für Dachbeschichtung",
-    description: "Lernen Sie das Team der Solar Komfort GmbH kennen. Erfahrene Experten für Dachreinigung und Dachbeschichtung mit modernster Ausrüstung in Darmstadt und Umgebung.",
-    url: "https://solar-komfort.de/ueber-uns",
-    siteName: "Solar Komfort GmbH",
+    title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
+    description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+    url: "https://komfort-gebaeudeservice24.de/ueber-uns",
+    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
     locale: "de_DE",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
+    description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+    images: ["https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp"]
+  },
+  alternates: {
+    canonical: "https://komfort-gebaeudeservice24.de/ueber-uns"
+  }
 };
 
 export default function UeberUns() {
@@ -26,7 +35,7 @@ export default function UeberUns() {
         <div className="absolute inset-0 z-0">
           <Image 
             src="/img/flux/team-gruppenfoto2.webp"
-            alt="Über uns - Solar Komfort Team"
+            alt="Über uns - Clean Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"
             priority
@@ -39,8 +48,8 @@ export default function UeberUns() {
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">ÜBER UNS</h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-100 drop-shadow-md">
-                Solar Komfort GmbH ist Ihr zuverlässiger Partner für professionelle Dach- und Fassadenreinigung sowie Dachbeschichtung. 
-                Mit jahrelanger Erfahrung und modernster Technik sorgen wir für langanhaltende Sauberkeit und Schutz Ihrer Immobilie.
+                Clean Komfort Gebäudeservice24 GmbH ist Ihr zuverlässiger Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. 
+                Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.
               </p>
             </div>
           </div>
@@ -56,13 +65,37 @@ export default function UeberUns() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                    Unser Unternehmen wurde 2010 gegründet und hat sich seitdem zu einem führenden Anbieter in der Region entwickelt. 
-                    Wir legen großen Wert auf Qualität, Nachhaltigkeit und Kundenzufriedenheit.
+                    Wir sind **HK Komfort Facility & Gebäudeservice GmbH**, Tochterunternehmen der Solar Komfort GmbH. Unsere Gründer Mohamed Kaddouri & Abdelhafid Hajjout vereinen jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
                   </p>
                   <p className="text-lg text-gray-600 dark:text-gray-300">
-                    Mit einem Team aus erfahrenen Fachleuten und modernster Ausrüstung bieten wir Ihnen Dienstleistungen auf höchstem Niveau. 
-                    Unsere Kunden schätzen unsere Zuverlässigkeit, Pünktlichkeit und die hervorragende Qualität unserer Arbeit.
+                    Unsere Stärken:
                   </p>
+                  <ul className="space-y-3 mt-4">
+                    <li className="flex items-start">
+                      <svg className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700 dark:text-gray-300">Eigene Fachkräfte (keine Subunternehmer)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700 dark:text-gray-300">Zertifizierungen & Sachkunde (z. B. Dach, PV)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700 dark:text-gray-300">Strukturierte Prozesse & transparente Angebote</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-700 dark:text-gray-300">Liebe zum Detail & feste Ansprechpartner</span>
+                    </li>
+                  </ul>
                 </div>
                 <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-xl">
                   <h3 className="text-2xl font-semibold mb-4">Unsere Werte</h3>
@@ -233,7 +266,7 @@ export default function UeberUns() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <p className="text-white text-sm">
-                      &quot;Innovation und Tradition im perfekten Gleichgewicht.&quot;
+                      "Innovation und Tradition im perfekten Gleichgewicht."
                     </p>
                   </div>
                 </div>
@@ -265,12 +298,12 @@ export default function UeberUns() {
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
                 <Image 
                   src="/img/flux/team-gruppenfoto1.webp"
-                  alt="Das Solar Komfort Team"
+                  alt="Das Clean Komfort Gebäudeservice24 Team"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-8">
-                  <h4 className="text-white text-2xl font-bold mb-2">Das Solar Komfort Team</h4>
+                  <h4 className="text-white text-2xl font-bold mb-2">Das Clean Komfort Gebäudeservice24 Team</h4>
                   <p className="text-white/90 mb-4">
                     Unser engagiertes Team aus über 25 Fachkräften steht für Qualität und Zuverlässigkeit.
                   </p>
@@ -283,7 +316,7 @@ export default function UeberUns() {
                   <h4 className="text-xl font-bold mb-4">Unsere Teamphilosophie</h4>
                   <div className="prose prose-sm dark:prose-invert">
                     <p>
-                      Das Herzstück der Solar Komfort GmbH ist unser engagiertes und hochqualifiziertes Team aus Fachkräften. Mit über 25 Mitarbeitern, darunter Dachdecker, Maler, Gebäudereiniger und Techniker, decken wir alle Kompetenzbereiche ab.
+                      Das Herzstück der Clean Komfort Gebäudeservice24 GmbH ist unser engagiertes und hochqualifiziertes Team aus Fachkräften. Mit über 25 Mitarbeitern, darunter Dachdecker, Maler, Gebäudereiniger und Techniker, decken wir alle Kompetenzbereiche ab.
                     </p>
                     <p>
                       Jedes Teammitglied durchläuft ein umfassendes Schulungsprogramm und nimmt regelmäßig an Weiterbildungen teil. Unsere Mitarbeiter sind nicht nur fachlich kompetent, sondern auch für ihre Zuverlässigkeit, Pünktlichkeit und ihren freundlichen Umgang mit Kunden bekannt.
@@ -431,7 +464,7 @@ export default function UeberUns() {
       <CtaSection 
         backgroundImage="/img/flux/firmenfahrzeug-solar-komfort1.webp"
         backgroundAlt="Kontaktieren Sie uns für ein persönliches Gespräch"
-        title="Bereit für die Experten von Solar Komfort?"
+        title="Bereit für die Experten von Clean Komfort Gebäudeservice24?"
         description="Kontaktieren Sie unser erfahrenes Team noch heute für eine unverbindliche Beratung zu Ihrem Dachprojekt."
       />
     </div>

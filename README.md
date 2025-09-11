@@ -31,8 +31,9 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 - [x] **Touch-optimierte Buttons** (min-h-[44px])
 - [x] **SEO-Optimierung** mit Metadata für alle Seiten
 - [ ] Hero-Bereiche für Gebäudeservice-Seiten (0/5)
-- [ ] Hero-Bereiche für Facility Management-Seiten (0/3) 
+- [ ] Hero-Bereiche für Facility Management-Seiten (0/3)
 - [x] **Galerie** mit Kategoriefiltern und Lightbox (1/1)
+- [x] **Template Demo Seite** mit verschiedenen Section-Elementen
 
 ## Sitemap Status
 ```

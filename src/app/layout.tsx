@@ -21,6 +21,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
   description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH.",
+  manifest: "/manifest.json",
   icons: [
     {
       rel: "icon",

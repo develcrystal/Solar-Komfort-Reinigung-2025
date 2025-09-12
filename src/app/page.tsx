@@ -231,7 +231,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Fassaden-Reingung.png" 
-                  alt="Professionelle Fassadenreinigung"
+                  alt="Professionelle Fassadenreinigung Darmstadt - Gebäudereinigung Rhein-Main"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -252,7 +252,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Büroreinigung.png" 
-                  alt="Professionelle Fensterreinigung"
+                  alt="Professionelle Fensterreinigung Frankfurt - Büroreinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -273,7 +273,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Krankenhausreinigung.png" 
-                  alt="Hygienische Sanitärreinigung"
+                  alt="Hygienische Sanitärreinigung Rhein-Main - Praxisreinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -294,7 +294,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Grundreinigung.png" 
-                  alt="Professionelle Bodenreinigung"
+                  alt="Professionelle Bodenreinigung Frankfurt - Industriereinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -315,7 +315,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Haus.png" 
-                  alt="Zuverlässiger Hausmeisterservice"
+                  alt="Zuverlässiger Hausmeisterservice Darmstadt - Facility Management Rhein-Main"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -452,7 +452,7 @@ export default function Home() {
           <div className="absolute inset-0 z-0">
             <Image 
               src="/img/kundenbilder/buero-reinigung-profi.png"
-              alt="Professionelle Gebäudereinigung - Unser Versprechen an Sie"
+              alt="Professionelle Gebäudereinigung Darmstadt Frankfurt - Komfort Gebäudeservice24 Qualitätsversprechen"
               fill
               className="object-cover brightness-50"
             />

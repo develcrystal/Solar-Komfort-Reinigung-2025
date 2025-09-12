@@ -572,10 +572,10 @@ export default function Home() {
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
           <SectionTitle
-            preTitle="Echte Kundenprojekte"
+            preTitle="Unsere Referenzprojekte"
             title="Vorher/Nachher - Sehen Sie den Unterschied"
           >
-            Überzeugen Sie sich selbst von der Qualität unserer Arbeit. Diese authentischen Vorher/Nachher-Bilder zeigen echte Kundenprojekte - dramatische Verbesserungen durch unsere professionelle Reinigung.
+            Überzeugen Sie sich selbst von der Qualität unserer Arbeit. Diese authentischen Vorher/Nachher-Bilder zeigen beeindruckende Transformationen - dramatische Verbesserungen durch unsere professionelle Reinigung.
           </SectionTitle>
           
           <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">

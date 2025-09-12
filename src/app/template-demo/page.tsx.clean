@@ -1,0 +1,87 @@
+import { Container } from "@/components/Container";
+import { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Template Demo - Alle Section-Elemente",
+  description: "Demo-Seite für alle verfügbaren Section-Elemente und Vorlagen",
+};
+
+export default function TemplateDemo() {
+  return (
+    <div className="template-demo">
+      {/* Header */}
+      <section className="py-12 sm:py-16 bg-gray-900 text-white">
+        <Container>
+          <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              🎨 Template Demo Seite
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8">
+              Alle verfügbaren Section-Elemente und Vorlagen im Überblick
+            </p>
+            <Link 
+              href="/" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              ← Zurück zur Hauptseite
+            </Link>
+          </div>
+        </Container>
+      </section>
+
+      <Container className="py-12">
+        <div className="text-center mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            📋 Alle verfügbaren Section-Elemente
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Diese Demo-Seite zeigt alle verfügbaren Template-Elemente und Section-Komponenten, 
+            die für die Erstellung von Unterseiten verwendet werden können.
+          </p>
+        </div>
+
+        {/* Section 1: Hero Section */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. Hero Section</h3>
+          <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center px-4">
+                Hero Section
+              </h2>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: Service Grid */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">2. Service Grid</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Service Card 1 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <Image 
+                  src="/img/flux/hero-kontakt1.webp" 
+                  alt="Service 1" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">Service 1</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                  Beschreibung des Services 1
+                </p>
+              </div>
+            </div>
+            
+            {/* Add more service cards as needed */}
+          </div>
+        </section>
+
+        {/* Add more sections as needed */}
+      </Container>
+    </div>
+  );
+}

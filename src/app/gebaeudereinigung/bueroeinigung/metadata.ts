@@ -3,9 +3,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Büroreinigung – Professionelle Sauberkeit für Ihr Büro",
   description:
-    "Effiziente Büroreinigung für Unternehmen in Berlin. Wir sorgen für ein sauberes, hygienisches Arbeitsumfeld, das Produktivität fördert.",
+    "Effiziente Büroreinigung für Unternehmen in Darmstadt und Südhessen. Wir sorgen für ein sauberes, hygienisches Arbeitsumfeld, das Produktivität fördert.",
   keywords:
-    "Büroreinigung, Büroreinigung Berlin, professionelle Büroreinigung, Gebäudereinigung, Facility Management, Sauberkeit im Büro",
+    "Büroreinigung, Büroreinigung Darmstadt, professionelle Büroreinigung, Gebäudereinigung, Facility Management, Sauberkeit im Büro",
   openGraph: {
     title: "Büroreinigung – Ihr Partner für ein sauberes Büro",
     description:

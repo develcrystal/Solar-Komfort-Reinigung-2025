@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://komfort-gebaeudeservice24.de/img/flux/gartenpflege-prozess.webp",
+        url: "https://komfort-gebaeudeservice24.de/img/flux/referenz-einfamilienhaus2.webp",
         width: 1200,
         height: 630,
         alt: "Gartenpflege - Professionelle Gartenbetreuung"
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gartenpflege - HK Komfort Facility & Gebäudeservice GmbH",
     description: "Professionelle Gartenpflege in Darmstadt und Umgebung. Rasenmähen, Hecken schneiden, Laub entfernen, Beetpflege – regelmäßig oder saisonal buchbar.",
-    images: ["https://komfort-gebaeudeservice24.de/img/flux/gartenpflege-prozess.webp"]
+    images: ["https://komfort-gebaeudeservice24.de/img/flux/referenz-einfamilienhaus2.webp"]
   },
   alternates: {
     canonical: "https://komfort-gebaeudeservice24.de/gartenpflege"
@@ -256,7 +256,7 @@ export default function Gartenpflege() {
 
       {/* CTA Section */}
       <CtaSection 
-        backgroundImage="/img/flux/gartenpflege-prozess.webp"
+        backgroundImage="/img/flux/referenz-einfamilienhaus2.webp"
         backgroundAlt="Gartenpflege - Kontaktieren Sie uns für ein kostenloses Angebot"
         title="Bereit für eine professionelle Gartenpflege?"
         description="Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Ihrer Gartenpflege."

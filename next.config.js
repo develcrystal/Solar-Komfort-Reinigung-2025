@@ -14,6 +14,23 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  // Ensure all assets are loaded from the correct port
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://solar-komfort-reinigung.de' : 'http://localhost:3002',
+  basePath: '',
+  publicRuntimeConfig: {
+    basePath: '',
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Fixes npm packages that depend on `fs` module
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false
+      }
+    }
+    return config;
+  },
 };
 
 module.exports = nextConfig;

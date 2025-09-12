@@ -106,9 +106,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className="home-container -mt-20">
       {/* Hero-Bereich - Fullwidth Layout */}
-      <div className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] w-full">
+      <div className="relative h-screen min-h-[600px] w-full">
         {/* Hintergrundbild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -374,7 +374,7 @@ export default function Home() {
       </section>
 
       {/* Problem vs. Lösung - Vergleich */}
-      <section className="pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-0 bg-gradient-to-b from-red-50 to-green-50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-red-50 to-green-50">
         <Container>
           <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
@@ -382,7 +382,7 @@ export default function Home() {
               Der Unterschied ist offensichtlich
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
-              Warum über 5.000 Kunden von anderen Reinigungsfirmen zu uns gewechselt sind
+              Warum über 100 zufriedene Kunden von anderen Reinigungsfirmen zu uns gewechselt sind
             </p>
           </div>
 

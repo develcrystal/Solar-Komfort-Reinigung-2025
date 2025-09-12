@@ -3,15 +3,15 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
 import Image from 'next/image';
 
-export default function Bueroreinigung() {
+export default function Angebot() {
   return (
     <>
       {/* Hero-Bereich - Mobile First */}
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/bueroeinigung-sauber.webp"
-            alt="Büroreinigung - Sauberes modernes Großraumbüro nach professioneller Reinigung"
+            src="/img/flux/industriereinigung.webp"
+            alt="Professionelle Industriereinigung - Facility Management Angebot"
             fill
             className="object-cover brightness-[0.8]"
             priority
@@ -22,10 +22,10 @@ export default function Bueroreinigung() {
         <Container className="relative z-10 h-full flex items-center">
           <div className="max-w-2xl sm:max-w-3xl">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-              BÜROREİNİGUNG
+              FACILITY MANAGEMENT ANGEBOT
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
-              Professionelle und zuverlässige Büroreinigung für ein sauberes und produktives Arbeitsumfeld.
+              Umfassende Facility Management-Lösungen für Ihre Immobilie aus einer Hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
@@ -39,35 +39,34 @@ export default function Bueroreinigung() {
         </Container>
       </div>
 
-      {/* Service-Details */}
-      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24">
         <Container>
           <SectionTitle
-            preTitle="Unser Service"
-            title="Büroreinigung"
+            preTitle="Facility Management"
+            title="Unser Angebot"
           >
-            Professionelle und zuverlässige Büroreinigung für ein sauberes und produktives Arbeitsumfeld.
+            Umfassende Facility Management-Lösungen für Ihre Immobilie aus einer Hand.
           </SectionTitle>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Tägliche, wöchentliche oder monatliche Reinigung</li>
-                <li>• Büroräume, Meetingräume, Flure</li>
-                <li>• Sanitäranlagen und Küchenbereiche</li>
-                <li>• Fensterreinigung inklusive</li>
-                <li>• Müllentsorgung und Recycling</li>
+                <li>• Technisches Facility Management</li>
+                <li>• Infrastrukturelles Facility Management</li>
+                <li>• Kaufmännisches Facility Management</li>
+                <li>• Energiemanagement und -optimierung</li>
+                <li>• Objektüberwachung und Sicherheit</li>
               </ul>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>✓ Produktives Arbeitsklima</li>
-                <li>✓ Professioneller Eindruck für Kunden</li>
-                <li>✓ Flexible Reinigungszeiten</li>
-                <li>✓ Zuverlässige und pünktliche Ausführung</li>
-                <li>✓ Individuelle Reinigungspläne</li>
+                <li>✓ Komplettlösungen aus einer Hand</li>
+                <li>✓ Kostentransparenz und -kontrolle</li>
+                <li>✓ Werterhaltung der Immobilie</li>
+                <li>✓ Professionelle Betreuung</li>
+                <li>✓ 24/7 Bereitschaftsdienst</li>
               </ul>
             </div>
           </div>
@@ -75,9 +74,9 @@ export default function Bueroreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/kundenbilder/Büroreinigung.png"
-        backgroundAlt="Kontaktieren Sie uns für Büroreinigung"
-        title="Bereit für ein sauberes Büro?"
+        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundAlt="Kontaktieren Sie uns für Facility Management"
+        title="Bereit für professionelles Facility Management?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."
         buttonText="Jetzt Beratung anfordern"
         buttonLink="/kontakt"

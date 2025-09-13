@@ -41,8 +41,8 @@ export default function Gartenpflege() {
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/familie-vor-haus-mit-solaranlagen.webp"
+          <Image
+            src="/img/kundenbilder/Gartenpflege (1).png"
             alt="Gartenpflege - Professionelle Gartenbetreuung in Darmstadt"
             fill
             className="object-cover brightness-50"

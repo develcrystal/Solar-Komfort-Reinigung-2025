@@ -14,3 +14,26 @@
   }
 }
 
+
+/* Remove top padding for main.pt-20 in dark mode */
+html.dark body.__className_ee9fce main.pt-20,
+.pt-20 {
+  padding-top: 0 !important;
+}
+
+/* Override the -mt-20 rule that's causing header issues */
+.-mt-20 {
+  margin-top: 0 !important;
+}
+
+/* Force navbar background to avoid hydration mismatch */
+.navbar-container {
+  background-color: white !important;
+  width: 100% !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-container {
+    background-color: #171717 !important;
+  }
+}

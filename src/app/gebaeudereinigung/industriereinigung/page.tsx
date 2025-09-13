@@ -1,5 +1,7 @@
 import { Container } from '@/components/Container';
 import { CtaSection } from '@/components/CtaSection';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { RelatedServices } from '@/components/RelatedServices';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircleIcon, CogIcon, ShieldCheckIcon, SparklesIcon } from '@heroicons/react/24/outline';
@@ -41,11 +43,14 @@ export default function Industriereinigung() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb />
+      
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/flux/industriereinigung.png"
+            src="/img/kundenbilder/Industriereinigung (1).png"
             alt="Industriereinigung - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"
@@ -260,6 +265,13 @@ export default function Industriereinigung() {
         </Section>
       </Container>
       
+      {/* Related Services - Internal Linking für SEO */}
+      <RelatedServices 
+        currentService="industriereinigung" 
+        category="gebaeudereinigung"
+        maxServices={4}
+      />
+
       {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection 
         backgroundImage="/img/flux/industriereinigung.png"

@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unseren professionellen Hausmeisterservice für ein gepflegtes Gebäude.",
     url: "https://www.komfort-gs24.de/hausmeisterservice",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/flux/komfort-team-cleaning.webp" }],
   },
 };

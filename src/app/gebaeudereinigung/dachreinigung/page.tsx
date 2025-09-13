@@ -3,6 +3,8 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
 import { ServiceHeader } from '@/components/ServiceHeader';
 import { ExtendedProcessSteps } from '@/components/ExtendedProcessSteps';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { RelatedServices } from '@/components/RelatedServices';
 
 export default function Dachreinigung() {
   // 6-Schritte Komplett-Prozess für Dachreinigung
@@ -63,7 +65,7 @@ export default function Dachreinigung() {
       <ServiceHeader
         title="DACHREINIGUNG & BESCHICHTUNG"
         description="Professionelle Dachreinigung und Beschichtung für ein gepflegtes Erscheinungsbild und längere Haltbarkeit Ihres Daches."
-        imageSrc="/img/kundenbilder/Dachreinigung Resultat!.png"
+        imageSrc="/img/kundenbilder/Dachreinigung.png"
         imageAlt="Dachreinigung Vorher/Nachher - Beeindruckende Transformation durch professionelle Dachreinigung"
       />
 

@@ -1,16 +1,21 @@
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { RelatedServices } from '@/components/RelatedServices';
 import Image from 'next/image';
 
 export default function Bueroreinigung() {
   return (
-    <>
+    <div className="bg-gray-50 dark:bg-gray-900">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb />
+      
       {/* Hero-Bereich - Mobile First */}
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/bueroeinigung-sauber.webp"
+          <Image
+            src="/img/kundenbilder/Büro-Reinigung (1).png"
             alt="Büroreinigung - Sauberes modernes Großraumbüro nach professioneller Reinigung"
             fill
             className="object-cover brightness-[0.8]"
@@ -74,6 +79,14 @@ export default function Bueroreinigung() {
         </Container>
       </div>
 
+      {/* Related Services - Internal Linking für SEO */}
+      <RelatedServices 
+        currentService="bueroeinigung" 
+        category="gebaeudereinigung"
+        maxServices={4}
+      />
+
+      {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection
         backgroundImage="/img/kundenbilder/Büroreinigung.png"
         backgroundAlt="Kontaktieren Sie uns für Büroreinigung"
@@ -82,6 +95,6 @@ export default function Bueroreinigung() {
         buttonText="Jetzt Beratung anfordern"
         buttonLink="/kontakt"
       />
-    </>
+    </div>
   );
 }

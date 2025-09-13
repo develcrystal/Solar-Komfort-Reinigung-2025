@@ -48,79 +48,79 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Dachreinigung & Beschichtung",
-          href: "/gebaeudereinigung/dachreinigung",
+          href: "/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         {
           name: "Fassadenreinigung & Impregnierung",
-          href: "/gebaeudereinigung/fassadenreinigung",
+          href: "/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         { 
           name: "Pflaster- & Steinreinigung", 
-          href: "/gebaeudereinigung/pflasterreinigung",
+          href: "/pflasterreinigung",
           description: "Gründliche Reinigung von Pflaster und Naturstein",
           icon: "🧱"
         },
         { 
           name: "Büroreinigung", 
-          href: "/gebaeudereinigung/bueroeinigung",
+          href: "/bueroeinigung",
           description: "Professionelle Reinigung für Büroräume",
           icon: "🏢"
         },
         { 
           name: "Baubeschlussreinigung", 
-          href: "/gebaeudereinigung/baubeschlussreinigung",
+          href: "/baubeschlussreinigung",
           description: "Gründliche Endreinigung nach Bauarbeiten",
           icon: "🔨"
         },
         { 
           name: "Grundreinigung", 
-          href: "/gebaeudereinigung/grundreinigung",
+          href: "/grundreinigung",
           description: "Intensive Grundreinigung aller Bereiche",
           icon: "✨"
         },
         { 
           name: "Haushaltsreinigung", 
-          href: "/gebaeudereinigung/haushaltsreinigung",
+          href: "/haushaltsreinigung",
           description: "Zuverlässige Reinigung für Privathaushalte",
           icon: "🏠"
         },
         { 
           name: "Industriereinigung", 
-          href: "/gebaeudereinigung/industriereinigung",
+          href: "/industriereinigung",
           description: "Spezialisierte Reinigung für Industrieanlagen",
           icon: "🏭"
         },
         { 
           name: "Treppenhausreinigung", 
-          href: "/gebaeudereinigung/treppenhausreinigung",
+          href: "/treppenhausreinigung",
           description: "Regelmäßige Treppenhausreinigung",
           icon: "/img/icons/treppenhausreinigung.svg"
         },
         { 
           name: "Krankenausreinigung", 
-          href: "/gebaeudereinigung/krankenausreinigung",
+          href: "/krankenausreinigung",
           description: "Hygienische Reinigung für medizinische Einrichtungen",
           icon: "🏥"
         },
         { 
           name: "Hotellerie & Gastronomie", 
-          href: "/gebaeudereinigung/hotellerie-gastronomie",
+          href: "/hotellerie-gastronomie",
           description: "Professionelle Reinigung für Hotels und Restaurants",
           icon: "🍽️"
         },
         { 
           name: "Fenster- & Glasreinigung", 
-          href: "/gebaeudereinigung/fensterreinigung",
+          href: "/fensterreinigung",
           description: "Streifenfreie Fenster- und Glasreinigung",
           icon: "/img/icons/fensterreinigung.svg"
         },
         { 
           name: "Schul- & Kindergartenreinigung", 
-          href: "/gebaeudereinigung/schulreinigung",
+          href: "/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
           icon: "/img/icons/fensterreinigung.svg"
         }
@@ -132,31 +132,31 @@ export const Navbar = () => {
       submenu: [
         { 
           name: "Hausmeisterservice", 
-          href: "/gebaeudeservice/hausmeisterservice",
+          href: "/hausmeisterservice",
           description: "Umfassender Hausmeisterservice für Ihre Immobilie",
           icon: "🔧"
         },
         { 
           name: "Gartenpflege & Außenanlagen", 
-          href: "/gebaeudeservice/gartenpflege",
+          href: "/gartenpflege",
           description: "Professionelle Garten- und Außenanlagenpflege",
           icon: "🌿"
         },
         { 
           name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/gebaeudeservice/entruempelung",
+          href: "/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
           icon: "📦"
         },
         { 
           name: "Winterdienst", 
-          href: "/gebaeudeservice/winterdienst",
+          href: "/winterdienst",
           description: "Zuverlässiger Winterdienst und Streupflicht",
           icon: "❄️"
         },
         { 
           name: "Außenpflege & saisonale Dienste", 
-          href: "/gebaeudeservice/aussenpflege",
+          href: "/aussenpflege",
           description: "Saisonale Außenpflege das ganze Jahr über",
           icon: "🍂"
         }
@@ -168,19 +168,19 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Angebot",
-          href: "/facility-management/angebot",
+          href: "/angebot",
           description: "Unser Facility Management Leistungsspektrum",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Unternehmen",
-          href: "/facility-management/unternehmen",
+          href: "/unternehmen",
           description: "Über unser Facility Management Team",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Kontakt",
-          href: "/facility-management/kontakt-facility",
+          href: "/kontakt-facility",
           description: "Kontakt für Facility Management Anfragen",
           icon: "/img/icons/facility-management.svg"
         }
@@ -221,7 +221,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="navbar-container">
       <nav className="container relative flex flex-wrap items-center justify-between px-4 py-6 sm:px-6 md:px-8 mx-auto lg:justify-between xl:px-1 z-50 max-w-screen-2xl">
         {/* Logo  */}
         <Link href="/" className="flex items-center">
@@ -230,15 +230,7 @@ export const Navbar = () => {
             width={400}
             height={120}
             alt="Komfort Gebäudeservice24"
-            className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto dark:hidden"
-            priority
-          />
-          <Image
-            src="/img/inverted_komfort-logo-cropped.png"
-            width={400}
-            height={120}
-            alt="Komfort Gebäudeservice24"
-            className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto hidden dark:block"
+            className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto"
             priority
           />
         </Link>

@@ -41,8 +41,8 @@ export default function Winterdienst() {
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/winterdienst-prozess.webp"
+          <Image
+            src="/img/kundenbilder/Dachreinigung.png"
             alt="Winterdienst - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"

@@ -1,17 +1,22 @@
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { RelatedServices } from '@/components/RelatedServices';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Fassadenreinigung() {
   return (
-    <>
+    <div className="bg-gray-50 dark:bg-gray-900">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb />
+      
       {/* Hero-Bereich - Mobile First */}
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/fassadenreinigung-prozess.webp"
+          <Image
+            src="/img/kundenbilder/Fassaden-Reingung.png"
             alt="Fassadenreinigung & Impregnierung - Professioneller Arbeiter reinigt Fassade"
             fill
             className="object-cover brightness-[0.8]"
@@ -170,7 +175,14 @@ export default function Fassadenreinigung() {
         </Container>
       </div>
 
-      {/* CTA-Bereich */}
+      {/* Related Services - Internal Linking für SEO */}
+      <RelatedServices 
+        currentService="fassadenreinigung" 
+        category="gebaeudereinigung"
+        maxServices={4}
+      />
+
+      {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection
         backgroundImage="/img/flux/fassadenreinigung-prozess1.webp"
         backgroundAlt="Kontaktieren Sie uns für Fassadenreinigung"
@@ -179,6 +191,6 @@ export default function Fassadenreinigung() {
         buttonText="Angebot anfordern"
         buttonLink="/kontakt"
       />
-    </>
+    </div>
   );
 }

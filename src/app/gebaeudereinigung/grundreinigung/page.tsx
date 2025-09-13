@@ -9,8 +9,8 @@ export default function Grundreinigung() {
       {/* Hero-Bereich - Mobile First */}
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/team-beratung1.webp"
+          <Image
+            src="/img/kundenbilder/Grundreinigung.png"
             alt="Grundreinigung - Intensive Tiefenreinigung für alle Oberflächen"
             fill
             className="object-cover brightness-[0.8]"

@@ -92,8 +92,8 @@ export default function Referenzen() {
       {/* Hero Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/referenz-einfamilienhaus2.webp"
+          <Image
+            src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg"
             alt="Referenzen - Solar Komfort"
             fill
             className="object-cover brightness-50"

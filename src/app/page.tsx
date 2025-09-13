@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Faq } from "@/components/Faq";
 import { CtaSection } from "@/components/CtaSection";
+import { RelatedServices } from "@/components/RelatedServices";
 import { ExtendedProcessSteps } from "@/components/ExtendedProcessSteps";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -106,7 +107,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="home-container -mt-20">
+    <div className="home-container">
       {/* Hero-Bereich - Fullwidth Layout */}
       <div className="relative h-screen min-h-[600px] w-full">
         {/* Hintergrundbild mit Overlay */}
@@ -673,6 +674,12 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      {/* Unsere Dienstleistungen - Internal Linking für SEO */}
+      <RelatedServices 
+        category="gebaeudereinigung"
+        maxServices={8}
+      />
 
       {/* Call-to-Action - Fullwidth Layout */}
       <div id="kontakt" className="w-full">

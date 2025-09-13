@@ -33,8 +33,8 @@ export default function UeberUns() {
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/team-gruppenfoto2.webp"
+          <Image
+            src="/img/kundenbilder/Büro-Reinigung (3).png"
             alt="Über uns - Clean Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"
@@ -187,107 +187,6 @@ export default function UeberUns() {
         <Section id="team" className="mt-0 mb-12 !py-0">
           <h2 className="text-4xl font-bold mb-10 uppercase tracking-wide text-center">UNSER TEAM</h2>
           
-          {/* Führungsteam - Moderne Karten mit Hover-Effekt */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">Führungsteam</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Geschäftsführer */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <div className="relative h-80">
-                  <Image 
-                    src="/img/flux/team-geschaeftsfuehrerteam1.webp"
-                    alt="Max Mustermann - Geschäftsführer"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <p className="text-white text-sm">
-                      &ldquo;Qualität und Nachhaltigkeit sind keine Trends, sondern unsere Grundwerte.&rdquo;
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-bold">Max Mustermann</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">Geschäftsführer</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    20+ Jahre Erfahrung in der Dachsanierung und -beschichtung. Zertifizierter Experte für nachhaltige Gebäudesanierung.
-                  </p>
-                  <div className="flex space-x-3">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                      Dachdeckermeister
-                    </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                      BWL
-                    </span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Projektleiterin */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <div className="relative h-80">
-                  <Image 
-                    src="/img/flux/team-projektleiterimage.webp"
-                    alt="Anna Schmidt - Projektleiterin"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <p className="text-white text-sm">
-                      &ldquo;Jedes Projekt ist einzigartig und verdient eine maßgeschneiderte Lösung.&rdquo;
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-bold">Anna Schmidt</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">Projektleiterin</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    Expertin für Bauprojektmanagement mit Fokus auf denkmalgeschützte Gebäude und Wohnanlagen.
-                  </p>
-                  <div className="flex space-x-3">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">
-                      Architektur
-                    </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
-                      PMI-Zertifiziert
-                    </span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Technischer Leiter */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <div className="relative h-80">
-                  <Image 
-                    src="/img/flux/team-technischer-leiterimage.webp"
-                    alt="Thomas Weber - Technischer Leiter"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <p className="text-white text-sm">
-                      &ldquo;Innovation und Tradition im perfekten Gleichgewicht.&rdquo;
-                    </p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-bold">Thomas Weber</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">Technischer Leiter</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    Entwickelt spezialisierte Reinigungsverfahren und umweltfreundliche Beschichtungstechniken.
-                  </p>
-                  <div className="flex space-x-3">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-                      Dachdeckermeister
-                    </span>
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
-                      Sachverständiger
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           
           {/* Team-Gruppenfotos mit interaktivem Layout */}
           <div className="mb-16">

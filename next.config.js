@@ -15,7 +15,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   // Ensure all assets are loaded from the correct port
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://solar-komfort-reinigung.de' : 'http://localhost:3002',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://solar-komfort-reinigung.de' : '',
   basePath: '',
   publicRuntimeConfig: {
     basePath: '',

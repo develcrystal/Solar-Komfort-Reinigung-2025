@@ -488,7 +488,7 @@ export default function Home() {
       </div>
 
       {/* Unsere Leistungen im Überblick - Fullwidth */}
-      <div id="leistungen" className="w-full">
+      <div id="leistungen" className="w-full mt-16 sm:mt-20 md:mt-24 lg:mt-28">
         <LeistungenImUberblick />
       </div>
 

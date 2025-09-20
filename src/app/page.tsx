@@ -11,6 +11,7 @@ import Benefits from "@/components/Benefits";
 import LeistungenImUberblick from "@/components/LeistungenImUberblick";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { WarumWirSection } from "@/components/WarumWirSection";
+import LogoSlider from "@/components/LogoSlider";
 import { ProblemLoesungSection } from "@/components/ProblemLoesungSection";
 
 const testimonials = [
@@ -568,7 +569,9 @@ export default function Home() {
           />
         </Container>
       </section>
-
+    
+      <LogoSlider />
+    
       {/* Le - Vorher/Nachher */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>

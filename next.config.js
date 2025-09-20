@@ -20,6 +20,15 @@ const nextConfig = {
   publicRuntimeConfig: {
     basePath: '',
   },
+  async redirects() {
+    return [
+      {
+        source: '/gartenpflege',
+        destination: '/gebaeudeservice/gartenpflege',
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Fixes npm packages that depend on `fs` module

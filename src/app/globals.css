@@ -25,15 +25,7 @@ html.dark body.__className_ee9fce main.pt-20,
 .-mt-20 {
   margin-top: 0 !important;
 }
-
-/* Force navbar background to avoid hydration mismatch */
+/* Navbar background with class-based dark mode support */
 .navbar-container {
-  background-color: white !important;
-  width: 100% !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  .navbar-container {
-    background-color: #171717 !important;
-  }
+  @apply bg-white dark:bg-trueGray-900 w-full;
 }

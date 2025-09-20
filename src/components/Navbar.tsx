@@ -1,16 +1,15 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 const renderIcon = (icon: string): JSX.Element | null => {
-  // If it's a path, render with Image
   if (icon.startsWith('/')) {
     return <Image src={icon} alt="" width={22} height={22} />;
   }
-  // Map common emoji to consistent SVG icons
   const emojiToIcon: Record<string, string> = {
     "🏠": "/img/icons/einfamilienhaus.svg",
     "🏢": "/img/icons/gebaeudereinigung.svg",
@@ -40,6 +39,7 @@ const renderIcon = (icon: string): JSX.Element | null => {
 
 export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { theme } = useTheme();
 
   const navigation = [
     {
@@ -48,79 +48,79 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Dachreinigung & Beschichtung",
-          href: "/dachreinigung",
+          href: "/gebaeudereinigung/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         {
           name: "Fassadenreinigung & Impregnierung",
-          href: "/fassadenreinigung",
+          href: "/gebaeudereinigung/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
           icon: "/img/icons/gebaeudereinigung.svg"
         },
         { 
           name: "Pflaster- & Steinreinigung", 
-          href: "/pflasterreinigung",
+          href: "/gebaeudereinigung/pflasterreinigung",
           description: "Gründliche Reinigung von Pflaster und Naturstein",
           icon: "🧱"
         },
         { 
           name: "Büroreinigung", 
-          href: "/bueroeinigung",
+          href: "/gebaeudereinigung/bueroeinigung",
           description: "Professionelle Reinigung für Büroräume",
           icon: "🏢"
         },
         { 
           name: "Baubeschlussreinigung", 
-          href: "/baubeschlussreinigung",
+          href: "/gebaeudereinigung/baubeschlussreinigung",
           description: "Gründliche Endreinigung nach Bauarbeiten",
           icon: "🔨"
         },
         { 
           name: "Grundreinigung", 
-          href: "/grundreinigung",
+          href: "/gebaeudereinigung/grundreinigung",
           description: "Intensive Grundreinigung aller Bereiche",
           icon: "✨"
         },
         { 
           name: "Haushaltsreinigung", 
-          href: "/haushaltsreinigung",
+          href: "/gebaeudereinigung/haushaltsreinigung",
           description: "Zuverlässige Reinigung für Privathaushalte",
           icon: "🏠"
         },
         { 
           name: "Industriereinigung", 
-          href: "/industriereinigung",
+          href: "/gebaeudereinigung/industriereinigung",
           description: "Spezialisierte Reinigung für Industrieanlagen",
           icon: "🏭"
         },
         { 
           name: "Treppenhausreinigung", 
-          href: "/treppenhausreinigung",
+          href: "/gebaeudereinigung/treppenhausreinigung",
           description: "Regelmäßige Treppenhausreinigung",
           icon: "/img/icons/treppenhausreinigung.svg"
         },
         { 
           name: "Krankenausreinigung", 
-          href: "/krankenausreinigung",
+          href: "/gebaeudereinigung/krankenausreinigung",
           description: "Hygienische Reinigung für medizinische Einrichtungen",
           icon: "🏥"
         },
         { 
           name: "Hotellerie & Gastronomie", 
-          href: "/hotellerie-gastronomie",
+          href: "/gebaeudereinigung/hotellerie-gastronomie",
           description: "Professionelle Reinigung für Hotels und Restaurants",
           icon: "🍽️"
         },
         { 
           name: "Fenster- & Glasreinigung", 
-          href: "/fensterreinigung",
+          href: "/gebaeudereinigung/fensterreinigung",
           description: "Streifenfreie Fenster- und Glasreinigung",
           icon: "/img/icons/fensterreinigung.svg"
         },
-        { 
-          name: "Schul- & Kindergartenreinigung", 
-          href: "/schulreinigung",
+        {
+          name: "Schul- & Kindergartenreinigung",
+          href: "/gebaeudereinigung/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
           icon: "/img/icons/fensterreinigung.svg"
         }
@@ -132,31 +132,31 @@ export const Navbar = () => {
       submenu: [
         { 
           name: "Hausmeisterservice", 
-          href: "/hausmeisterservice",
+          href: "/gebaeudeservice/hausmeisterservice",
           description: "Umfassender Hausmeisterservice für Ihre Immobilie",
           icon: "🔧"
         },
         { 
           name: "Gartenpflege & Außenanlagen", 
-          href: "/gartenpflege",
+          href: "/gebaeudeservice/gartenpflege",
           description: "Professionelle Garten- und Außenanlagenpflege",
           icon: "🌿"
         },
         { 
           name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/entruempelung",
+          href: "/gebaeudeservice/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
           icon: "📦"
         },
         { 
           name: "Winterdienst", 
-          href: "/winterdienst",
+          href: "/gebaeudeservice/winterdienst",
           description: "Zuverlässiger Winterdienst und Streupflicht",
           icon: "❄️"
         },
         { 
           name: "Außenpflege & saisonale Dienste", 
-          href: "/aussenpflege",
+          href: "/gebaeudeservice/aussenpflege",
           description: "Saisonale Außenpflege das ganze Jahr über",
           icon: "🍂"
         }
@@ -168,19 +168,19 @@ export const Navbar = () => {
       submenu: [
         {
           name: "Angebot",
-          href: "/angebot",
+          href: "/facility-management/angebot",
           description: "Unser Facility Management Leistungsspektrum",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Unternehmen",
-          href: "/unternehmen",
+          href: "/facility-management/unternehmen",
           description: "Über unser Facility Management Team",
           icon: "/img/icons/facility-management.svg"
         },
         {
           name: "Kontakt",
-          href: "/kontakt-facility",
+          href: "/facility-management/kontakt-facility",
           description: "Kontakt für Facility Management Anfragen",
           icon: "/img/icons/facility-management.svg"
         }
@@ -226,7 +226,7 @@ export const Navbar = () => {
         {/* Logo  */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/img/komfort-logo-cropped.png"
+            src={theme === 'dark' ? '/img/inverted_komfort-logo-cropped.png' : '/img/komfort-logo-cropped.png'}
             width={400}
             height={120}
             alt="Komfort Gebäudeservice24"
@@ -281,7 +281,7 @@ export const Navbar = () => {
                           <>
                             <button 
                               onClick={() => toggleDropdown(item.name)}
-                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
+                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
                             >
                               {item.name}
                               <svg 
@@ -300,7 +300,7 @@ export const Navbar = () => {
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}
-                                    className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
+                                    className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
                                   >
                                     <span className="inline-flex items-center">
                                       {renderIcon(subItem.icon)}
@@ -314,7 +314,7 @@ export const Navbar = () => {
                         ) : (
                           <Link 
                             href={item.href} 
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
+                            className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
                           >
                             {item.name}
                           </Link>
@@ -338,7 +338,7 @@ export const Navbar = () => {
                 {menu.submenu ? (
                   <div className="relative group">
                     <button 
-                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
+                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
                     >
                       {menu.name}
                       <svg 
@@ -359,10 +359,10 @@ export const Navbar = () => {
                         {menu.isMega ? (
                           <div className="w-[800px] p-8">
                             <div className="mb-6">
-                              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-left">
+                              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-left">
                                 {menu.name}
                               </h3>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 text-left">
+                              <p className="text-sm text-gray-600 dark:text-gray-300 text-left">
                                 Entdecken Sie unser umfassendes Leistungsspektrum
                               </p>
                             </div>
@@ -379,11 +379,11 @@ export const Navbar = () => {
                                       {renderIcon(subItem.icon)}
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                      <div className="text-sm font-medium text-gray-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
+                                      <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
                                         {subItem.name}
                                       </div>
                                       {subItem.description && (
-                                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight text-left">
+                                        <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 leading-tight text-left">
                                           {subItem.description}
                                         </div>
                                       )}
@@ -396,10 +396,10 @@ export const Navbar = () => {
                             <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <p className="text-sm font-medium text-gray-900 dark:text-white text-left">
+                                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100 text-left">
                                     Benötigen Sie eine Beratung?
                                   </p>
-                                  <p className="text-xs text-gray-500 dark:text-gray-400 text-left">
+                                  <p className="text-xs text-gray-500 dark:text-gray-300 text-left">
                                     Kontaktieren Sie uns für ein kostenloses Angebot
                                   </p>
                                 </div>
@@ -416,7 +416,7 @@ export const Navbar = () => {
                           /* Regular Dropdown for smaller menus */
                           <div className="w-80 py-4">
                             <div className="px-6 pb-4 mb-4 border-b border-gray-100 dark:border-gray-800">
-                              <h3 className="text-base font-semibold text-gray-900 dark:text-white text-left">
+                              <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 text-left">
                                 {menu.name}
                               </h3>
                             </div>
@@ -424,13 +424,13 @@ export const Navbar = () => {
                               <Link 
                                 key={subIndex} 
                                 href={subItem.href} 
-                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
+                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
                               >
                                 <span className="text-lg mr-3">{renderIcon(subItem.icon)}</span>
                                 <div className="flex-1">
                                   <div className="text-sm font-medium text-left">{subItem.name}</div>
                                   {subItem.description && (
-                                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">
+                                    <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 text-left">
                                       {subItem.description}
                                     </div>
                                   )}
@@ -445,7 +445,7 @@ export const Navbar = () => {
                 ) : (
                   <Link
                     href={menu.href}
-                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
+                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
                   >
                     {menu.name}
                   </Link>

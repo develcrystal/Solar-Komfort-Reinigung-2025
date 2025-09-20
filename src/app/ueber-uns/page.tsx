@@ -34,8 +34,8 @@ export default function UeberUns() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Büro-Reinigung (3).png"
-            alt="Über uns - Clean Komfort Gebäudeservice24 Team"
+            src="/img/kundenbilder/Industriereinigung (1).png"
+            alt="HK Komfort Facility & Gebäudeservice GmbH - Professionelle Reinigungskräfte im Einsatz"
             fill
             className="object-cover brightness-50"
             priority
@@ -139,8 +139,8 @@ export default function UeberUns() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center text-center">
                   <Image 
-                    src="/img/flux/badge-qualitaet.webp"
-                    alt="Premium Qualität"
+                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg"
+                    alt="Unsere Reinigungskräfte bei der Arbeit an einer Fassade"
                     width={180}
                     height={180}
                     className="mb-6"
@@ -153,8 +153,8 @@ export default function UeberUns() {
                 
                 <div className="flex flex-col items-center text-center">
                   <Image 
-                    src="/img/flux/badge-erfahrung.webp"
-                    alt="10 Jahre Erfahrung"
+                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg"
+                    alt="Unser Team bei der professionellen Reinigung"
                     width={180}
                     height={180}
                     className="mb-6"
@@ -196,8 +196,8 @@ export default function UeberUns() {
               {/* Linke Spalte - Großes Bild */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/img/flux/team-gruppenfoto1.webp"
-                  alt="Das Clean Komfort Gebäudeservice24 Team"
+                  src="/img/kundenbilder/Team_Arbeitseinsatz.jpg"
+                  alt="Unser professionelles Reinigungsteam im Einsatz"
                   fill
                   className="object-cover"
                 />

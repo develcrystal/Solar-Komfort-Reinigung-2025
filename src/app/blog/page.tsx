@@ -79,7 +79,7 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function BlogPage() {
-  const categories = [...new Set(blogPosts.map(post => post.category))];
+  const categories = Array.from(new Set(blogPosts.map(post => post.category)));
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen">

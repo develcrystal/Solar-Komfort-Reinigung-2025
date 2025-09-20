@@ -35,12 +35,12 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Hero-Content */}
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-2xl">
+        <Container className="relative z-10 h-full flex items-center px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="max-w-2xl pr-4 md:pr-8">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white mb-3 sm:mb-4 md:mb-5 drop-shadow-lg">
               {title}
             </h1>
-            <p className="py-2 text-base sm:text-lg md:text-xl leading-relaxed text-gray-200 drop-shadow-md mb-4 sm:mb-5 md:mb-6">
+            <p className="py-2 text-base sm:text-lg md:text-xl leading-relaxed text-gray-200 drop-shadow-md mb-4 sm:mb-5 md:mb-6 pr-4 md:pr-8">
               {subtitle}
             </p>
 

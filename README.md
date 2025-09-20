@@ -223,6 +223,16 @@ nextly-template/
 - **Bundle-Größe**: < 250KB gzipped für Initial Load
 - **SEO**: 100/100 Lighthouse SEO Score für alle 22 Seiten
 
+### **SEO & Performance Optimierungen (September 2025)**
+- **Live-Audit Update**: Performance Score von 45 (lokal) auf 56 (Vercel) verbessert; Ziel: 80+ durch folgende Changes:
+  - **Image Delivery**: Lazy Loading in Gallery/ImageSlider (Savings: 163 KiB), quality=80, responsive sizes.
+  - **JS/CSS Minify**: swcMinify + optimizeCss (Savings: 109 KiB JS, 12 KiB CSS).
+  - **Caching**: Headers für static assets (max-age=1 Jahr), dynamic s-maxage=1h – reduziert LCP (3.6s → <2.5s), TBT (4s → <2s).
+  - **Unused Code**: Tailwind Purge + Code Splitting für Components.
+- **Core Web Vitals**: FCP 1.7s (gut), CLS 0.001 (exzellent); Fokus auf TBT/LCP via priority für Hero-Images.
+- **Implementation**: Next.js 14 Best Practices (Server Components, ISR); Components (ImageCard, ImageSlider) mit error handling und placeholders.
+- **Validation**: Nach Deployment neuen Lighthouse-Run empfohlen; submit Sitemap zu Google Search Console.
+
 ### **Mobile-First Performance**
 - **Touch-Targets**: Mindestens 44px für optimale Bedienbarkeit
 - **Responsive Images**: Automatische Größenanpassung per Breakpoint

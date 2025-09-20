@@ -45,13 +45,13 @@ export default function Hausmeisterservice() {
       <Breadcrumb />
       
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
+      {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <Hero
         title="HAUSMEISTERSERVICE"
         subtitle="Professioneller Hausmeisterservice in Darmstadt und Umgebung. Regelmäßige Kontrollgänge, Kleinreparaturen, Techniküberwachung, Schließdienst, Ansprechpartner vor Ort."
-        backgroundImage="/img/flux/komfort-team-cleaning.webp"
-        backgroundAlt="Hausmeisterservice - HK Komfort Facility & Gebäudeservice GmbH"
+        backgroundImage="/img/kundenbilder/Gartenpflege.png"
+        backgroundAlt="Hausmeisterservice - Umfassende Objektbetreuung inklusive Außenpflege"
       />
-
       <Container>
         {/* Leistungsübersicht Section */}
         <Section id="leistungen" className="py-16">

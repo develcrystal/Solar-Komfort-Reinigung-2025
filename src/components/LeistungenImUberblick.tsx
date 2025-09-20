@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ImageSlider } from '@/components/ImageSlider';
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
+import '@/app/globals.css';
 
 interface Service {
   title: string;
@@ -27,7 +28,7 @@ const services: Service[] = [
     title: "Unterhaltsreinigung",
     images: [
       { src: "/img/kundenbilder/Büroreinigung.png", alt: "Professionelle Büroreinigung" },
-      { src: "/img/kundenbilder/buero-reinigung-profi.png", alt: "Büroreinigung Detail" }
+      { src: "/img/kundenbilder/Reinigung (1).png", alt: "Unterhaltsreinigung in Aktion" }
     ],
     description: "Regelmäßige professionelle Büro- und Praxisreinigung für ein sauberes und gesundes Arbeitsumfeld. Unsere geschulten Fachkräfte sorgen für konstante Qualität nach individuellen Reinigungsplänen.",
     features: [
@@ -165,10 +166,10 @@ export default function LeistungenImUberblick() {
         {/* Services */}
         {services.map((service, index) => (
           <Section key={index}>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
-              <div className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] hover:ring-2 hover:ring-blue-200 dark:hover:ring-blue-800 hover:ring-opacity-50 animate-pulse-once">
+              <div className={`relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} group`}>
                 {/* Image Section with Slider */}
-                <div className="md:w-1/2 relative">
+                <div className="md:w-1/2 relative group">
                   <ImageSlider
                     images={service.images}
                     width={800}
@@ -181,6 +182,9 @@ export default function LeistungenImUberblick() {
                 
                 {/* Content Section */}
                 <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                  <Link href={service.link} className="absolute inset-0 z-10" aria-hidden="true">
+                    <span className="sr-only">Mehr erfahren über {service.title}</span>
+                  </Link>
                   {/* Title */}
                   <div className="mb-6">
                     <h3 className="text-4xl font-bold uppercase tracking-wide text-gray-900 dark:text-white">

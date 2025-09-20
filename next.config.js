@@ -14,6 +14,7 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Security Headers
         source: '/(.*)',
         headers: [
           { key: 'X-Frame-Options', value: 'DENY' },
@@ -23,10 +24,31 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      {
+        // Cache Headers for Static Assets (Images, CSS, JS) - Reduces LCP/TBT
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/img/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        // Dynamic Pages Cache (ISR-like)
+        source: '/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=3600, max-age=0' },
+        ],
+      },
     ];
   },
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizeCss: true,
   },
   swcMinify: true,
 };

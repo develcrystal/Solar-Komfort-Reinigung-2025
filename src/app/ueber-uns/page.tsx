@@ -34,8 +34,8 @@ export default function UeberUns() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Industriereinigung (1).png"
-            alt="HK Komfort Facility & Gebäudeservice GmbH - Professionelle Reinigungskräfte im Einsatz"
+            src="/img/flux/team-gruppenfoto1.webp"
+            alt="HK Komfort Facility & Gebäudeservice GmbH - Unser motiviertes Team für professionelle Gebäudereinigung und Service"
             fill
             className="object-cover brightness-50"
             priority
@@ -195,9 +195,9 @@ export default function UeberUns() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Linke Spalte - Großes Bild */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
-                <Image 
-                  src="/img/kundenbilder/Team_Arbeitseinsatz.jpg"
-                  alt="Unser professionelles Reinigungsteam im Einsatz"
+                <Image
+                  src="/img/kundenbilder/team-model-reinigung.png"
+                  alt="Unser freundliches Teammitglied bei der Reinigungsarbeit"
                   fill
                   className="object-cover"
                 />
@@ -321,7 +321,7 @@ export default function UeberUns() {
                 <div>
                   <div className="relative h-80 mb-6">
                     <Image 
-                      src="/img/flux/firmenfahrzeug-solar-komfort1.webp"
+                      src="/img/flux/firmenfahrzeug-solar-komfort4.png"
                       alt="Firmenfahrzeug Solar Komfort"
                       fill
                       className="rounded-xl object-cover"

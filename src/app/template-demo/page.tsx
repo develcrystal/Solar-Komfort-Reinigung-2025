@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { IndividuelleLoesungSection } from "@/components/IndividuelleLoesungSection";
 
 export const metadata: Metadata = {
   title: "Template Demo - Alle Section-Elemente",
@@ -47,7 +48,7 @@ export default function TemplateDemo() {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. Hero Section</h3>
           <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden">
             <Image 
-              src="/img/flux/hero-kontakt1.webp" 
+              src="/img/kundenbilder/Büro-Reinigung.png"
               alt="Hero Section Beispiel" 
               fill
               className="object-cover"
@@ -74,7 +75,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/flux/fassadenreinigung-prozess.webp"
+                  src="/img/kundenbilder/Fassaden-Reingung.png"
                   alt="Fassadenreinigung"
                   fill
                   className="object-cover"
@@ -94,7 +95,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/flux/dachreinigung-prozess1.webp"
+                  src="/img/kundenbilder/Dachreinigung.png"
                   alt="Dachreinigung"
                   fill
                   className="object-cover"
@@ -114,7 +115,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/flux/industriereinigung.png"
+                  src="/img/kundenbilder/Industriereinigung.png"
                   alt="Industriereinigung"
                   fill
                   className="object-cover"
@@ -148,37 +149,37 @@ export default function TemplateDemo() {
                 id: 1,
                 title: 'Kontakt & Beratung',
                 description: 'Unverbindliche Erstberatung und Terminvereinbarung für eine Vor-Ort-Besichtigung.',
-                image: '/img/flux/step1-beratung.webp'
+                image: '/img/kundenbilder/Büro-Reinigung (1).png'
               },
               {
                 id: 2,
                 title: 'Dachanalyse & Angebot',
                 description: 'Detaillierte Analyse des Dachs und Erstellung eines unverbindlichen Angebots.',
-                image: '/img/flux/step2-analyse.webp'
+                image: '/img/kundenbilder/Grundreinigung.png'
               },
               {
                 id: 3,
                 title: 'Vorbereitung & Reinigung',
                 description: 'Gründliche Reinigung und Vorbereitung der Dachfläche für die Beschichtung.',
-                image: '/img/flux/step3-reinigung.webp'
+                image: '/img/kundenbilder/Reinigung.png'
               },
               {
                 id: 4,
                 title: 'Ausbesserung & Reparatur',
                 description: 'Fachgerechte Ausbesserung von Schäden und Rissen im Dach.',
-                image: '/img/flux/step4-reparatur.webp'
+                image: '/img/kundenbilder/Entrümpelung.png'
               },
               {
                 id: 5,
                 title: 'Beschichtungsauftrag',
                 description: 'Auftrag der speziellen Dachbeschichtung in mehreren Schichten.',
-                image: '/img/flux/step5-beschichtung.webp'
+                image: '/img/kundenbilder/Dachbeschichtung.png'
               },
               {
                 id: 6,
                 title: 'Qualitätskontrolle & Übergabe',
                 description: 'Abschließende Kontrolle und Übergabe der fertiggestellten Dachbeschichtung.',
-                image: '/img/flux/step6-fertig.webp'
+                image: '/img/kundenbilder/Dachreinigung Resultat!.png'
               }
             ].map((step) => (
               <div 
@@ -207,6 +208,74 @@ export default function TemplateDemo() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Trust Section */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Trust Section - Warum uns vertrauen?
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Premium Qualität */}
+            <div className="text-center bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Premium Qualität</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Premium Qualität mit modernster Technik und höchsten Standards für langlebige Ergebnisse.
+              </p>
+            </div>
+
+            {/* 10 Jahre Erfahrung */}
+            <div className="text-center bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">10 Jahre Erfahrung</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                10 Jahre Erfahrung als zuverlässiger Partner für Dachbeschichtung in der Region.
+              </p>
+            </div>
+
+            {/* 100% Kundenzufriedenheit */}
+            <div className="text-center bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+              <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-orange-600 dark:text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">100% Kundenzufriedenheit</h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                100% Kundenzufriedenheit durch persönliche Betreuung und Garantie auf unsere Arbeit.
+              </p>
+            </div>
+          </div>
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> Trust Section zur Stärkung des Vertrauens mit Qualitäts-Siegeln und Erfolgsmetriken.
+            </p>
+          </div>
+        </section>
+
+        {/* Individuelle Lösung Section - Normal */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Individuelle Lösung Section - Normal
+          </h3>
+          <IndividuelleLoesungSection variant="normal" />
+        </section>
+
+        {/* Individuelle Lösung Section - Glassmorphism */}
+        <section className="py-12 bg-gray-900 dark:bg-gray-900 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+            Individuelle Lösung Section - Glassmorphism
+          </h3>
+          <IndividuelleLoesungSection variant="glassmorphism" />
         </section>
       </Container>
     </div>

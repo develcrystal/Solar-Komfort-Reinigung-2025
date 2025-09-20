@@ -9,11 +9,11 @@ export default function Angebot() {
       {/* Hero-Bereich - Mobile First */}
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/industriereinigung.webp"
+          <Image
+            src="/img/kundenbilder/Industriereinigung.png"
             alt="Professionelle Industriereinigung - Facility Management Angebot"
             fill
-            className="object-cover brightness-[0.8]"
+            className="object-cover brightness-50"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50"></div>

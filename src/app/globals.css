@@ -29,3 +29,33 @@ html.dark body.__className_ee9fce main.pt-20,
 .navbar-container {
   @apply bg-white dark:bg-trueGray-900 w-full;
 }
+
+/* Pulsing animation for service cards */
+@keyframes pulse-once {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.1);
+  }
+  70% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* Hover effects for linked tiles and cards */
+.hover-tile {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-tile:hover {
+  @apply shadow-lg transform -translate-y-1;
+  animation: pulse-once 1.5s ease-out;
+}
+
+.animate-pulse-once:hover {
+  animation: pulse-once 1.5s ease-out;
+}

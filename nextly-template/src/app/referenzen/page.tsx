@@ -68,32 +68,28 @@ export default function Referenzen() {
   ];
 
   // Bildslider für Firmenfahrzeuge
+  // Bildslider für Firmenfahrzeuge
   const firmenfahrzeugeImages = [
-    { 
-      src: "/img/flux/firmenfahrzeug-solar-komfort1.webp", 
-      alt: "Firmenfahrzeug Solar Komfort GmbH" 
+    {
+      src: "/img/flux/einsatz-beim-kunden1.png",
+      alt: "Einsatz beim Kunden mit Firmenfahrzeug"
     },
-    { 
-      src: "/img/flux/firmenfahrzeug-solar-komfort2.webp", 
-      alt: "Firmenfahrzeug Solar Komfort GmbH - Seitenansicht" 
+    {
+      src: "/img/flux/firmenfahrzeug-solar-komfort4.png",
+      alt: "Firmenfahrzeug Solar Komfort"
     },
-    { 
-      src: "/img/flux/firmenfahrzeug-solar-komfort3.webp", 
-      alt: "Firmenfahrzeug Solar Komfort GmbH - Frontansicht" 
-    },
-    { 
-      src: "/img/flux/firmenfahrzeug-solar-komfort4.webp", 
-      alt: "Firmenfahrzeug Solar Komfort GmbH - Im Einsatz" 
+    {
+      src: "/img/flux/unser-furhpark.png",
+      alt: "Unser Fuhrpark"
     }
   ];
-
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Hero Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/referenz-einfamilienhaus2.webp"
+          <Image
+            src="/img/flux/einsatz-beim-kunden1.png"
             alt="Referenzen - Solar Komfort"
             fill
             className="object-cover brightness-50"
@@ -280,7 +276,7 @@ export default function Referenzen() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105">
               <div className="relative h-64">
-                <ImageSlider 
+                <ImageSlider
                   images={firmenfahrzeugeImages}
                   width={800}
                   height={400}

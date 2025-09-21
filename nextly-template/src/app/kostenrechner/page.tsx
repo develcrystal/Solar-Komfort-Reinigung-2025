@@ -233,8 +233,8 @@ export default function Kostenrechner() {
       {/* Hero Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/dachbeschichtung-prozess.webp"
+          <Image
+            src="/img/kundenbilder/Dachreinigung Resultat!.png"
             alt="Kostenrechner - Solar Komfort"
             fill
             className="object-cover brightness-50"
@@ -285,7 +285,7 @@ export default function Kostenrechner() {
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="relative h-96">
                 <Image 
-                  src="/img/flux/team-beratung1.webp"
+                  src="/img/flux/hero-kontakt2.webp"
                   alt="Persönliche Beratung bei Solar Komfort"
                   fill
                   className="rounded-xl object-cover"

@@ -25,13 +25,14 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 
 ## Aktuelle Features
 - [x] **22 Unterseiten** vollständig implementiert
+- [x] **LogoSlider-Komponente:** Auto-rotierender Slider mit Städtenamen (Darmstadt, IHK Darmstadt, Frankfurt, Mannheim) für fiktive Kunden auf Startseite
 - [x] **Mobile First Hero-Bereiche** für alle Gebäudereinigung-Seiten (13/13)
 - [x] **Responsive Navigation** mit Dropdown-Menüs
 - [x] **Thematische Hero-Bilder** (inkl. externe Pflaster-Bilder)
 - [x] **Touch-optimierte Buttons** (min-h-[44px])
 - [x] **SEO-Optimierung** mit Metadata für alle Seiten
-- [ ] Hero-Bereiche für Gebäudeservice-Seiten (0/5)
-- [ ] Hero-Bereiche für Facility Management-Seiten (0/3)
+- [x] Hero-Bereiche für Gebäudeservice-Seiten (5/5)
+- [x] Hero-Bereiche für Facility Management-Seiten (3/3)
 - [x] **Galerie** mit Kategoriefiltern und Lightbox (1/1)
 - [x] **Template Demo Seite** mit verschiedenen Section-Elementen
 
@@ -51,15 +52,15 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 ├── /krankenausreinigung ✅ /hotellerie-gastronomie ✅ /fensterreinigung
 └── /schulreinigung
 
-🔄 Gebäudeservice (5/5 - Hero pending)
+✅ Gebäudeservice (5/5)
 ├── /hausmeisterservice /gartenpflege /entruempelung  
 └── /winterdienst /aussenpflege
 
-🔄 Facility Management (3/3 - Hero pending)
+✅ Facility Management (3/3)
 ├── /angebot /unternehmen
 └── /kontakt-facility
 
-🔄 Zusätzlich (1/1 - Hero pending)
+✅ Zusätzlich (1/1)
 └── /galerie
 ```
 
@@ -95,6 +96,7 @@ npm run dev  # Läuft auf http://localhost:3003
 
 ## Status
 ✅ **Gebäudereinigung:** 13/13 Seiten mit Mobile First Hero-Bereichen
-🔄 **Gebäudeservice:** 5/5 Seiten erstellt, Hero-Bereiche folgen  
-🔄 **Facility Management:** 3/3 Seiten erstellt, Hero-Bereiche folgen
+- [x] **LogoSlider auf Startseite:** Fiktiver Kunden-Slider mit Städtenamen vor Referenz-Sektion hinzugefügt
+✅ **Gebäudeservice:** 5/5 Seiten mit Heroes  
+✅ **Facility Management:** 3/3 Seiten mit Heroes
 ✅ **Galerie:** 1/1 Seite mit erweiterten Funktionen

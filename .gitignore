@@ -27,6 +27,9 @@ build/
 *.swo
 .DS_Store
 
+# Client documents
+Kunden/
+
 # Logs
 logs
 *.log

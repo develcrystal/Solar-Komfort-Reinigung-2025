@@ -49,7 +49,7 @@ export function Footer() {
             <div className="mt-5 text-center sm:text-left">
               <div className="text-gray-500 dark:text-gray-400">
                 <p>Telefon: <a href="tel:061511546592" className="hover:text-blue-500">06151 15 465 92</a></p>
-                <p>E-Mail: <a href="mailto:info@solarkomfort.de" className="hover:text-blue-500">info@solarkomfort.de</a></p>
+                <p>E-Mail: <a href="mailto:info@komfort-facility.de" className="hover:text-blue-500">info@komfort-facility.de</a></p>
                 <p>Adresse: Darmstadt, Deutschland</p>
               </div>
             </div>

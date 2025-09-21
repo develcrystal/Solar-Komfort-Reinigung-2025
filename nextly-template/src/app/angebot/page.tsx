@@ -10,8 +10,8 @@ export default function Angebot() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/img/flux/team-gruppenfoto1.webp"
-            alt="Facility Management Angebot - Umfassende Lösungen aus einer Hand"
+            src="/img/flux/industriereinigung.webp"
+            alt="Professionelle Industriereinigung - Facility Management Angebot"
             fill
             className="object-cover brightness-[0.8]"
             priority

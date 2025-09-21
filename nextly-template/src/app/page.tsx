@@ -2,6 +2,7 @@ import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Faq } from "@/components/Faq";
 import { CtaSection } from "@/components/CtaSection";
+import { RelatedServices } from "@/components/RelatedServices";
 import { ExtendedProcessSteps } from "@/components/ExtendedProcessSteps";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -10,6 +11,7 @@ import Benefits from "@/components/Benefits";
 import LeistungenImUberblick from "@/components/LeistungenImUberblick";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { WarumWirSection } from "@/components/WarumWirSection";
+import LogoSlider from "@/components/LogoSlider";
 import { ProblemLoesungSection } from "@/components/ProblemLoesungSection";
 
 const testimonials = [
@@ -86,7 +88,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp",
+        url: "/img/flux/team-gruppenfoto1.webp",
         width: 1200,
         height: 630,
         alt: "Clean Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung"
@@ -97,7 +99,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
     description: "Tochterfirma der Solar Komfort GmbH. Über 5.000 zufriedene Kunden. Komplettlösungen aus einer Hand.",
-    images: ["https://komfort-gebaeudeservice24.de/img/flux/kunden-dachreinigung-1.jpg"]
+    images: ["/img/flux/kunden-dachreinigung-1.webp"]
   },
   alternates: {
     canonical: "https://komfort-gebaeudeservice24.de"
@@ -108,7 +110,7 @@ export default function Home() {
   return (
     <div className="home-container">
       {/* Hero-Bereich - Fullwidth Layout */}
-      <div className="relative h-[70vh] sm:h-[75vh] md:h-[80vh] lg:h-[85vh] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] w-full">
+      <div className="relative h-screen min-h-[600px] w-full">
         {/* Hintergrundbild mit Overlay */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -231,7 +233,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Fassaden-Reingung.png" 
-                  alt="Professionelle Fassadenreinigung"
+                  alt="Professionelle Fassadenreinigung Darmstadt - Gebäudereinigung Rhein-Main"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -252,7 +254,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Büroreinigung.png" 
-                  alt="Professionelle Fensterreinigung"
+                  alt="Professionelle Fensterreinigung Frankfurt - Büroreinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -273,7 +275,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Krankenhausreinigung.png" 
-                  alt="Hygienische Sanitärreinigung"
+                  alt="Hygienische Sanitärreinigung Rhein-Main - Praxisreinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -294,7 +296,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Grundreinigung.png" 
-                  alt="Professionelle Bodenreinigung"
+                  alt="Professionelle Bodenreinigung Frankfurt - Industriereinigung Darmstadt"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -315,7 +317,7 @@ export default function Home() {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <Image 
                   src="/img/kundenbilder/Haus.png" 
-                  alt="Zuverlässiger Hausmeisterservice"
+                  alt="Zuverlässiger Hausmeisterservice Darmstadt - Facility Management Rhein-Main"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"
@@ -452,7 +454,7 @@ export default function Home() {
           <div className="absolute inset-0 z-0">
             <Image 
               src="/img/kundenbilder/buero-reinigung-profi.png"
-              alt="Professionelle Gebäudereinigung - Unser Versprechen an Sie"
+              alt="Professionelle Gebäudereinigung Darmstadt Frankfurt - Komfort Gebäudeservice24 Qualitätsversprechen"
               fill
               className="object-cover brightness-50"
             />
@@ -487,7 +489,7 @@ export default function Home() {
       </div>
 
       {/* Unsere Leistungen im Überblick - Fullwidth */}
-      <div id="leistungen" className="w-full">
+      <div id="leistungen" className="w-full mt-16 sm:mt-20 md:mt-24 lg:mt-28">
         <LeistungenImUberblick />
       </div>
 
@@ -567,15 +569,17 @@ export default function Home() {
           />
         </Container>
       </section>
-
+    
+      <LogoSlider />
+    
       {/* Le - Vorher/Nachher */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gray-50 dark:bg-gray-900">
         <Container>
           <SectionTitle
-            preTitle="Echte Kundenprojekte"
+            preTitle="Unsere Referenzprojekte"
             title="Vorher/Nachher - Sehen Sie den Unterschied"
           >
-            Überzeugen Sie sich selbst von der Qualität unserer Arbeit. Diese authentischen Vorher/Nachher-Bilder zeigen echte Kundenprojekte - dramatische Verbesserungen durch unsere professionelle Reinigung.
+            Überzeugen Sie sich selbst von der Qualität unserer Arbeit. Diese authentischen Vorher/Nachher-Bilder zeigen beeindruckende Transformationen - dramatische Verbesserungen durch unsere professionelle Reinigung.
           </SectionTitle>
           
           <div className="mt-10 sm:mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -673,6 +677,12 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      {/* Unsere Dienstleistungen - Internal Linking für SEO */}
+      <RelatedServices 
+        category="gebaeudereinigung"
+        maxServices={8}
+      />
 
       {/* Call-to-Action - Fullwidth Layout */}
       <div id="kontakt" className="w-full">

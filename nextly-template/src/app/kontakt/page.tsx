@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kontakt - Clean Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
     description: "Kontaktieren Sie Clean Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
-    images: ["https://komfort-gebaeudeservice24.de/img/flux/komfort-team-cleaning.webp"]
+    images: ["/img/flux/team-gruppenfoto1.webp"]
   },
   alternates: {
     canonical: "https://komfort-gebaeudeservice24.de/kontakt"
@@ -35,8 +35,8 @@ export default function Kontakt() {
       {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
       <div className="relative h-[35vh] sm:h-[40vh] md:h-[45vh] min-h-[280px] sm:min-h-[300px] md:min-h-[350px] w-full">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/img/flux/team-gruppenfoto1.webp"
+          <Image
+            src="/img/kundenbilder/Gartenpflege (1).png"
             alt="Kontakt - Clean Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"

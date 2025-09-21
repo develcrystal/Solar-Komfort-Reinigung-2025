@@ -4,9 +4,9 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Solar Komfort GmbH",
-    "image": "https://solar-komfort.de/img/flux/logo-solar-komfort.webp",
-    "url": "https://solar-komfort.de",
+    "name": "Komfort Gebäudeservice24 GmbH",
+    "image": "/img/komfort-logo-cropped.webp",
+    "url": "https://www.komfort-gebaeudeservice24.de",
     "telephone": "+4961511234567",
     "address": {
       "@type": "PostalAddress",
@@ -39,7 +39,7 @@ export function LocalBusinessSchema() {
       "https://www.instagram.com/solarkomfort"
     ],
     "priceRange": "€€",
-    "description": "Solar Komfort GmbH bietet professionelle Dachreinigung, Dachbeschichtung, Fassadenreinigung und Solaranlagenreinigung in Darmstadt und Umgebung.",
+    "description": "Komfort Gebäudeservice24 GmbH bietet professionelle Gebäudereinigung, Büroreinigung, Industriereinigung, Fassadenreinigung, Grundreinigung und Hausmeisterservice in Darmstadt und dem Rhein-Main-Gebiet.",
     "areaServed": {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -49,7 +49,7 @@ export function LocalBusinessSchema() {
       },
       "geoRadius": "50000"
     },
-    "serviceType": ["Dachreinigung", "Dachbeschichtung", "Fassadenreinigung", "Solaranlagenreinigung"]
+    "serviceType": ["Gebäudereinigung", "Büroreinigung", "Industriereinigung", "Fassadenreinigung", "Grundreinigung", "Hausmeisterservice", "Treppenhausreinigung", "Dachreinigung"]
   };
 
   return (
@@ -66,13 +66,13 @@ export function ServiceSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Dachreinigung",
+      "name": "Büroreinigung",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Solar Komfort GmbH"
+        "name": "Komfort Gebäudeservice24 GmbH"
       },
-      "areaServed": "Darmstadt und Umgebung",
-      "description": "Professionelle Dachreinigung zur Entfernung von Moos, Algen und Verschmutzungen für eine längere Lebensdauer Ihres Daches.",
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Professionelle Büroreinigung und Unterhaltsreinigung für Unternehmen. Regelmäßige und zuverlässige Reinigung von Büroräumen, Praxen und Gewerbeimmobilien.",
       "offers": {
         "@type": "Offer",
         "priceSpecification": {
@@ -84,13 +84,13 @@ export function ServiceSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Dachbeschichtung",
+      "name": "Industriereinigung",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Solar Komfort GmbH"
+        "name": "Komfort Gebäudeservice24 GmbH"
       },
-      "areaServed": "Darmstadt und Umgebung",
-      "description": "Hochwertige Dachbeschichtung mit Nano-Effekt für langanhaltenden Schutz und Wertsteigerung Ihrer Immobilie.",
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Spezialisierte Industriereinigung für Produktionsstätten, Hallen und gewerbliche Anlagen mit modernsten Reinigungsverfahren und Sicherheitsstandards.",
       "offers": {
         "@type": "Offer",
         "priceSpecification": {
@@ -105,10 +105,10 @@ export function ServiceSchema() {
       "name": "Fassadenreinigung",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Solar Komfort GmbH"
+        "name": "Komfort Gebäudeservice24 GmbH"
       },
-      "areaServed": "Darmstadt und Umgebung",
-      "description": "Schonende Fassadenreinigung zur Entfernung von Verschmutzungen, Algen und Pilzen für ein gepflegtes Erscheinungsbild.",
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Schonende Fassadenreinigung und Gebäudeaußenreinigung zur Entfernung von Verschmutzungen, Algen und Grünbelag für ein gepflegtes Erscheinungsbild.",
       "offers": {
         "@type": "Offer",
         "priceSpecification": {
@@ -120,13 +120,49 @@ export function ServiceSchema() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Solaranlagenreinigung",
+      "name": "Grundreinigung",
       "provider": {
         "@type": "LocalBusiness",
-        "name": "Solar Komfort GmbH"
+        "name": "Komfort Gebäudeservice24 GmbH"
       },
-      "areaServed": "Darmstadt und Umgebung",
-      "description": "Professionelle Reinigung von Solaranlagen für maximale Effizienz und Leistung Ihrer Photovoltaikanlage.",
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Intensive Grundreinigung und Bauschlussreinigung für Neubezug, nach Renovierungen oder bei hartnäckigen Verschmutzungen.",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Hausmeisterservice",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Komfort Gebäudeservice24 GmbH"
+      },
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Professioneller Hausmeisterservice und Facility Management für Wohnanlagen, Gewerbeimmobilien und öffentliche Einrichtungen.",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "EUR"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Dachreinigung",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Komfort Gebäudeservice24 GmbH"
+      },
+      "areaServed": "Darmstadt, Frankfurt, Rhein-Main-Gebiet",
+      "description": "Professionelle Dachreinigung zur Entfernung von Moos, Algen und Verschmutzungen für eine längere Lebensdauer und bessere Optik Ihres Daches.",
       "offers": {
         "@type": "Offer",
         "priceSpecification": {

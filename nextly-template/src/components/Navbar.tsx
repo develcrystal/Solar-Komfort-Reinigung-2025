@@ -1,16 +1,15 @@
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
+import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 const renderIcon = (icon: string): JSX.Element | null => {
-  // If it's a path, render with Image
   if (icon.startsWith('/')) {
     return <Image src={icon} alt="" width={22} height={22} />;
   }
-  // Map common emoji to consistent SVG icons
   const emojiToIcon: Record<string, string> = {
     "🏠": "/img/icons/einfamilienhaus.svg",
     "🏢": "/img/icons/gebaeudereinigung.svg",
@@ -40,6 +39,7 @@ const renderIcon = (icon: string): JSX.Element | null => {
 
 export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { theme } = useTheme();
 
   const navigation = [
     {
@@ -118,8 +118,8 @@ export const Navbar = () => {
           description: "Streifenfreie Fenster- und Glasreinigung",
           icon: "/img/icons/fensterreinigung.svg"
         },
-        { 
-          name: "Schul- & Kindergartenreinigung", 
+        {
+          name: "Schul- & Kindergartenreinigung",
           href: "/gebaeudereinigung/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
           icon: "/img/icons/fensterreinigung.svg"
@@ -221,12 +221,12 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="navbar-container">
       <nav className="container relative flex flex-wrap items-center justify-between px-4 py-6 sm:px-6 md:px-8 mx-auto lg:justify-between xl:px-1 z-50 max-w-screen-2xl">
-        {/* Logo  */}
+        {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/img/komfort-logo-cropped.png"
+            src={theme === 'dark' ? '/img/inverted_komfort-logo-cropped.png' : '/img/komfort-logo-cropped.png'}
             width={400}
             height={120}
             alt="Komfort Gebäudeservice24"
@@ -235,117 +235,22 @@ export const Navbar = () => {
           />
         </Link>
 
-        {/* get started  */}
-        <div className="gap-2 sm:gap-3 nav__item mr-1 sm:mr-2 xl:flex ml-auto xl:ml-0 xl:order-2">
-            <div className="flex items-center mr-2 sm:mr-3">
-              <ThemeChanger />
-            </div>
-            <div className="hidden mr-2 sm:mr-3 2xl:flex nav__item">
-              <Link href="/kostenrechner" className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md md:ml-5 hover:bg-indigo-700 transition-colors">
-                Kostenrechner
-              </Link>
-            </div>
-        </div>
-                
-        <Disclosure>
-          {({ open }) => (
-            <>
-                <Disclosure.Button
-                  aria-label="Toggle Menu"
-                  className="px-2 py-1 text-gray-500 rounded-md 2xl:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation">
-                  <svg
-                    className="w-6 h-6 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24">
-                    {open && (
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.829z"
-                      />
-                    )}
-                    {!open && (
-                      <path
-                        fillRule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                      />
-                    )}
-                  </svg>
-                </Disclosure.Button>
-
-                <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5 2xl:hidden">
-                  <>
-                    {navigation.map((item, index) => (
-                      <div key={index} className="w-full">
-                        {item.submenu ? (
-                          <>
-                            <button 
-                              onClick={() => toggleDropdown(item.name)}
-                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
-                            >
-                              {item.name}
-                              <svg 
-                                className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
-                                fill="none" 
-                                stroke="currentColor" 
-                                viewBox="0 0 24 24" 
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                              </svg>
-                            </button>
-                            {activeDropdown === item.name && (
-                              <div className="pl-3 sm:pl-4 max-w-[280px]">
-                                {item.submenu.map((subItem, subIndex) => (
-                                  <Link
-                                    key={subIndex}
-                                    href={subItem.href}
-                                    className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
-                                  >
-                                    <span className="inline-flex items-center">
-                                      {renderIcon(subItem.icon)}
-                                      <span className="ml-2">{subItem.name}</span>
-                                    </span>
-                                  </Link>
-                                ))}
-                              </div>
-                            )}
-                          </>
-                        ) : (
-                          <Link 
-                            href={item.href} 
-                            className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
-                          >
-                            {item.name}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                    <Link href="/kostenrechner" className="w-full px-4 sm:px-6 py-3 mt-3 text-center text-white bg-indigo-600 rounded-md xl:ml-5 hover:bg-indigo-700 transition-colors touch-manipulation">         
-                        Kostenrechner
-                    </Link>
-                  </>
-                </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-        
-        {/* Desktop Mega Menu */}
-        <div className="hidden 2xl:flex 2xl:items-center">
-          <ul className="items-center justify-center flex-1 pt-6 list-none 2xl:pt-0 2xl:flex">
+        {/* Desktop Mega Menu - zentriert */}
+        <div className="hidden xl:flex xl:items-center flex-1 justify-center">
+          <ul className="items-center justify-center flex list-none xl:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 {menu.submenu ? (
                   <div className="relative group">
-                    <button 
-                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
+                    <button
+                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
                     >
                       {menu.name}
-                      <svg 
-                        className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -355,23 +260,22 @@ export const Navbar = () => {
                     {/* Mega Menu Dropdown */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 z-50 hidden pt-4 group-hover:block">
                       <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300">
-                        {/* Mega Menu for "Gebäudereinigung" and "Gebäudeservice" */}
                         {menu.isMega ? (
                           <div className="w-[800px] p-8">
                             <div className="mb-6">
-                              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 text-left">
+                              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-left">
                                 {menu.name}
                               </h3>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 text-left">
+                              <p className="text-sm text-gray-600 dark:text-gray-300 text-left">
                                 Entdecken Sie unser umfassendes Leistungsspektrum
                               </p>
                             </div>
                             
                             <div className="grid grid-cols-3 gap-6">
                               {menu.submenu.map((subItem, subIndex) => (
-                                <Link 
-                                  key={subIndex} 
-                                  href={subItem.href} 
+                                <Link
+                                  key={subIndex}
+                                  href={subItem.href}
                                   className="group/item p-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-200 border border-transparent hover:border-blue-200 dark:hover:border-gray-700"
                                 >
                                   <div className="flex items-start space-x-3">
@@ -379,11 +283,11 @@ export const Navbar = () => {
                                       {renderIcon(subItem.icon)}
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                      <div className="text-sm font-medium text-gray-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
+                                      <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
                                         {subItem.name}
                                       </div>
                                       {subItem.description && (
-                                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-tight text-left">
+                                        <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 leading-tight text-left">
                                           {subItem.description}
                                         </div>
                                       )}
@@ -396,14 +300,14 @@ export const Navbar = () => {
                             <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <p className="text-sm font-medium text-gray-900 dark:text-white text-left">
+                                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100 text-left">
                                     Benötigen Sie eine Beratung?
                                   </p>
-                                  <p className="text-xs text-gray-500 dark:text-gray-400 text-left">
+                                  <p className="text-xs text-gray-500 dark:text-gray-300 text-left">
                                     Kontaktieren Sie uns für ein kostenloses Angebot
                                   </p>
                                 </div>
-                                <Link 
+                                <Link
                                   href="/kontakt"
                                   className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200"
                                 >
@@ -413,24 +317,23 @@ export const Navbar = () => {
                             </div>
                           </div>
                         ) : (
-                          /* Regular Dropdown for smaller menus */
                           <div className="w-80 py-4">
                             <div className="px-6 pb-4 mb-4 border-b border-gray-100 dark:border-gray-800">
-                              <h3 className="text-base font-semibold text-gray-900 dark:text-white text-left">
+                              <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 text-left">
                                 {menu.name}
                               </h3>
                             </div>
                             {menu.submenu.map((subItem, subIndex) => (
-                              <Link 
-                                key={subIndex} 
-                                href={subItem.href} 
-                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
+                              <Link
+                                key={subIndex}
+                                href={subItem.href}
+                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
                               >
                                 <span className="text-lg mr-3">{renderIcon(subItem.icon)}</span>
                                 <div className="flex-1">
                                   <div className="text-sm font-medium text-left">{subItem.name}</div>
                                   {subItem.description && (
-                                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 text-left">
+                                    <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 text-left">
                                       {subItem.description}
                                     </div>
                                   )}
@@ -445,7 +348,7 @@ export const Navbar = () => {
                 ) : (
                   <Link
                     href={menu.href}
-                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-200 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
+                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
                   >
                     {menu.name}
                   </Link>
@@ -455,6 +358,108 @@ export const Navbar = () => {
           </ul>
         </div>
 
+        {/* Rechter Block: Button, Theme, Mobile Menu */}
+        <div className="flex items-center gap-2 sm:gap-3 ml-auto">
+          {/* Kostenrechner Button - nur auf Desktop */}
+          <div className="hidden xl:block">
+            <Link 
+              href="/kostenrechner" 
+              className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors whitespace-nowrap"
+            >
+              Kostenrechner
+            </Link>
+          </div>
+          {/* Theme Switcher */}
+          <ThemeChanger />
+          {/* Mobile Menu - nur auf Mobile */}
+          <div className="xl:hidden">
+            <Disclosure>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button
+                    aria-label="Toggle Menu"
+                    className="px-2 py-1 text-gray-500 rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation"
+                  >
+                    <svg
+                      className="w-6 h-6 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      {open && (
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.829z"
+                        />
+                      )}
+                      {!open && (
+                        <path
+                          fillRule="evenodd"
+                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                        />
+                      )}
+                    </svg>
+                  </Disclosure.Button>
+
+                  <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5">
+                    <div>
+                      {navigation.map((item, index) => (
+                        <div key={index} className="w-full">
+                          {item.submenu ? (
+                            <>
+                              <button 
+                                onClick={() => toggleDropdown(item.name)}
+                                className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
+                              >
+                                {item.name}
+                                <svg 
+                                  className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
+                                  fill="none" 
+                                  stroke="currentColor" 
+                                  viewBox="0 0 24 24" 
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                              </button>
+                              {activeDropdown === item.name && (
+                                <div className="pl-3 sm:pl-4 max-w-[280px]">
+                                  {item.submenu.map((subItem, subIndex) => (
+                                    <Link
+                                      key={subIndex}
+                                      href={subItem.href}
+                                      className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
+                                    >
+                                      <span className="inline-flex items-center">
+                                        {renderIcon(subItem.icon)}
+                                        <span className="ml-2">{subItem.name}</span>
+                                      </span>
+                                    </Link>
+                                  ))}
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <Link 
+                              href={item.href} 
+                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
+                            >
+                              {item.name}
+                            </Link>
+                          )}
+                        </div>
+                      ))}
+                      {/* Kostenrechner Button - im Mobile Menu */}
+                      <Link href="/kostenrechner" className="w-full px-4 sm:px-6 py-3 mt-3 text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors touch-manipulation">         
+                        Kostenrechner
+                      </Link>
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </div>
+        </div>
       </nav>
     </div>
   );

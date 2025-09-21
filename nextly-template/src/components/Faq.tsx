@@ -58,5 +58,25 @@ const faqdata = [
   {
     question: "Wie schnell können Sie mit der Reinigung beginnen?",
     answer: "Nach einem kostenlosen Beratungstermin und Angebotsannahme können wir in der Regel innerhalb von 1-2 Wochen mit der Reinigung beginnen. Bei Notfällen sind auch kurzfristige Termine möglich."
+  },
+  {
+    question: "Bieten Sie Gebäudereinigung in Darmstadt und Frankfurt an?",
+    answer: "Ja, wir sind Ihr zuverlässiger Partner für professionelle Gebäudereinigung in Darmstadt, Frankfurt und dem gesamten Rhein-Main-Gebiet. Unsere Einsatzgebiete umfassen auch Wiesbaden, Mainz, Offenbach und die umliegenden Gemeinden."
+  },
+  {
+    question: "Was kostet eine Büroreinigung in Darmstadt?",
+    answer: "Die Kosten für Büroreinigung in Darmstadt hängen von verschiedenen Faktoren ab: Größe der Räumlichkeiten, Reinigungsfrequenz und gewünschte Leistungen. Gerne erstellen wir Ihnen ein kostenloses, unverbindliches Angebot für Ihre Büroreinigung im Rhein-Main-Gebiet."
+  },
+  {
+    question: "Reinigen Sie auch Industrieanlagen und Produktionshallen?",
+    answer: "Selbstverständlich! Wir sind spezialisiert auf Industriereinigung in Darmstadt und Umgebung. Mit modernster Ausrüstung und geschultem Personal reinigen wir Produktionshallen, Maschinenparks und technische Anlagen nach höchsten Standards."
+  },
+  {
+    question: "Bieten Sie auch Hausmeisterservice im Rhein-Main-Gebiet an?",
+    answer: "Ja, unser Hausmeisterservice deckt das gesamte Rhein-Main-Gebiet ab. Wir betreuen Wohnanlagen, Gewerbeimmobilien und öffentliche Einrichtungen in Darmstadt, Frankfurt und Umgebung mit allen Facility Management Dienstleistungen."
+  },
+  {
+    question: "Welche Zertifizierungen haben Sie für die Gebäudereinigung?",
+    answer: "Wir arbeiten nach DIN-Standards und sind ISO-zertifiziert. Unsere Mitarbeiter sind in speziellen Reinigungsverfahren geschult und wir verwenden ausschließlich TÜV-geprüfte, umweltfreundliche Reinigungsmittel für nachhaltige Gebäudereinigung."
   }
 ];

@@ -73,6 +73,7 @@ export const galleryImages: GalleryImage[] = [
   },
   
   // Pflasterreinigung
+  // Pflasterreinigung
   {
     src: '/img/kundenbilder/Pflaster-stein-Reinigung (2).png',
     alt: 'Pflasterstein-Reinigung Vorher/Nachher',
@@ -81,13 +82,12 @@ export const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
-    src: '/img/kundenbilder/Pflaster-stein-Reinigung (3).png',
-    alt: 'Professionelle Steinreinigung',
+    src: '/img/kundenbilder/Pflaster-stein-Reinigung (4).png',
+    alt: 'Pflasterreinigung - Saubere Wege nach professioneller Behandlung',
     category: 'Pflasterreinigung',
     width: 800,
     height: 600
   },
-  
   // Weitere Services
   {
     src: '/img/kundenbilder/Grundreinigung.png',

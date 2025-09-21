@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://solar-komfort.de/sitemap.xml
+Sitemap: https://www.komfort-gebaeudeservice24.de/sitemap.xml

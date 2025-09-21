@@ -62,7 +62,22 @@
       "mcp__browsermcp-cline__browser_click",
       "Bash(del /s /q .next)",
       "mcp__browsermcp-cline__browser_press_key",
-      "WebFetch(domain:solar-komfort-reinigung-2025.vercel.app)"
+      "WebFetch(domain:solar-komfort-reinigung-2025.vercel.app)",
+      "Bash(cmd /c copy:*)",
+      "Bash(cmd /c dir:*)",
+      "mcp__browsermcp-cline__browser_snapshot",
+      "Bash(cmd /c:*)",
+      "mcp__browsermcp-cline__browser_wait",
+      "mcp__puppeteer__puppeteer_click",
+      "Bash(git log:*)",
+      "mcp__puppeteer__puppeteer_hover",
+      "Bash(del srccomponentsMegaNavbar.tsx)",
+      "Bash(netstat:*)",
+      "mcp__browsermcp-cline__browser_get_console_logs",
+      "Bash(del \"facility-management\\page.tsx\")",
+      "Bash(set PORT=3002)",
+      "Bash(git pull:*)",
+      "Bash(node:*)"
     ],
     "deny": []
   },

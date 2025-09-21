@@ -1,3 +1,72 @@
+# TypeScript Build-Compliance & Vercel-Ready - 21.09.2025
+
+## Problem & Root Cause Analysis
+- **Problem**: Build-Failure durch TypeScript-Errors in Service-Components
+- **Root Cause**: Component Interfaces entsprachen nicht der tatsächlichen Verwendung
+  - ProcessStep: Props `number`, `icon`, `className` → sollten `step`, `imageSrc`, `imageAlt` sein
+  - SectionTitle: Akzeptiert keine `className` Props
+  - TwoColContent: Erwartete `left`/`right` ReactNode → Service-Pages verwenden `title`/`textLeft`/`textRight`
+  - GarantieSection: Keine dynamischen `title`/`subtitle` Props
+  - RelatedServices: Keine `className`/`title`/`services` Props
+  - CtaSection: Fehlende Props für `subtitle`, `ctaText`, `ctaLink`, `children`
+  - Faq: Keine dynamischen `title`/`items` Props
+
+## Lösung implementiert ✅
+### 1. ProcessStep Component-Standardisierung
+```tsx
+// ALT (ERROR):
+<ProcessStep number="1" icon="/img/icons/planung.svg" className="..." />
+
+// NEU (KORREKT):
+<ProcessStep step={1} imageSrc="/img/icons/planung.svg" imageAlt="..." />
+```
+
+### 2. Component Interface Updates
+- **SectionTitle**: Alle `className="text-center mb-12"` Props entfernt
+- **TwoColContent**: Interface erweitert für `title`, `textLeft`, `textRight`, `image`, `alt`
+- **GarantieSection**: `title?`, `subtitle?` Props mit Defaults hinzugefügt
+- **RelatedServices**: `className?`, `title?`, `services?` Props für Custom-Content
+- **CtaSection**: Vollständige Props für `subtitle`, `ctaText`, `ctaLink`, `children`
+- **Faq**: `title?`, `items?` Props für dynamischen Content
+
+### 3. Import-Fixes
+- dachreinigung: Fehlenden `Section` Import hinzugefügt
+- grundreinigung: Redundante `className` Props entfernt
+
+## Build-Ergebnis ✅
+```bash
+✓ Compiled successfully
+✓ Generating static pages (40/40)
+Route (app)                                    Size     First Load JS
+├ ○ /                                          10 kB           121 kB
+├ ○ /gebaeudereinigung/baubeschlussreinigung   2.57 kB         118 kB
+├ ○ /gebaeudereinigung/fensterreinigung        2.57 kB         118 kB
+└ ... (40 Seiten total - ALLE ERFOLGREICH)
+```
+
+## Technische Details
+- **Dev-Server**: Läuft auf Port 3001 (Port 3000 belegt)
+- **Component-Standards**: Alle Service-Pages verwenden einheitliche Interfaces
+- **TypeScript-Compliance**: 100% - Keine Build-Errors mehr
+- **Vercel-Ready**: Deployment-bereit mit statischer Generierung
+
+## Performance-Impact ✅
+- **Build-Zeit**: ~14.3s für 40 Seiten
+- **Bundle-Größe**: Optimiert - Shared Chunks 87.2 kB
+- **Static Generation**: Alle Service-Pages pre-rendered
+- **Image-Optimierung**: Next.js Image-Component korrekt implementiert
+
+## Service-Pages Template-Standard
+**Einheitliche Component-Nutzung** nach TypeScript-Compliance:
+1. **ServiceHeader**: Standardisiert für alle Service-Pages
+2. **ProcessStep**: `step`, `imageSrc`, `imageAlt` Props
+3. **GarantieSection**: Mit Custom `title`/`subtitle`
+4. **RelatedServices**: Mit Custom `title`/`services` Array
+5. **CtaSection**: Mit `subtitle`, `ctaText`, `ctaLink`
+6. **Faq**: Mit Custom `title`/`items` Array
+
+---
+
 # Global Section Spacing Rules
 
 ## Standard Section Spacing

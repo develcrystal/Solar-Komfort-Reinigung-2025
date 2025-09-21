@@ -149,7 +149,7 @@ const services: Service[] = [
 export default function LeistungenImUberblick() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
-      <Container>
+      <div className="container px-8 mx-auto xl:px-0">
         {/* Header */}
         <Section>
           <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16 md:mb-20">
@@ -165,7 +165,7 @@ export default function LeistungenImUberblick() {
 
         {/* Services */}
         {services.map((service, index) => (
-          <Section key={index}>
+          <Section key={index} fullWidth={true}>
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] hover:ring-2 hover:ring-blue-200 dark:hover:ring-blue-800 hover:ring-opacity-50 animate-pulse-once">
               <div className={`relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} group`}>
                 {/* Image Section with Slider */}
@@ -243,7 +243,7 @@ export default function LeistungenImUberblick() {
             </div>
           </div>
         </Section>
-      </Container>
+      </div>
     </div>
   );
 }

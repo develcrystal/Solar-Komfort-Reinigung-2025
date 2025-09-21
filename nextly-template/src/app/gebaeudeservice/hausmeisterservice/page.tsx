@@ -5,7 +5,7 @@ import { RelatedServices } from '@/components/RelatedServices';
 import Image from 'next/image';
 import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 
 export const metadata: Metadata = {
   title: "Hausmeisterservice - HK Komfort Facility & Gebäudeservice GmbH",
@@ -43,14 +43,13 @@ export default function Hausmeisterservice() {
     <div className="bg-gray-50 dark:bg-gray-900">
       {/* Breadcrumb Navigation */}
       <Breadcrumb />
-      
-      {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
-      {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
-      <Hero
+
+      {/* Header Section mit schmalem Header und blaustichigem Overlay */}
+      <ServiceHeader
         title="HAUSMEISTERSERVICE"
-        subtitle="Professioneller Hausmeisterservice in Darmstadt und Umgebung. Regelmäßige Kontrollgänge, Kleinreparaturen, Techniküberwachung, Schließdienst, Ansprechpartner vor Ort."
-        backgroundImage="/img/kundenbilder/Gartenpflege.png"
-        backgroundAlt="Hausmeisterservice - Umfassende Objektbetreuung inklusive Außenpflege"
+        description="Professioneller Hausmeisterservice in Darmstadt und Umgebung. Regelmäßige Kontrollgänge, Kleinreparaturen, Techniküberwachung, Schließdienst, Ansprechpartner vor Ort."
+        imageSrc="/img/kundenbilder/Gartenpflege.png"
+        imageAlt="Hausmeisterservice - Umfassende Objektbetreuung inklusive Außenpflege"
       />
       <Container>
         {/* Leistungsübersicht Section */}
@@ -243,15 +242,15 @@ export default function Hausmeisterservice() {
       </Container>
 
       {/* Related Services - Internal Linking für SEO */}
-      <RelatedServices 
-        currentService="hausmeisterservice" 
+      <RelatedServices
+        currentService="hausmeisterservice"
         category="gebaeudeservice"
         maxServices={4}
       />
 
       {/* CTA Section */}
-      <CtaSection 
-        backgroundImage="/img/flux/hausmeisterservice-prozess.webp"
+      <CtaSection
+        backgroundImage="/img/flux/team-bei-der-arbeit1741879901018.webp"
         backgroundAlt="Hausmeisterservice - Kontaktieren Sie uns für ein kostenloses Angebot"
         title="Bereit für einen professionellen Hausmeisterservice?"
         description="Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Ihrer Objektbetreuung."

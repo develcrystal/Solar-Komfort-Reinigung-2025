@@ -1,38 +1,38 @@
-import { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Baubeschlussreinigung – Professionelle Reinigung nach Bauabschluss",
-  description:
-    "Spezialisierte Baubeschlussreinigung für Neubau- und Sanierungsprojekte. Wir entfernen Bauschutt, Staub und Rückstände, damit Ihr Objekt bezugsfertig ist.",
-  keywords:
-    "Baubeschlussreinigung, Bauendreinigung, Baustellenreinigung, Neubau Reinigung, Sanierung Reinigung, Gebäudereinigung Berlin",
+  title: 'Baubeschlussreinigung – Baustellen-Standards & Rohbau-Reinigung | Komfort Gebäudeservice24 GmbH',
+  description: 'Professionelle Baubeschlussreinigung gemäß VOB/C ATV DIN 18299. Rohbau-Reinigung und Baustaub-Entfernung für Neubauten und Sanierungen. Mit Entsorgungsnachweis und Baustellenverordnung-Compliance für reibungslose Abnahmen.',
+  keywords: 'Baubeschlussreinigung, VOB/C ATV DIN 18299, Rohbau-Reinigung, Baustaub-Entfernung, Baustellen-Standards, Baustellenverordnung, Entsorgungsnachweis, Baureinigung Berlin, Endreinigung Baustelle, Komfort Gebäudeservice24',
   openGraph: {
-    title: "Baubeschlussreinigung – Ihr Partner für saubere Baustellen",
-    description:
-      "Effiziente Baubeschlussreinigung in Berlin. Wir sorgen für eine gründliche Endreinigung nach Bauarbeiten, damit Sie Ihr Objekt sofort nutzen können.",
-    url: "https://komfort-gebaeudeservice24.de/baubeschlussreinigung",
-    siteName: "Komfort Gebäudeservice24 GmbH",
-    locale: "de_DE",
-    type: "website",
-    images: [
-      {
-        url: "https://komfort-gebaeudeservice24.de/img/flux/baubeschlussreinigung.webp",
-        width: 1200,
-        height: 630,
-        alt: "Baubeschlussreinigung – Saubere Baustelle nach Abschluss"
-      }
-    ]
+    title: 'Baubeschlussreinigung – VOB/C-konforme Services von Komfort Gebäudeservice24',
+    description: 'Erfahren Sie mehr über unsere zertifizierten Baubeschlussreinigungs-Services für saubere und abnahmefähige Baustellen.',
+    images: [{ url: '/img/kundenbilder/Grundreinigung.webp' }],
+    url: 'https://www.komfort-gebaeudeservice.de/gebaeudereinigung/baubeschlussreinigung',
+    type: 'website',
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Baubeschlussreinigung – Saubere Übergabe nach Bauarbeiten",
-    description:
-      "Professionelle Endreinigung von Baustellen in Berlin. Schnell, gründlich und zuverlässig.",
-    images: [
-      "https://komfort-gebaeudeservice24.de/img/flux/baubeschlussreinigung-twitter.jpg"
-    ]
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+    follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   alternates: {
-    canonical: "https://komfort-gebaeudeservice24.de/baubeschlussreinigung"
-  }
+    canonical: '/gebaeudereinigung/baubeschlussreinigung',
+  },
+  authors: [{ name: 'Komfort Gebäudeservice24 GmbH' }],
+  creator: 'Komfort Gebäudeservice24 GmbH',
+  publisher: 'Komfort Gebäudeservice24 GmbH',
+  applicationName: 'Komfort Gebäudeservice24',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };

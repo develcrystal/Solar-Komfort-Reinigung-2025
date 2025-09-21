@@ -17,14 +17,14 @@ export const Section = ({
   noPadding = false,
 }: SectionProps) => {
   return (
-    <section 
-      id={id} 
-      className={`py-12 md:py-16 ${className}`}
+    <section
+      id={id}
+      className={`py-4 sm:py-8 md:py-12 lg:py-16 ${className}`}
     >
       {fullWidth ? (
         children
       ) : (
-        <Container className={noPadding ? "" : "px-4 sm:px-6 lg:px-8"}>
+        <Container className={noPadding ? "" : "px-2 sm:px-4 md:px-6 lg:px-8"}>
           {children}
         </Container>
       )}

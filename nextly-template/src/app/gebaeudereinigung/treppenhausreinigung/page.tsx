@@ -1,88 +1,237 @@
-import { Container } from '@/components/Container';
+import { Metadata } from 'next';
+import { Hero } from '@/components/Hero';
+import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
-import Image from 'next/image';
+import { RelatedServices } from '@/components/RelatedServices';
+import { GarantieSection } from '@/components/GarantieSection';
+import { Faq } from '@/components/Faq';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { TwoColContent } from '@/components/TwoColContent';
+import { ProcessStep } from '@/components/ProcessStep';
 import Link from 'next/link';
+import Image from 'next/image';
+import { metadata as meta } from './metadata';
 
-export default function Treppenhausreinigung() {
+export const metadata = meta;
+
+export default function TreppenhausreinigungPage() {
+  const serviceName = 'Treppenhausreinigung';
+  const heroImage = '/img/kundenbilder/Treppenhausreinigung.webp';
+  const ctaBg = '/img/kundenbilder/Treppenhausreinigung.webp';
+
   return (
     <>
-      {/* Hero-Bereich - Mobile First */}
-      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/img/kundenbilder/Treppenhausreinigung.png"
-            alt="Treppenhausreinigung - Regelmäßige Reinigung von Treppenhäusern"
-            fill
-            className="object-cover brightness-[0.8]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50"></div>
-        </div>
-        
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-2xl sm:max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-              TREPPENHAUSREINIGUNG
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
-              Regelmäßige und gründliche Reinigung von Treppenhäusern in Wohn- und Geschäftsgebäuden.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
-                Kostenlos beraten lassen
-              </Link>
-              <Link href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
-                Kosten berechnen
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      {/* Service-Details */}
-      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
-        <Container>
-          <SectionTitle
-            preTitle="Unser Service"
-            title="Treppenhausreinigung"
-          >
-            Regelmäßige und gründliche Reinigung von Treppenhäusern in Wohn- und Geschäftsgebäuden.
-          </SectionTitle>
-          
-          <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
-              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <li>• Wöchentliche Treppenhausreinigung</li>
-                <li>• Geländer und Handläufe säubern</li>
-                <li>• Eingangsbereiche und Flure</li>
-                <li>• Müllbereiche sauber halten</li>
-                <li>• Kellerflur-Reinigung inklusive</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
-              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                <li>✓ Gepflegtes Hauserscheinungsbild</li>
-                <li>✓ Zufriedene Mieter und Bewohner</li>
-                <li>✓ Regelmäßige Kontrollen</li>
-                <li>✓ Pünktliche Ausführung</li>
-                <li>✓ Hausordnung wird beachtet</li>
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <CtaSection
-        backgroundImage="/img/kundenbilder/Treppenhausreinigung.png"
-        backgroundAlt="Kontaktieren Sie uns für Treppenhausreinigung"
-        title="Bereit für ein sauberes Treppenhaus?"
-        description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."
-        buttonText="Jetzt Beratung anfordern"
-        buttonLink="/kontakt"
+      <Breadcrumb
+        list={[
+          { title: 'Home', href: '/' },
+          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        ]}
+        className="py-6 bg-gray-50"
       />
+
+      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
+      <Hero
+        title={`${serviceName} – WEG-Verwaltung & Mehrfamilienhaus-Expertise`}
+        subtitle="WEG-konforme Reinigung für Mehrfamilienhäuser mit Hausordnungs-Compliance und Lärmschutz-Zeiten. Professionelle Pflege von Treppenhäusern, Eingangsbereichen und Gemeinschaftsflächen."
+        backgroundImage={heroImage}
+        backgroundAlt={`${serviceName} – Gepflegte Treppenhäuser für Wohnkomfort`}
+        ctaText="Kostenloses Angebot anfragen"
+        ctaLink="/kontakt"
+        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Mieter – WEG-konform und hausordnungsgerecht</p>
+        </div>
+      </Hero>
+
+      {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="Unsere Kernleistungen"
+          title="Detaillierte Treppenhausreinigung-Services"
+          className="text-center mb-12"
+        >
+          Von der wöchentlichen Wartung bis zur WEG-Verwaltung: Unsere Services sind auf Mehrfamilienhäuser und Hausordnungen abgestimmt.
+        </SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/treppenhausreinigung.svg" alt="Wöchentliche Treppenhausreinigung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Wöchentliche Treppenhausreinigung</h3>
+            <p className="text-gray-600 mb-4">Regelmäßige Reinigung von Stufen, Geländer und Handläufen unter Beachtung der Hausordnung.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">Reinigungsplan erstellen</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Eingangsbereiche & Flure Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Eingangsbereiche & Flure</h3>
+            <p className="text-gray-600 mb-4">Gründliche Pflege von Eingängen, Fluren und Briefkastenanlagen für gepflegtes Erscheinungsbild.</p>
+            <Link href="/gebaeudereinigung/haushaltsreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Haushaltsreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/sonstiges.svg" alt="Müllbereiche & Kellerflure Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Müllbereiche & Kellerflure</h3>
+            <p className="text-gray-600 mb-4">Hygienische Reinigung von Müllstandplätzen und Kellerfluren – geruchsfrei und sauber.</p>
+            <Link href="/gebaeudereinigung/grundreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Grundreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/fensterreinigung.svg" alt="WEG-Verwaltung Services Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">WEG-Verwaltung Services</h3>
+            <p className="text-gray-600 mb-4">Direkte Zusammenarbeit mit Hausverwaltungen – Protokolle und Mängeldokumentation inklusive.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">WEG-Angebot anfordern</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Lärmschutz-Zeiten Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Lärmschutz-Zeiten</h3>
+            <p className="text-gray-600 mb-4">Arbeiten zwischen 8-20 Uhr werktags, Ruhezeiten-konform für ungestörtes Wohnen.</p>
+            <Link href="/gebaeudereinigung/bueroeinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Büroreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/treppenhausreinigung.svg" alt="Hausordnung-Compliance Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Hausordnung-Compliance</h3>
+            <p className="text-gray-600 mb-4">Strikte Einhaltung aller Hausregeln und Mieterpflichten für konfliktfreie Reinigung.</p>
+            <Link href="/gebaeudereinigung/industriereinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Industriereinigung</Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* 4-Stufen-Verfahren Section: Compliance-Heavy */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <SectionTitle
+          preTitle="Unser bewährter Prozess"
+          title="4-Stufen-Treppenhausreinigung für Mieter-Zufriedenheit"
+          className="text-center mb-12"
+        >
+          Jede Reinigung folgt einem WEG-konformen Verfahren, das WEG-Gesetz §21 und Hausordnungen einhält. Von der Planung bis zur Abnahme – alles für harmonisches Wohnen.
+        </SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <ProcessStep
+            number="1"
+            title="WEG-Abstimmung & Planung"
+            description="Koordination mit Hausverwaltung und WEG-Beschlüssen. Erstellung hausordnungskonformer Reinigungspläne unter Beachtung von Mieterinteressen."
+            icon="/img/icons/planung.svg"
+            className="bg-blue-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="2"
+            title="Lärmschutz-konforme Ausführung"
+            description="Professionelle Reinigung zwischen 8-20 Uhr werktags: Treppen, Geländer, Eingänge – ohne Störung der Mieter."
+            icon="/img/icons/ausfuehrung.svg"
+            className="bg-green-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="3"
+            title="Qualitätskontrolle & Mängeldokumentation"
+            description="Finale Inspektion und Erstellung von Protokollen für WEG-Verwaltung. Garantie für gepflegte Gemeinschaftsflächen."
+            icon="/img/icons/kontrolle.svg"
+            className="bg-yellow-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="4"
+            title="Mieter-Feedback & Nachsorge"
+            description="Regelmäßige Kontrollen und anonymes Mieter-Feedback. Kontinuierliche Verbesserung für höchste Zufriedenheit."
+            icon="/img/icons/nachsorge.svg"
+            className="bg-purple-50 rounded-lg p-6 text-center"
+          />
+        </div>
+      </Section>
+
+      {/* Compliance-Section: Branchenspezifische Vorschriften + Garantien */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="WEG-Gesetz & Hausordnung"
+          title="Compliance-Standards in der Treppenhausreinigung"
+          className="text-center mb-12"
+        >
+          Als WEG-Partner halten wir uns an alle relevanten Vorschriften für harmonisches Zusammenleben.
+        </SectionTitle>
+        <TwoColContent
+          title="WEG-konforme Treppenhausreinigung"
+          textLeft="Gemäß WEG-Gesetz §21 koordinieren wir alle Reinigungsarbeiten mit der Hausverwaltung. Strikte Einhaltung von Hausordnungen und Lärmschutz-Zeiten für ungestörtes Wohnen."
+          textRight="Mehrfamilienhaus-Expertise: Wir verstehen die besonderen Anforderungen von Wohngemeinschaften. Professionelle Protokollierung und direkter Kontakt zu Verwaltungen für reibungslose Abläufe."
+          image="/img/compliance-placeholder.webp"
+          alt="WEG und Hausordnung Icons für Treppenhausreinigung"
+          className="max-w-6xl mx-auto"
+        />
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">WEG-Gesetz §21</h3>
+            <p>Alle Arbeiten erfolgen in Abstimmung mit der Eigentümergemeinschaft und deren Beschlüssen.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Hausordnung-Compliance</h3>
+            <p>Strikte Einhaltung aller Hausregeln und Mieterpflichten für konfliktfreie Zusammenarbeit.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Lärmschutz-Zeiten</h3>
+            <p>Arbeiten ausschließlich werktags 8-20 Uhr – Respekt vor Ruhezeiten und Mieterkomfort.</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Garantie Section: Trust-Building */}
+      <GarantieSection
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white"
+        title="Ihre Garantien bei uns"
+        subtitle="Über 5000 Kunden, 100% WEG-Compliance, Hausordnungs-Respekt und Mieter-Zufriedenheit"
+      />
+
+      {/* Related Services: SEO-optimierte interne Verlinkung */}
+      <RelatedServices
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50"
+        title="Ähnliche Reinigungs-Services"
+        services={[
+          { title: 'Haushaltsreinigung', href: '/gebaeudereinigung/haushaltsreinigung', description: 'Private Reinigung für Mieter – diskret und haustier-sicher.' },
+          { title: 'Grundreinigung', href: '/gebaeudereinigung/grundreinigung', description: 'Umzugsreinigung für Mieterwechsel – VOB-konform.' },
+          { title: 'Büroreinigung', href: '/gebaeudereinigung/bueroeinigung', description: 'Gewerbliche Flächen in Mehrfamilienhäusern.' },
+          { title: 'Fensterreinigung', href: '/gebaeudereinigung/fensterreinigung', description: 'Treppenhaus-Fenster und Eingangsbereiche.' },
+        ]}
+      />
+
+      {/* CTA Section: Thematisches Hintergrundbild + Conversion-optimiert */}
+      <CtaSection
+        title="Bereit für ein gepflegtes Treppenhaus?"
+        subtitle="Kontaktieren Sie uns für ein maßgeschneidertes Angebot. Wir beraten Sie zu WEG-Standards, Hausordnungen und Kosten – mieterfreundlich und unverbindlich."
+        ctaText="Angebot anfragen"
+        ctaLink="/kontakt"
+        backgroundImage={ctaBg}
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-cover bg-center text-white relative"
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <p className="text-lg mb-6 opacity-90">Schaffen Sie Wohnkomfort für alle Mieter – mit professioneller WEG-konformer Reinigung.</p>
+        </div>
+      </CtaSection>
+
+      {/* FAQ Section für SEO */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <Faq
+          title="Häufige Fragen zur Treppenhausreinigung"
+          items={[
+            {
+              question: 'Arbeiten Sie WEG-konform?',
+              answer: 'Ja, alle Arbeiten erfolgen gemäß WEG-Gesetz §21 in Abstimmung mit Hausverwaltung und Eigentümergemeinschaft.',
+            },
+            {
+              question: 'Werden Lärmschutz-Zeiten eingehalten?',
+              answer: 'Absolut: Wir arbeiten ausschließlich werktags zwischen 8-20 Uhr und respektieren alle Ruhezeiten.',
+            },
+            {
+              question: 'Wie wird die Hausordnung berücksichtigt?',
+              answer: 'Wir studieren jede Hausordnung im Vorfeld und halten alle Regeln und Mieterpflichten strikt ein.',
+            },
+            {
+              question: 'Können Sie direkt mit der Hausverwaltung arbeiten?',
+              answer: 'Ja, wir sind erfahren in der Zusammenarbeit mit WEG-Verwaltungen und erstellen alle erforderlichen Protokolle.',
+            },
+            {
+              question: 'Wie oft empfehlen Sie eine Treppenhausreinigung?',
+              answer: 'Wöchentlich für stark frequentierte Bereiche, alle 14 Tage für normale Mehrfamilienhäuser – je nach Bedarf.',
+            },
+          ]}
+        />
+      </Section>
     </>
   );
 }

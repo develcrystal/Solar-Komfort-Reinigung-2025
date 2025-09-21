@@ -77,7 +77,8 @@
       "Bash(del \"facility-management\\page.tsx\")",
       "Bash(set PORT=3002)",
       "Bash(git pull:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(findstr:*)"
     ],
     "deny": []
   },

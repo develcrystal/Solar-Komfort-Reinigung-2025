@@ -3,7 +3,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 // Create optimized directory if it doesn't exist
-const optimizedDir = path.join(__dirname, 'public', 'img', 'optimized');
+const optimizedDir = path.join(__dirname, 'nextly-template', 'public', 'img', 'optimized');
 if (!fs.existsSync(optimizedDir)) {
   fs.mkdirSync(optimizedDir, { recursive: true });
 }
@@ -74,7 +74,7 @@ async function main() {
   const imgDir = path.join(__dirname, 'nextly-template', 'public', 'img');
   const count = await processDirectory(imgDir);
   console.log(`\nOptimization complete! Processed ${count} images.`);
-  console.log('Optimized images are saved in the public/img/optimized directory.');
+  console.log('Optimized images are saved in the nextly-template/public/img/optimized directory.');
   console.log('\nNext steps:');
   console.log('1. Review the optimized images');
   console.log('2. Update image paths in your components to use the optimized versions');

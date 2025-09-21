@@ -119,21 +119,22 @@ export function Breadcrumb({ customItems, className = "" }: BreadcrumbProps) {
 
   return (
     <nav className={`${pathname === '/' ? 'py-4' : 'py-2'} bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700 ${className}`} aria-label="Breadcrumb">
-      <div className="container mx-auto px-4 max-w-screen-2xl">
-        <ol className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-          <li>
-            <Link 
-              href="/" 
+      <div className="container mx-auto px-2 sm:px-4 max-w-screen-2xl">
+        <ol className="flex flex-wrap items-center space-x-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400 overflow-hidden">
+          <li className="flex-shrink-0">
+            <Link
+              href="/"
               className="hover:text-gray-900 dark:hover:text-white transition-colors flex items-center"
             >
-              <HomeIcon className="w-4 h-4 mr-1" />
-              Start
+              <HomeIcon className="w-3 h-3 sm:w-4 sm:h-4 mr-1 flex-shrink-0" />
+              <span className="hidden sm:inline">Start</span>
+              <span className="sm:hidden">Home</span>
             </Link>
           </li>
           {breadcrumbItems.map((item, index) => (
-            <li key={index} className="flex items-center">
-              <ChevronRightIcon className="w-4 h-4 mx-2 text-gray-400" />
-              <span className={`${index === breadcrumbItems.length - 1 ? 'text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-gray-400'}`}>
+            <li key={index} className="flex items-center flex-shrink-0 min-w-0">
+              <ChevronRightIcon className="w-3 h-3 sm:w-4 sm:h-4 mx-1 sm:mx-2 text-gray-400 flex-shrink-0" />
+              <span className={`${index === breadcrumbItems.length - 1 ? 'text-gray-900 dark:text-white font-medium' : 'text-gray-600 dark:text-gray-400'} truncate max-w-[150px] sm:max-w-none`}>
                 {item.label}
               </span>
             </li>

@@ -3,28 +3,28 @@ import { GalleryImage } from '@/components/gallery';
 export const galleryImages: GalleryImage[] = [
   // Dachreinigung - Echte Kundenbilder
   {
-    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).webp',
     alt: 'Dachreinigung Kundenprojekt - Vorher/Nachher',
     category: 'Dachreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).jpg',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).webp',
     alt: 'Dachbeschichtung Kundenprojekt',
     category: 'Dachreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg',
+    src: '/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).webp',
     alt: 'Professionelle Dachreinigung',
     category: 'Dachreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Dachreinigung Resultat!.png',
+    src: '/img/kundenbilder/Dachreinigung Resultat!.webp',
     alt: 'Dachreinigung Endergebnis',
     category: 'Dachreinigung',
     width: 800,
@@ -33,7 +33,7 @@ export const galleryImages: GalleryImage[] = [
   
   // Fassadenreinigung
   {
-    src: '/img/kundenbilder/Fassaden-Reingung.png',
+    src: '/img/kundenbilder/Fassaden-Reingung.webp',
     alt: 'Professionelle Fassadenreinigung',
     category: 'Fassadenreinigung',
     width: 800,
@@ -42,14 +42,14 @@ export const galleryImages: GalleryImage[] = [
   
   // Büroreinigung
   {
-    src: '/img/kundenbilder/Büro-Reinigung (1).png',
+    src: '/img/kundenbilder/Büro-Reinigung (1).webp',
     alt: 'Büroreinigung - Moderne Büros',
     category: 'Büroreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Büro-Reinigung (2).png',
+    src: '/img/kundenbilder/Büro-Reinigung (2).webp',
     alt: 'Gewerbliche Büroreinigung',
     category: 'Büroreinigung',
     width: 800,
@@ -58,14 +58,14 @@ export const galleryImages: GalleryImage[] = [
   
   // Industriereinigung
   {
-    src: '/img/kundenbilder/Industriereinigung (1).png',
+    src: '/img/kundenbilder/Industriereinigung (1).webp',
     alt: 'Industrielle Reinigungsarbeiten',
     category: 'Industriereinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Industriereinigung (2).png',
+    src: '/img/kundenbilder/Industriereinigung (2).webp',
     alt: 'Gewerbliche Industriereinigung',
     category: 'Industriereinigung',
     width: 800,
@@ -75,14 +75,14 @@ export const galleryImages: GalleryImage[] = [
   // Pflasterreinigung
   // Pflasterreinigung
   {
-    src: '/img/kundenbilder/Pflaster-stein-Reinigung (2).png',
+    src: '/img/kundenbilder/Pflaster-stein-Reinigung (2).webp',
     alt: 'Pflasterstein-Reinigung Vorher/Nachher',
     category: 'Pflasterreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Pflaster-stein-Reinigung (4).png',
+    src: '/img/kundenbilder/Pflaster-stein-Reinigung (4).webp',
     alt: 'Pflasterreinigung - Saubere Wege nach professioneller Behandlung',
     category: 'Pflasterreinigung',
     width: 800,
@@ -90,28 +90,28 @@ export const galleryImages: GalleryImage[] = [
   },
   // Weitere Services
   {
-    src: '/img/kundenbilder/Grundreinigung.png',
+    src: '/img/kundenbilder/Grundreinigung.webp',
     alt: 'Umfassende Grundreinigung',
     category: 'Grundreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Treppenhausreinigung.png',
+    src: '/img/kundenbilder/Treppenhausreinigung.webp',
     alt: 'Treppenhausreinigung',
     category: 'Treppenhausreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Krankenhausreinigung (1).png',
+    src: '/img/kundenbilder/Krankenhausreinigung (1).webp',
     alt: 'Hygienische Krankenhausreinigung',
     category: 'Krankenhausreinigung',
     width: 800,
     height: 600
   },
   {
-    src: '/img/kundenbilder/Gartenpflege (1).png',
+    src: '/img/kundenbilder/Gartenpflege (1).webp',
     alt: 'Professionelle Gartenpflege',
     category: 'Gartenpflege',
     width: 800,

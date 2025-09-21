@@ -15,15 +15,15 @@
 }
 
 
-/* Remove top padding for main.pt-20 in dark mode */
-html.dark body.__className_ee9fce main.pt-20,
-.pt-20 {
-  padding-top: 0 !important;
+/* Mobile-first responsive padding adjustments */
+.main-content {
+  padding-top: 0;
 }
 
-/* Override the -mt-20 rule that's causing header issues */
-.-mt-20 {
-  margin-top: 0 !important;
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 1rem;
+  }
 }
 /* Navbar background with class-based dark mode support */
 .navbar-container {

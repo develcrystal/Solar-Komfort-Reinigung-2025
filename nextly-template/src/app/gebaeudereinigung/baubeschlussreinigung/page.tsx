@@ -1,87 +1,237 @@
-import { Container } from '@/components/Container';
+import { Metadata } from 'next';
+import { Hero } from '@/components/Hero';
+import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
+import { RelatedServices } from '@/components/RelatedServices';
+import { GarantieSection } from '@/components/GarantieSection';
+import { Faq } from '@/components/Faq';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { TwoColContent } from '@/components/TwoColContent';
+import { ProcessStep } from '@/components/ProcessStep';
+import Link from 'next/link';
 import Image from 'next/image';
+import { metadata as meta } from './metadata';
 
-export default function Baubeschlussreinigung() {
+export const metadata = meta;
+
+export default function BaubeschlussreinigungPage() {
+  const serviceName = 'Baubeschlussreinigung';
+  const heroImage = '/img/kundenbilder/Grundreinigung.webp';
+  const ctaBg = '/img/kundenbilder/Grundreinigung.webp';
+
   return (
     <>
-      {/* Hero-Bereich - Mobile First */}
-      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/img/kundenbilder/Entrümpelung.png"
-            alt="Bauabschlussreinigung - Professionelle Endreinigung nach Bauarbeiten"
-            fill
-            className="object-cover brightness-[0.8]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50"></div>
-        </div>
-        
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-2xl sm:max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-              BAUABSCHLUSSREINIGUNG
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
-              Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für bezugsfertige Räume.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
-                Kostenlos beraten lassen
-              </a>
-              <a href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
-                Kosten berechnen
-              </a>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      {/* Service-Details */}
-      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
-        <Container>
-          <SectionTitle
-            preTitle="Unser Service"
-            title="Bauabschlussreinigung"
-          >
-            Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für bezugsfertige Räume.
-          </SectionTitle>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Entfernung aller Baustaub und Verschmutzungen</li>
-                <li>• Fenster- und Rahmenreinigung</li>
-                <li>• Sanitäranlagen komplett reinigen</li>
-                <li>• Böden grundreinigen und versiegeln</li>
-                <li>• Bauschutt-Entsorgung auf Wunsch</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>✓ Bezugsfertige Übergabe</li>
-                <li>✓ Termingerechte Fertigstellung</li>
-                <li>✓ Professionelle Ausrüstung</li>
-                <li>✓ Erfahrene Reinigungskräfte</li>
-                <li>✓ Komplettservice aus einer Hand</li>
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
-        backgroundAlt="Kontaktieren Sie uns für Bauabschlussreinigung"
-        title="Bereit für die Übergabe?"
-        description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."
-        buttonText="Jetzt Beratung anfordern"
-        buttonLink="/kontakt"
+      <Breadcrumb
+        list={[
+          { title: 'Home', href: '/' },
+          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        ]}
+        className="py-6 bg-gray-50"
       />
+
+      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
+      <Hero
+        title={`${serviceName} – VOB/C ATV DIN 18299 & Baustellenverordnung`}
+        subtitle="Professionelle Endreinigung nach Bau- und Renovierungsarbeiten mit Baustellenstandards, Rohbau-Reinigung und Entsorgungsnachweis. VOB/C-konforme Abwicklung für bezugsfertige Übergaben."
+        backgroundImage={heroImage}
+        backgroundAlt={`${serviceName} – Bezugsfertige Übergabe nach Bauende`}
+        ctaText="Kostenloses Angebot anfragen"
+        ctaLink="/kontakt"
+        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Bauherren – VOB/C-konform und termingerecht</p>
+        </div>
+      </Hero>
+
+      {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="Unsere Kernleistungen"
+          title="Detaillierte Baubeschlussreinigung-Services"
+          className="text-center mb-12"
+        >
+          Von der Rohbau-Reinigung bis zur bezugsfertigen Übergabe: Unsere Services sind auf Baustellenstandards und VOB/C-Compliance abgestimmt.
+        </SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Rohbau-Reinigung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Rohbau-Reinigung</h3>
+            <p className="text-gray-600 mb-4">Gründliche Entfernung von Mörtel, Zement und Baustaub aus Rohbau-Strukturen nach ATV DIN 18299.</p>
+            <Link href="/gebaeudereinigung/grundreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Grundreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/sonstiges.svg" alt="Baustaub-Entfernung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Baustaub-Entfernung</h3>
+            <p className="text-gray-600 mb-4">Professionelle Beseitigung aller Baustäube und Feinpartikel – auch aus schwer zugänglichen Bereichen.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">Angebot für Entstaubung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/fensterreinigung.svg" alt="Baustellen-Standards Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Baustellen-Standards</h3>
+            <p className="text-gray-600 mb-4">Einhaltung aller Baustellenverordnungen und Sicherheitsvorschriften für professionelle Abwicklung.</p>
+            <Link href="/gebaeudereinigung/industriereinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Industriereinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Fenster- & Rahmenreinigung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Fenster- & Rahmenreinigung</h3>
+            <p className="text-gray-600 mb-4">Streifenfreie Reinigung aller Fenster und Rahmen – Entfernung von Kleberesten und Folien.</p>
+            <Link href="/gebaeudereinigung/fensterreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Fensterreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/treppenhausreinigung.svg" alt="Sanitäranlagen komplett Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Sanitäranlagen komplett</h3>
+            <p className="text-gray-600 mb-4">Desinfektion und Grundreinigung aller Sanitärinstallationen – bezugsfertig und hygienisch.</p>
+            <Link href="/gebaeudereinigung/krankenausreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Krankenausreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/sonstiges.svg" alt="Entsorgungsnachweis Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Entsorgungsnachweis</h3>
+            <p className="text-gray-600 mb-4">Dokumentierte Entsorgung aller Bauabfälle und Verpackungsmaterialien – umweltgerecht und nachweisbar.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">Entsorgungsangebot</Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* 4-Stufen-Verfahren Section: Compliance-Heavy */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <SectionTitle
+          preTitle="Unser bewährter Prozess"
+          title="4-Stufen-Baubeschlussreinigung für bezugsfertige Übergabe"
+          className="text-center mb-12"
+        >
+          Jede Reinigung folgt einem standardisierten Verfahren, das VOB/C ATV DIN 18299 und Baustellenverordnung einhält. Von der Planung bis zur Abnahme – alles für termingerechte Fertigstellung.
+        </SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <ProcessStep
+            number="1"
+            title="Baustellenanalyse & Planung"
+            description="Detaillierte Bestandsaufnahme nach VOB/C und Erstellung eines Reinigungsplans. Koordination mit Generalunternehmer und Baustellenleitung."
+            icon="/img/icons/planung.svg"
+            className="bg-blue-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="2"
+            title="Rohbau- & Entstaubung"
+            description="Professionelle Entfernung von Mörtel, Zement und Baustaub mit speziellen Geräten. Reinigung nach ATV DIN 18299 Standards."
+            icon="/img/icons/ausfuehrung.svg"
+            className="bg-green-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="3"
+            title="Feinreinigung & Qualitätskontrolle"
+            description="Finale Reinigung aller Oberflächen und Sanitäranlagen. Abnahmeprotokoll und Dokumentation für bezugsfertige Übergabe."
+            icon="/img/icons/kontrolle.svg"
+            className="bg-yellow-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="4"
+            title="Übergabe & Entsorgungsnachweis"
+            description="Bezugsfertige Übergabe mit vollständiger Dokumentation. Entsorgungsnachweis und Nachkontrolle für Garantie."
+            icon="/img/icons/nachsorge.svg"
+            className="bg-purple-50 rounded-lg p-6 text-center"
+          />
+        </div>
+      </Section>
+
+      {/* Compliance-Section: Branchenspezifische Vorschriften + Garantien */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="VOB/C & Baustellenverordnung"
+          title="Compliance-Standards in der Baubeschlussreinigung"
+          className="text-center mb-12"
+        >
+          Als VOB/C-Partner halten wir uns an alle relevanten Bauvorschriften für termingerechte und mängelfreie Übergaben.
+        </SectionTitle>
+        <TwoColContent
+          title="VOB/C-konforme Baubeschlussreinigung"
+          textLeft="Gemäß VOB/C ATV DIN 18299 führen wir alle Reinigungsarbeiten durch. Strikte Einhaltung der Baustellenverordnung und professionelle Koordination mit allen Gewerken für reibungslose Abläufe."
+          textRight="Baustellen-Expertise: Wir verstehen die besonderen Anforderungen von Bauprojekten. Termingerechte Ausführung und vollständige Dokumentation für Generalunternehmer und Bauherren."
+          image="/img/compliance-placeholder.webp"
+          alt="VOB/C und Baustellenverordnung Icons für Baubeschlussreinigung"
+          className="max-w-6xl mx-auto"
+        />
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">VOB/C ATV DIN 18299</h3>
+            <p>Alle Arbeiten entsprechen den allgemeinen technischen Vertragsbedingungen für Bauleistungen.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Baustellenverordnung</h3>
+            <p>Strikte Einhaltung aller Sicherheitsvorschriften und Koordination mit anderen Gewerken.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Entsorgungsnachweis</h3>
+            <p>Vollständige Dokumentation der umweltgerechten Entsorgung aller Bauabfälle und Materialien.</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Garantie Section: Trust-Building */}
+      <GarantieSection
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white"
+        title="Ihre Garantien bei uns"
+        subtitle="Über 5000 Kunden, 100% VOB/C-Compliance, Baustellenverordnungs-Einhaltung und termingerechte Fertigstellung"
+      />
+
+      {/* Related Services: SEO-optimierte interne Verlinkung */}
+      <RelatedServices
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50"
+        title="Ähnliche Reinigungs-Services"
+        services={[
+          { title: 'Grundreinigung', href: '/gebaeudereinigung/grundreinigung', description: 'VOB-konforme Tiefenreinigung für Umzüge und Neubauten.' },
+          { title: 'Industriereinigung', href: '/gebaeudereinigung/industriereinigung', description: 'Spezialreinigung für Produktionsanlagen und Maschinen.' },
+          { title: 'Fensterreinigung', href: '/gebaeudereinigung/fensterreinigung', description: 'Professionelle Reinigung für Baustellen und Neubauten.' },
+          { title: 'Krankenausreinigung', href: '/gebaeudereinigung/krankenausreinigung', description: 'Hygienische Standards für medizinische Einrichtungen.' },
+        ]}
+      />
+
+      {/* CTA Section: Thematisches Hintergrundbild + Conversion-optimiert */}
+      <CtaSection
+        title="Bereit für die bezugsfertige Übergabe?"
+        subtitle="Kontaktieren Sie uns für ein maßgeschneidertes Angebot. Wir beraten Sie zu VOB/C-Standards, Baustellenkoordination und Terminen – professionell und unverbindlich."
+        ctaText="Angebot anfragen"
+        ctaLink="/kontakt"
+        backgroundImage={ctaBg}
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-cover bg-center text-white relative"
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <p className="text-lg mb-6 opacity-90">Vertrauen Sie auf unsere Baustellenerfahrung – für termingerechte und mängelfreie Übergaben.</p>
+        </div>
+      </CtaSection>
+
+      {/* FAQ Section für SEO */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <Faq
+          title="Häufige Fragen zur Baubeschlussreinigung"
+          items={[
+            {
+              question: 'Arbeiten Sie VOB/C-konform?',
+              answer: 'Ja, alle Arbeiten erfolgen gemäß VOB/C ATV DIN 18299 und in Koordination mit Generalunternehmern und Baustellenleitung.',
+            },
+            {
+              question: 'Können Sie termingerecht zur Baufertigstellung arbeiten?',
+              answer: 'Absolut: Wir koordinieren unsere Arbeiten mit dem Bauzeitplan und sorgen für pünktliche, bezugsfertige Übergaben.',
+            },
+            {
+              question: 'Ist die Entsorgung der Bauabfälle inklusive?',
+              answer: 'Ja, wir entsorgen alle Bauabfälle umweltgerecht und stellen vollständige Entsorgungsnachweise zur Verfügung.',
+            },
+            {
+              question: 'Arbeiten Sie auch bei laufendem Baubetrieb?',
+              answer: 'Ja, wir sind erfahren in der Koordination mit anderen Gewerken und halten alle Baustellenverordnungen ein.',
+            },
+            {
+              question: 'Welche Garantien geben Sie auf die Baubeschlussreinigung?',
+              answer: 'Wir garantieren bezugsfertige Qualität mit Abnahmeprotokoll und bieten Nachkontrolle bei Bedarf.',
+            },
+          ]}
+        />
+      </Section>
     </>
   );
 }

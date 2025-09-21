@@ -362,8 +362,8 @@ export const Navbar = () => {
         <div className="flex items-center gap-2 sm:gap-3 ml-auto">
           {/* Kostenrechner Button - nur auf Desktop */}
           <div className="hidden xl:block">
-            <Link 
-              href="/kostenrechner" 
+            <Link
+              href="/kostenrechner"
               className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors whitespace-nowrap"
             >
               Kostenrechner
@@ -401,34 +401,35 @@ export const Navbar = () => {
                     </svg>
                   </Disclosure.Button>
 
-                  <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5">
-                    <div>
+                  <Disclosure.Panel className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg z-50 border-t border-gray-200 dark:border-gray-700">
+                    <div className="px-4 py-4 max-w-md mx-auto">
                       {navigation.map((item, index) => (
-                        <div key={index} className="w-full">
+                        <div key={index} className="w-full mb-2">
                           {item.submenu ? (
                             <>
-                              <button 
+                              <button
                                 onClick={() => toggleDropdown(item.name)}
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
+                                className="w-full px-4 py-3 text-left text-gray-700 dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between rounded-md transition-colors duration-200"
                               >
                                 {item.name}
-                                <svg 
-                                  className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
-                                  fill="none" 
-                                  stroke="currentColor" 
-                                  viewBox="0 0 24 24" 
+                                <svg
+                                  className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                               </button>
                               {activeDropdown === item.name && (
-                                <div className="pl-3 sm:pl-4 max-w-[280px]">
+                                <div className="pl-6 mt-2 space-y-1">
                                   {item.submenu.map((subItem, subIndex) => (
                                     <Link
                                       key={subIndex}
                                       href={subItem.href}
-                                      className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
+                                      className="block w-full px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400 rounded-md transition-colors duration-200"
+                                      onClick={() => setActiveDropdown(null)}
                                     >
                                       <span className="inline-flex items-center">
                                         {renderIcon(subItem.icon)}
@@ -440,9 +441,10 @@ export const Navbar = () => {
                               )}
                             </>
                           ) : (
-                            <Link 
-                              href={item.href} 
-                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
+                            <Link
+                              href={item.href}
+                              className="w-full px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block rounded-md transition-colors duration-200"
+                              onClick={() => setActiveDropdown(null)}
                             >
                               {item.name}
                             </Link>
@@ -450,7 +452,7 @@ export const Navbar = () => {
                         </div>
                       ))}
                       {/* Kostenrechner Button - im Mobile Menu */}
-                      <Link href="/kostenrechner" className="w-full px-4 sm:px-6 py-3 mt-3 text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors touch-manipulation">         
+                      <Link href="/kostenrechner" className="w-full px-4 py-3 mt-4 text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-200 block">
                         Kostenrechner
                       </Link>
                     </div>

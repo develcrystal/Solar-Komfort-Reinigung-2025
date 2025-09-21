@@ -1,87 +1,237 @@
-import { Container } from '@/components/Container';
+import { Metadata } from 'next';
+import { Hero } from '@/components/Hero';
+import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
+import { RelatedServices } from '@/components/RelatedServices';
+import { GarantieSection } from '@/components/GarantieSection';
+import { Faq } from '@/components/Faq';
+import { Breadcrumb } from '@/components/Breadcrumb';
+import { TwoColContent } from '@/components/TwoColContent';
+import { ProcessStep } from '@/components/ProcessStep';
+import Link from 'next/link';
 import Image from 'next/image';
+import { metadata as meta } from './metadata';
 
-export default function Haushaltsreinigung() {
+export const metadata = meta;
+
+export default function HaushaltsreinigungPage() {
+  const serviceName = 'Haushaltsreinigung';
+  const heroImage = '/img/kundenbilder/Haus.webp';
+  const ctaBg = '/img/kundenbilder/Haus.webp';
+
   return (
     <>
-      {/* Hero-Bereich - Mobile First */}
-      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/img/kundenbilder/Reinigung (1).png"
-            alt="Haushaltsreinigung - Professionelle Reinigung für Ihr Zuhause"
-            fill
-            className="object-cover brightness-[0.8]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50"></div>
-        </div>
-        
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-2xl sm:max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-              HAUSHALTSREINİGUNG
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
-              Professionelle Haushaltsreinigung für mehr Zeit und Komfort in Ihrem Zuhause.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/kontakt" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation">
-                Kostenlos beraten lassen
-              </a>
-              <a href="/kostenrechner" className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation">
-                Kosten berechnen
-              </a>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      {/* Service-Details */}
-      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
-        <Container>
-          <SectionTitle
-            preTitle="Unser Service"
-            title="Haushaltsreinigung"
-          >
-            Professionelle Haushaltsreinigung für mehr Zeit und Komfort in Ihrem Zuhause.
-          </SectionTitle>
-          
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Regelmäßige Haushaltsreinigung</li>
-                <li>• Küche und Bad gründlich reinigen</li>
-                <li>• Staubsaugen und Böden wischen</li>
-                <li>• Fensterreinigung inklusive</li>
-                <li>• Individuelle Reinigungswünsche</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>✓ Mehr Zeit für wichtige Dinge</li>
-                <li>✓ Sauberes und gepflegtes Zuhause</li>
-                <li>✓ Zuverlässige Reinigungskräfte</li>
-                <li>✓ Flexible Termine</li>
-                <li>✓ Faire Preise</li>
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <CtaSection
-        backgroundImage="/img/kundenbilder/Reinigung.png"
-        backgroundAlt="Kontaktieren Sie uns für Haushaltsreinigung"
-        title="Bereit für ein sauberes Zuhause?"
-        description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."
-        buttonText="Jetzt Beratung anfordern"
-        buttonLink="/kontakt"
+      <Breadcrumb
+        list={[
+          { title: 'Home', href: '/' },
+          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        ]}
+        className="py-6 bg-gray-50"
       />
+
+      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
+      <Hero
+        title={`${serviceName} – Premium Private Services mit Diskretion`}
+        subtitle="Diskrete und haustier-sichere Reinigung für Ihr Zuhause. DSGVO-konforme Vertragsgestaltung und Respektierung des Hausrechts für höchsten Komfort und Hygiene."
+        backgroundImage={heroImage}
+        backgroundAlt={`${serviceName} – Professionelle Reinigung für Privatkunden`}
+        ctaText="Kostenloses Angebot anfragen"
+        ctaLink="/kontakt"
+        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Privatkunden – Diskretion und Zuverlässigkeit garantiert</p>
+        </div>
+      </Hero>
+
+      {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="Unsere Kernleistungen"
+          title="Detaillierte Haushaltsreinigung-Services"
+          className="text-center mb-12"
+        >
+          Von der regelmäßigen Wartung bis zu Sonderreinigungen: Unsere Services sind diskret und auf Ihr Privatleben abgestimmt.
+        </SectionTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/sonstiges.svg" alt="Regelmäßige Haushaltsreinigung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Regelmäßige Haushaltsreinigung</h3>
+            <p className="text-gray-600 mb-4">Wöchentliche oder monatliche Reinigung: Staubsaugen, Wischen, Sanitär – flexibel und zuverlässig.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">Termin vereinbaren</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Küche & Bad gründlich Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Küche & Bad gründlich</h3>
+            <p className="text-gray-600 mb-4">Desinfektion von Oberflächen, Entkalkung und Hygiene – haustier-sicher und geruchsfrei.</p>
+            <Link href="/gebaeudereinigung/grundreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Grundreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/fensterreinigung.svg" alt="Fensterreinigung inklusive Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Fensterreinigung inklusive</h3>
+            <p className="text-gray-600 mb-4">Streifenfreie Pflege von Fenstern und Spiegeln – diskret und ohne Störung.</p>
+            <Link href="/gebaeudereinigung/fensterreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Fensterreinigung</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/sonstiges.svg" alt="Individuelle Wünsche Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Individuelle Wünsche</h3>
+            <p className="text-gray-600 mb-4">Maßgeschneiderte Reinigung: Von der Wäschepflege bis zu speziellen Bereichen – alles nach Ihren Vorstellungen.</p>
+            <Link href="/kontakt" className="text-blue-600 hover:text-blue-800 font-medium">Ihre Wünsche besprechen</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/gebaeudereinigung.svg" alt="Diskretion-Garantie Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Diskretion-Garantie</h3>
+            <p className="text-gray-600 mb-4">Vollständiger Datenschutz und Respekt vor Ihrem Privatleben – DSGVO-konform und vertrauensvoll.</p>
+            <Link href="/datenschutz" className="text-blue-600 hover:text-blue-800 font-medium">Datenschutz-Info</Link>
+          </div>
+          <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <Image src="/img/icons/treppenhausreinigung.svg" alt="Haustier-sichere Reinigung Icon" width={48} height={48} className="mb-4 mx-auto" />
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Haustier-sichere Reinigung</h3>
+            <p className="text-gray-600 mb-4">Tierfreundliche Mittel und Methoden – sicher für Haustiere und Familie.</p>
+            <Link href="/gebaeudereinigung/treppenhausreinigung" className="text-blue-600 hover:text-blue-800 font-medium">Mehr zu Treppenhausreinigung</Link>
+          </div>
+        </div>
+      </Section>
+
+      {/* 4-Stufen-Verfahren Section: Compliance-Heavy */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <SectionTitle
+          preTitle="Unser bewährter Prozess"
+          title="4-Stufen-Haushaltsreinigung für höchsten Komfort"
+          className="text-center mb-12"
+        >
+          Jede Reinigung folgt einem diskreten Verfahren, das DSGVO und Hausrecht respektiert. Von der Planung bis zur Abnahme – alles für Ihr Wohlbefinden.
+        </SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <ProcessStep
+            number="1"
+            title="Vorbereitung & Absprache"
+            description="Persönliche Beratung zu Ihren Wünschen und Zeitplan. DSGVO-konforme Vertragsgestaltung für vollen Datenschutz."
+            icon="/img/icons/planung.svg"
+            className="bg-blue-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="2"
+            title="Diskrete Ausführung"
+            description="Professionelle Reinigung mit haustier-sicheren Mitteln: Küche, Bad, Böden – ohne Störung Ihres Alltags."
+            icon="/img/icons/ausfuehrung.svg"
+            className="bg-green-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="3"
+            title="Qualitätskontrolle & Abnahme"
+            description="Finale Prüfung und gemeinsame Abnahme. Garantie für hygienische Ergebnisse und Zufriedenheit."
+            icon="/img/icons/kontrolle.svg"
+            className="bg-yellow-50 rounded-lg p-6 text-center"
+          />
+          <ProcessStep
+            number="4"
+            title="Nachsorge & Feedback"
+            description="Übergabe mit Pflegetipps. Anonymes Feedback für kontinuierliche Verbesserung – Respekt vor Hausrecht."
+            icon="/img/icons/nachsorge.svg"
+            className="bg-purple-50 rounded-lg p-6 text-center"
+          />
+        </div>
+      </Section>
+
+      {/* Compliance-Section: Branchenspezifische Vorschriften + Garantien */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
+        <SectionTitle
+          preTitle="Privatsphäre & Sicherheit"
+          title="Compliance-Standards in der Haushaltsreinigung"
+          className="text-center mb-12"
+        >
+          Wir schützen Ihre Privatsphäre und respektieren Ihr Hausrecht in jedem Schritt.
+        </SectionTitle>
+        <TwoColContent
+          title="DSGVO-konforme Haushaltsreinigung"
+          textLeft="Gemäß DSGVO gestalten wir Verträge und Prozesse datenschutzkonform. Keine Speicherung persönlicher Daten ohne Einwilligung – volle Transparenz."
+          textRight="Hausrecht-Respektierung: Unsere Teams arbeiten diskret und respektieren Ihre Regeln. Haustier-sichere Mittel und Methoden für familienfreundliche Reinigung."
+          image="/img/compliance-placeholder.webp"
+          alt="DSGVO und Hausrecht Icons für Haushaltsreinigung"
+          className="max-w-6xl mx-auto"
+        />
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">DSGVO-konform</h3>
+            <p>Vertragsgestaltung mit Datenschutzgarantie – Ihre Informationen bleiben geschützt.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Diskretion-Garantie</h3>
+            <p>Vollständige Vertraulichkeit: Keine Weitergabe von Details, respektiertes Privatleben.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-bold text-lg mb-2">Haustier-sicher</h3>
+            <p>Tierfreundliche Produkte und Methoden – sicher für Haustiere und Kinder.</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Garantie Section: Trust-Building */}
+      <GarantieSection
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white"
+        title="Ihre Garantien bei uns"
+        subtitle="Über 5000 Kunden, 100% Diskretion, DSGVO-konforme Qualität und Haustier-Sicherheit"
+      />
+
+      {/* Related Services: SEO-optimierte interne Verlinkung */}
+      <RelatedServices
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50"
+        title="Ähnliche Reinigungs-Services"
+        services={[
+          { title: 'Grundreinigung', href: '/gebaeudereinigung/grundreinigung', description: 'Tiefenreinigung für Umzüge und Neubezug – VOB-konform.' },
+          { title: 'Fensterreinigung', href: '/gebaeudereinigung/fensterreinigung', description: 'Streifenfreie Pflege für Ihr Zuhause – sicher und professionell.' },
+          { title: 'Treppenhausreinigung', href: '/gebaeudereinigung/treppenhausreinigung', description: 'Diskrete Reinigung für Mehrfamilienhäuser.' },
+          { title: 'Büroreinigung', href: '/gebaeudereinigung/bueroeinigung', description: 'Übergang von Privat zu Gewerbe – flexible Services.' },
+        ]}
+      />
+
+      {/* CTA Section: Thematisches Hintergrundbild + Conversion-optimiert */}
+      <CtaSection
+        title="Bereit für ein sauberes Zuhause?"
+        subtitle="Kontaktieren Sie uns für ein maßgeschneidertes Angebot. Wir beraten Sie diskret zu Terminen, Kosten und individuellen Wünschen – DSGVO-sicher."
+        ctaText="Angebot anfragen"
+        ctaLink="/kontakt"
+        backgroundImage={ctaBg}
+        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-cover bg-center text-white relative"
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <p className="text-lg mb-6 opacity-90">Genießen Sie mehr Zeit zu Hause – mit unserem premium Service und voller Diskretion.</p>
+        </div>
+      </CtaSection>
+
+      {/* FAQ Section für SEO */}
+      <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white">
+        <Faq
+          title="Häufige Fragen zur Haushaltsreinigung"
+          items={[
+            {
+              question: 'Wie stellen Sie Diskretion sicher?',
+              answer: 'Durch DSGVO-konforme Verträge und geschulte Teams – keine Speicherung oder Weitergabe persönlicher Daten.',
+            },
+            {
+              question: 'Sind die Mittel haustier-sicher?',
+              answer: 'Ja, wir verwenden nur tierfreundliche, biologisch abbaubare Produkte – getestet für Haustiere und Familie.',
+            },
+            {
+              question: 'Respektieren Sie das Hausrecht?',
+              answer: 'Absolut: Wir folgen Ihren Regeln, arbeiten in Abwesenheit und minimieren Störungen.',
+            },
+            {
+              question: 'Können Wünsche individuell angepasst werden?',
+              answer: 'Ja, von der Wäschepflege bis zu speziellen Bereichen – alles maßgeschneidert auf Sie.',
+            },
+            {
+              question: 'Wie oft empfehlen Sie eine Reinigung?',
+              answer: 'Wöchentlich oder monatlich für Wartung, oder bei Bedarf für Sonderreinigungen – flexibel planbar.',
+            },
+          ]}
+        />
+      </Section>
     </>
   );
 }

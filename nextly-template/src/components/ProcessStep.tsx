@@ -11,8 +11,8 @@ interface ProcessStepProps {
 
 export const ProcessStep: React.FC<ProcessStepProps> = ({ step, title, description, imageSrc, imageAlt }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all hover:scale-105">
-      <div className="relative h-64">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl transform transition-all hover:scale-105 h-full flex flex-col">
+      <div className="relative h-64 overflow-hidden rounded-t-2xl">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -25,9 +25,11 @@ export const ProcessStep: React.FC<ProcessStepProps> = ({ step, title, descripti
           </div>
         </div>
       </div>
-      <div className="p-6">
-        <h3 className="text-2xl font-bold mb-4">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300">{description}</p>
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-bold mb-4">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
+          {description}
+        </p>
       </div>
     </div>
   );

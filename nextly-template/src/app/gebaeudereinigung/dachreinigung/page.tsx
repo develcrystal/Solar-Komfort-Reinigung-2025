@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container';
+import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
 import { ServiceHeader } from '@/components/ServiceHeader';
@@ -14,8 +15,8 @@ export default function Dachreinigung() {
       step: 1,
       title: "Ausgangszustand dokumentieren",
       description: "Dokumentation des verschmutzten Dachs vor der Reinigung. Das Dach zeigt deutliche Verschmutzung durch Moos, Algen und jahrelange Witterungseinflüsse.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg",
-      imageAlt: "Kundenprojekt: Dach vor der Reinigung mit sichtbaren Verschmutzungen",
+      imageSrc: "/img/flux/team-beratung1.webp",
+      imageAlt: "Team-Beratung",
       bgColor: "bg-blue-600"
     },
     {

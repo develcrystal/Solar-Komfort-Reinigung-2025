@@ -1,10 +1,6 @@
+/* Standard section spacing according to CLAUDE.md guidelines */
 .section {
-  @apply py-0 md:py-20 md:py-24;
-}
-
-.section.md\:py-16 {
-  padding-top: 6rem;
-  padding-bottom: 0rem;
+  @apply py-16 sm:py-20 md:py-24 lg:py-28;
 }
 
 /* Smaller sections with less vertical padding */
@@ -47,24 +43,7 @@
   @apply transition-all duration-300 ease-in-out;
 }
 
-/* Responsive spacing for mobile */
-@media (max-width: 640px) {
-  .section {
-    @apply py-12;
-  }
-  
-  .section-sm {
-    @apply py-10;
-  }
-  
-  .section-lg {
-    @apply py-16;
-  }
-  
-  .section-xl {
-    @apply py-20;
-  }
-}
+/* Mobile-first responsive spacing - already handled by Tailwind classes above */
 
 /* Add subtle background pattern to alternate sections */
 .section-pattern {

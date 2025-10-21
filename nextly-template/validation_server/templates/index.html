@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Validation Tool - Komfort Gebäudeservice24</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-blue-600 text-white">
+            <div class="container mx-auto px-4 py-6">
+                <h1 class="text-3xl font-bold">Komfort Gebäudeservice24 - Website Validator</h1>
+                <p class="mt-2">Find content, image, SEO, and keyword inconsistencies</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Controls Panel -->
+                <div class="lg:col-span-1 bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold mb-4">Validation Controls</h2>
+                    
+                    <div class="space-y-4">
+                        <button id="validateAllBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded">
+                            Validate Entire Website
+                        </button>
+                        
+                        <div class="pt-4 border-t">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Validate Specific Page</label>
+                            <div class="flex">
+                                <input 
+                                    type="text" 
+                                    id="pageInput" 
+                                    placeholder="Enter page name (e.g., dachreinigung)" 
+                                    class="flex-1 border border-gray-300 rounded-l px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                <button id="validatePageBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-r">
+                                    Validate
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 border-t">
+                            <h3 class="font-medium mb-2">Validation Summary</h3>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span>Total Issues:</span>
+                                    <span id="totalIssues" class="font-bold">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Errors:</span>
+                                    <span id="errorCount" class="font-bold text-red-600">0</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Warnings:</span>
+                                    <span id="warningCount" class="font-bold text-yellow-600">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Panel -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h2 class="text-xl font-bold mb-4">Validation Results</h2>
+                        
+                        <div id="resultsContainer">
+                            <div id="summaryChartContainer" class="mb-6">
+                                <canvas id="summaryChart"></canvas>
+                            </div>
+                            
+                            <div id="resultsList" class="space-y-4">
+                                <div class="text-center text-gray-500 py-8" id="initialMessage">
+                                    Click "Validate Entire Website" to start the validation process...
+                                </div>
+                                <div id="resultsDetails" class="hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Detailed Error View -->
+                    <div id="detailedView" class="mt-6 bg-white p-6 rounded-lg shadow hidden">
+                        <h3 class="text-lg font-bold mb-4">Detailed Error Information</h3>
+                        <div id="detailedContent"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // DOM Elements
+        const validateAllBtn = document.getElementById('validateAllBtn');
+        const validatePageBtn = document.getElementById('validatePageBtn');
+        const pageInput = document.getElementById('pageInput');
+        const resultsList = document.getElementById('resultsList');
+        const initialMessage = document.getElementById('initialMessage');
+        const resultsDetails = document.getElementById('resultsDetails');
+        const detailedView = document.getElementById('detailedView');
+        const detailedContent = document.getElementById('detailedContent');
+        const totalIssues = document.getElementById('totalIssues');
+        const errorCount = document.getElementById('errorCount');
+        const warningCount = document.getElementById('warningCount');
+        
+        // Chart
+        let summaryChart = null;
+        
+        // Event Listeners
+        validateAllBtn.addEventListener('click', validateWebsite);
+        validatePageBtn.addEventListener('click', () => {
+            const page = pageInput.value.trim();
+            if (page) {
+                validateSpecificPage(page);
+            } else {
+                alert('Please enter a page name');
+            }
+        });
+        
+        // Functions
+        async function validateWebsite() {
+            try {
+                showLoading();
+                
+                const response = await fetch('/validate');
+                const data = await response.json();
+                
+                updateSummary(data);
+                displayResults(data.detailed_errors);
+                createSummaryChart(data.errors_by_type, data.errors_by_severity);
+                
+                initialMessage.classList.add('hidden');
+                resultsDetails.classList.remove('hidden');
+            } catch (error) {
+                console.error('Error during validation:', error);
+                alert('Error occurred during validation. Please check the console.');
+            }
+        }
+        
+        async function validateSpecificPage(pageName) {
+            try {
+                showLoading();
+                
+                const response = await fetch(`/validate/${pageName}`);
+                const data = await response.json();
+                
+                updateSummary({
+                    total_errors: data.count,
+                    errors_by_severity: {
+                        error: data.errors.filter(e => e.severity === 'error').length,
+                        warning: data.errors.filter(e => e.severity === 'warning').length,
+                        info: data.errors.filter(e => e.severity === 'info').length
+                    },
+                    detailed_errors: data.errors
+                });
+                
+                displayResults(data.errors);
+                createSummaryChart(
+                    data.errors.reduce((acc, err) => {
+                        acc[err.type] = (acc[err.type] || 0) + 1;
+                        return acc;
+                    }, {}),
+                    {
+                        error: data.errors.filter(e => e.severity === 'error').length,
+                        warning: data.errors.filter(e => e.severity === 'warning').length,
+                        info: data.errors.filter(e => e.severity === 'info').length
+                    }
+                );
+                
+                initialMessage.classList.add('hidden');
+                resultsDetails.classList.remove('hidden');
+            } catch (error) {
+                console.error('Error during page validation:', error);
+                alert('Error occurred during page validation. Please check the console.');
+            }
+        }
+        
+        function updateSummary(data) {
+            totalIssues.textContent = data.total_errors || data.total_errors === 0 ? data.total_errors : 0;
+            errorCount.textContent = data.errors_by_severity?.error || 0;
+            warningCount.textContent = data.errors_by_severity?.warning || 0;
+        }
+        
+        function displayResults(errors) {
+            if (!errors || errors.length === 0) {
+                resultsDetails.innerHTML = '<div class="text-center text-gray-500 py-8">No issues found! Your website is in excellent condition.</div>';
+                return;
+            }
+            
+            let html = '<div class="space-y-3">';
+            
+            errors.forEach((error, index) => {
+                const severityClass = error.severity === 'error' ? 'bg-red-50 border-red-200' : 
+                                    error.severity === 'warning' ? 'bg-yellow-50 border-yellow-200' : 
+                                    'bg-blue-50 border-blue-200';
+                
+                html += `
+                <div class="border-l-4 ${severityClass} p-4 rounded">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h4 class="font-bold">${error.type}</h4>
+                            <p class="text-sm text-gray-600">${error.message}</p>
+                            <p class="text-xs text-gray-500 mt-1">Page: ${error.page}</p>
+                            ${error.suggestion ? `<p class="text-xs italic mt-1">Suggestion: ${error.suggestion}</p>` : ''}
+                        </div>
+                        <span class="px-2 py-1 text-xs rounded-full ${
+                            error.severity === 'error' ? 'bg-red-200 text-red-800' : 
+                            error.severity === 'warning' ? 'bg-yellow-200 text-yellow-800' : 
+                            'bg-blue-200 text-blue-800'
+                        }">
+                            ${error.severity}
+                        </span>
+                    </div>
+                </div>`;
+            });
+            
+            html += '</div>';
+            resultsDetails.innerHTML = html;
+        }
+        
+        function createSummaryChart(errorsByType, errorsBySeverity) {
+            const ctx = document.getElementById('summaryChart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (summaryChart) {
+                summaryChart.destroy();
+            }
+            
+            // Prepare data for the chart
+            const labels = Object.keys(errorsByType);
+            const data = Object.values(errorsByType);
+            
+            summaryChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        backgroundColor: [
+                            '#EF4444', // red
+                            '#F59E0B', // yellow
+                            '#10B981', // green
+                            '#3B82F6', // blue
+                            '#8B5CF6', // purple
+                            '#EC4899', // pink
+                        ],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Issues by Type'
+                        }
+                    }
+                }
+            });
+        }
+        
+        function showLoading() {
+            resultsDetails.innerHTML = '<div class="text-center py-8"><div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div><p class="mt-2 text-gray-600">Validating website...</p></div>';
+            initialMessage.classList.add('hidden');
+            resultsDetails.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
@@ -23,36 +23,27 @@ export default function HaushaltsreinigungPage() {
   return (
     <>
       <Breadcrumb
-        list={[
-          { title: 'Home', href: '/' },
-          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
-          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        customItems={[
+          { label: 'Home', href: '/' },
+          { label: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { label: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
         ]}
         className="py-6 bg-gray-50"
       />
 
-      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
-      <Hero
-        title={`${serviceName} – Premium Private Services mit Diskretion`}
-        subtitle="Diskrete und haustier-sichere Reinigung für Ihr Zuhause. DSGVO-konforme Vertragsgestaltung und Respektierung des Hausrechts für höchsten Komfort und Hygiene."
-        backgroundImage={heroImage}
-        backgroundAlt={`${serviceName} – Professionelle Reinigung für Privatkunden`}
-        ctaText="Kostenloses Angebot anfragen"
-        ctaLink="/kontakt"
-        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Privatkunden – Diskretion und Zuverlässigkeit garantiert</p>
-        </div>
-      </Hero>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title={`${serviceName.toUpperCase()} – PREMIUM PRIVATE SERVICES MIT DISKRETION`}
+        description="Diskrete und haustier-sichere Reinigung für Ihr Zuhause. DSGVO-konforme Vertragsgestaltung und Respektierung des Hausrechts für höchsten Komfort und Hygiene."
+        imageSrc={heroImage}
+        imageAlt={`${serviceName} – Professionelle Reinigung für Privatkunden`}
+      />
 
       {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
       <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
         <SectionTitle
           preTitle="Unsere Kernleistungen"
           title="Detaillierte Haushaltsreinigung-Services"
-          className="text-center mb-12"
         >
           Von der regelmäßigen Wartung bis zu Sonderreinigungen: Unsere Services sind diskret und auf Ihr Privatleben abgestimmt.
         </SectionTitle>
@@ -101,38 +92,37 @@ export default function HaushaltsreinigungPage() {
         <SectionTitle
           preTitle="Unser bewährter Prozess"
           title="4-Stufen-Haushaltsreinigung für höchsten Komfort"
-          className="text-center mb-12"
         >
           Jede Reinigung folgt einem diskreten Verfahren, das DSGVO und Hausrecht respektiert. Von der Planung bis zur Abnahme – alles für Ihr Wohlbefinden.
         </SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <ProcessStep
-            number="1"
+            step={1}
             title="Vorbereitung & Absprache"
-            description="Persönliche Beratung zu Ihren Wünschen und Zeitplan. DSGVO-konforme Vertragsgestaltung für vollen Datenschutz."
-            icon="/img/icons/planung.svg"
-            className="bg-blue-50 rounded-lg p-6 text-center"
+            description="Persönliche Beratung und DSGVO-konforme Vertragsgestaltung für vollen Datenschutz."
+            imageSrc="/img/kundenbilder/Haus.webp"
+            imageAlt="Vorbereitung und Absprache Icon"
           />
           <ProcessStep
-            number="2"
+            step={2}
             title="Diskrete Ausführung"
-            description="Professionelle Reinigung mit haustier-sicheren Mitteln: Küche, Bad, Böden – ohne Störung Ihres Alltags."
-            icon="/img/icons/ausfuehrung.svg"
-            className="bg-green-50 rounded-lg p-6 text-center"
+            description="Professionelle Reinigung mit haustier-sicheren Mitteln ohne Störung Ihres Alltags."
+            imageSrc="/img/kundenbilder/Reinigung.webp"
+            imageAlt="Diskrete Ausführung Icon"
           />
           <ProcessStep
-            number="3"
+            step={3}
             title="Qualitätskontrolle & Abnahme"
-            description="Finale Prüfung und gemeinsame Abnahme. Garantie für hygienische Ergebnisse und Zufriedenheit."
-            icon="/img/icons/kontrolle.svg"
-            className="bg-yellow-50 rounded-lg p-6 text-center"
+            description="Finale Prüfung und gemeinsame Abnahme mit Garantie für hygienische Ergebnisse."
+            imageSrc="/img/kundenbilder/Grundreinigung.webp"
+            imageAlt="Qualitätskontrolle und Abnahme Icon"
           />
           <ProcessStep
-            number="4"
+            step={4}
             title="Nachsorge & Feedback"
-            description="Übergabe mit Pflegetipps. Anonymes Feedback für kontinuierliche Verbesserung – Respekt vor Hausrecht."
-            icon="/img/icons/nachsorge.svg"
-            className="bg-purple-50 rounded-lg p-6 text-center"
+            description="Übergabe mit Pflegetipps und anonymes Feedback für kontinuierliche Verbesserung."
+            imageSrc="/img/kundenbilder/team-model-reinigung.webp"
+            imageAlt="Nachsorge und Feedback Icon"
           />
         </div>
       </Section>
@@ -142,7 +132,6 @@ export default function HaushaltsreinigungPage() {
         <SectionTitle
           preTitle="Privatsphäre & Sicherheit"
           title="Compliance-Standards in der Haushaltsreinigung"
-          className="text-center mb-12"
         >
           Wir schützen Ihre Privatsphäre und respektieren Ihr Hausrecht in jedem Schritt.
         </SectionTitle>

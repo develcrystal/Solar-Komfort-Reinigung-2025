@@ -45,7 +45,8 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,
   },
-  swcMinify: true,
+  // swcMinify is enabled by default in Next.js 14+, so this line is redundant
+  // swcMinify: true,
 };
 
 module.exports = nextConfig;

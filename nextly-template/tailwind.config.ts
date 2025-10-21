@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         trueGray: colors.neutral,
       },
+      maxWidth: {
+        '8xl': '90rem', // 1440px
+      }
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],

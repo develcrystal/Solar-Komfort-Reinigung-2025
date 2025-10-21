@@ -42,19 +42,19 @@ const benefits: Benefit[] = [
 
 const Benefits = () => {
   return (
-    <Container>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {benefits.map((benefit, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
-            <div className="text-4xl mb-4">{benefit.icon}</div>
-            <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{benefit.title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+          <div key={index} className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
+            <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{benefit.icon}</div>
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">{benefit.title}</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
               {benefit.description}
             </p>
           </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 

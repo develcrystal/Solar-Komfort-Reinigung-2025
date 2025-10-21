@@ -19,7 +19,7 @@ export const Section = ({
   return (
     <section
       id={id}
-      className={`py-4 sm:py-8 md:py-12 lg:py-16 ${className}`}
+      className={`py-8 sm:py-12 md:py-16 lg:py-20 ${className}`}
     >
       {fullWidth ? (
         children

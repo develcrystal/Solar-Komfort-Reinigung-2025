@@ -1,7 +1,7 @@
 # Solar-Komfort Reinigung - Website Neugestaltung
 
 ## Übersicht
-Neugestaltung der alten Vorlage zur modernen, responsiven Live-Website für **Komfort Gebäudeservice24 GmbH**. 
+Neugestaltung der alten Vorlage zur modernen, responsiven Live-Website für **Komfort Gebäudeservice24 GmbH**.
 Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 
 ## Projektstruktur
@@ -35,13 +35,14 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 - [x] Hero-Bereiche für Facility Management-Seiten (3/3)
 - [x] **Galerie** mit Kategoriefiltern und Lightbox (1/1)
 - [x] **Template Demo Seite** mit verschiedenen Section-Elementen
+- [x] **ServiceLeistungenGrid-Komponente:** Moderne Icon-Card-Komponente für Service-Übersichten
 
 ## Sitemap Status
 ```
 ✅ Hauptnavigation (5/5)
 ├── / (Homepage)
 ├── /kontakt
-├── /kostenrechner  
+├── /kostenrechner
 ├── /ueber-uns
 └── /referenzen (+galerie)
 
@@ -53,7 +54,7 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 └── /schulreinigung
 
 ✅ Gebäudeservice (5/5)
-├── /hausmeisterservice /gartenpflege /entruempelung  
+├── /hausmeisterservice /gartenpflege /entruempelung
 └── /winterdienst /aussenpflege
 
 ✅ Facility Management (3/3)
@@ -73,6 +74,17 @@ Das Projekt enthält auch ein RAG-System als Hilfstool für die Entwicklung.
 - **Lazy Loading** für optimale Performance
 - **Barrierefreiheit** gemäß WCAG 2.1
 - **Dunkelmodus**-Unterstützung
+
+### ServiceLeistungenGrid-Komponente
+- **Zweck:** Moderne Darstellung von Service-Leistungen und Vorteilen mit Icon-Cards
+- **Features:**
+  - Responsive Grid-Layout (1-3 Spalten je nach Bildschirmgröße)
+  - Hover-Effekte mit Schatten und Translation
+  - Konsistente CI-Farben (blaue Icons für Leistungen, grüne für Vorteile)
+  - SVG-Icons für bessere Skalierbarkeit
+  - Dunkelmodus-Unterstützung
+- **Verwendung:** Auf Service-Seiten für "Unsere Leistungen" und "Ihre Vorteile" Abschnitte
+- **Implementiert auf:** fassadenreinigung, dachreinigung, facility-management/unternehmen (ersetzt alte Bullet-Point-Listen)
 
 ### Mobile First Design
 - **Breakpoints:** sm: (640px+) → md: (768px+) → lg: (1024px+) → xl: (1280px+)
@@ -94,9 +106,17 @@ npm run dev  # Läuft auf http://localhost:3003
 - **/components/gallery/types.ts** - TypeScript-Definitionen
 - **/data/galleryImages.ts** - Bilddaten und Kategorien
 
+## Letzte Änderungen (2025-09-21)
+- **ServiceLeistungenGrid-Komponente erstellt:** Moderne Icon-Card-Komponente für Service-Übersichten
+- **Service-Seiten aktualisiert:** Alte Bullet-Point-Listen durch ServiceLeistungenGrid ersetzt auf:
+  - `/gebaeudereinigung/fassadenreinigung`
+  - `/gebaeudereinigung/dachreinigung`
+  - `/facility-management/unternehmen`
+- **Konsistenz verbessert:** Einheitliches Design für alle Service-Leistungsabschnitte
+
 ## Status
 ✅ **Gebäudereinigung:** 13/13 Seiten mit Mobile First Hero-Bereichen
 - [x] **LogoSlider auf Startseite:** Fiktiver Kunden-Slider mit Städtenamen vor Referenz-Sektion hinzugefügt
-✅ **Gebäudeservice:** 5/5 Seiten mit Heroes  
+✅ **Gebäudeservice:** 5/5 Seiten mit Heroes
 ✅ **Facility Management:** 3/3 Seiten mit Heroes
 ✅ **Galerie:** 1/1 Seite mit erweiterten Funktionen

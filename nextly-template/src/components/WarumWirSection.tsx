@@ -62,7 +62,7 @@ const WarumWirSection = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24">
+    <div className="section bg-white dark:bg-gray-900">
       <Container>
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center">

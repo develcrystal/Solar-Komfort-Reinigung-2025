@@ -1064,13 +1064,14 @@ Professioneller Hausmeisterservice umfasst weit mehr als nur Reinigung und klein
 ];
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPost({ params }: PageProps) {
-  const post = blogPosts.find(p => p.slug === params.slug);
+export default async function BlogPost({ params }: PageProps) {
+  const resolvedParams = await params;
+  const post = blogPosts.find(p => p.slug === resolvedParams.slug);
   
   if (!post) {
     notFound();

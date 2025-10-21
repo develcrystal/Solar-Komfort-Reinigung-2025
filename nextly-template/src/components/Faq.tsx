@@ -4,15 +4,29 @@ import { Container } from "@/components/Container";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
-export const Faq = () => {
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface FaqProps {
+  title?: string;
+  items?: FaqItem[];
+}
+
+export const Faq = ({ title = "Häufig gestellte Fragen", items }: FaqProps) => {
+  const faqItems = items || faqdata;
   return (
     <Container className="!p-0">
       <div className="w-full max-w-3xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item, index) => (
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+          {title}
+        </h2>
+        {faqItems.map((item, index) => (
           <div key={item.question} className="mb-4">
             <Disclosure>
               {({ open }) => (
-                <>
+                <div>
                   <DisclosureButton className="flex items-center justify-between w-full px-6 py-5 text-lg font-medium text-left text-gray-800 rounded-xl bg-white shadow-sm border border-gray-100 hover:bg-gray-50 hover:shadow-md transition-all duration-200 focus:outline-none focus-visible:ring focus-visible:ring-blue-100 focus-visible:ring-opacity-75 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-700">
                     <span>{item.question}</span>
                     <ChevronUpIcon
@@ -24,7 +38,7 @@ export const Faq = () => {
                   <DisclosurePanel className="px-6 pt-5 pb-4 text-gray-600 bg-gray-50 rounded-b-xl mt-1 shadow-inner dark:bg-gray-700 dark:text-gray-300 leading-relaxed">
                     {item.answer}
                   </DisclosurePanel>
-                </>
+                </div>
               )}
             </Disclosure>
           </div>

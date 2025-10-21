@@ -78,7 +78,10 @@
       "Bash(set PORT=3002)",
       "Bash(git pull:*)",
       "Bash(node:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(pwsh.exe:*)",
+      "Bash(cmd /C:*)",
+      "mcp__browsermcp-cline__browser_hover"
     ],
     "deny": []
   },

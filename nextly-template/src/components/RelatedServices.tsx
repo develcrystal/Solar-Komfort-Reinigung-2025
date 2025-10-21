@@ -16,6 +16,13 @@ interface RelatedServicesProps {
   currentService?: string;
   category?: 'gebaeudereinigung' | 'gebaeudeservice' | 'facility-management';
   maxServices?: number;
+  className?: string;
+  title?: string;
+  services?: Array<{
+    title: string;
+    href: string;
+    description: string;
+  }>;
 }
 
 const allServices: RelatedService[] = [
@@ -77,10 +84,13 @@ const allServices: RelatedService[] = [
   }
 ];
 
-export function RelatedServices({ 
-  currentService, 
-  category = 'gebaeudereinigung', 
-  maxServices = 4 
+export function RelatedServices({
+  currentService,
+  category = 'gebaeudereinigung',
+  maxServices = 4,
+  className = '',
+  title = 'Weitere Dienstleistungen',
+  services
 }: RelatedServicesProps) {
   // Filter services based on category and exclude current service
   let filteredServices = allServices
@@ -110,11 +120,11 @@ export function RelatedServices({
   }
 
   return (
-    <Section className="bg-gray-50 dark:bg-gray-900">
+    <Section className={`bg-gray-50 dark:bg-gray-900 ${className}`}>
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Weitere Dienstleistungen
+{title}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Entdecken Sie unser komplettes Leistungsspektrum für professionelle Gebäudereinigung und Facility Management im Rhein-Main-Gebiet.

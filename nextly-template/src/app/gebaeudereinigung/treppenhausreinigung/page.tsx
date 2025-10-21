@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
@@ -23,36 +23,27 @@ export default function TreppenhausreinigungPage() {
   return (
     <>
       <Breadcrumb
-        list={[
-          { title: 'Home', href: '/' },
-          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
-          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        customItems={[
+          { label: 'Home', href: '/' },
+          { label: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { label: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
         ]}
         className="py-6 bg-gray-50"
       />
 
-      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
-      <Hero
-        title={`${serviceName} – WEG-Verwaltung & Mehrfamilienhaus-Expertise`}
-        subtitle="WEG-konforme Reinigung für Mehrfamilienhäuser mit Hausordnungs-Compliance und Lärmschutz-Zeiten. Professionelle Pflege von Treppenhäusern, Eingangsbereichen und Gemeinschaftsflächen."
-        backgroundImage={heroImage}
-        backgroundAlt={`${serviceName} – Gepflegte Treppenhäuser für Wohnkomfort`}
-        ctaText="Kostenloses Angebot anfragen"
-        ctaLink="/kontakt"
-        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Mieter – WEG-konform und hausordnungsgerecht</p>
-        </div>
-      </Hero>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title={`${serviceName.toUpperCase()} – WEG-VERWALTUNG & MEHRFAMILIENHAUS-EXPERTISE`}
+        description="WEG-konforme Reinigung für Mehrfamilienhäuser mit Hausordnungs-Compliance und Lärmschutz-Zeiten. Professionelle Pflege von Treppenhäusern, Eingangsbereichen und Gemeinschaftsflächen."
+        imageSrc={heroImage}
+        imageAlt={`${serviceName} – Gepflegte Treppenhäuser für Wohnkomfort`}
+      />
 
       {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
       <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
         <SectionTitle
           preTitle="Unsere Kernleistungen"
           title="Detaillierte Treppenhausreinigung-Services"
-          className="text-center mb-12"
         >
           Von der wöchentlichen Wartung bis zur WEG-Verwaltung: Unsere Services sind auf Mehrfamilienhäuser und Hausordnungen abgestimmt.
         </SectionTitle>
@@ -101,38 +92,37 @@ export default function TreppenhausreinigungPage() {
         <SectionTitle
           preTitle="Unser bewährter Prozess"
           title="4-Stufen-Treppenhausreinigung für Mieter-Zufriedenheit"
-          className="text-center mb-12"
         >
           Jede Reinigung folgt einem WEG-konformen Verfahren, das WEG-Gesetz §21 und Hausordnungen einhält. Von der Planung bis zur Abnahme – alles für harmonisches Wohnen.
         </SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <ProcessStep
-            number="1"
+            step={1}
             title="WEG-Abstimmung & Planung"
-            description="Koordination mit Hausverwaltung und WEG-Beschlüssen. Erstellung hausordnungskonformer Reinigungspläne unter Beachtung von Mieterinteressen."
-            icon="/img/icons/planung.svg"
-            className="bg-blue-50 rounded-lg p-6 text-center"
+            description="Koordination mit Hausverwaltung und Erstellung hausordnungskonformer Reinigungspläne."
+            imageSrc="/img/flux/team-beratung1.webp"
+            imageAlt="WEG-Abstimmung und Planung Icon"
           />
           <ProcessStep
-            number="2"
+            step={2}
             title="Lärmschutz-konforme Ausführung"
-            description="Professionelle Reinigung zwischen 8-20 Uhr werktags: Treppen, Geländer, Eingänge – ohne Störung der Mieter."
-            icon="/img/icons/ausfuehrung.svg"
-            className="bg-green-50 rounded-lg p-6 text-center"
+            description="Professionelle Reinigung werktags 8-20 Uhr: Treppen, Geländer, Eingänge ohne Störung."
+            imageSrc="/img/flux/team-beratung1.webp"
+            imageAlt="Lärmschutz-konforme Ausführung Icon"
           />
           <ProcessStep
-            number="3"
+            step={3}
             title="Qualitätskontrolle & Mängeldokumentation"
-            description="Finale Inspektion und Erstellung von Protokollen für WEG-Verwaltung. Garantie für gepflegte Gemeinschaftsflächen."
-            icon="/img/icons/kontrolle.svg"
-            className="bg-yellow-50 rounded-lg p-6 text-center"
+            description="Finale Inspektion und Protokollerstellung für WEG-Verwaltung mit Qualitätsgarantie."
+            imageSrc="/img/flux/team-beratung1.webp"
+            imageAlt="Qualitätskontrolle und Mängeldokumentation Icon"
           />
           <ProcessStep
-            number="4"
+            step={4}
             title="Mieter-Feedback & Nachsorge"
-            description="Regelmäßige Kontrollen und anonymes Mieter-Feedback. Kontinuierliche Verbesserung für höchste Zufriedenheit."
-            icon="/img/icons/nachsorge.svg"
-            className="bg-purple-50 rounded-lg p-6 text-center"
+            description="Regelmäßige Kontrollen und Mieter-Feedback für kontinuierliche Verbesserung."
+            imageSrc="/img/flux/team-beratung1.webp"
+            imageAlt="Mieter-Feedback und Nachsorge Icon"
           />
         </div>
       </Section>
@@ -142,7 +132,6 @@ export default function TreppenhausreinigungPage() {
         <SectionTitle
           preTitle="WEG-Gesetz & Hausordnung"
           title="Compliance-Standards in der Treppenhausreinigung"
-          className="text-center mb-12"
         >
           Als WEG-Partner halten wir uns an alle relevanten Vorschriften für harmonisches Zusammenleben.
         </SectionTitle>

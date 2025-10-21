@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
@@ -23,36 +23,27 @@ export default function BaubeschlussreinigungPage() {
   return (
     <>
       <Breadcrumb
-        list={[
-          { title: 'Home', href: '/' },
-          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
-          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        customItems={[
+          { label: 'Home', href: '/' },
+          { label: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { label: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
         ]}
         className="py-6 bg-gray-50"
       />
 
-      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
-      <Hero
-        title={`${serviceName} – VOB/C ATV DIN 18299 & Baustellenverordnung`}
-        subtitle="Professionelle Endreinigung nach Bau- und Renovierungsarbeiten mit Baustellenstandards, Rohbau-Reinigung und Entsorgungsnachweis. VOB/C-konforme Abwicklung für bezugsfertige Übergaben."
-        backgroundImage={heroImage}
-        backgroundAlt={`${serviceName} – Bezugsfertige Übergabe nach Bauende`}
-        ctaText="Kostenloses Angebot anfragen"
-        ctaLink="/kontakt"
-        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Bauherren – VOB/C-konform und termingerecht</p>
-        </div>
-      </Hero>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title={`${serviceName.toUpperCase()} – VOB/C ATV DIN 18299 & BAUSTELLENVERORDNUNG`}
+        description="Professionelle Endreinigung nach Bau- und Renovierungsarbeiten mit Baustellenstandards, Rohbau-Reinigung und Entsorgungsnachweis. VOB/C-konforme Abwicklung für bezugsfertige Übergaben."
+        imageSrc={heroImage}
+        imageAlt={`${serviceName} – Bezugsfertige Übergabe nach Bauende`}
+      />
 
       {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
       <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
         <SectionTitle
           preTitle="Unsere Kernleistungen"
           title="Detaillierte Baubeschlussreinigung-Services"
-          className="text-center mb-12"
         >
           Von der Rohbau-Reinigung bis zur bezugsfertigen Übergabe: Unsere Services sind auf Baustellenstandards und VOB/C-Compliance abgestimmt.
         </SectionTitle>
@@ -101,38 +92,37 @@ export default function BaubeschlussreinigungPage() {
         <SectionTitle
           preTitle="Unser bewährter Prozess"
           title="4-Stufen-Baubeschlussreinigung für bezugsfertige Übergabe"
-          className="text-center mb-12"
         >
           Jede Reinigung folgt einem standardisierten Verfahren, das VOB/C ATV DIN 18299 und Baustellenverordnung einhält. Von der Planung bis zur Abnahme – alles für termingerechte Fertigstellung.
         </SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <ProcessStep
-            number="1"
+            step={1}
             title="Baustellenanalyse & Planung"
-            description="Detaillierte Bestandsaufnahme nach VOB/C und Erstellung eines Reinigungsplans. Koordination mit Generalunternehmer und Baustellenleitung."
-            icon="/img/icons/planung.svg"
-            className="bg-blue-50 rounded-lg p-6 text-center"
+            description="Detaillierte Bestandsaufnahme nach VOB/C und Erstellung eines Reinigungsplans mit Generalunternehmer-Koordination."
+            imageSrc="/img/kundenbilder/Haus.webp"
+            imageAlt="Baustellenanalyse und Planung Icon"
           />
           <ProcessStep
-            number="2"
+            step={2}
             title="Rohbau- & Entstaubung"
-            description="Professionelle Entfernung von Mörtel, Zement und Baustaub mit speziellen Geräten. Reinigung nach ATV DIN 18299 Standards."
-            icon="/img/icons/ausfuehrung.svg"
-            className="bg-green-50 rounded-lg p-6 text-center"
+            description="Professionelle Entfernung von Mörtel, Zement und Baustaub mit modernsten Spezialgeräten nach ATV DIN 18299 Standards."
+            imageSrc="/img/kundenbilder/Grundreinigung.webp"
+            imageAlt="Rohbau und Entstaubung Icon"
           />
           <ProcessStep
-            number="3"
+            step={3}
             title="Feinreinigung & Qualitätskontrolle"
-            description="Finale Reinigung aller Oberflächen und Sanitäranlagen. Abnahmeprotokoll und Dokumentation für bezugsfertige Übergabe."
-            icon="/img/icons/kontrolle.svg"
-            className="bg-yellow-50 rounded-lg p-6 text-center"
+            description="Finale Reinigung aller Oberflächen und Sanitäranlagen mit Abnahmeprotokoll für bezugsfertige Übergabe."
+            imageSrc="/img/kundenbilder/Reinigung.webp"
+            imageAlt="Feinreinigung und Qualitätskontrolle Icon"
           />
           <ProcessStep
-            number="4"
+            step={4}
             title="Übergabe & Entsorgungsnachweis"
-            description="Bezugsfertige Übergabe mit vollständiger Dokumentation. Entsorgungsnachweis und Nachkontrolle für Garantie."
-            icon="/img/icons/nachsorge.svg"
-            className="bg-purple-50 rounded-lg p-6 text-center"
+            description="Bezugsfertige Übergabe mit Dokumentation und Entsorgungsnachweis für Garantie."
+            imageSrc="/img/kundenbilder/team-model-reinigung.webp"
+            imageAlt="Übergabe und Entsorgungsnachweis Icon"
           />
         </div>
       </Section>
@@ -142,7 +132,6 @@ export default function BaubeschlussreinigungPage() {
         <SectionTitle
           preTitle="VOB/C & Baustellenverordnung"
           title="Compliance-Standards in der Baubeschlussreinigung"
-          className="text-center mb-12"
         >
           Als VOB/C-Partner halten wir uns an alle relevanten Bauvorschriften für termingerechte und mängelfreie Übergaben.
         </SectionTitle>
@@ -150,7 +139,7 @@ export default function BaubeschlussreinigungPage() {
           title="VOB/C-konforme Baubeschlussreinigung"
           textLeft="Gemäß VOB/C ATV DIN 18299 führen wir alle Reinigungsarbeiten durch. Strikte Einhaltung der Baustellenverordnung und professionelle Koordination mit allen Gewerken für reibungslose Abläufe."
           textRight="Baustellen-Expertise: Wir verstehen die besonderen Anforderungen von Bauprojekten. Termingerechte Ausführung und vollständige Dokumentation für Generalunternehmer und Bauherren."
-          image="/img/compliance-placeholder.webp"
+          image="/img/flux/industriereinigung.webp"
           alt="VOB/C und Baustellenverordnung Icons für Baubeschlussreinigung"
           className="max-w-6xl mx-auto"
         />
@@ -196,12 +185,8 @@ export default function BaubeschlussreinigungPage() {
         ctaText="Angebot anfragen"
         ctaLink="/kontakt"
         backgroundImage={ctaBg}
-        className="py-4 sm:py-8 md:py-12 lg:py-16 bg-cover bg-center text-white relative"
       >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <p className="text-lg mb-6 opacity-90">Vertrauen Sie auf unsere Baustellenerfahrung – für termingerechte und mängelfreie Übergaben.</p>
-        </div>
+        <p className="text-lg mb-6 opacity-90">Vertrauen Sie auf unsere Baustellenerfahrung – für termingerechte und mängelfreie Übergaben.</p>
       </CtaSection>
 
       {/* FAQ Section für SEO */}

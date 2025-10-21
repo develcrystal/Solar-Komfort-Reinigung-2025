@@ -2,6 +2,11 @@ import { Container } from "@/components/Container";
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import ServiceLeistungenGrid from "@/components/ServiceLeistungenGrid";
+import { ProblemLoesungSection } from "@/components/ProblemLoesungSection";
+import { Faq } from "@/components/Faq";
+import { GarantieSection } from "@/components/GarantieSection";
+import { RelatedServices } from "@/components/RelatedServices";
 import { IndividuelleLoesungSection } from "@/components/IndividuelleLoesungSection";
 
 export const metadata: Metadata = {
@@ -13,7 +18,7 @@ export default function TemplateDemo() {
   return (
     <div className="template-demo">
       {/* Header */}
-      <section className="py-12 sm:py-16 bg-gray-900 text-white">
+      <section className="section section-xl bg-gray-900 text-white">
         <Container>
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -276,6 +281,119 @@ export default function TemplateDemo() {
             Individuelle Lösung Section - Glassmorphism
           </h3>
           <IndividuelleLoesungSection variant="glassmorphism" />
+        </section>
+
+        {/* Section 7: ServiceLeistungenGrid */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">7. ServiceLeistungenGrid</h3>
+          <ServiceLeistungenGrid
+            title="Unsere Leistungen"
+            subtitle="Professionelle Dienstleistungen mit Icon-Karten"
+            leistungen={[
+              {
+                title: "Fassadenreinigung",
+                description: "Professionelle Reinigung aller Fassadenarten mit modernster Technik.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2zm0 0l3 3m0 0l3-3m-3 3v10m0 0l3-3m-3 3l3 3m6-9v10m0 0l3-3m-3 3l3 3M3 7h18" />
+                  </svg>
+                ),
+                color: "bg-blue-600"
+              },
+              {
+                title: "Dachreinigung",
+                description: "Gründliche Reinigung für langfristigen Schutz Ihres Daches.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Industriereinigung",
+                description: "Spezialisierte Reinigung für Industrieanlagen und Großräume.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                color: "bg-yellow-600"
+              }
+            ]}
+          />
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> Moderne Icon-Karten für Leistungen und Vorteile auf Service-Seiten.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 8: ProblemLoesungSection */}
+        <section className="py-12 bg-gradient-to-b from-red-50 to-green-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">8. ProblemLoesungSection</h3>
+          <ProblemLoesungSection />
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> Problem-Lösung-Vergleich für Konversionsstärkung auf der Homepage.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 9: Faq */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">9. Faq Section</h3>
+          <Faq
+            title="Häufige Fragen"
+            items={[
+              {
+                question: "Was ist eine Dachreinigung?",
+                answer: "Eine professionelle Dachreinigung entfernt Moos, Algen und Schmutz, um die Lebensdauer zu verlängern."
+              },
+              {
+                question: "Wie oft sollte man das Dach reinigen?",
+                answer: "Je nach Witterung und Standort empfehlen wir alle 2-3 Jahre eine Reinigung."
+              },
+              {
+                question: "Ist die Reinigung umweltfreundlich?",
+                answer: "Ja, wir verwenden biologisch abbaubare Reiniger und schonende Verfahren."
+              }
+            ]}
+          />
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> FAQ-Abschnitt für SEO und Nutzerfragen auf Service-Seiten.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 10: GarantieSection */}
+        <section className="py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">10. GarantieSection</h3>
+          <GarantieSection
+            title="Unsere Garantien"
+            subtitle="Vertrauen Sie auf unsere verbindlichen Zusagen für Qualität und Zuverlässigkeit."
+          />
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> Garantie- und Trust-Building-Abschnitt für Service-Seiten.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 11: RelatedServices */}
+        <section className="py-12 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow-lg p-6 mb-12">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">11. RelatedServices</h3>
+          <RelatedServices 
+            currentService="dachreinigung" 
+            category="gebaeudereinigung"
+            maxServices={4}
+          />
+          <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+            <p className="text-gray-700 dark:text-gray-300">
+              <strong>Verwendung:</strong> Verwandte Services für interne Verlinkung und SEO auf Unterseiten.
+            </p>
+          </div>
         </section>
       </Container>
     </div>

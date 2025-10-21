@@ -1,0 +1,59 @@
+/* Custom styles for the validation tool */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.error-item {
+    border-left: 4px solid #ef4444;
+}
+
+.warning-item {
+    border-left: 4px solid #f59e0b;
+}
+
+.info-item {
+    border-left: 4px solid #3b82f6;
+}
+
+.severity-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.severity-error {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.severity-warning {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.severity-info {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

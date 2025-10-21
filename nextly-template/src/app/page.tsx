@@ -154,7 +154,7 @@ export default function Home() {
       </div>
 
       {/* Über uns - Firmenvorstellung */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-20 bg-white dark:bg-gray-900">
         <Container>
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Ihr zuverlässiger Partner</h2>
@@ -231,8 +231,8 @@ export default function Home() {
             {/* Service 1: Fassadenreinigung */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Fassaden-Reingung.png" 
+                <Image
+                  src="/img/kundenbilder/Fassaden-Reinigung.webp"
                   alt="Professionelle Fassadenreinigung Darmstadt - Gebäudereinigung Rhein-Main"
                   width={400}
                   height={300}
@@ -252,8 +252,8 @@ export default function Home() {
             {/* Service 2: Fensterreinigung */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Büroreinigung.png" 
+                <Image
+                  src="/img/kundenbilder/Büro-Reinigung.webp"
                   alt="Professionelle Fensterreinigung Frankfurt - Büroreinigung Darmstadt"
                   width={400}
                   height={300}
@@ -273,8 +273,8 @@ export default function Home() {
             {/* Service 3: Sanitärreinigung */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Krankenhausreinigung.png" 
+                <Image
+                  src="/img/kundenbilder/Krankenhausreinigung (1).webp"
                   alt="Hygienische Sanitärreinigung Rhein-Main - Praxisreinigung Darmstadt"
                   width={400}
                   height={300}
@@ -294,8 +294,8 @@ export default function Home() {
             {/* Service 4: Bodenreinigung */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Grundreinigung.png" 
+                <Image
+                  src="/img/kundenbilder/Grundreinigung.webp"
                   alt="Professionelle Bodenreinigung Frankfurt - Industriereinigung Darmstadt"
                   width={400}
                   height={300}
@@ -315,8 +315,8 @@ export default function Home() {
             {/* Service 5: Hausmeisterservice */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Haus.png" 
+                <Image
+                  src="/img/kundenbilder/Haus.webp"
                   alt="Zuverlässiger Hausmeisterservice Darmstadt - Facility Management Rhein-Main"
                   width={400}
                   height={300}
@@ -336,8 +336,8 @@ export default function Home() {
             {/* Service 6: Teppichreinigung */}
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 md:h-56 overflow-hidden">
-                <Image 
-                  src="/img/kundenbilder/Pflaster-stein-Reinigung.png" 
+                <Image
+                  src="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
                   alt="Professionelle Teppichreinigung"
                   width={400}
                   height={300}
@@ -496,7 +496,7 @@ export default function Home() {
       {/* Unsere Vorteile */}
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 bg-white dark:bg-gray-900">
         <Container>
-          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 md:mb-20 lg:mb-8">
             <h2 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-3 tracking-wider uppercase">Warum Komfort Gebäudeservice24?</h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Unsere Vorteile auf einen Blick</h3>
             <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
@@ -519,7 +519,7 @@ export default function Home() {
                 step: 1,
                 title: "Beratung & Angebot",
                 description: "Unverbindliche Beratung, umfassende Bedarfsanalyse und maßgeschneidertes Angebot. Wir nehmen uns Zeit für Ihre individuellen Anforderungen und erstellen eine auf Sie zugeschnittene Lösung.",
-                imageSrc: "/img/flux/hero-ueber-uns1.webp",
+                imageSrc: "/img/flux/hero-kontakt2.webp",
                 imageAlt: "Persönliche Beratung und Angebotserstellung",
                 bgColor: "bg-blue-600"
               },
@@ -527,7 +527,7 @@ export default function Home() {
                 step: 2,
                 title: "Terminvereinbarung",
                 description: "Flexible Terminplanung nach Ihren Wünschen. Wir passen uns Ihrem Zeitplan an und garantieren pünktliches Erscheinen unserer Fachkräfte.",
-                imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
+                imageSrc: "/img/flux/team-beratung1.webp",
                 imageAlt: "Terminvereinbarung für die Reinigung",
                 bgColor: "bg-green-600"
               },
@@ -535,7 +535,7 @@ export default function Home() {
                 step: 3,
                 title: "Professionelle Durchführung",
                 description: "Professionelle Ausführung durch erfahrene Fachkräfte mit modernster Technik. Wir arbeiten gründlich, effizient und mit größter Sorgfalt.",
-                imageSrc: "/img/flux/bueroeinigung-sauber.webp",
+                imageSrc: "/img/flux/team-bei-der-arbeit1741879901018.webp",
                 imageAlt: "Professionelle Durchführung der Reinigungsarbeiten",
                 bgColor: "bg-yellow-600"
               },
@@ -543,7 +543,7 @@ export default function Home() {
                 step: 4,
                 title: "Qualitätskontrolle & Übergabe",
                 description: "Abschließende Qualitätsprüfung, ausführliche Dokumentation der durchgeführten Arbeiten und Übergabe mit umfassender Garantie. Ihre Zufriedenheit ist unser Ziel.",
-                imageSrc: "/img/flux/dachreinigung-vorher-nachher.webp",
+                imageSrc: "/img/flux/team-gruppenfoto1.webp",
                 imageAlt: "Qualitätskontrolle und Projektübergabe",
                 bgColor: "bg-red-600"
               },
@@ -559,7 +559,7 @@ export default function Home() {
                 step: 6,
                 title: "Langfristige Betreuung & Wartung",
                 description: "Wir bieten optional langfristige Betreuungsverträge und regelmäßige Wartungsarbeiten, um den hohen Standard Ihrer Immobilie dauerhaft zu sichern.",
-                imageSrc: "/img/flux/familie-vor-haus-mit-solaranlagen.webp",
+                imageSrc: "/img/flux/team-projektleiterin1741879288857.webp",
                 imageAlt: "Langfristige Betreuung und Wartung",
                 bgColor: "bg-green-500"
               }

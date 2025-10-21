@@ -1,8 +1,8 @@
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
-import Image from 'next/image';
 import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
+import { ServiceHeader } from '@/components/ServiceHeader';
 
 export const metadata: Metadata = {
   title: "Winterdienst - HK Komfort Facility & Gebäudeservice GmbH",
@@ -38,31 +38,13 @@ export const metadata: Metadata = {
 export default function Winterdienst() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
-      {/* Header Section mit großer Überschrift und vollbreitem Hintergrundbild */}
-      <div className="relative h-[50vh] min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/img/kundenbilder/Dachreinigung.png"
-            alt="Winterdienst - HK Komfort Facility & Gebäudeservice GmbH"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
-        </div>
-        
-        <Container className="relative z-10 h-full flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">WINTERDIENST</h1>
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-100 drop-shadow-md">
-                Professioneller Winterdienst in Darmstadt und Umgebung. 
-                Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </div>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title="WINTERDIENST"
+        description="Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft."
+        imageSrc="/img/kundenbilder/Dachreinigung.png"
+        imageAlt="Winterdienst - HK Komfort Facility & Gebäudeservice GmbH"
+      />
 
       <Container>
         {/* Leistungsübersicht Section */}

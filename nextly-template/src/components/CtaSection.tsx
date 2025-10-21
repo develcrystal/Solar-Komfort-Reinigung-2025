@@ -3,39 +3,58 @@ import Image from 'next/image';
 
 interface CtaSectionProps {
   backgroundImage: string;
-  backgroundAlt: string;
+  backgroundAlt?: string;
   title?: string;
+  subtitle?: string;
   description?: string;
+  ctaText?: string;
   buttonText?: string;
+  ctaLink?: string;
   buttonLink?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export const CtaSection: React.FC<CtaSectionProps> = ({ 
-  backgroundImage, 
-  backgroundAlt,
+export const CtaSection: React.FC<CtaSectionProps> = ({
+  backgroundImage,
+  backgroundAlt = "CTA Background",
   title = "Bereit für ein kostenloses Angebot?",
+  subtitle,
   description = "Kontaktieren Sie uns noch heute für eine unverbindliche Beratung.",
+  ctaText,
   buttonText = "Kontakt aufnehmen",
-  buttonLink = "/kontakt"
+  ctaLink,
+  buttonLink = "/kontakt",
+  className = "",
+  children
 }) => {
+  const finalCTAText = ctaText || buttonText;
+  const finalCTALink = ctaLink || buttonLink;
+  const finalDescription = subtitle || description;
+
   return (
-    <section className="relative py-24 w-full">
+    <section className={`relative py-24 w-full ${className}`}>
       <div className="absolute inset-0 z-0">
-        <Image 
+        <Image
           src={backgroundImage}
           alt={backgroundAlt}
           fill
-          className="object-cover brightness-50"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
       </div>
-      
+
       <div className="relative z-10 w-full px-4">
         <div className="text-center max-w-5xl mx-auto">
           <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">{title}</h2>
           <p className="text-xl mb-8 text-gray-100 drop-shadow-md">
-            {description}
+            {finalDescription}
           </p>
+          {children && (
+            <div className="mb-8">
+              {children}
+            </div>
+          )}
           <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-3xl mx-auto">
             <a
               href="tel:061511546592"
@@ -47,10 +66,10 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
               06151 15 465 92
             </a>
             <a
-              href={buttonLink}
+              href={finalCTALink}
               className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg flex-1"
             >
-              {buttonText}
+              {finalCTAText}
             </a>
           </div>
         </div>

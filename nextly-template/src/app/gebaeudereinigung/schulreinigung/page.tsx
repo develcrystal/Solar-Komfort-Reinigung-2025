@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { RelatedServices } from '@/components/RelatedServices'
 import { CtaSection } from '@/components/CtaSection'
 import { Container } from '@/components/Container'
 import { SectionTitle } from '@/components/SectionTitle'
+import { ServiceHeader } from '@/components/ServiceHeader'
+import ServiceLeistungenGrid from '@/components/ServiceLeistungenGrid'
 
 export const metadata: Metadata = {
   title: 'Schulreinigung - Komfort Gebäudeservice24 GmbH',
@@ -30,70 +31,134 @@ export default function Schulreinigung() {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       <Breadcrumb />
-      <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/img/kundenbilder/Reinigung.png"
-            alt="Schulreinigung - Saubere und hygienische Lernumgebungen"
-            fill
-            className="object-cover brightness-[0.8]"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-900/50" />
-        </div>
-        <Container className="relative z-10 h-full flex items-center">
-          <div className="max-w-2xl sm:max-w-3xl">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-6 drop-shadow-lg">
-              SCHULREINIGUNG
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-4 sm:mb-6 md:mb-8 drop-shadow-md">
-              Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
-                href="/kontakt"
-                className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
-              >
-                Kostenlos beraten lassen
-              </a>
-              <a
-                href="/kostenrechner"
-                className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation"
-              >
-                Kosten berechnen
-              </a>
-            </div>
-          </div>
-        </Container>
-      </div>
+
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title="SCHULREINIGUNG"
+        description="Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards."
+        imageSrc="/img/kundenbilder/Reinigung.png"
+        imageAlt="Schulreinigung - Saubere und hygienische Lernumgebungen"
+      />
 
       <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
         <Container>
           <SectionTitle preTitle="Unser Service" title="Schulreinigung">
             Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards.
           </SectionTitle>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Unsere Leistungen</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Tägliche Klassenzimmerreinigung</li>
-                <li>• Hygienereinigung von Sanitärbereichen</li>
-                <li>• Flächenreinigung in Korridoren & Pausenräumen</li>
-                <li>• Spezialreinigung von Sporthallen & Werkstätten</li>
-                <li>• Professionelle Müllentsorgung & Abfallmanagement</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Ihre Vorteile</h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>✓ Hygienisch einwandfreie Lernumgebung</li>
-                <li>✓ Geprüfte und geschulte Reinigungskräfte</li>
-                <li>✓ Flexible Reinigungszeiten außerhalb der Schulzeiten</li>
-                <li>✓ Zertifizierte Reinigungsmittel und -verfahren</li>
-                <li>• Individuell angepasste Reinigungskonzepte</li>
-              </ul>
-            </div>
-          </div>
+          <ServiceLeistungenGrid
+            title="Unsere Leistungen"
+            subtitle="Professionelle Reinigungsdienste speziell für Schulen und Bildungseinrichtungen."
+            leistungen={[
+              {
+                title: "Tägliche Klassenzimmerreinigung",
+                description: "Gründliche Reinigung der Klassenzimmer und Lernräume für ein sauberes Lernumfeld.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2zM12 10v6m-3-3h6" />
+                  </svg>
+                ),
+                color: "bg-blue-600"
+              },
+              {
+                title: "Hygienereinigung von Sanitärbereichen",
+                description: "Desinfektion und Reinigung von Toiletten und Waschräumen nach höchsten Hygienestandards.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l3-3L7.07 7.07 9 9l-1.07 1.07-1.93-1.93L5 10zm0 4l3-3L7.07 11.07 9 13l-1.07 1.07-1.93-1.93L5 14zm4 0l3-3L11.07 11.07 13 13l-1.07 1.07-1.93-1.93L9 14zm4 0l3-3L15.07 11.07 17 13l-1.07 1.07-1.93-1.93L13 14z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Flächenreinigung in Korridoren & Pausenräumen",
+                description: "Sichere und gründliche Reinigung der Verkehrswege und Gemeinschaftsräume.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                ),
+                color: "bg-yellow-600"
+              },
+              {
+                title: "Spezialreinigung von Sporthallen & Werkstätten",
+                description: "Professionelle Reinigung sportlicher und technischer Räume mit speziellen Mitteln.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
+                  </svg>
+                ),
+                color: "bg-purple-600"
+              },
+              {
+                title: "Professionelle Müllentsorgung & Abfallmanagement",
+                description: "Effiziente Entsorgung und Recyclingkonzepte für schulische Abfälle.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h18M3 8h18M3 12h18M3 16h18M3 20h18M3 4l1.5 4.5M7.5 4l1.5 4.5M12 4l1.5 4.5M16.5 4l1.5 4.5M21 4l-1.5 4.5M3 8l1.5 4.5M7.5 8l1.5 4.5M12 8l1.5 4.5M16.5 8l1.5 4.5M21 8l-1.5 4.5M3 12l1.5 4.5M7.5 12l1.5 4.5M12 12l1.5 4.5M16.5 12l1.5 4.5M21 12l-1.5 4.5M3 16l1.5 4.5M7.5 16l1.5 4.5M12 16l1.5 4.5M16.5 16l1.5 4.5M21 16l-1.5 4.5M3 20l1.5 4.5M7.5 20l1.5 4.5M12 20l1.5 4.5M16.5 20l1.5 4.5M21 20l-1.5 4.5" />
+                  </svg>
+                ),
+                color: "bg-red-600"
+              }
+            ]}
+          />
+
+          <ServiceLeistungenGrid
+            title="Ihre Vorteile"
+            subtitle="Warum unsere Schulreinigung die richtige Wahl für Ihre Einrichtung ist."
+            leistungen={[
+              {
+                title: "Hygienisch einwandfreie Lernumgebung",
+                description: "Saubere Räume reduzieren Krankheitsrisiken und fördern die Konzentration.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Geprüfte und geschulte Reinigungskräfte",
+                description: "Unser Team ist speziell für schulische Umgebungen geschult.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Flexible Reinigungszeiten außerhalb der Schulzeiten",
+                description: "Reinigung passend zu Ihrem Stundenplan, ohne Unterrichtsstörung.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Zertifizierte Reinigungsmittel und -verfahren",
+                description: "Umweltfreundliche und kindersichere Produkte für maximale Sicherheit.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              },
+              {
+                title: "Individuell angepasste Reinigungskonzepte",
+                description: "Maßgeschneiderte Pläne für Ihre spezifischen Bedürfnisse.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  </svg>
+                ),
+                color: "bg-green-600"
+              }
+            ]}
+          />
+
           <div className="mt-8 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Fenster- und Glasreinigung</h3>
             <p className="text-gray-600 dark:text-gray-300">Kristallklare Sicht durch saubere Fenster und Glastüren in Schulgebäuden für besseres Licht.</p>

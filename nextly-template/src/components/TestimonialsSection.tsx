@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
 
 const testimonials = [
   {
@@ -27,19 +28,19 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => (
-  <div className="bg-gray-50 dark:bg-gray-800 py-12 sm:py-16 md:py-20 lg:py-28">
+  <Section className="bg-gray-50 dark:bg-gray-800">
     <Container>
-      <div className="text-center mb-10 sm:mb-12 md:mb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-          Kundenstimmen
-        </h2>
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4 sm:mb-6">
-          Das sagen unsere Kunden
-        </h3>
-        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Überzeugen Sie sich von der Qualität unserer Arbeit durch die Erfahrungen zufriedener Kunden.
-        </p>
-      </div>
+      <div className="text-center">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
+        Kundenstimmen
+      </h2>
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4 sm:mb-6">
+        Das sagen unsere Kunden
+      </h3>
+      <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+        Überzeugen Sie sich von der Qualität unserer Arbeit durch die Erfahrungen zufriedener Kunden.
+      </p>
+    </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {testimonials.map((testimonial, index) => (
@@ -69,9 +70,9 @@ const TestimonialsSection = () => (
         ))}
       </div>
       
-      {/* Zufriedene Kunden Statistiken */}
-      <div className="mt-16 sm:mt-20 lg:mt-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+    {/* Zufriedene Kunden Statistiken */}
+    <div className="mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           <div className="relative h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
             <Image
               src="/img/flux/familie-zufrieden.webp"
@@ -118,7 +119,7 @@ const TestimonialsSection = () => (
         </div>
       </div>
     </Container>
-  </div>
+  </Section>
 );
 
 export default TestimonialsSection;

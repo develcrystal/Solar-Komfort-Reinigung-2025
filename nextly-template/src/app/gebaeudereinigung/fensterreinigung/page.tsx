@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
@@ -23,36 +23,27 @@ export default function FensterreinigungPage() {
   return (
     <>
       <Breadcrumb
-        list={[
-          { title: 'Home', href: '/' },
-          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
-          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        customItems={[
+          { label: 'Home', href: '/' },
+          { label: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { label: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
         ]}
         className="py-6 bg-gray-50"
       />
 
-      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
-      <Hero
-        title={`${serviceName} – Höhenarbeits-Zertifizierung & Glasarten-Expertise`}
-        subtitle="Professionelle Reinigung aller Glasarten und Rahmen-Materialien mit SCC-Zertifizierung und DGUV-Regel 101-005. Sichere Höhenarbeiten mit voller Versicherung für kristallklare Ergebnisse."
-        backgroundImage={heroImage}
-        backgroundAlt={`${serviceName} – Streifenfreie Reinigung für klare Sicht`}
-        ctaText="Kostenloses Angebot anfragen"
-        ctaLink="/kontakt"
-        className="min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <p className="text-xl mb-4 opacity-90">Über 5000 zufriedene Kunden – Sichere und zertifizierte Höhenarbeiten</p>
-        </div>
-      </Hero>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title={`${serviceName.toUpperCase()} – HÖHENARBEITS-ZERTIFIZIERUNG & GLASARTEN-EXPERTISE`}
+        description="Professionelle Reinigung aller Glasarten und Rahmen-Materialien mit SCC-Zertifizierung und DGUV-Regel 101-005. Sichere Höhenarbeiten mit voller Versicherung für kristallklare Ergebnisse."
+        imageSrc={heroImage}
+        imageAlt={`${serviceName} – Streifenfreie Reinigung für klare Sicht`}
+      />
 
       {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
       <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
         <SectionTitle
           preTitle="Unsere Kernleistungen"
           title="Detaillierte Fensterreinigung-Services"
-          className="text-center mb-12"
         >
           Von der Innen-/Außenreinigung bis zu Fassaden und Wintergärten: Unsere Services sind zertifiziert und auf höchste Sicherheit abgestimmt.
         </SectionTitle>
@@ -101,38 +92,37 @@ export default function FensterreinigungPage() {
         <SectionTitle
           preTitle="Unser bewährter Prozess"
           title="4-Stufen-Fensterreinigung für perfekte Klarheit"
-          className="text-center mb-12"
         >
           Jede Fensterreinigung folgt einem standardisierten Verfahren, das DGUV Regel 101-005 und SCC-Standards einhält. Von der Vorbereitung bis zur Abnahme – alles für Ihre Sicherheit.
         </SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <ProcessStep
-            number="1"
+            step={1}
             title="Vorbereitung & Sicherung"
-            description="Risikoanalyse und Sicherung des Arbeitsbereichs gemäß DGUV 101-005. Auswahl materialgerechter Mittel für Glasarten und Rahmen."
-            icon="/img/icons/planung.svg"
-            className="bg-blue-50 rounded-lg p-6 text-center"
+            description="Risikoanalyse und Sicherung gemäß DGUV 101-005 mit materialgerechten Mitteln."
+            imageSrc="/img/kundenbilder/Haus.webp"
+            imageAlt="Vorbereitung und Sicherung Icon"
           />
           <ProcessStep
-            number="2"
+            step={2}
             title="Ausführung der Reinigung"
-            description="Professionelle Reinigung mit SCC-zertifizierten Methoden: Streifenfrei für alle Oberflächen, inklusive Höhenarbeiten mit Versicherungsschutz."
-            icon="/img/icons/ausfuehrung.svg"
-            className="bg-green-50 rounded-lg p-6 text-center"
+            description="Professionelle SCC-zertifizierte Reinigung: Streifenfrei mit Versicherungsschutz für Höhenarbeiten."
+            imageSrc="/img/kundenbilder/Reinigung.webp"
+            imageAlt="Ausführung der Reinigung Icon"
           />
           <ProcessStep
-            number="3"
+            step={3}
             title="Qualitätskontrolle & Abnahme"
-            description="Finale Inspektion auf Streifen und Sauberkeit. Abnahmeprotokoll für dokumentierte Qualität und Zufriedenheit."
-            icon="/img/icons/kontrolle.svg"
-            className="bg-yellow-50 rounded-lg p-6 text-center"
+            description="Finale Inspektion und Abnahmeprotokoll für dokumentierte Qualität und Zufriedenheit."
+            imageSrc="/img/kundenbilder/Grundreinigung.webp"
+            imageAlt="Qualitätskontrolle und Abnahme Icon"
           />
           <ProcessStep
-            number="4"
+            step={4}
             title="Nachsorge & Wartungstipps"
-            description="Übergabe mit Pflegetipps für Rahmen und Glas. Optionale Wartungspläne für langfristige Klarheit und Sicherheit."
-            icon="/img/icons/nachsorge.svg"
-            className="bg-purple-50 rounded-lg p-6 text-center"
+            description="Übergabe mit Pflegetipps und optionale Wartungspläne für langfristige Klarheit."
+            imageSrc="/img/kundenbilder/team-model-reinigung.webp"
+            imageAlt="Nachsorge und Wartungstipps Icon"
           />
         </div>
       </Section>
@@ -142,7 +132,6 @@ export default function FensterreinigungPage() {
         <SectionTitle
           preTitle="Sicherheit & Zertifizierung"
           title="Compliance-Standards in der Fensterreinigung"
-          className="text-center mb-12"
         >
           Unsere Höhenarbeiten sind voll versichert und zertifiziert, um höchste Sicherheit zu gewährleisten.
         </SectionTitle>

@@ -54,10 +54,10 @@ export default function Hausmeisterservice() {
       <Container>
         {/* Leistungsübersicht Section */}
         <Section id="leistungen" className="py-16">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Leistungen</h2>
-            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Leistungen</h2>
+            <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
               Wir übernehmen für Sie die professionelle Objektbetreuung - zuverlässig, kompetent und vor Ort.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function Hausmeisterservice() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold mb-4">Regelmäßige Kontrollgänge</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Regelmäßige Kontrollgänge</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Tägliche oder wöchentliche Kontrollgänge durch unseren erfahrenen Hausmeister. Wir prüfen auf Schäden, Sicherheitsrisiken und Wartungsbedarf.
               </p>

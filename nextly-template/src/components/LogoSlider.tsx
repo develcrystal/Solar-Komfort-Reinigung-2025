@@ -20,17 +20,17 @@ const LogoSlider: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-12 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+    <section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-8">
+        <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 dark:text-white mb-4 sm:mb-6 md:mb-8">
           Unsere Kunden in der Region
         </h3>
-        <div className="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-700">
-          <div className="flex animate-scroll whitespace-nowrap">
+        <div className="relative overflow-hidden">
+          <div className="flex animate-scroll whitespace-nowrap py-4">
             {cities.map((city, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-4 w-64 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg shadow-md flex items-center justify-center text-xl font-bold text-gray-900 dark:text-white border border-blue-200 dark:border-blue-800"
+                className="flex-shrink-0 mx-6 px-8 py-4 flex items-center justify-center text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
                 {city}
               </div>
@@ -38,7 +38,7 @@ const LogoSlider: React.FC = () => {
             {cities.map((city, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="flex-shrink-0 mx-4 w-64 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg shadow-md flex items-center justify-center text-xl font-bold text-gray-900 dark:text-white border border-blue-200 dark:border-blue-800"
+                className="flex-shrink-0 mx-6 px-8 py-4 flex items-center justify-center text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
               >
                 {city}
               </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Hero } from '@/components/Hero';
+import { ServiceHeader } from '@/components/ServiceHeader';
 import { Section } from '@/components/Section';
 import { SectionTitle } from '@/components/SectionTitle';
 import { CtaSection } from '@/components/CtaSection';
@@ -23,36 +23,27 @@ export default function GrundreinigungPage() {
   return (
     <>
       <Breadcrumb
-        list={[
-          { title: 'Home', href: '/' },
-          { title: 'Gebäudereinigung', href: '/gebaeudereinigung' },
-          { title: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
+        customItems={[
+          { label: 'Home', href: '/' },
+          { label: 'Gebäudereinigung', href: '/gebaeudereinigung' },
+          { label: serviceName, href: `/gebaeudereinigung/${serviceName.toLowerCase()}` },
         ]}
         className="py-4 sm:py-6 bg-gray-50 dark:bg-gray-800"
       />
 
-      {/* Hero Section: Vollbreites thematisches Bild + technische Details */}
-      <Hero
-        title={`${serviceName} – VOB-konforme Bauschluss- und Umzugsreinigung`}
-        subtitle="Professionelle Tiefenreinigung für Neubauten, Umbauten und Umzüge. Mit Abnahmeprotokoll und Kaution-Rückgabe-Garantie für stressfreie Übergaben."
-        backgroundImage={heroImage}
-        backgroundAlt={`${serviceName} – Intensive Tiefenreinigung für makellose Ergebnisse`}
-        ctaText="Kostenloses Angebot anfragen"
-        ctaLink="/kontakt"
-        className="min-h-[50vh] sm:min-h-[60vh] bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 max-w-full sm:max-w-4xl mx-auto text-center px-4">
-          <p className="text-base sm:text-lg mb-4 opacity-90 leading-relaxed">Über 5000 zufriedene Kunden – 100% Termintreue und VOB-Compliance</p>
-        </div>
-      </Hero>
+      {/* Header Section: Schmal und blaustichig wie Hausmeisterservice */}
+      <ServiceHeader
+        title={`${serviceName.toUpperCase()} – VOB-KONFORME BAUSCHLUSS- UND UMZUGSREINIGUNG`}
+        description="Professionelle Tiefenreinigung für Neubauten, Umbauten und Umzüge. Mit Abnahmeprotokoll und Kaution-Rückgabe-Garantie für stressfreie Übergaben."
+        imageSrc={heroImage}
+        imageAlt={`${serviceName} – Intensive Tiefenreinigung für makellose Ergebnisse`}
+      />
 
       {/* Service-Cards Section: Custom Cards mit Icons und Beschreibungen */}
       <Section className="py-8 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
         <SectionTitle
           preTitle="Unsere Kernleistungen"
           title="Detaillierte Grundreinigung-Services"
-          className="text-center mb-8 sm:mb-12"
         >
           Von der Bauschlussreinigung bis zur Nachmieter-Übergabe: Unsere Services sind auf höchste Standards abgestimmt und decken alle Aspekte der Tiefenreinigung ab.
         </SectionTitle>
@@ -101,38 +92,37 @@ export default function GrundreinigungPage() {
         <SectionTitle
           preTitle="Unser bewährter Prozess"
           title="4-Stufen-Grundreinigung für perfekte Ergebnisse"
-          className="text-center mb-8 sm:mb-12"
         >
           Jede Grundreinigung folgt einem standardisierten Verfahren, das VOB/B §4 und DIN-Normen einhält. Von der Planung bis zur Abnahme – alles dokumentiert für Ihre Sicherheit.
         </SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-full sm:max-w-4xl lg:max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-full sm:max-w-4xl lg:max-w-6xl mx-auto px-4">
           <ProcessStep
-            number="1"
+            step={1}
             title="Vorbereitung & Planung"
-            description="Detaillierte Vor-Ort-Besichtigung und Erstellung eines VOB-konformen Reinigungsplans. Berücksichtigung von Bauphasen und spezifischen Anforderungen für Umzugs- oder Nachmieterreinigung."
-            icon="/img/icons/planung.svg"
-            className="bg-blue-50 dark:bg-blue-950 rounded-lg p-4 sm:p-6 text-center"
+            description="Detaillierte Besichtigung und Erstellung eines VOB-konformen Reinigungsplans mit spezifischen Anforderungen."
+            imageSrc="/img/kundenbilder/Haus.webp"
+            imageAlt="Vorbereitung und Planung Icon"
           />
           <ProcessStep
-            number="2"
+            step={2}
             title="Ausführung der Reinigung"
-            description="Professionelle Tiefenreinigung mit zertifizierten Mitteln: Entfernung von Baustaub, Flecken und Resten. Spezielle Techniken für Böden, Wände und Sanitärbereiche."
-            icon="/img/icons/ausfuehrung.svg"
-            className="bg-green-50 dark:bg-green-950 rounded-lg p-4 sm:p-6 text-center"
+            description="Professionelle Tiefenreinigung mit zertifizierten Mitteln und speziellen Techniken für alle Bereiche."
+            imageSrc="/img/kundenbilder/Grundreinigung.webp"
+            imageAlt="Ausführung der Reinigung Icon"
           />
           <ProcessStep
-            number="3"
+            step={3}
             title="Qualitätskontrolle & Abnahme"
-            description="Finale Inspektion und Erstellung des Abnahmeprotokolls gemäß VOB/B §4. Garantie für fehlerfreie Übergabe und Kaution-Rückzahlung."
-            icon="/img/icons/kontrolle.svg"
-            className="bg-yellow-50 dark:bg-yellow-950 rounded-lg p-4 sm:p-6 text-center"
+            description="Finale Inspektion und Erstellung des Abnahmeprotokolls gemäß VOB/B für fehlerfreie Übergabe."
+            imageSrc="/img/kundenbilder/Reinigung.webp"
+            imageAlt="Qualitätskontrolle und Abnahme Icon"
           />
           <ProcessStep
-            number="4"
+            step={4}
             title="Nachsorge & Dokumentation"
-            description="Übergabe der Räume mit Reinigungsbericht. Optionale Nachkontrolle und Tipps für langfristige Sauberkeit. Vollständige Nachverfolgung für Ihre Akten."
-            icon="/img/icons/nachsorge.svg"
-            className="bg-purple-50 dark:bg-purple-950 rounded-lg p-4 sm:p-6 text-center"
+            description="Übergabe mit Reinigungsbericht, optionaler Nachkontrolle und vollständiger Dokumentation für Akten."
+            imageSrc="/img/kundenbilder/team-model-reinigung.webp"
+            imageAlt="Nachsorge und Dokumentation Icon"
           />
         </div>
       </Section>
@@ -142,7 +132,6 @@ export default function GrundreinigungPage() {
         <SectionTitle
           preTitle="Rechtliche Absicherung"
           title="Compliance-Standards in der Grundreinigung"
-          className="text-center mb-8 sm:mb-12"
         >
           Als zertifizierter Partner halten wir uns an alle relevanten Vorschriften, um Risiken zu minimieren und Ihre Kaution zu schützen.
         </SectionTitle>
@@ -150,7 +139,7 @@ export default function GrundreinigungPage() {
           title="VOB-konforme Grundreinigung"
           textLeft="Gemäß VOB/B §4 planen und führen wir alle Reinigungsarbeiten durch. Dies umfasst detaillierte Dokumentation, die für Bauprojekte und Mietübergaben essenziell ist. Unsere Services decken Bauschluss, Umzug und Nachmieter ab."
           textRight="Abnahmeprotokoll und Kaution-Rückgabe-Garantie: Wir stellen sicher, dass alle Kriterien erfüllt sind, damit Sie ohne Nachweise oder Streitigkeiten die Kaution zurückerhalten. Inklusive Nachweis über umweltfreundliche Entsorgung."
-          image="/img/compliance-placeholder.webp"
+          image="/img/flux/industriereinigung.webp"
           alt="VOB und Compliance Icons für Grundreinigung"
           className="max-w-full sm:max-w-4xl lg:max-w-6xl mx-auto px-4"
         />
@@ -198,10 +187,7 @@ export default function GrundreinigungPage() {
         backgroundImage={ctaBg}
         className="py-8 sm:py-16 lg:py-20 bg-cover bg-center text-white relative"
       >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-full sm:max-w-4xl mx-auto px-4">
-          <p className="text-base sm:text-lg mb-6 opacity-90 leading-relaxed">Sichern Sie sich die Kaution-Rückgabe und perfekte Sauberkeit – mit Komfort Gebäudeservice24.</p>
-        </div>
+        <p className="text-base sm:text-lg mb-6 opacity-90 leading-relaxed">Sichern Sie sich die Kaution-Rückgabe und perfekte Sauberkeit – mit Komfort Gebäudeservice24.</p>
       </CtaSection>
 
       {/* FAQ Section für SEO */}

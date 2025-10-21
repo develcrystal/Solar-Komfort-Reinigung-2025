@@ -6,17 +6,11 @@ import { Container } from "@/components/Container";
 export function Footer() {
   const navigation = [
     { name: "Startseite", href: "/" },
-    { name: "Dienstleistungen", href: "/dienstleistungen" },
     { name: "Über uns", href: "/ueber-uns" },
     { name: "Referenzen", href: "/referenzen" },
-    { name: "Kontakt", href: "/kontakt" }
-  ];
-  
-  const services = [
-    { name: "Dachreinigung", href: "/dienstleistungen#dachreinigung" },
-    { name: "Dachbeschichtung", href: "/dienstleistungen#dachbeschichtung" },
-    { name: "Fassadenreinigung", href: "/dienstleistungen#fassadenreinigung" },
-    { name: "Solaranlagenreinigung", href: "/dienstleistungen#solaranlagenreinigung" }
+    { name: "Kontakt", href: "/kontakt" },
+    { name: "Impressum", href: "/impressum" },
+    { name: "Datenschutz", href: "/datenschutz" }
   ];
   
   return (
@@ -69,23 +63,9 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="text-center sm:text-left">
-            <div className="flex flex-col w-full">
-              <h3 className="mb-3 sm:mb-4 font-semibold text-gray-800 dark:text-gray-200">Dienstleistungen</h3>
-              {services.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="w-full px-2 py-2 sm:px-3 sm:py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-blue-500 focus:text-blue-500 focus:bg-blue-50 focus:outline-none dark:focus:bg-gray-700 transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
-            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-3 sm:mb-4">Folgen Sie uns</div>
-            <div className="flex justify-center sm:justify-start mt-3 space-x-4 sm:space-x-5 text-gray-400 dark:text-gray-500">
+            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-0">Folgen Sie uns</div>
+            <div className="flex justify-center sm:justify-start mt-0 space-x-4 sm:space-x-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://facebook.com/"
                 target="_blank"
@@ -104,9 +84,9 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a 
-                href="https://linkedin.com/" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
                 rel="noopener"
                 className="hover:text-blue-500 transition-colors duration-200"
               >
@@ -118,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright {new Date().getFullYear()}. Solar Komfort GmbH. Alle Rechte vorbehalten.
+          Copyright {new Date().getFullYear()}. Komfort Gebäudeservice24 GmbH. Alle Rechte vorbehalten.
         </div>
       </Container>
     </div>

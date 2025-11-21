@@ -1,14 +1,29 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
-  CursorArrowRaysIcon,
-  DevicePhoneMobileIcon,
-  AdjustmentsHorizontalIcon,
-  SunIcon,
   HomeIcon,
   BuildingOfficeIcon,
   WrenchIcon,
-} from "@heroicons/react/24/solid";
+  WrenchScrewdriverIcon,
+  MoonIcon,
+  SparklesIcon,
+  TrashIcon,
+  KeyIcon,
+  UserCircleIcon,
+  UserGroupIcon,
+  UserIcon,
+  DocumentTextIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  InformationCircleIcon,
+  CheckCircleIcon,
+  ChevronRightIcon,
+  FaceSmileIcon,
+  DocumentMagnifyingGlassIcon,
+  CheckBadgeIcon,
+  ShieldCheckIcon,
+  Squares2X2Icon,
+  StarIcon,
+  PhotoIcon
+} from "@heroicons/react/24/outline";
 import { ReactElement } from "react";
 import benefitOneImg from "../../public/img/flux/dachbeschichtung-prozess.webp";
 import benefitTwoImg from "../../public/img/flux/quer_Vorher-Nachher Dachreinigung.webp";
@@ -35,17 +50,17 @@ const benefitOne: BenefitData = {
     {
       title: "Vorbereitung",
       desc: "Detaillierte Inspektion, gründliche Reinigung mit Hochdruckverfahren und sorgfältiger Schutz angrenzender Bereiche.",
-      icon: <FaceSmileIcon />,
+      icon: <DocumentMagnifyingGlassIcon className="h-6 w-6 text-white" />,
     },
     {
       title: "Grundierung",
       desc: "Optimale Haftung durch spezielle Grundierung, die tief in die Poren der Ziegel eindringt und für eine stabile Verbindung sorgt.",
-      icon: <ChartBarSquareIcon />,
+      icon: <CheckBadgeIcon className="h-6 w-6 text-white" />,
     },
     {
       title: "Beschichtung",
       desc: "Zweifache Beschichtung für langfristigen Schutz mit Lotus-Effekt gegen Umwelteinflüsse, UV-Strahlung, Regen und Frost.",
-      icon: <CursorArrowRaysIcon />,
+      icon: <ShieldCheckIcon className="h-6 w-6 text-white" />,
     },
   ],
 };
@@ -58,17 +73,17 @@ const benefitTwo: BenefitData = {
     {
       title: "Dachreinigung & Dachimprägnierung",
       desc: "Professionelle Reinigung und Imprägnierung Ihres Daches für langanhaltenden Schutz und Werterhalt.",
-      icon: <HomeIcon />,
+      icon: <HomeIcon className="h-6 w-6 text-white" />,
     },
     {
       title: "Dachrinnenreinigung",
       desc: "Gründliche Reinigung Ihrer Dachrinnen für eine optimale Wasserableitung und Schutz vor Wasserschäden.",
-      icon: <WrenchIcon />,
+      icon: <WrenchIcon className="h-6 w-6 text-white" />,
     },
     {
       title: "Pflaster- & Fassadenreinigung",
       desc: "Professionelle Reinigung von Pflastersteinen und Fassaden sowie hochwertige Fassadenanstriche.",
-      icon: <BuildingOfficeIcon />,
+      icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />,
     },
   ],
 };
@@ -82,79 +97,79 @@ const navigation = [
           name: "Dachreinigung & Beschichtung",
           href: "/gebaeudereinigung/dachreinigung",
           description: "Professionelle Dachreinigung und langlebige Beschichtung",
-          icon: "/img/icons/gebaeudereinigung.svg"
+          icon: <HomeIcon className="h-6 w-6 text-white" />
         },
         {
           name: "Fassadenreinigung & Impregnierung",
           href: "/gebaeudereinigung/fassadenreinigung",
           description: "Schonende Fassadenreinigung und Schutzimprägnierung",
-          icon: "/img/icons/gebaeudereinigung.svg"
+          icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Pflaster- & Steinreinigung", 
+        {
+          name: "Pflaster- & Steinreinigung",
           href: "/gebaeudereinigung/pflasterreinigung",
           description: "Gründliche Reinigung von Pflaster und Naturstein",
-          icon: "🧱"
+          icon: <Squares2X2Icon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Büroreinigung", 
+        {
+          name: "Büroreinigung",
           href: "/gebaeudereinigung/bueroeinigung",
-          description: "Professionelle Reinigung für Büroräume",
-          icon: "🏢"
+          description: "Professionelle Reinigung für Büoräume",
+          icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Baubeschlussreinigung", 
+        {
+          name: "Baubeschlussreinigung",
           href: "/gebaeudereinigung/baubeschlussreinigung",
           description: "Gründliche Endreinigung nach Bauarbeiten",
-          icon: "🔨"
+          icon: <DocumentTextIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Grundreinigung", 
+        {
+          name: "Grundreinigung",
           href: "/gebaeudereinigung/grundreinigung",
           description: "Intensive Grundreinigung aller Bereiche",
-          icon: "✨"
+          icon: <SparklesIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Haushaltsreinigung", 
+        {
+          name: "Haushaltsreinigung",
           href: "/gebaeudereinigung/haushaltsreinigung",
           description: "Zuverlässige Reinigung für Privathaushalte",
-          icon: "🏠"
+          icon: <HomeIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Industriereinigung", 
+        {
+          name: "Industriereinigung",
           href: "/gebaeudereinigung/industriereinigung",
           description: "Spezialisierte Reinigung für Industrieanlagen",
-          icon: "🏭"
+          icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Treppenhausreinigung", 
+        {
+          name: "Treppenhausreinigung",
           href: "/gebaeudereinigung/treppenhausreinigung",
           description: "Regelmäßige Treppenhausreinigung",
-          icon: "/img/icons/treppenhausreinigung.svg"
+          icon: <WrenchIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Krankenausreinigung", 
+        {
+          name: "Krankenausreinigung",
           href: "/gebaeudereinigung/krankenausreinigung",
           description: "Hygienische Reinigung für medizinische Einrichtungen",
-          icon: "🏥"
+          icon: <InformationCircleIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Hotellerie & Gastronomie", 
+        {
+          name: "Hotellerie & Gastronomie",
           href: "/gebaeudereinigung/hotellerie-gastronomie",
           description: "Professionelle Reinigung für Hotels und Restaurants",
-          icon: "🍽️"
+          icon: <CheckCircleIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Fenster- & Glasreinigung", 
+        {
+          name: "Fenster- & Glasreinigung",
           href: "/gebaeudereinigung/fensterreinigung",
           description: "Streifenfreie Fenster- und Glasreinigung",
-          icon: "/img/icons/fensterreinigung.svg"
+          icon: <PhotoIcon className="h-6 w-6 text-white" />
         },
         {
           name: "Schul- & Kindergartenreinigung",
           href: "/gebaeudereinigung/schulreinigung",
           description: "Kindgerechte Reinigung für Bildungseinrichtungen",
-          icon: "/img/icons/fensterreinigung.svg"
+          icon: <UserGroupIcon className="h-6 w-6 text-white" />
         }
       ]
     },
@@ -162,35 +177,35 @@ const navigation = [
       name: "Gebäudeservice",
       isMega: true,
       submenu: [
-        { 
-          name: "Hausmeisterservice", 
+        {
+          name: "Hausmeisterservice",
           href: "/gebaeudeservice/hausmeisterservice",
           description: "Umfassender Hausmeisterservice für Ihre Immobilie",
-          icon: "🔧"
+          icon: <WrenchIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Gartenpflege & Außenanlagen", 
+        {
+          name: "Gartenpflege & Außenanlagen",
           href: "/gebaeudeservice/gartenpflege",
           description: "Professionelle Garten- und Außenanlagenpflege",
-          icon: "🌿"
+          icon: <SparklesIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Entrümpelung & Haushaltsauflösungen", 
+        {
+          name: "Entrümpelung & Haushaltsauflösungen",
           href: "/gebaeudeservice/entruempelung",
           description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
-          icon: "📦"
+          icon: <TrashIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Winterdienst", 
+        {
+          name: "Winterdienst",
           href: "/gebaeudeservice/winterdienst",
           description: "Zuverlässiger Winterdienst und Streupflicht",
-          icon: "❄️"
+          icon: <MoonIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Außenpflege & saisonale Dienste", 
+        {
+          name: "Außenpflege & saisonale Dienste",
           href: "/gebaeudeservice/aussenpflege",
           description: "Saisonale Außenpflege das ganze Jahr über",
-          icon: "🍂"
+          icon: <SparklesIcon className="h-6 w-6 text-white" />
         }
       ]
     },
@@ -202,19 +217,19 @@ const navigation = [
           name: "Angebot",
           href: "/facility-management/angebot",
           description: "Unser Facility Management Leistungsspektrum",
-          icon: "/img/icons/facility-management.svg"
+          icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
         {
           name: "Unternehmen",
           href: "/facility-management/unternehmen",
           description: "Über unser Facility Management Team",
-          icon: "/img/icons/facility-management.svg"
+          icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
         {
           name: "Kontakt",
           href: "/facility-management/kontakt-facility",
           description: "Kontakt für Facility Management Anfragen",
-          icon: "/img/icons/facility-management.svg"
+          icon: <PhoneIcon className="h-6 w-6 text-white" />
         }
       ]
     },
@@ -222,23 +237,23 @@ const navigation = [
       name: "Über uns",
       isMega: true,
       submenu: [
-        { 
-          name: "Über uns", 
+        {
+          name: "Über uns",
           href: "/ueber-uns",
           description: "Lernen Sie unser erfahrenes Team kennen",
-          icon: "👥"
+          icon: <UserGroupIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Referenzen", 
+        {
+          name: "Referenzen",
           href: "/referenzen",
           description: "Erfolgreiche Projekte und Kundenstimmen",
-          icon: "⭐"
+          icon: <StarIcon className="h-6 w-6 text-white" />
         },
-        { 
-          name: "Bildergalerie", 
+        {
+          name: "Bildergalerie",
           href: "/galerie",
           description: "Impressionen unserer Arbeiten",
-          icon: "📸"
+          icon: <PhotoIcon className="h-6 w-6 text-white" />
         }
       ]
     },

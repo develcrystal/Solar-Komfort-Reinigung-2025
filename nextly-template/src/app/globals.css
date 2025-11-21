@@ -10,7 +10,7 @@
 @layer base {
   html,
   body {
-    @apply dark:bg-trueGray-900;
+    @apply bg-white dark:bg-gray-900;
   }
 }
 
@@ -27,7 +27,7 @@
 }
 /* Navbar background with class-based dark mode support */
 .navbar-container {
-  @apply bg-white dark:bg-trueGray-900 w-full;
+  @apply bg-white dark:bg-gray-900 w-full;
 }
 
 /* Navbar specific styles to avoid global CSS conflicts */

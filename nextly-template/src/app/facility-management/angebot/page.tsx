@@ -74,7 +74,7 @@ export default function Angebot() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für Facility Management"
         title="Bereit für professionelles Facility Management?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

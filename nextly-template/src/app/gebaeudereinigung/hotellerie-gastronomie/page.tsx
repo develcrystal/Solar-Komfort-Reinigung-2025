@@ -317,7 +317,7 @@ export default function HotelleriGastronomie() {
 
       {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für Hotellerie & Gastronomie Reinigung"
         title="Bereit für zufriedene Gäste und perfekte Hygiene?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin für Ihre HACCP-konforme Hospitality-Reinigung."

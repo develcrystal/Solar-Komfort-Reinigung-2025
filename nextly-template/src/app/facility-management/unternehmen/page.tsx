@@ -167,7 +167,7 @@ export default function Unternehmen() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Kontaktieren Sie uns"
         title="Lernen Sie uns kennen!"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

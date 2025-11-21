@@ -81,7 +81,17 @@
       "Bash(findstr:*)",
       "Bash(pwsh.exe:*)",
       "Bash(cmd /C:*)",
-      "mcp__browsermcp-cline__browser_hover"
+      "mcp__browsermcp-cline__browser_hover",
+      "Bash(/tmp/old_navbar.tsx)",
+      "Bash(vercel projects list)",
+      "Bash(vercel deploy:*)",
+      "Bash(__NEW_LINE__ curl -s http://localhost:3003)",
+      "Bash(__NEW_LINE__ curl -s http://localhost:3003/gebaeudeservice/winterdienst)",
+      "Bash(__NEW_LINE__ ls -lah \"f:/108Coding/solar-komfort-reinigung-rag/nextly-template/public/img/flux/\")",
+      "Bash(__NEW_LINE__ ls -1 f:/108Coding/solar-komfort-reinigung-rag/nextly-template/public/img/flux/)",
+      "Bash(__NEW_LINE__ find \"f:/108Coding/solar-komfort-reinigung-rag/nextly-template/src\" -name \"*.tsx\" -o -name \"*.ts\")",
+      "Bash(__NEW_LINE__ grep -n \"megaMenu\\|MegaMenu\" f:/108Coding/solar-komfort-reinigung-rag/nextly-template/src/components/MegaMenu.tsx)",
+      "Bash(ls -lah \"f:\\108Coding\\solar-komfort-reinigung-rag\\nextly-template\\public\\img\\kundenbilder\"\" | grep -i \"webp|jpg|png \")"
     ],
     "deny": []
   },

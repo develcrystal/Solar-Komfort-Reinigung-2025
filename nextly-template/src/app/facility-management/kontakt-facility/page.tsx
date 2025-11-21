@@ -74,7 +74,7 @@ export default function KontaktFacility() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Kontaktieren Sie unser Facility Management Team"
         title="Bereit für professionelle Betreuung?"
         description="Kontaktieren Sie noch heute unser Facility Management-Team."

@@ -76,7 +76,7 @@ export function PopupWidget() {
         {({ open }) => (
           <div>
             <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
-              <span className="sr-only">Open Contact form Widget</span>
+              <span className="sr-only">Kontaktformular öffnen</span>
               <Transition
                 show={!open}
                 enter="transition duration-200 transform ease"
@@ -132,9 +132,9 @@ export function PopupWidget() {
             >
               <DisclosurePanel className="fixed z-50 bottom-[100px] top-0 right-0  left-0 sm:top-auto sm:right-5 sm:left-auto flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
+                  <h3 className="text-lg text-white">Wie können wir Ihnen helfen?</h3>
                   <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                    Wir antworten in der Regel innerhalb weniger Stunden
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
@@ -167,14 +167,14 @@ export function PopupWidget() {
                           htmlFor="full_name"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Full Name
+                          Vor- und Nachname
                         </label>
                         <input
                           type="text"
                           id="full_name"
-                          placeholder="John Doe"
+                          placeholder="Max Mustermann"
                           {...register("name", {
-                            required: "Full name is required",
+                            required: "Bitte geben Sie Ihren Namen ein",
                             maxLength: 80,
                           })}
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
@@ -195,19 +195,19 @@ export function PopupWidget() {
                           htmlFor="email"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Email Address
+                          E-Mail-Adresse
                         </label>
                         <input
                           type="email"
                           id="email"
                           {...register("email", {
-                            required: "Enter your email",
+                            required: "Bitte geben Sie Ihre E-Mail-Adresse ein",
                             pattern: {
-                              value: /^\S+@\S+$/i,
-                              message: "Please enter a valid email",
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                              message: "Bitte geben Sie eine gültige E-Mail-Adresse ein",
                             },
                           })}
-                          placeholder="you@company.com"
+                          placeholder="ihre@email.de"
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
                             errors.email
                               ? "border-red-600 focus:border-red-600 ring-red-100"
@@ -227,16 +227,16 @@ export function PopupWidget() {
                           htmlFor="message"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Your Message
+                          Ihre Nachricht
                         </label>
 
                         <textarea
                           rows={4}
                           id="message"
                           {...register("message", {
-                            required: "Enter your Message",
+                            required: "Bitte geben Sie eine Nachricht ein",
                           })}
-                          placeholder="Your Message"
+                          placeholder="Ihre Nachricht hier..."
                           className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md h-28 focus:outline-none focus:ring   ${
                             errors.message
                               ? "border-red-600 focus:border-red-600 ring-red-100"
@@ -256,46 +256,40 @@ export function PopupWidget() {
                           className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
                         >
                           {isSubmitting ? (
-                            <svg
-                              className="w-5 h-5 mx-auto text-white animate-spin"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <circle
-                                className="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                strokeWidth="4"
-                              ></circle>
-                              <path
-                                className="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                              ></path>
-                            </svg>
+                            <>
+                              <svg
+                                className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                              >
+                                <circle
+                                  className="opacity-25"
+                                  cx="12"
+                                  cy="12"
+                                  r="10"
+                                  stroke="currentColor"
+                                  strokeWidth="4"
+                                ></circle>
+                                <path
+                                  className="opacity-75"
+                                  fill="currentColor"
+                                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                ></path>
+                              </svg>
+                              Wird gesendet...
+                            </>
                           ) : (
-                            "Send Message"
+                            "Nachricht senden"
                           )}
                         </button>
                       </div>
-                      <p
-                        className="text-xs text-center text-gray-400"
-                        id="result"
-                      >
-                        <span>
-                          Powered by{" "}
-                          <a
-                            href="https://Web3Forms.com"
-                            className="text-gray-600"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Web3Forms
-                          </a>
-                        </span>
+                      <p className="text-sm text-center text-gray-400" id="result">
+                        <span className="block">Vielen Dank für Ihre Nachricht!</span>
+                        <span>Wir melden uns so schnell wie möglich bei Ihnen.</span>
+                        <div className="mt-2 text-xs">
+                          Powered by <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">Web3Forms</a>
+                        </div>
                       </p>
                     </form>
                   )}
@@ -317,14 +311,14 @@ export function PopupWidget() {
                         />
                       </svg>
                       <h3 className="py-5 text-xl text-green-500">
-                        Message sent successfully
+                        Nachricht erfolgreich gesendet
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        Zurück
                       </button>
                     </div>
                   )}
@@ -347,14 +341,14 @@ export function PopupWidget() {
                       </svg>
 
                       <h3 className="text-xl text-red-400 py-7">
-                        Oops, Something went wrong!
+                        Hoppla, etwas ist schiefgelaufen!
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
                         className="mt-6 text-indigo-600 focus:outline-none"
                         onClick={() => reset()}
                       >
-                        Go back
+                        Zurück
                       </button>
                     </div>
                   )}

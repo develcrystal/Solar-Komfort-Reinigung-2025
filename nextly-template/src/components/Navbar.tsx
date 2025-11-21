@@ -100,7 +100,7 @@ export const Navbar = () => {
           <div className="xl:hidden">
             <Disclosure>
               {({ open }) => (
-                <>
+                <div>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
                     className="px-2 py-1 text-neutral-500 rounded-md hover:text-primary focus:text-primary focus:bg-primary/10 focus:outline-none dark:text-neutral-300 dark:focus:bg-neutral-700 touch-manipulation"
@@ -125,7 +125,7 @@ export const Navbar = () => {
                     </svg>
                   </Disclosure.Button>
 
-                  <Disclosure.Panel className="absolute top-full left-0 w-full bg-white dark:bg-neutral-900 shadow-lg py-5 px-container-px mt-2">
+                  <Disclosure.Panel className="fixed left-0 right-0 w-full bg-white dark:bg-neutral-900 shadow-lg py-5 px-4 sm:px-6 z-40 top-16 max-h-[calc(100vh-4rem)] overflow-y-auto xl:absolute xl:top-full xl:left-1/2 xl:-translate-x-1/2 xl:w-auto xl:max-w-none xl:max-h-none xl:overflow-visible xl:mt-2">
                     <div className="flex flex-col gap-y-1">
                       {navigation.map((item, index) => (
                         <div key={index} className="w-full">
@@ -174,7 +174,7 @@ export const Navbar = () => {
                       </Link>
                     </div>
                   </Disclosure.Panel>
-                </>
+                </div>
               )}
             </Disclosure>
           </div>

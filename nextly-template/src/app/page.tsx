@@ -388,60 +388,74 @@ export default function Home() {
             </p>
           </div>
 
-            {/* Vergleichstabelle */}
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                {/* Header Row */}
-                <div className="bg-gray-100 p-6 font-semibold text-gray-800">
-                  Das Problem
-                </div>
-                <div className="bg-red-100 p-6 font-semibold text-red-800">
-                  ❌ Andere Reinigungsfirmen
-                </div>
-                <div className="bg-green-100 p-6 font-semibold text-green-800">
-                  ✅ Komfort Gebäudeservice24
-                </div>
+            {/* Vergleichstabelle - Desktop / Bild - Mobile */}
+            <div>
+              {/* Desktop-Version (hidden on mobile) */}
+              <div className="hidden lg:block bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                  {/* Header Row */}
+                  <div className="bg-gray-100 p-6 font-semibold text-gray-800">
+                    Das Problem
+                  </div>
+                  <div className="bg-red-100 p-6 font-semibold text-red-800">
+                    ❌ Andere Reinigungsfirmen
+                  </div>
+                  <div className="bg-green-100 p-6 font-semibold text-green-800">
+                    ✅ Komfort Gebäudeservice24
+                  </div>
 
-                {/* Comparison Rows */}
-                <div className="p-6 border-t border-gray-200 bg-gray-50">
-                  <p className="font-medium text-gray-900">Reinigungsqualität schwankt trotz Beschwerden</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-red-50">
-                  <p className="text-red-700">Versprechen Besserung, aber keine Struktur</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-green-50">
-                  <p className="text-green-700 font-medium">Strukturierte Qualitätskontrolle mit Checklisten</p>
-                </div>
+                  {/* Comparison Rows */}
+                  <div className="p-6 border-t border-gray-200 bg-gray-50">
+                    <p className="font-medium text-gray-900">Reinigungsqualität schwankt trotz Beschwerden</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-red-50">
+                    <p className="text-red-700">Versprechen Besserung, aber keine Struktur</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-green-50">
+                    <p className="text-green-700 font-medium">Strukturierte Qualitätskontrolle mit Checklisten</p>
+                  </div>
 
-                <div className="p-6 border-t border-gray-200 bg-gray-50">
-                  <p className="font-medium text-gray-900">Termine werden nicht eingehalten</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-red-50">
-                  <p className="text-red-700">Ausreden und Entschuldigungen</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-green-50">
-                  <p className="text-green-700 font-medium">Feste Terminpläne + Backup-Teams</p>
-                </div>
+                  <div className="p-6 border-t border-gray-200 bg-gray-50">
+                    <p className="font-medium text-gray-900">Termine werden nicht eingehalten</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-red-50">
+                    <p className="text-red-700">Ausreden und Entschuldigungen</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-green-50">
+                    <p className="text-green-700 font-medium">Feste Terminpläne + Backup-Teams</p>
+                  </div>
 
-                <div className="p-6 border-t border-gray-200 bg-gray-50">
-                  <p className="font-medium text-gray-900">Ständiges Nachfassen erforderlich</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-red-50">
-                  <p className="text-red-700">Reagieren nur auf Beschwerden</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-green-50">
-                  <p className="text-green-700 font-medium">Proaktive Kommunikation + feste Ansprechpartner</p>
-                </div>
+                  <div className="p-6 border-t border-gray-200 bg-gray-50">
+                    <p className="font-medium text-gray-900">Ständiges Nachfassen erforderlich</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-red-50">
+                    <p className="text-red-700">Reagieren nur auf Beschwerden</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-green-50">
+                    <p className="text-green-700 font-medium">Proaktive Kommunikation + feste Ansprechpartner</p>
+                  </div>
 
-                <div className="p-6 border-t border-gray-200 bg-gray-50">
-                  <p className="font-medium text-gray-900">Unprofessionelles Personal</p>
+                  <div className="p-6 border-t border-gray-200 bg-gray-50">
+                    <p className="font-medium text-gray-900">Unprofessionelles Personal</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-red-50">
+                    <p className="text-red-700">Wechselnde Subunternehmer</p>
+                  </div>
+                  <div className="p-6 border-t border-gray-200 bg-green-50">
+                    <p className="text-green-700 font-medium">Eigenes, geschultes Fachpersonal</p>
+                  </div>
                 </div>
-                <div className="p-6 border-t border-gray-200 bg-red-50">
-                  <p className="text-red-700">Wechselnde Subunternehmer</p>
-                </div>
-                <div className="p-6 border-t border-gray-200 bg-green-50">
-                  <p className="text-green-700 font-medium">Eigenes, geschultes Fachpersonal</p>
-                </div>
+              </div>
+
+              {/* Mobile-Version: Zentrales Bild (lg:hidden) */}
+              <div className="lg:hidden relative h-[500px] sm:h-[600px] md:h-[700px] w-full rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/_a_erstelle_auder_tabel.png"
+                  alt="Der Unterschied ist offensichtlich - Vergleich Komfort Gebäudeservice24"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>

@@ -18,7 +18,6 @@
 # misc
 .DS_Store
 *.pem
-.history/
 temp_startseite2.tsx
 screencapture-solar-komfort-reinigung-n82t8suyj-develcrystals-projects-vercel-app-2025-03-15-01_23_38.png
 
@@ -35,6 +34,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vercel/
+.vercel/**
+
+# Build cache
+.next/
+.next/**
 
 # Windows-spezifische Dateien (IGNORIEREN!)
 desktop.ini
@@ -44,14 +49,18 @@ Thumbs.db
 
 # Entwicklungs-Müll
 nul
-src/nul 
+src/nul
 src/app/nul
 **/desktop.ini
 
-# Unnötige Ordner
+# Unnötige Ordner (aber nicht .md Dokumentation!)
 flux bilder/
 ideogram-images/
-*.md
-!README.md
 screencapture-*.png
 *.code-workspace
+
+# Aber diese .md Dateien MÜSSEN in git sein!
+!CLAUDE.md
+!QWEN.md
+!PROJECT_SUMMARY.md
+!README.md

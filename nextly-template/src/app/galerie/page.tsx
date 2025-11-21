@@ -77,7 +77,7 @@ export default function Galerie() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/flux/team-beratung1.webp"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Unser Team berät Sie gerne persönlich"
         title="Beeindruckt von unserer Arbeit?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

@@ -42,7 +42,7 @@ export default function Aussenpflege() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Gartenpflege.png"
+            src="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
             alt="Außenpflege - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"

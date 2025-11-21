@@ -270,8 +270,8 @@ export default function Kontakt() {
           </div>
         </Section>
       </Container>
-      <CtaSection 
-        backgroundImage="/img/flux/team-beratung1.webp"
+      <CtaSection
+        backgroundImage="/img/kundenbilder/Krankenhausreinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für eine persönliche Beratung"
         title="Bereit für eine persönliche Beratung durch unsere Experten?"
         description="Kontaktieren Sie uns noch heute für ein unverbindliches Gespräch zu Ihren individuellen Anforderungen."

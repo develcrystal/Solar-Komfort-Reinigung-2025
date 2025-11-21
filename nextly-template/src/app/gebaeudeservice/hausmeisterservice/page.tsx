@@ -48,7 +48,7 @@ export default function Hausmeisterservice() {
       <ServiceHeader
         title="HAUSMEISTERSERVICE"
         description="Professioneller Hausmeisterservice in Darmstadt und Umgebung. Regelmäßige Kontrollgänge, Kleinreparaturen, Techniküberwachung, Schließdienst, Ansprechpartner vor Ort."
-        imageSrc="/img/kundenbilder/Gartenpflege.png"
+        imageSrc="/img/kundenbilder/Haus.webp"
         imageAlt="Hausmeisterservice - Umfassende Objektbetreuung inklusive Außenpflege"
       />
       <Container>
@@ -250,7 +250,7 @@ export default function Hausmeisterservice() {
 
       {/* CTA Section */}
       <CtaSection
-        backgroundImage="/img/flux/team-bei-der-arbeit1741879901018.webp"
+        backgroundImage="/img/kundenbilder/Haus.webp"
         backgroundAlt="Hausmeisterservice - Kontaktieren Sie uns für ein kostenloses Angebot"
         title="Bereit für einen professionellen Hausmeisterservice?"
         description="Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Ihrer Objektbetreuung."

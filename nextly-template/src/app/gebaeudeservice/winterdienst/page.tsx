@@ -42,7 +42,7 @@ export default function Winterdienst() {
       <ServiceHeader
         title="WINTERDIENST"
         description="Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft."
-        imageSrc="/img/kundenbilder/Dachreinigung.png"
+        imageSrc="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
         imageAlt="Winterdienst - HK Komfort Facility & Gebäudeservice GmbH"
       />
 
@@ -237,8 +237,8 @@ export default function Winterdienst() {
       </Container>
 
       {/* CTA Section */}
-      <CtaSection 
-        backgroundImage="/img/flux/winterdienst-prozess.webp"
+      <CtaSection
+        backgroundImage="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
         backgroundAlt="Winterdienst - Kontaktieren Sie uns für ein kostenloses Angebot"
         title="Bereit für einen professionellen Winterdienst?"
         description="Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Ihrem Winterdienst."

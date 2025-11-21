@@ -41,7 +41,8 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
       </div>
 
       <div className="relative z-10 w-full px-4">

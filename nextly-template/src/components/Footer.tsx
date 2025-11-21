@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 
 export function Footer() {
   const navigation = [
@@ -69,7 +70,7 @@ export function Footer() {
               <a
                 href="https://facebook.com/"
                 target="_blank"
-                rel="noopener"
+                rel="nofollow noopener noreferrer"
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 <span className="sr-only">Facebook</span>
@@ -78,7 +79,7 @@ export function Footer() {
               <a
                 href="https://instagram.com/"
                 target="_blank"
-                rel="noopener"
+                rel="nofollow noopener noreferrer"
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 <span className="sr-only">Instagram</span>
@@ -87,7 +88,7 @@ export function Footer() {
               <a
                 href="https://linkedin.com/"
                 target="_blank"
-                rel="noopener"
+                rel="nofollow noopener noreferrer"
                 className="hover:text-blue-500 transition-colors duration-200"
               >
                 <span className="sr-only">Linkedin</span>
@@ -96,6 +97,8 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        <PWAInstallPrompt />
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
           Copyright {new Date().getFullYear()}. Komfort Gebäudeservice24 GmbH. Alle Rechte vorbehalten.

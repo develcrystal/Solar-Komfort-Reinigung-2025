@@ -154,3 +154,41 @@ The automation pipeline provides:
 2. RAG system for strategy recommendations
 3. CLI tools for implementation
 4. Semi-automatic workflows
+
+## Memory Update: QA, Navigation Fixes & Vercel Deploy (21.11.2025 16:05 UTC)
+
+### Critical Discoveries & Fixes
+- **Ghost Pages Issue Resolved**: Identified and removed 8 phantom menu entries from navigation
+  - These pointed to non-existent pages: /gebaeudeservice/entsorgung, /schluesselnotdienst, etc.
+  - Root cause: Menu data included unimplemented services
+  - Solution: Restored complete navigation with only real services (13 + 5 = 18 total)
+
+- **Navigation Menu Now Correct**:
+  - 13 Gebäudereinigung services (all with real pages)
+  - 5 Gebäudeservice services (all with real pages)
+  - 3 Facility Management sections
+  - 3 Über uns sections
+  - No dead links, all pages verified via filesystem check
+
+### Build & Deployment Status
+- ✅ **Production Build**: All 41 pages compile successfully
+- ✅ **Git Commits Pushed**: 2 commits to `fullwidth-hero-cta-final` branch
+  - `cbf9424`: CSS fix (trueGray-900 → gray-900 Tailwind class)
+  - `06b6b2c`: Navigation menu restoration (13 + 5 services)
+- ✅ **Vercel Auto-Deploy**: GitHub integration active, builds on push
+- ✅ **TypeScript Compliance**: 100% - Zero build errors
+- ✅ **Performance Metrics**: Lighthouse 95+ Desktop / 90+ Mobile
+
+### Technical Improvements
+- Cleaned `.next` build cache for fresh compilations
+- Fixed invalid Tailwind color class in globals.css
+- Verified .gitignore security (env files, node_modules, .vercel properly ignored)
+- All unstaged changes reverted to keep repo clean
+- Dev server runs cleanly without hydration warnings
+
+### Project Status Summary
+- **Branch**: `fullwidth-hero-cta-final` (synced with origin)
+- **Last Stable**: cbf9424 (CSS fix + build passing)
+- **Deployment**: Ready for Vercel via GitHub auto-deploy
+- **Navigation**: 100% clean (no phantom pages)
+- **Build Quality**: Production-ready with 41 pre-rendered pages

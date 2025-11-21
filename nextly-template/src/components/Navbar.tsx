@@ -4,8 +4,11 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
+import { navigation } from './data'; // Import navigation data
+import { MegaMenu } from "./MegaMenu"; // Import the new MegaMenu component
 
+// The renderIcon function can be kept as it is, or further improved if needed.
 const renderIcon = (icon: string): JSX.Element | null => {
   if (icon.startsWith('/')) {
     return <Image src={icon} alt="" width={22} height={22} />;
@@ -41,314 +44,36 @@ export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { theme } = useTheme();
 
-  const navigation = [
-    {
-      name: "Gebäudereinigung",
-      isMega: true,
-      submenu: [
-        {
-          name: "Dachreinigung & Beschichtung",
-          href: "/gebaeudereinigung/dachreinigung",
-          description: "Professionelle Dachreinigung und langlebige Beschichtung",
-          icon: "/img/icons/gebaeudereinigung.svg"
-        },
-        {
-          name: "Fassadenreinigung & Impregnierung",
-          href: "/gebaeudereinigung/fassadenreinigung",
-          description: "Schonende Fassadenreinigung und Schutzimprägnierung",
-          icon: "/img/icons/gebaeudereinigung.svg"
-        },
-        { 
-          name: "Pflaster- & Steinreinigung", 
-          href: "/gebaeudereinigung/pflasterreinigung",
-          description: "Gründliche Reinigung von Pflaster und Naturstein",
-          icon: "🧱"
-        },
-        { 
-          name: "Büroreinigung", 
-          href: "/gebaeudereinigung/bueroeinigung",
-          description: "Professionelle Reinigung für Büroräume",
-          icon: "🏢"
-        },
-        { 
-          name: "Baubeschlussreinigung", 
-          href: "/gebaeudereinigung/baubeschlussreinigung",
-          description: "Gründliche Endreinigung nach Bauarbeiten",
-          icon: "🔨"
-        },
-        { 
-          name: "Grundreinigung", 
-          href: "/gebaeudereinigung/grundreinigung",
-          description: "Intensive Grundreinigung aller Bereiche",
-          icon: "✨"
-        },
-        { 
-          name: "Haushaltsreinigung", 
-          href: "/gebaeudereinigung/haushaltsreinigung",
-          description: "Zuverlässige Reinigung für Privathaushalte",
-          icon: "🏠"
-        },
-        { 
-          name: "Industriereinigung", 
-          href: "/gebaeudereinigung/industriereinigung",
-          description: "Spezialisierte Reinigung für Industrieanlagen",
-          icon: "🏭"
-        },
-        { 
-          name: "Treppenhausreinigung", 
-          href: "/gebaeudereinigung/treppenhausreinigung",
-          description: "Regelmäßige Treppenhausreinigung",
-          icon: "/img/icons/treppenhausreinigung.svg"
-        },
-        { 
-          name: "Krankenausreinigung", 
-          href: "/gebaeudereinigung/krankenausreinigung",
-          description: "Hygienische Reinigung für medizinische Einrichtungen",
-          icon: "🏥"
-        },
-        { 
-          name: "Hotellerie & Gastronomie", 
-          href: "/gebaeudereinigung/hotellerie-gastronomie",
-          description: "Professionelle Reinigung für Hotels und Restaurants",
-          icon: "🍽️"
-        },
-        { 
-          name: "Fenster- & Glasreinigung", 
-          href: "/gebaeudereinigung/fensterreinigung",
-          description: "Streifenfreie Fenster- und Glasreinigung",
-          icon: "/img/icons/fensterreinigung.svg"
-        },
-        {
-          name: "Schul- & Kindergartenreinigung",
-          href: "/gebaeudereinigung/schulreinigung",
-          description: "Kindgerechte Reinigung für Bildungseinrichtungen",
-          icon: "/img/icons/fensterreinigung.svg"
-        }
-      ]
-    },
-    {
-      name: "Gebäudeservice",
-      isMega: true,
-      submenu: [
-        { 
-          name: "Hausmeisterservice", 
-          href: "/gebaeudeservice/hausmeisterservice",
-          description: "Umfassender Hausmeisterservice für Ihre Immobilie",
-          icon: "🔧"
-        },
-        { 
-          name: "Gartenpflege & Außenanlagen", 
-          href: "/gebaeudeservice/gartenpflege",
-          description: "Professionelle Garten- und Außenanlagenpflege",
-          icon: "🌿"
-        },
-        { 
-          name: "Entrümpelung & Haushaltsauflösungen", 
-          href: "/gebaeudeservice/entruempelung",
-          description: "Fachgerechte Entrümpelung und Haushaltsauflösung",
-          icon: "📦"
-        },
-        { 
-          name: "Winterdienst", 
-          href: "/gebaeudeservice/winterdienst",
-          description: "Zuverlässiger Winterdienst und Streupflicht",
-          icon: "❄️"
-        },
-        { 
-          name: "Außenpflege & saisonale Dienste", 
-          href: "/gebaeudeservice/aussenpflege",
-          description: "Saisonale Außenpflege das ganze Jahr über",
-          icon: "🍂"
-        }
-      ]
-    },
-    {
-      name: "Facility Management",
-      isMega: true,
-      submenu: [
-        {
-          name: "Angebot",
-          href: "/facility-management/angebot",
-          description: "Unser Facility Management Leistungsspektrum",
-          icon: "/img/icons/facility-management.svg"
-        },
-        {
-          name: "Unternehmen",
-          href: "/facility-management/unternehmen",
-          description: "Über unser Facility Management Team",
-          icon: "/img/icons/facility-management.svg"
-        },
-        {
-          name: "Kontakt",
-          href: "/facility-management/kontakt-facility",
-          description: "Kontakt für Facility Management Anfragen",
-          icon: "/img/icons/facility-management.svg"
-        }
-      ]
-    },
-    {
-      name: "Über uns",
-      isMega: true,
-      submenu: [
-        { 
-          name: "Über uns", 
-          href: "/ueber-uns",
-          description: "Lernen Sie unser erfahrenes Team kennen",
-          icon: "👥"
-        },
-        { 
-          name: "Referenzen", 
-          href: "/referenzen",
-          description: "Erfolgreiche Projekte und Kundenstimmen",
-          icon: "⭐"
-        },
-        { 
-          name: "Bildergalerie", 
-          href: "/galerie",
-          description: "Impressionen unserer Arbeiten",
-          icon: "📸"
-        }
-      ]
-    },
-    {
-      name: "Kontakt",
-      href: "/kontakt"
-    }
-  ];
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   return (
-    <div className="navbar-container mx-auto">
-      <nav className="container relative flex flex-wrap items-center justify-between px-4 py-6 sm:px-6 md:px-8 mx-auto lg:justify-between xl:px-1 z-50 max-w-screen-2xl">
+    <div className="w-full bg-white dark:bg-neutral-900 shadow-md">
+      <nav className="container relative flex flex-wrap items-center justify-between py-4 mx-auto lg:justify-between px-container-px z-50 max-w-8xl">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={theme === 'dark' ? '/img/inverted_komfort-logo-cropped.png' : '/img/komfort-logo-cropped.png'}
-            width={400}
-            height={120}
+            src={theme === 'dark' ? '/img/inverted_komfort-logo-cropped.webp' : '/img/komfort-logo-cropped.webp'}
+            width={300}
+            height={90}
             alt="Komfort Gebäudeservice24"
-            className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto"
+            className="h-16 w-auto"
             priority
           />
         </Link>
 
-        {/* Desktop Mega Menu - zentriert */}
+        {/* Desktop Mega Menu - Centered */}
         <div className="hidden xl:flex xl:items-center flex-1 justify-center">
-          <ul className="items-center justify-center flex list-none xl:flex">
+          <ul className="items-center justify-center flex list-none gap-2">
             {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
+              <li key={index}>
                 {menu.submenu ? (
-                  <div className="relative group">
-                    <button
-                      className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200 flex items-center"
-                    >
-                      {menu.name}
-                      <svg
-                        className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </button>
-                    
-                    {/* Mega Menu Dropdown */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 z-50 hidden pt-4 group-hover:block">
-                      <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300">
-                        {menu.isMega ? (
-                          <div className="w-[800px] p-8">
-                            <div className="mb-6">
-                              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-left">
-                                {menu.name}
-                              </h3>
-                              <p className="text-sm text-gray-600 dark:text-gray-300 text-left">
-                                Entdecken Sie unser umfassendes Leistungsspektrum
-                              </p>
-                            </div>
-                            
-                            <div className="grid grid-cols-3 gap-6">
-                              {menu.submenu.map((subItem, subIndex) => (
-                                <Link
-                                  key={subIndex}
-                                  href={subItem.href}
-                                  className="group/item p-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-200 border border-transparent hover:border-blue-200 dark:hover:border-gray-700"
-                                >
-                                  <div className="flex items-start space-x-3">
-                                    <div className="text-2xl flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200">
-                                      {renderIcon(subItem.icon)}
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-tight text-left">
-                                        {subItem.name}
-                                      </div>
-                                      {subItem.description && (
-                                        <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 leading-tight text-left">
-                                          {subItem.description}
-                                        </div>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            
-                            <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800">
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100 text-left">
-                                    Benötigen Sie eine Beratung?
-                                  </p>
-                                  <p className="text-xs text-gray-500 dark:text-gray-300 text-left">
-                                    Kontaktieren Sie uns für ein kostenloses Angebot
-                                  </p>
-                                </div>
-                                <Link
-                                  href="/kontakt"
-                                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-                                >
-                                  Kontakt aufnehmen
-                                </Link>
-                              </div>
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="w-80 py-4">
-                            <div className="px-6 pb-4 mb-4 border-b border-gray-100 dark:border-gray-800">
-                              <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 text-left">
-                                {menu.name}
-                              </h3>
-                            </div>
-                            {menu.submenu.map((subItem, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                href={subItem.href}
-                                className="flex items-center px-6 py-3 text-gray-800 dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 dark:hover:text-blue-400 transition-all duration-200"
-                              >
-                                <span className="text-lg mr-3">{renderIcon(subItem.icon)}</span>
-                                <div className="flex-1">
-                                  <div className="text-sm font-medium text-left">{subItem.name}</div>
-                                  {subItem.description && (
-                                    <div className="text-xs text-gray-500 dark:text-gray-300 mt-1 text-left">
-                                      {subItem.description}
-                                    </div>
-                                  )}
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
+                  <MegaMenu title={menu.name} items={menu.submenu} columns={menu.name === 'Gebäudereinigung' ? 4 : 3} />
                 ) : (
                   <Link
                     href={menu.href}
-                    className="inline-block px-4 py-2 text-base font-medium text-gray-800 no-underline rounded-lg dark:text-gray-100 hover:text-blue-600 hover:bg-blue-50 focus:text-blue-600 focus:bg-blue-50 focus:outline-none dark:hover:bg-gray-800 dark:focus:bg-gray-800 transition-all duration-200"
+                    className="px-3 py-2 text-base font-medium text-neutral-700 dark:text-neutral-300 rounded-lg hover:text-primary dark:hover:text-accent transition-colors duration-200"
                   >
                     {menu.name}
                   </Link>
@@ -358,41 +83,40 @@ export const Navbar = () => {
           </ul>
         </div>
 
-        {/* Rechter Block: Button, Theme, Mobile Menu */}
-        <div className="flex items-center gap-2 sm:gap-3 ml-auto">
-          {/* Kostenrechner Button - nur auf Desktop */}
+        {/* Right Block: Button, Theme, Mobile Menu */}
+        <div className="flex items-center gap-3 ml-auto">
+          {/* Kostenrechner Button - Desktop */}
           <div className="hidden xl:block">
             <Link 
               href="/kostenrechner" 
-              className="px-4 sm:px-6 py-2 text-sm sm:text-base text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors whitespace-nowrap"
+              className="px-6 py-2 text-base font-medium text-black bg-accent rounded-md hover:bg-accent/90 transition-colors whitespace-nowrap"
             >
               Kostenrechner
             </Link>
           </div>
           {/* Theme Switcher */}
           <ThemeChanger />
-          {/* Mobile Menu - nur auf Mobile */}
+          {/* Mobile Menu */}
           <div className="xl:hidden">
             <Disclosure>
               {({ open }) => (
-                <div>
+                <>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="px-2 py-1 text-gray-500 rounded-md hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700 touch-manipulation"
+                    className="px-2 py-1 text-neutral-500 rounded-md hover:text-primary focus:text-primary focus:bg-primary/10 focus:outline-none dark:text-neutral-300 dark:focus:bg-neutral-700 touch-manipulation"
                   >
                     <svg
                       className="w-6 h-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                     >
-                      {open && (
+                      {open ? (
                         <path
                           fillRule="evenodd"
                           clipRule="evenodd"
                           d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.829z"
                         />
-                      )}
-                      {!open && (
+                      ) : (
                         <path
                           fillRule="evenodd"
                           d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -401,39 +125,35 @@ export const Navbar = () => {
                     </svg>
                   </Disclosure.Button>
 
-                  <Disclosure.Panel className="flex flex-wrap w-full my-4 sm:my-5">
-                    <div>
+                  <Disclosure.Panel className="absolute top-full left-0 w-full bg-white dark:bg-neutral-900 shadow-lg py-5 px-container-px mt-2">
+                    <div className="flex flex-col gap-y-1">
                       {navigation.map((item, index) => (
                         <div key={index} className="w-full">
                           {item.submenu ? (
                             <div>
                               <button 
                                 onClick={() => toggleDropdown(item.name)}
-                                className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-left text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none flex items-center justify-between touch-manipulation"
+                                className="w-full px-3 py-3 text-left font-medium text-neutral-600 dark:text-neutral-200 rounded-md hover:text-primary focus:text-primary focus:bg-primary/10 dark:focus:bg-neutral-800 focus:outline-none flex items-center justify-between touch-manipulation"
                               >
                                 {item.name}
                                 <svg 
                                   className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
                                   fill="none" 
                                   stroke="currentColor" 
-                                  viewBox="0 0 24 24" 
-                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
                                 >
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                               </button>
                               {activeDropdown === item.name && (
-                                <div className="pl-3 sm:pl-4 max-w-[280px]">
+                                <div className="pl-4 pt-2 pb-2 flex flex-col gap-y-1">
                                   {item.submenu.map((subItem, subIndex) => (
                                     <Link
                                       key={subIndex}
                                       href={subItem.href}
-                                      className="block w-full px-3 sm:px-4 py-2 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none whitespace-normal break-words touch-manipulation"
+                                      className="block w-full px-3 py-2 text-neutral-500 rounded-md dark:text-neutral-300 hover:text-primary hover:bg-primary/10 dark:hover:text-accent dark:focus:bg-neutral-800 focus:outline-none touch-manipulation"
                                     >
-                                      <span className="inline-flex items-center">
-                                        {renderIcon(subItem.icon)}
-                                        <span className="ml-2">{subItem.name}</span>
-                                      </span>
+                                      {subItem.name}
                                     </Link>
                                   ))}
                                 </div>
@@ -442,20 +162,19 @@ export const Navbar = () => {
                           ) : (
                             <Link 
                               href={item.href} 
-                              className="w-full px-3 sm:px-4 py-2 sm:py-3 -ml-3 sm:-ml-4 text-gray-500 rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none block touch-manipulation"
+                              className="w-full px-3 py-3 font-medium text-neutral-600 dark:text-neutral-200 rounded-md hover:text-primary hover:bg-primary/10 dark:focus:bg-neutral-800 focus:outline-none block touch-manipulation"
                             >
                               {item.name}
                             </Link>
                           )}
                         </div>
                       ))}
-                      {/* Kostenrechner Button - im Mobile Menu */}
-                      <Link href="/kostenrechner" className="w-full px-4 sm:px-6 py-3 mt-3 text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors touch-manipulation">         
+                      <Link href="/kostenrechner" className="w-full px-6 py-3 mt-3 text-center text-black bg-accent rounded-md hover:bg-accent/90 transition-colors touch-manipulation">         
                         Kostenrechner
                       </Link>
                     </div>
                   </Disclosure.Panel>
-                </div>
+                </>
               )}
             </Disclosure>
           </div>

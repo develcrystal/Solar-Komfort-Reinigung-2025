@@ -31,10 +31,10 @@ const TestimonialsSection = () => (
   <Section className="bg-gray-50 dark:bg-gray-800">
     <Container>
       <div className="text-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-stack-sm">
         Kundenstimmen
       </h2>
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4 sm:mb-6">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-container-md">
         Das sagen unsere Kunden
       </h3>
       <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -44,11 +44,11 @@ const TestimonialsSection = () => (
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700">
-            <div className="flex items-center mb-3 sm:mb-4">
+          <div key={index} className="bg-white dark:bg-gray-800 p-container-md rounded-radius-default shadow-shadow-elevation-1 transition-shadow border border-gray-100 dark:border-gray-700">
+            <div className="flex items-center mb-stack-sm">
               <div className="text-yellow-400 text-lg sm:text-xl">{testimonial.rating}</div>
             </div>
-            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 italic">
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-stack-sm italic">
               &ldquo;{testimonial.text}&rdquo;
             </p>
             <div className="flex items-center">

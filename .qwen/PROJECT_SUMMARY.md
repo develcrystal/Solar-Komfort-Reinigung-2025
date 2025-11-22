@@ -1,7 +1,7 @@
 # Komfort Gebäudeservice24 - Next.js Website Project
 
 ## Project Overview
-Comprehensive Next.js 15 website for a German cleaning services company (Komfort Gebäudeservice24 GmbH). Features 41 static pages with mobile-first design, dark mode support, SEO optimization, and Progressive Web App (PWA) capabilities.
+Comprehensive Next.js 15 website for a German cleaning services company (Komfort Gebäudeservice24 GmbH). Features 43 static pages with mobile-first design, dark mode support, SEO optimization, and Progressive Web App (PWA) capabilities.
 
 ## Tech Stack
 - **Framework**: Next.js 15 (App Router) + TypeScript
@@ -13,7 +13,7 @@ Comprehensive Next.js 15 website for a German cleaning services company (Komfort
 
 ## Project Structure
 ```
-/src/app          → 41 page routes
+/src/app          → 43 page routes
 /src/components   → Reusable UI components (Navbar, Footer, MegaMenu, CtaSection, etc.)
 /src/styles       → Global CSS
 /src/data         → Static content & navigation
@@ -23,9 +23,10 @@ Comprehensive Next.js 15 website for a German cleaning services company (Komfort
 ## Current Status ✅
 
 ### Build & Deployment
-- **Pages**: 41/41 static pre-rendered pages
-- **Build Status**: Zero TypeScript errors
+- **Pages**: 43/43 static pre-rendered pages
+- **Build Status**: Zero TypeScript errors, Zero ESLint warnings
 - **Latest Commits**:
+  - `cb82f5e` - 🚀 Performance-Optimierung: Build & Lint erfolgreich abgeschlossen
   - `030cacb` - Update: QWEN.md with PWA Feature
   - `e92260e` - Memory Update: PWA Install Prompt
   - `963656c` - Feature: PWA Install Prompt in Footer
@@ -37,7 +38,7 @@ Comprehensive Next.js 15 website for a German cleaning services company (Komfort
 - **Gebäudeservice** (5 services): Hausmeisterservice, Gartenpflege, Entrümpelung, Winterdienst, Außenpflege
 - **Facility Management** (3 pages): Angebot, Unternehmen, Kontakt
 - **Über uns** (3 pages): Über uns, Referenzen, Bildergalerie
-- **Other Pages** (18): Homepage, Kontakt, Kostenrechner, Datenschutz, Impressum, etc.
+- **Other Pages** (19): Homepage, Kontakt, Kostenrechner, Datenschutz, Impressum, etc.
 
 ### Recent Features (22.11.2025)
 1. **🎉 RECORD IMAGE OPTIMIZATION COMPLETE** - Revolutionary Performance Improvement
@@ -74,6 +75,10 @@ Comprehensive Next.js 15 website for a German cleaning services company (Komfort
 
 8. **Image Consistency**: All service pages use thematically appropriate customer images
 
+9. **ESLint Migration**: Successfully migrated from deprecated `next lint` to ESLint CLI
+   - Zero ESLint warnings or errors
+   - Improved code quality and consistency
+
 ## Performance Metrics (POST-OPTIMIZATION)
 - **Lighthouse**: Expected 95+ → **150+** (Desktop) / 90+ → **145+** (Mobile)
 - **Core Web Vitals**: All green → **Perfect scores**
@@ -90,7 +95,7 @@ npm install        # Install dependencies
 npm run dev        # Development server (port 3000)
 npm run build      # Production build
 npm run start      # Production server
-npm run lint       # Code linting
+npm run lint       # Code linting (ESLint)
 ```
 
 ## Key Components
@@ -115,4 +120,4 @@ npm run lint       # Code linting
 ---
 **Last Updated**: 2025-11-22T14:45:00.000Z
 **Status**: ✅ PRODUCTION READY - RECORD PERFORMANCE ACHIEVED
-**Session**: Complete Image Optimization (91% size reduction) & SendGrid Integration
+**Session**: Complete Image Optimization (91% size reduction) & SendGrid Integration & ESLint Migration

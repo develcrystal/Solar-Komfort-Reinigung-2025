@@ -22,17 +22,23 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
 
-  const handleMouseEnter = (button: HTMLElement) => {
+  const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-    button.click();
+    const button = menuRef.current?.querySelector('button') as HTMLElement;
+    if (button && button.getAttribute('data-headlessui-state') !== 'open') {
+      button.click();
+    }
   };
 
-  const handleMouseLeave = (button: HTMLElement) => {
+  const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
-      button.click();
-    }, 300);
+      const button = menuRef.current?.querySelector('button') as HTMLElement;
+      if (button && button.getAttribute('data-headlessui-state') === 'open') {
+        button.click();
+      }
+    }, 250);
   };
 
   return (
@@ -41,16 +47,8 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
         <>
           <div
             ref={menuRef}
-            onMouseEnter={() => {
-              const button = menuRef.current?.querySelector('button') as HTMLElement;
-              if (button) handleMouseEnter(button);
-            }}
-            onMouseLeave={() => {
-              const button = menuRef.current?.querySelector('button') as HTMLElement;
-              if (button) {
-                handleMouseLeave(button);
-              }
-            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <Popover.Button
               className={`
@@ -84,12 +82,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                     clearTimeout(timeoutRef.current);
                   }
                 }}
-                onMouseLeave={() => {
-                  const button = menuRef.current?.querySelector('button') as HTMLElement;
-                  if (button) {
-                    handleMouseLeave(button);
-                  }
-                }}
+                onMouseLeave={handleMouseLeave}
               >
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className={`relative grid gap-6 bg-white dark:bg-gray-800 p-6 auto-rows-fr ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>

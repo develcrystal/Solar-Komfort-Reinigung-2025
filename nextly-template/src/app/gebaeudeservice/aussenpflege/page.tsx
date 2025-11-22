@@ -5,14 +5,14 @@ import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
 
 export const metadata: Metadata = {
-  title: "Außenpflege & saisonale Dienste - HK Komfort Facility & Gebäudeservice GmbH",
+  title: "Außenpflege & saisonale Dienste - Clean Komfort Gebäudeservice24 GmbH",
   description: "Professionelle Außenpflege in Darmstadt und Umgebung. Terrassen- & Pflasterreinigung, Spielplatzkontrolle, Mülltonnendienst, Sonderaufträge.",
   keywords: "Außenpflege, Pflasterreinigung, Terrassenreinigung, Saisonarbeiten, Darmstadt, Außenanlagen",
   openGraph: {
-    title: "Außenpflege & saisonale Dienste - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Außenpflege & saisonale Dienste - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Außenpflege in Darmstadt und Umgebung. Terrassen- & Pflasterreinigung, Spielplatzkontrolle, Mülltonnendienst, Sonderaufträge.",
     url: "https://komfort-gebaeudeservice24.de/aussenpflege",
-    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Außenpflege & saisonale Dienste - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Außenpflege & saisonale Dienste - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Außenpflege in Darmstadt und Umgebung. Terrassen- & Pflasterreinigung, Spielplatzkontrolle, Mülltonnendienst, Sonderaufträge.",
     images: ["/img/flux/unser-furhpark.webp"]
   },
@@ -43,7 +43,7 @@ export default function Aussenpflege() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
-            alt="Außenpflege - HK Komfort Facility & Gebäudeservice GmbH"
+            alt="Außenpflege - Clean Komfort Gebäudeservice24 GmbH"
             fill
             className="object-cover brightness-50"
             priority
@@ -153,7 +153,7 @@ export default function Aussenpflege() {
         {/* Vorteile Section */}
         <Section id="vorteile" className="py-16">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum HK Komfort Facility & Gebäudeservice GmbH?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum Clean Komfort Gebäudeservice24 GmbH?</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Wir sind Ihr zuverlässiger Partner für professionelle Außenpflege in Darmstadt und Umgebung.

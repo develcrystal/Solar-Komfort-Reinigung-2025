@@ -5,14 +5,14 @@ import { CtaSection } from '@/components/CtaSection';
 import { ServiceHeader } from '@/components/ServiceHeader';
 
 export const metadata: Metadata = {
-  title: "Winterdienst - HK Komfort Facility & Gebäudeservice GmbH",
+  title: "Winterdienst - Clean Komfort Gebäudeservice24 GmbH",
   description: "Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft.",
   keywords: "Winterdienst, Streudienst, Schneeräumung, Darmstadt, Winterdienstvertrag",
   openGraph: {
-    title: "Winterdienst - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Winterdienst - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft.",
     url: "https://komfort-gebaeudeservice24.de/winterdienst",
-    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Winterdienst - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Winterdienst - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft.",
     images: ["/img/flux/firmenfahrzeug-solar-komfort4.webp"]
   },
@@ -43,7 +43,7 @@ export default function Winterdienst() {
         title="WINTERDIENST"
         description="Professioneller Winterdienst in Darmstadt und Umgebung. Räumen & Streuen nach Ortssatzung. Maschinenpark & 24/7-Rufbereitschaft."
         imageSrc="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
-        imageAlt="Winterdienst - HK Komfort Facility & Gebäudeservice GmbH"
+        imageAlt="Winterdienst - Clean Komfort Gebäudeservice24 GmbH"
       />
 
       <Container>
@@ -136,7 +136,7 @@ export default function Winterdienst() {
         {/* Vorteile Section */}
         <Section id="vorteile" className="py-16">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum HK Komfort Facility & Gebäudeservice GmbH?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum Clean Komfort Gebäudeservice24 GmbH?</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Wir sind Ihr zuverlässiger Partner für professionellen Winterdienst in Darmstadt und Umgebung.

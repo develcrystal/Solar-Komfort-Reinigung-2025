@@ -226,10 +226,10 @@ const navigation = [
           icon: <BuildingOfficeIcon className="h-6 w-6 text-white" />
         },
         {
-          name: "Kontakt",
-          href: "/facility-management/kontakt-facility",
-          description: "Kontakt für Facility Management Anfragen",
-          icon: <PhoneIcon className="h-6 w-6 text-white" />
+          name: "Portfolio",
+          href: "/facility-management/portfolio",
+          description: "Case Studies, Team & Service-Pakete",
+          icon: <Squares2X2Icon className="h-6 w-6 text-white" />
         }
       ]
     },

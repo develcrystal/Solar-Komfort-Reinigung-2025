@@ -5,14 +5,14 @@ import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
 
 export const metadata: Metadata = {
-  title: "Entrümpelung & Haushaltsauflösungen - HK Komfort Facility & Gebäudeservice GmbH",
+  title: "Entrümpelung & Haushaltsauflösungen - Clean Komfort Gebäudeservice24 GmbH",
   description: "Professionelle Entrümpelung und Haushaltsauflösungen in Darmstadt und Umgebung. Besenreine Räumung von Kellern, Wohnungen, Büros. Inkl. Trennung, Transport & fachgerechter Entsorgung.",
   keywords: "Entrümpelung, Haushaltsauflösung, Wohnungsauflösung, Keller entrümpeln, Büro entrümpeln, Darmstadt, Entsorgung",
   openGraph: {
-    title: "Entrümpelung & Haushaltsauflösungen - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Entrümpelung & Haushaltsauflösungen - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Entrümpelung und Haushaltsauflösungen in Darmstadt und Umgebung. Besenreine Räumung von Kellern, Wohnungen, Büros. Inkl. Trennung, Transport & fachgerechter Entsorgung.",
     url: "https://komfort-gebaeudeservice24.de/entruempelung",
-    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Entrümpelung & Haushaltsauflösungen - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Entrümpelung & Haushaltsauflösungen - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Entrümpelung und Haushaltsauflösungen in Darmstadt und Umgebung. Besenreine Räumung von Kellern, Wohnungen, Büros. Inkl. Trennung, Transport & fachgerechter Entsorgung.",
     images: ["/img/kundenbilder/Entrümpelung.webp"]
   },
@@ -43,7 +43,7 @@ export default function Entrümpelung() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/kundenbilder/Entrümpelung.webp"
-            alt="Entrümpelung - HK Komfort Facility & Gebäudeservice GmbH"
+            alt="Entrümpelung - Clean Komfort Gebäudeservice24 GmbH"
             fill
             className="object-cover brightness-50"
             priority
@@ -153,7 +153,7 @@ export default function Entrümpelung() {
         {/* Vorteile Section */}
         <Section id="vorteile" className="py-16">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum HK Komfort Facility & Gebäudeservice GmbH?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum Clean Komfort Gebäudeservice24 GmbH?</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Wir sind Ihr zuverlässiger Partner für Entrümpelungen und Haushaltsauflösungen in Darmstadt und Umgebung.

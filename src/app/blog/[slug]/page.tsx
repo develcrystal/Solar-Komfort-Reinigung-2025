@@ -80,7 +80,7 @@ Eine professionelle Büroreinigung ist eine Investition in den Erfolg Ihres Unte
     category: "Büroreinigung",
     keywords: ["Büroreinigung Darmstadt", "Arbeitsplatz Hygiene", "Produktivität"],
     image: "/img/flux/bueroreinigung-tipps.webp",
-    author: "HK Komfort Experten-Team"
+    author: "Clean Komfort Gebäudeservice24 Experten-Team"
   },
   {
     slug: "industriereinigung-sicherheitsstandards-rhein-main",

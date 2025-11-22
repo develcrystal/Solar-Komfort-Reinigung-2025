@@ -82,16 +82,16 @@ export function GarantieSection({ className = '', title = 'Unsere Garantien', su
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <div>
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">5000+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">Zufriedene Kunden</div>
-                </div>
-                <div>
                   <div className="text-3xl font-bold text-green-600 dark:text-green-400">100%</div>
                   <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">Termintreue</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">24h</div>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">24h</div>
                   <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">Reaktionszeit</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">SCC</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">Zertifiziert</div>
                 </div>
               </div>
             </div>

@@ -52,7 +52,7 @@ export default function Industriereinigung() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/kundenbilder/Industriereinigung (1).webp"
-            alt="Industriereinigung - HK Komfort Facility & Gebäudeservice GmbH"
+            alt="Industriereinigung - Clean Komfort Gebäudeservice24 GmbH"
             fill
             className="object-cover brightness-50"
             priority

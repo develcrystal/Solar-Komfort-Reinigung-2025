@@ -84,7 +84,7 @@ export default function Kontakt() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
                 </div>
                 
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">HK Komfort Facility & Gebäudeservice GmbH</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Clean Komfort Gebäudeservice24 GmbH</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Musterstraße 12</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">64283 Darmstadt</p>
                 
@@ -162,7 +162,7 @@ export default function Kontakt() {
                 <h3 className="text-lg sm:text-xl font-bold mb-2">Mohamed Kaddouri</h3>
                 <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium mb-3">Geschäftsführung</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
-                  Als Geschäftsführer der HK Komfort Facility & Gebäudeservice GmbH vereint Mohamed jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
+                  Als Geschäftsführer der Clean Komfort Gebäudeservice24 GmbH vereint Mohamed jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
                 </p>
                 <div className="flex items-center space-x-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">

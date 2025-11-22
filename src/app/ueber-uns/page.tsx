@@ -5,21 +5,21 @@ import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
 
 export const metadata: Metadata = {
-  title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
-  description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
-  keywords: "HK Komfort Team, Facility Management, Darmstadt, Gebäudereinigung Experten, Über uns, Unternehmensgeschichte",
+  title: "Über uns - Clean Komfort Gebäudeservice24 GmbH | Facility Management & Gebäudereinigung",
+  description: "Lernen Sie das Team der Clean Komfort Gebäudeservice24 GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+  keywords: "Clean Komfort Gebäudeservice24 Team, Facility Management, Darmstadt, Gebäudereinigung Experten, Über uns, Unternehmensgeschichte",
   openGraph: {
-    title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
-    description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+    title: "Über uns - Clean Komfort Gebäudeservice24 GmbH | Facility Management & Gebäudereinigung",
+    description: "Lernen Sie das Team der Clean Komfort Gebäudeservice24 GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
     url: "https://komfort-gebaeudeservice24.de/ueber-uns",
-    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Über uns - HK Komfort Facility & Gebäudeservice GmbH | Facility Management & Gebäudereinigung",
-    description: "Lernen Sie das Team der HK Komfort Facility & Gebäudeservice GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
+    title: "Über uns - Clean Komfort Gebäudeservice24 GmbH | Facility Management & Gebäudereinigung",
+    description: "Lernen Sie das Team der Clean Komfort Gebäudeservice24 GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
     images: ["/img/flux/team-gruppenfoto1.webp"]
   },
   alternates: {
@@ -35,7 +35,7 @@ export default function UeberUns() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/flux/team-gruppenfoto1.webp"
-            alt="HK Komfort Facility & Gebäudeservice GmbH - Unser motiviertes Team für professionelle Gebäudereinigung und Service"
+            alt="Clean Komfort Gebäudeservice24 GmbH - Unser motiviertes Team für professionelle Gebäudereinigung und Service"
             fill
             className="object-cover brightness-50"
             priority
@@ -65,7 +65,7 @@ export default function UeberUns() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                    Wir sind **HK Komfort Facility & Gebäudeservice GmbH**, Tochterunternehmen der Solar Komfort GmbH. Unsere Gründer Mohamed Kaddouri & Abdelhafid Hajjout vereinen jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
+                    Wir sind **Clean Komfort Gebäudeservice24 GmbH**, Tochterunternehmen der Solar Komfort GmbH. Unsere Gründer Mohamed Kaddouri & Abdelhafid Hajjout vereinen jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung.
                   </p>
                   <p className="text-lg text-gray-600 dark:text-gray-300">
                     Unsere Stärken:

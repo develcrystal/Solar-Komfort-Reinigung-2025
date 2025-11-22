@@ -5,14 +5,14 @@ import { Metadata } from "next";
 import { CtaSection } from '@/components/CtaSection';
 
 export const metadata: Metadata = {
-  title: "Gartenpflege - HK Komfort Facility & Gebäudeservice GmbH",
+  title: "Gartenpflege - Clean Komfort Gebäudeservice24 GmbH",
   description: "Professionelle Gartenpflege in Darmstadt und Umgebung. Rasenmähen, Hecken schneiden, Laub entfernen, Beetpflege – regelmäßig oder saisonal buchbar.",
   keywords: "Gartenpflege, Rasenmähen, Heckenschnitt, Blumenbeete, Darmstadt, Außenanlagen",
   openGraph: {
-    title: "Gartenpflege - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Gartenpflege - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Gartenpflege in Darmstadt und Umgebung. Rasenmähen, Hecken schneiden, Laub entfernen, Beetpflege – regelmäßig oder saisonal buchbar.",
     url: "https://komfort-gebaeudeservice24.de/gartenpflege",
-    siteName: "HK Komfort Facility & Gebäudeservice GmbH",
+    siteName: "Clean Komfort Gebäudeservice24 GmbH",
     locale: "de_DE",
     type: "website",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gartenpflege - HK Komfort Facility & Gebäudeservice GmbH",
+    title: "Gartenpflege - Clean Komfort Gebäudeservice24 GmbH",
     description: "Professionelle Gartenpflege in Darmstadt und Umgebung. Rasenmähen, Hecken schneiden, Laub entfernen, Beetpflege – regelmäßig oder saisonal buchbar.",
     images: ["/img/flux/einsatz-beim-kunden1.webp"]
   },
@@ -154,7 +154,7 @@ export default function Gartenpflege() {
         {/* Vorteile Section */}
         <Section id="vorteile" className="py-16">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum HK Komfort Facility & Gebäudeservice GmbH?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Warum Clean Komfort Gebäudeservice24 GmbH?</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Wir sind Ihr zuverlässiger Partner für professionelle Gartenpflege in Darmstadt und Umgebung.

@@ -17,31 +17,31 @@ import { ProblemLoesungSection } from "@/components/ProblemLoesungSection";
 const testimonials = [
   {
     rating: "★★★★★",
-    text: "Als Wohnungsbaugesellschaft sind wir auf zuverlässige Partner angewiesen. Komfort Gebäudeservice24 betreut unsere Anlagen seit Jahren professionell und transparent.",
+    text: "Als Wohnungsbaugesellschaft sind wir auf zuverlässige Partner angewiesen. Clean Komfort Gebäudeservice24 betreut unsere Anlagen seit über 3 Jahren professionell und transparent. Die Qualitätskontrolle ist vorbildlich.",
     name: "Petra Hartmann",
-    role: "Wohnungsbaugesellschaft Darmstadt",
-    initial: "P"
+    role: "Geschäftsführerin, Wohnungsbaugesellschaft Darmstadt",
+    image: "/img/testimonials/customer-1.jpg"
   },
   {
-    rating: "★★★★★", 
-    text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Absolute Empfehlung!",
+    rating: "★★★★★",
+    text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach aktuellen RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Die Zuverlässigkeit ist beeindruckend!",
     name: "Dr. Michael Schmidt",
-    role: "Zahnarztpraxis Groß-Gerau",
-    initial: "M"
+    role: "Zahnmediziner, Zahnarztpraxis Groß-Gerau",
+    image: "/img/testimonials/customer-2.jpg"
   },
   {
     rating: "★★★★★",
-    text: "Vom Fitnessstudio bis zum Architekturbüro - Komfort Gebäudeservice24 kennt die besonderen Anforderungen jeder Branche. Eigenes Fachpersonal macht den Unterschied.",
+    text: "Von Fitnessstudios bis zu Architekturbüros – Clean Komfort Gebäudeservice24 kennt die besonderen Anforderungen jeder Branche perfekt. Das eigene Fachpersonal macht den entscheidenden Unterschied.",
     name: "Sandra Becker",
-    role: "Facility Managerin, Gewerbezentrum",
-    initial: "S"
+    role: "Facility Managerin, Gewerbezentrum Frankfurt",
+    image: "/img/testimonials/customer-3.jpg"
   },
   {
     rating: "★★★★★",
-    text: "Kommunale Einrichtungen haben besondere Anforderungen. Die strukturierten Prozesse und transparente Dokumentation überzeugen uns seit Jahren.",
+    text: "Kommunale Einrichtungen haben hohe Anforderungen an Dokumentation und Qualität. Die strukturierten Prozesse und transparente Kommunikation überzeugen Schulträger wie uns. Ein zuverlässiger Partner!",
     name: "Thomas Wagner",
-    role: "Schulverwaltung Darmstadt",
-    initial: "T"
+    role: "Leiter Schulverwaltung, Stadt Darmstadt",
+    image: "/img/testimonials/customer-4.jpg"
   }
 ];
 
@@ -56,11 +56,19 @@ const Testimonials = () => (
           &ldquo;{testimonial.text}&rdquo;
         </p>
         <div className="flex items-center">
-          <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
-            <span className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium">
-              {testimonial.initial}
-            </span>
-          </div>
+          {testimonial.image ? (
+            <Image
+              src={testimonial.image}
+              alt={testimonial.name}
+              width={48}
+              height={48}
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover mr-3 shadow-sm"
+            />
+          ) : (
+            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center mr-3 shadow-sm">
+              <span className="text-xs sm:text-sm text-white font-bold">—</span>
+            </div>
+          )}
           <div>
             <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
               {testimonial.name}
@@ -77,7 +85,7 @@ const Testimonials = () => (
 
 export const metadata: Metadata = {
   title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
-  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochter der Solar Komfort GmbH mit über 500 zufriedenen Kunden in der Region.",
+  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochter der Solar Komfort GmbH.",
   keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
     title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
@@ -132,7 +140,7 @@ export default function Home() {
               IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
-              Willkommen bei HK Komfort Facility & Gebäudeservice GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
+              Willkommen bei Clean Komfort Gebäudeservice24 GmbH – Ihrem zuverlässigen Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH bringen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement zusammen.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link 
@@ -357,20 +365,12 @@ export default function Home() {
 
           {/* CTA Section */}
           <div className="text-center mt-8 sm:mt-12">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link 
-                href="/kontakt" 
-                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
-              >
-                Kostenlose Beratung anfragen
-              </Link>
-              <Link 
-                href="/kostenrechner" 
-                className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition-all min-h-[44px] touch-manipulation"
-              >
-                Kosten berechnen
-              </Link>
-            </div>
+            <Link
+              href="/kostenrechner"
+              className="inline-flex items-center justify-center px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-semibold text-gray-900 bg-white border-2 border-blue-600 rounded-lg hover:bg-blue-50 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
+            >
+              → Kosten berechnen (Schnell & kostenlos)
+            </Link>
           </div>
         </Container>
       </section>
@@ -485,17 +485,17 @@ export default function Home() {
                 Konstante Qualität und zuverlässiger Service - oder Sie zahlen den ersten Monat nicht.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-3xl mx-auto">
-                <Link 
-                  href="/kontakt" 
+                <Link
+                  href="/kontakt"
                   className="px-8 py-4 text-lg font-bold text-center text-white bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex-1"
                 >
-                  Jetzt kostenlos testen
+                  Jetzt Kontakt aufnehmen
                 </Link>
-                <Link 
-                  href="/galerie" 
-                  className="px-8 py-4 text-lg font-bold text-center text-white bg-orange-500 rounded-xl hover:bg-orange-600 transition-colors shadow-lg flex-1"
+                <Link
+                  href="/referenzen"
+                  className="px-8 py-4 text-lg font-bold text-center text-white bg-gray-700 rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex-1"
                 >
-                  Referenzen anfordern
+                  Unsere Referenzen ansehen
                 </Link>
               </div>
             </div>

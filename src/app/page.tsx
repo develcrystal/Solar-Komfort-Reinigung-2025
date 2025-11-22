@@ -136,7 +136,7 @@ export default function Home() {
           <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="max-w-4xl ml-4 sm:ml-8 lg:ml-48">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.2] tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              KOMFORT GEBÄUDESERVICE24 GMBH<br />
+              CLEAN KOMFORT GEBÄUDESERVICE24 GMBH<br />
               IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">

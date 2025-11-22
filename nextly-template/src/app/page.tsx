@@ -454,6 +454,7 @@ export default function Home() {
                   alt="Der Unterschied ist offensichtlich - Vergleich Komfort Gebäudeservice24"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 640px) 90vw, (max-width: 768px) 85vw, 100vw"
                   priority
                 />
               </div>

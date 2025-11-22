@@ -16,7 +16,7 @@ export default function FMPortfolio() {
       description: "Umfassende Facility Management Betreuung für modernes Geschäftszentrum mit 5.000 m² Bürofläche. Management von Reinigung, Instandhaltung und Sicherheit.",
       results: [
         "98% Kundenzufriedenheit",
-        "24/7 Notfallunterstützung",
+        "Notfallkontakt innerhalb 24-48 Stunden",
         "Kostenoptimierung um 15%",
         "Energie-Effizienzsteigerung um 12%"
       ]
@@ -73,7 +73,7 @@ export default function FMPortfolio() {
         "Tägliche Premium-Reinigung",
         "Wöchentliche Spezialreinigung",
         "Vollständiges Facility Management",
-        "24/7 Notfallkontakt",
+        "Notfallkontakt innerhalb 24-48 Stunden",
         "Monatl. Inspektionen & Reports",
         "Wartungs-Koordination"
       ],
@@ -116,7 +116,7 @@ export default function FMPortfolio() {
     {
       icon: "🛠️",
       title: "Schnelle Reaktionszeiten",
-      description: "24/7 Notfallkontakt mit Reaktionszeit unter 2 Stunden in der Rhein-Main Region."
+      description: "Notfallkontakt mit Reaktionszeit innerhalb 24-48 Stunden in der Rhein-Main Region."
     },
     {
       icon: "💰",

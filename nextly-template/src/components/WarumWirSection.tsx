@@ -80,8 +80,8 @@ const WarumWirSection = () => {
         <SectionTitle
           title="Was uns von anderen Reinigungsfirmen unterscheidet"
         >
-          Sie kennen das bestimmt: Unzuverlässige Termine, versteckte Kosten, schlechte Erreichbarkeit oder mangelnde Dokumentation. 
-          Als Tochterfirma der Solar Komfort GmbH machen wir es anders - professionell, transparent und mit über 10 Jahren Erfahrung.
+          Sie kennen das bestimmt: Unzuverlässige Termine, versteckte Kosten, schlechte Erreichbarkeit oder mangelnde Dokumentation.
+          Als Tochterfirma der Solar Komfort GmbH machen wir es anders - professionell, transparent und mit über 15 Jahren Erfahrung.
         </SectionTitle>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

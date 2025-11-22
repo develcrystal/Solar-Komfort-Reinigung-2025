@@ -20,7 +20,7 @@ const ProblemLoesungSection = () => {
   const loesungen = [
     {
       title: "Pünktlichkeit & Zuverlässigkeit",
-      description: "Terminverbindlich seit über 10 Jahren - bei uns können Sie sich darauf verlassen",
+      description: "Terminverbindlich seit über 15 Jahren - bei uns können Sie sich darauf verlassen",
       icon: (
         <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -112,7 +112,7 @@ const ProblemLoesungSection = () => {
               Wir machen es anders - professioneller!
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Als Tochterfirma der Solar Komfort GmbH haben wir über 10 Jahre daran gearbeitet, 
+              Als Tochterfirma der Solar Komfort GmbH haben wir über 15 Jahre daran gearbeitet,
               diese typischen Branchenprobleme zu lösen. Das macht uns zu Ihrem zuverlässigen Partner.
             </p>
           </div>

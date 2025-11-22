@@ -84,15 +84,15 @@ const TestimonialsSection = () => (
           </div>
           <div className="space-y-4 sm:space-y-6">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white">
-              Über 5.000 zufriedene Kunden
+              Über 500 zufriedene Kunden
             </h3>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Seit über 10 Jahren vertrauen Familien, Unternehmen und Hausverwaltungen in Darmstadt und Umgebung auf unsere professionellen Reinigungsdienstleistungen. 
+              Seit über 15 Jahren vertrauen Familien, Unternehmen und Hausverwaltungen in Darmstadt und Umgebung auf unsere professionellen Reinigungsdienstleistungen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <div className="text-center sm:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
-                  5.000+
+                  500+
                 </div>
                 <div className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
                   Zufriedene Kunden
@@ -100,7 +100,7 @@ const TestimonialsSection = () => (
               </div>
               <div className="text-center sm:text-left">
                 <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400">
-                  10+
+                  15+
                 </div>
                 <div className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
                   Jahre Erfahrung

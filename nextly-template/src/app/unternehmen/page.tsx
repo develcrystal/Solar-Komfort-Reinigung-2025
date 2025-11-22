@@ -133,14 +133,14 @@ export default function UeberUns() {
                 </div>
                 
                 <div className="flex flex-col items-center text-center">
-                  <Image 
+                  <Image
                     src="/img/flux/badge-kundenzufriedenheit.webp"
-                    alt="100% Kundenzufriedenheit"
+                    alt="99% Kundenzufriedenheit"
                     width={180}
                     height={180}
                     className="mb-6"
                   />
-                  <h3 className="text-2xl font-bold mb-3">100% Kundenzufriedenheit</h3>
+                  <h3 className="text-2xl font-bold mb-3">99% Kundenzufriedenheit</h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     Die Zufriedenheit unserer Kunden steht für uns an erster Stelle. Wir arbeiten erst dann ab, wenn Sie vollständig zufrieden sind.
                   </p>

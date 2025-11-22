@@ -12,10 +12,6 @@ interface PopupFormData {
   name: string;
   email: string;
   message: string;
-  apikey: string;
-  subject: string;
-  from_name: string;
-  botcheck: boolean;
 }
 
 interface ApiResponse {
@@ -41,33 +37,37 @@ export function PopupWidget() {
 
   const onSubmit: SubmitHandler<PopupFormData> = async (data, event) => {
     console.log(data);
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(data, null, 2),
-    })
-      .then(async (response) => {
-        const json: ApiResponse = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          if (event?.target) {
-            (event.target as HTMLFormElement).reset();
-          }
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      })
-      .catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
       });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSuccess(true);
+        setMessage(result.message);
+        if (event?.target) {
+          (event.target as HTMLFormElement).reset();
+        }
+        reset();
+      } else {
+        setIsSuccess(false);
+        setMessage(result.message);
+      }
+    } catch (error) {
+      setIsSuccess(false);
+      setMessage('Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.');
+      console.error('Form submission error:', error);
+    }
   };
 
   return (
@@ -75,7 +75,7 @@ export function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <div>
-            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-[#2563eb] rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-[#1d4ed8] focus:bg-[#1d4ed8] ease">
+            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-[#FFC700] rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-[#FFB400] focus:bg-[#FFB400] ease ring-4 ring-[#FFC700]/30 hover:ring-[#FFC700]/50">
               <span className="sr-only">Kontaktformular öffnen</span>
               <Transition
                 show={!open}
@@ -86,7 +86,7 @@ export function PopupWidget() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute w-6 h-6 text-white"
+                  className="absolute w-6 h-6 text-gray-800"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export function PopupWidget() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute w-6 h-6 text-white"
+                  className="absolute w-6 h-6 text-gray-800"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -140,28 +140,6 @@ export function PopupWidget() {
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
                   {!isSubmitSuccessful && (
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                      <input
-                        type="hidden"
-                        value={process.env.NEXT_PUBLIC_ACCESS_KEY || ''}
-                        {...register("apikey")}
-                      />
-                      <input
-                        type="hidden"
-                        value={`${userName} sent a message from Nextly`}
-                        {...register("subject")}
-                      />
-                      <input
-                        type="hidden"
-                        value="Nextly Template"
-                        {...register("from_name")}
-                      />
-                      <input
-                        type="checkbox"
-                        className="hidden"
-                        style={{ display: "none" }}
-                        {...register("botcheck")}
-                      ></input>
-
                       <div className="mb-4">
                         <label
                           htmlFor="full_name"

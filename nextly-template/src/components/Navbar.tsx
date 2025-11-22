@@ -3,7 +3,7 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
 import { navigation } from './data'; // Import navigation data
 import { MegaMenu } from "./MegaMenu"; // Import the new MegaMenu component
@@ -46,7 +46,7 @@ export const Navbar = () => {
   const [mounted, setMounted] = useState(false);
 
   // Only render the dynamic logo after client-side hydration
-  React.useEffect(() => {
+  useEffect(() => {
     setMounted(true);
   }, []);
 
@@ -105,7 +105,7 @@ export const Navbar = () => {
           {/* Mobile Menu */}
           <div className="xl:hidden">
             <Disclosure>
-              {({ open }) => (
+              {({ open, close }) => (
                 <div>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
@@ -157,6 +157,7 @@ export const Navbar = () => {
                                     <Link
                                       key={subIndex}
                                       href={subItem.href}
+                                      onClick={() => close()}
                                       className="block w-full px-3 py-2 text-neutral-500 rounded-md dark:text-neutral-300 hover:text-primary hover:bg-primary/10 dark:hover:text-accent dark:focus:bg-neutral-800 focus:outline-none touch-manipulation"
                                     >
                                       {subItem.name}
@@ -166,8 +167,9 @@ export const Navbar = () => {
                               )}
                             </div>
                           ) : (
-                            <Link 
-                              href={item.href} 
+                            <Link
+                              href={item.href}
+                              onClick={() => close()}
                               className="w-full px-3 py-3 font-medium text-neutral-600 dark:text-neutral-200 rounded-md hover:text-primary hover:bg-primary/10 dark:focus:bg-neutral-800 focus:outline-none block touch-manipulation"
                             >
                               {item.name}
@@ -175,7 +177,7 @@ export const Navbar = () => {
                           )}
                         </div>
                       ))}
-                      <Link href="/kostenrechner" className="w-full px-6 py-3 mt-3 text-center text-black bg-accent rounded-md hover:bg-accent/90 transition-colors touch-manipulation">         
+                      <Link href="/kostenrechner" onClick={() => close()} className="w-full px-6 py-3 mt-3 text-center text-black bg-accent rounded-md hover:bg-accent/90 transition-colors touch-manipulation">         
                         Kostenrechner
                       </Link>
                     </div>

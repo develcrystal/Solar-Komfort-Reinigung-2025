@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
@@ -19,25 +19,54 @@ type MegaMenuProps = {
 };
 
 export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
+  const menuRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+
+  const handleMouseEnter = (button: HTMLElement) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    button.click();
+  };
+
+  const handleMouseLeave = (button: HTMLElement) => {
+    timeoutRef.current = setTimeout(() => {
+      button.click();
+    }, 150);
+  };
+
   return (
     <Popover className="relative">
-      {({ open }) => (
+      {({ open, close }) => (
         <>
-          <Popover.Button
-            className={`
-              ${open ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'}
-              group inline-flex items-center rounded-md text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-3 py-2 transition-colors duration-200
-            `}
+          <div
+            ref={menuRef}
+            onMouseEnter={() => {
+              const button = menuRef.current?.querySelector('button') as HTMLElement;
+              if (button) handleMouseEnter(button);
+            }}
+            onMouseLeave={() => {
+              const button = menuRef.current?.querySelector('button') as HTMLElement;
+              if (button && !menuRef.current?.querySelector('[data-headlessui-state*="open"]')) {
+                handleMouseLeave(button);
+              }
+            }}
           >
-            <span>{title}</span>
-            <ChevronDownIcon
+            <Popover.Button
               className={`
-                ${open ? 'rotate-180 text-blue-600 dark:text-blue-400' : 'text-gray-500'}
-                ml-1 h-5 w-5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-transform duration-200
+                ${open ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'}
+                group inline-flex items-center rounded-md text-base font-medium hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 px-3 py-2 transition-colors duration-200
               `}
-              aria-hidden="true"
-            />
-          </Popover.Button>
+            >
+              <span>{title}</span>
+              <ChevronDownIcon
+                className={`
+                  ${open ? 'rotate-180 text-blue-600 dark:text-blue-400' : 'text-gray-500'}
+                  ml-1 h-5 w-5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-transform duration-200
+                `}
+                aria-hidden="true"
+              />
+            </Popover.Button>
 
           <Transition
             as={Fragment}
@@ -55,6 +84,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                     <Link
                       key={item.name}
                       href={item.href}
+                      onClick={() => close()}
                       className="group -m-3 flex items-start rounded-lg p-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 h-full"
                     >
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-blue-500 text-white group-hover:bg-blue-600 transition-colors duration-200">
@@ -128,6 +158,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                       {/* Facility Management */}
                       <Link
                         href="/facility-management/angebot"
+                        onClick={() => close()}
                         className="flex flex-col items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
                       >
                         <div className="mb-2">
@@ -149,6 +180,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
               </div>
             </Popover.Panel>
           </Transition>
+          </div>
         </>
       )}
     </Popover>

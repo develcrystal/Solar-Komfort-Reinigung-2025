@@ -5,7 +5,9 @@
       "Bash(npm run build:*)",
       "Bash(curl:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(node fix-corporate-identity.js:*)",
+      "Bash(node copy-testimonial-photos.js:*)"
     ],
     "deny": [],
     "ask": []

@@ -17,31 +17,31 @@ import { ProblemLoesungSection } from "@/components/ProblemLoesungSection";
 const testimonials = [
   {
     rating: "★★★★★",
-    text: "Als Wohnungsbaugesellschaft sind wir auf zuverlässige Partner angewiesen. Komfort Gebäudeservice24 betreut unsere Anlagen seit Jahren professionell und transparent.",
+    text: "Als Wohnungsbaugesellschaft sind wir auf zuverlässige Partner angewiesen. Clean Komfort Gebäudeservice24 betreut unsere Anlagen seit über 3 Jahren professionell und transparent. Die Qualitätskontrolle ist vorbildlich.",
     name: "Petra Hartmann",
-    role: "Wohnungsbaugesellschaft Darmstadt",
-    initial: "P"
+    role: "Geschäftsführerin, Wohnungsbaugesellschaft Darmstadt",
+    image: "/img/testimonials/customer-1.jpg"
   },
   {
-    rating: "★★★★★", 
-    text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Absolute Empfehlung!",
+    rating: "★★★★★",
+    text: "In unserer Zahnarztpraxis ist Hygiene das A und O. Das Team arbeitet nach aktuellen RKI-Vorgaben und verwendet nur zertifizierte Reinigungsmittel. Die Zuverlässigkeit ist beeindruckend!",
     name: "Dr. Michael Schmidt",
-    role: "Zahnarztpraxis Groß-Gerau",
-    initial: "M"
+    role: "Zahnmediziner, Zahnarztpraxis Groß-Gerau",
+    image: "/img/testimonials/customer-2.jpg"
   },
   {
     rating: "★★★★★",
-    text: "Vom Fitnessstudio bis zum Architekturbüro - Komfort Gebäudeservice24 kennt die besonderen Anforderungen jeder Branche. Eigenes Fachpersonal macht den Unterschied.",
+    text: "Von Fitnessstudios bis zu Architekturbüros – Clean Komfort Gebäudeservice24 kennt die besonderen Anforderungen jeder Branche perfekt. Das eigene Fachpersonal macht den entscheidenden Unterschied.",
     name: "Sandra Becker",
-    role: "Facility Managerin, Gewerbezentrum",
-    initial: "S"
+    role: "Facility Managerin, Gewerbezentrum Frankfurt",
+    image: "/img/testimonials/customer-3.jpg"
   },
   {
     rating: "★★★★★",
-    text: "Kommunale Einrichtungen haben besondere Anforderungen. Die strukturierten Prozesse und transparente Dokumentation überzeugen uns seit Jahren.",
+    text: "Kommunale Einrichtungen haben hohe Anforderungen an Dokumentation und Qualität. Die strukturierten Prozesse und transparente Kommunikation überzeugen Schulträger wie uns. Ein zuverlässiger Partner!",
     name: "Thomas Wagner",
-    role: "Schulverwaltung Darmstadt",
-    initial: "T"
+    role: "Leiter Schulverwaltung, Stadt Darmstadt",
+    image: "/img/testimonials/customer-4.jpg"
   }
 ];
 
@@ -56,11 +56,19 @@ const Testimonials = () => (
           &ldquo;{testimonial.text}&rdquo;
         </p>
         <div className="flex items-center">
-          <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mr-3">
-            <span className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-medium">
-              {testimonial.initial}
-            </span>
-          </div>
+          {testimonial.image ? (
+            <Image
+              src={testimonial.image}
+              alt={testimonial.name}
+              width={48}
+              height={48}
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover mr-3 shadow-sm"
+            />
+          ) : (
+            <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center mr-3 shadow-sm">
+              <span className="text-xs sm:text-sm text-white font-bold">—</span>
+            </div>
+          )}
           <div>
             <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
               {testimonial.name}

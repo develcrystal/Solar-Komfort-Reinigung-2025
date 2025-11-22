@@ -9,61 +9,61 @@ import Link from 'next/link';
 export default function Referenzen() {
   // Bildslider für Einfamilienhaus-Referenzen
   const einfamilienhausImages = [
-    { 
-      src: "/img/flux/referenz-einfamilienhaus2.webp", 
-      alt: "Einfamilienhaus in München - Dachreinigung und Dachbeschichtung" 
+    {
+      src: "/img/flux/referenz-einfamilienhaus2.webp",
+      alt: "Einfamilienhaus in Darmstadt - Dachreinigung und Dachbeschichtung"
     },
-    { 
-      src: "/img/flux/referenz-einfamilienhaus3.webp", 
-      alt: "Einfamilienhaus in Berlin - Dachbeschichtung" 
+    {
+      src: "/img/flux/referenz-einfamilienhaus3.webp",
+      alt: "Einfamilienhaus in Groß-Gerau - Dachbeschichtung"
     },
-    { 
-      src: "/img/flux/referenz-einfamilienhaus4.webp", 
-      alt: "Einfamilienhaus - Dachreinigung" 
+    {
+      src: "/img/flux/referenz-einfamilienhaus4.webp",
+      alt: "Einfamilienhaus in Offenbach - Dachreinigung"
     },
-    { 
-      src: "/img/flux/referenz-einfamilienhaus5.webp", 
-      alt: "Einfamilienhaus - Nach der Dachbeschichtung" 
+    {
+      src: "/img/flux/referenz-einfamilienhaus5.webp",
+      alt: "Einfamilienhaus - Nach der Dachbeschichtung"
     }
   ];
 
   // Bildslider für Mehrfamilienhaus-Referenzen
   const mehrfamilienhausImages = [
-    { 
-      src: "/img/flux/referenz-mehrfamilienhaus1.webp", 
-      alt: "Mehrfamilienhaus in Stuttgart - Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-mehrfamilienhaus1.webp",
+      alt: "Mehrfamilienhaus in Frankfurt - Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-mehrfamilienhaus2.webp", 
-      alt: "Mehrfamilienhaus - Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-mehrfamilienhaus2.webp",
+      alt: "Mehrfamilienhaus in Darmstadt - Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-mehrfamilienhaus3.webp", 
-      alt: "Mehrfamilienhaus - Nach der Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-mehrfamilienhaus3.webp",
+      alt: "Mehrfamilienhaus - Nach der Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-mehrfamilienhaus4.webp", 
-      alt: "Mehrfamilienhaus - Dach- und Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-mehrfamilienhaus4.webp",
+      alt: "Mehrfamilienhaus in Rüsselsheim - Dach- und Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-mehrfamilienhaus5.webp", 
-      alt: "Mehrfamilienhaus in Groß-Gerau - Dach- und Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-mehrfamilienhaus5.webp",
+      alt: "Mehrfamilienhaus in Groß-Gerau - Dach- und Fassadenreinigung"
     }
   ];
 
   // Bildslider für Gewerbeobjekt-Referenzen
   const gewerbeobjektImages = [
-    { 
-      src: "/img/flux/referenz-gewerbeobjekt1.webp", 
-      alt: "Gewerbeobjekt in Wiesbaden - Dach- und Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-gewerbeobjekt1.webp",
+      alt: "Gewerbeobjekt in Wiesbaden - Dach- und Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-gewerbeobjekt2.webp", 
-      alt: "Gewerbeobjekt - Dach- und Fassadenreinigung" 
+    {
+      src: "/img/flux/referenz-gewerbeobjekt2.webp",
+      alt: "Gewerbeobjekt in Offenbach - Dach- und Fassadenreinigung"
     },
-    { 
-      src: "/img/flux/referenz-gewerbeobjekt3.webp", 
-      alt: "Gewerbeobjekt - Nach der Reinigung" 
+    {
+      src: "/img/flux/referenz-gewerbeobjekt3.webp",
+      alt: "Gewerbeobjekt in Frankfurt - Nach der Reinigung"
     }
   ];
 
@@ -119,7 +119,7 @@ export default function Referenzen() {
             </h2>
             <div className="prose prose-lg dark:prose-dark mx-auto">
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
-                Bei <strong>Solar Komfort GmbH</strong> stehen Qualität und Kundenzufriedenheit an erster Stelle. Seit über 10 Jahren sorgen wir in Darmstadt und Umgebung für saubere Dächer, langlebige Dachbeschichtungen und makellose Fassaden.
+                Bei <strong>Solar Komfort GmbH</strong> stehen Qualität und Kundenzufriedenheit an erster Stelle. Seit über 10 Jahren sorgen wir in Darmstadt, Groß-Gerau, Wiesbaden und dem gesamten Rhein-Main-Gebiet für saubere Dächer, langlebige Dachbeschichtungen und makellose Fassaden.
               </p>
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
                 Unsere Referenzprojekte zeigen eindrucksvoll die Wirksamkeit unserer <strong>professionellen Dachreinigung</strong> und <strong>Dachbeschichtung</strong>. Die beeindruckenden Vorher-Nachher-Vergleiche demonstrieren, wie wir Moose, Flechten und Verschmutzungen effektiv entfernen und Ihrem Dach neuen Glanz verleihen.
@@ -153,7 +153,7 @@ export default function Referenzen() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-lg italic">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg italic line-clamp-3">
                     &quot;Die Dachreinigung wurde sehr professionell durchgeführt. Das Team war pünktlich, freundlich und hat saubere Arbeit geleistet. Mein Dach sieht aus wie neu!&quot;
                   </p>
                 </div>
@@ -174,7 +174,7 @@ export default function Referenzen() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-lg italic">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg italic line-clamp-3">
                     &quot;Ich bin sehr zufrieden mit der Dachbeschichtung. Die Beratung war kompetent und das Ergebnis überzeugt. Kann Solar Komfort nur weiterempfehlen!&quot;
                   </p>
                 </div>
@@ -195,7 +195,7 @@ export default function Referenzen() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-lg italic">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg italic line-clamp-3">
                     &quot;Die Fassadenreinigung hat mein Haus komplett verändert. Es sieht aus wie neu gestrichen. Das Team war sehr ordentlich und hat alles sauber hinterlassen.&quot;
                   </p>
                 </div>
@@ -220,7 +220,7 @@ export default function Referenzen() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">Einfamilienhaus in München</h3>
+                <h3 className="text-2xl font-bold mb-2">Einfamilienhaus in Darmstadt</h3>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4">Dachreinigung und Dachbeschichtung</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Vollständige Reinigung und Beschichtung eines 180m² großen Daches. Entfernung von Moos, Flechten und Algen, gefolgt von einer hochwertigen Schutzbeschichtung.
@@ -240,7 +240,7 @@ export default function Referenzen() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">Mehrfamilienhaus in Stuttgart</h3>
+                <h3 className="text-2xl font-bold mb-2">Mehrfamilienhaus in Frankfurt</h3>
                 <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4">Fassadenreinigung</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Professionelle Reinigung einer 450m² großen Fassade. Beseitigung von Verschmutzungen und Wiederherstellung des ursprünglichen Erscheinungsbildes.

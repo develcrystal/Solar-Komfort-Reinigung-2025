@@ -45,28 +45,28 @@ export function GarantieSection({ className = '', title = 'Unsere Garantien', su
     <div className={`bg-white dark:bg-gray-900 ${className}`}>
       <Container>
         <Section>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
               {title}
             </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               {subtitle}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {garantien.map((garantie, index) => (
               <div
                 key={garantie.title}
-                className={`${garantie.bgColor} ${garantie.borderColor} border rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300`}
+                className={`${garantie.bgColor} ${garantie.borderColor} border rounded-2xl p-6 sm:p-8 text-center hover:shadow-lg transition-shadow duration-300`}
               >
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 sm:mb-6">
                   <div className={`${garantie.bgColor} p-4 rounded-full shadow-sm`}>
-                    <garantie.icon className={`h-8 w-8 ${garantie.iconColor}`} />
+                    <garantie.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${garantie.iconColor}`} />
                   </div>
                 </div>
 
-                <h3 className={`text-xl font-bold ${garantie.textColor} mb-4`}>
+                <h3 className={`text-lg sm:text-xl font-bold ${garantie.textColor} mb-3 sm:mb-4`}>
                   {garantie.title}
                 </h3>
 

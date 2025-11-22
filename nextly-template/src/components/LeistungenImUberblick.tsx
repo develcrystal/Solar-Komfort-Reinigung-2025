@@ -153,10 +153,10 @@ export default function LeistungenImUberblick() {
         {/* Header */}
         <Section>
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white uppercase mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white uppercase mb-4 sm:mb-6">
               Unsere Leistungen im Überblick
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               Von der täglichen Unterhaltsreinigung bis zur kompletten Objektbetreuung -
               wir bieten Ihnen professionelle Reinigungsdienstleistungen aus einer Hand.
             </p>

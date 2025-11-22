@@ -47,8 +47,8 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
 
       <div className="relative z-10 w-full px-4">
         <div className="text-center max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">{title}</h2>
-          <p className="text-xl mb-8 text-gray-100 drop-shadow-md">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white drop-shadow-lg">{title}</h2>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-100 drop-shadow-md">
             {finalDescription}
           </p>
           {children && (

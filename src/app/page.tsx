@@ -450,8 +450,8 @@ export default function Home() {
               {/* Mobile-Version: Zentrales Bild (lg:hidden) */}
               <div className="lg:hidden relative h-[500px] sm:h-[600px] md:h-[700px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/_a_erstelle_auder_tabel.webp"
-                  alt="Der Unterschied ist offensichtlich - Vergleich Komfort Gebäudeservice24"
+                  src="/img/kundenbilder/Dachreinigung Resultat!.webp"
+                  alt="Vorher/Nachher Vergleich - Dachreinigung Transformation mit Komfort Gebäudeservice24"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 90vw, (max-width: 768px) 85vw, 100vw"

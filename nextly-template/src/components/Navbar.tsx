@@ -43,6 +43,12 @@ const renderIcon = (icon: string): JSX.Element | null => {
 export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Only render the dynamic logo after client-side hydration
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
@@ -54,7 +60,7 @@ export const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={theme === 'dark' ? '/img/inverted_komfort-logo-cropped.webp' : '/img/komfort-logo-cropped.webp'}
+            src={mounted && theme === 'dark' ? '/img/inverted_komfort-logo-cropped.webp' : '/img/komfort-logo-cropped.webp'}
             width={300}
             height={90}
             alt="Komfort Gebäudeservice24"

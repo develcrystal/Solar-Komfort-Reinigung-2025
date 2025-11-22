@@ -77,7 +77,7 @@ const Testimonials = () => (
 
 export const metadata: Metadata = {
   title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
-  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochterfirma der Solar Komfort GmbH mit über 5.000 zufriedenen Kunden.",
+  description: "Professionelle Gebäudereinigung, Unterhaltsreinigung, Industriereinigung und Facility Management. Tochter der Solar Komfort GmbH mit über 500 zufriedenen Kunden in der Region.",
   keywords: "Gebäudereinigung, Büroreinigung, Industriereinigung, Dachreinigung, Fassadenreinigung, Grundreinigung, Objektbetreuung, Berlin, Komfort Gebäudeservice24",
   openGraph: {
     title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Clean Komfort Gebäudeservice24 GmbH - Ihre Gebäudereinigung als Komplettlösung",
-    description: "Tochterfirma der Solar Komfort GmbH. Über 5.000 zufriedene Kunden. Komplettlösungen aus einer Hand.",
+    description: "Tochter der Solar Komfort GmbH. Über 500 zufriedene Kunden in Darmstadt & Region. Komplettlösungen aus einer Hand.",
     images: ["/img/flux/kunden-dachreinigung-1.webp"]
   },
   alternates: {
@@ -641,7 +641,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
-                <strong>Einer von 5.000+ Kunden:</strong> Authentische Referenz - so arbeiten wir für zufriedene Kunden seit Jahren.
+                <strong>Beispiel einer Dachreinigung:</strong> So sieht unsere professionelle Arbeit aus - Vorher und Nachher in Darmstadt und der Region.
               </p>
             </div>
           </div>

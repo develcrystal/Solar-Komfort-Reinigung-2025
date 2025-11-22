@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Schulreinigung - Saubere Lernumgebungen | Komfort Gebäudeservice24',
     description: 'Professionelle Reinigung für Schulen – hygienisch und kindgerecht. Fordern Sie jetzt Ihr Angebot an!',
-    images: ['/img/kundenbilder/Reinigung.png'],
+    images: ['/img/kundenbilder/Reinigung.webp'],
     type: 'website',
     locale: 'de_DE',
     siteName: 'Komfort Gebäudeservice24 GmbH',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Schulreinigung - Komfort Gebäudeservice24',
     description: 'Saubere Schulen für gesundes Lernen. Professionelle Reinigungsdienste.',
-    images: ['/img/kundenbilder/Reinigung.png'],
+    images: ['/img/kundenbilder/Reinigung.webp'],
   },
 }
 
@@ -36,7 +36,7 @@ export default function Schulreinigung() {
       <ServiceHeader
         title="SCHULREINIGUNG"
         description="Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards."
-        imageSrc="/img/kundenbilder/Reinigung.png"
+        imageSrc="/img/kundenbilder/Reinigung.webp"
         imageAlt="Schulreinigung - Saubere und hygienische Lernumgebungen"
       />
 
@@ -270,7 +270,7 @@ export default function Schulreinigung() {
       />
 
       <CtaSection
-        backgroundImage="/img/kundenbilder/Reinigung.png"
+        backgroundImage="/img/kundenbilder/Reinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für Schulreinigung"
         title="Bereit für eine saubere Schule?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

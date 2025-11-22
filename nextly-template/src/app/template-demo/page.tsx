@@ -53,7 +53,7 @@ export default function TemplateDemo() {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">1. Hero Section</h3>
           <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden">
             <Image 
-              src="/img/kundenbilder/Büro-Reinigung.png"
+              src="/img/kundenbilder/Büro-Reinigung.webp"
               alt="Hero Section Beispiel" 
               fill
               className="object-cover"
@@ -80,7 +80,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/kundenbilder/Fassaden-Reingung.png"
+                  src="/img/kundenbilder/Fassaden-Reingung.webp"
                   alt="Fassadenreinigung"
                   fill
                   className="object-cover"
@@ -100,7 +100,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/kundenbilder/Dachreinigung.png"
+                  src="/img/kundenbilder/Dachreinigung.webp"
                   alt="Dachreinigung"
                   fill
                   className="object-cover"
@@ -120,7 +120,7 @@ export default function TemplateDemo() {
             <div className="bg-white dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600 overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/img/kundenbilder/Industriereinigung.png"
+                  src="/img/kundenbilder/Industriereinigung.webp"
                   alt="Industriereinigung"
                   fill
                   className="object-cover"
@@ -154,37 +154,37 @@ export default function TemplateDemo() {
                 id: 1,
                 title: 'Kontakt & Beratung',
                 description: 'Unverbindliche Erstberatung und Terminvereinbarung für eine Vor-Ort-Besichtigung.',
-                image: '/img/kundenbilder/Büro-Reinigung (1).png'
+                image: '/img/kundenbilder/Büro-Reinigung (1).webp'
               },
               {
                 id: 2,
                 title: 'Dachanalyse & Angebot',
                 description: 'Detaillierte Analyse des Dachs und Erstellung eines unverbindlichen Angebots.',
-                image: '/img/kundenbilder/Grundreinigung.png'
+                image: '/img/kundenbilder/Grundreinigung.webp'
               },
               {
                 id: 3,
                 title: 'Vorbereitung & Reinigung',
                 description: 'Gründliche Reinigung und Vorbereitung der Dachfläche für die Beschichtung.',
-                image: '/img/kundenbilder/Reinigung.png'
+                image: '/img/kundenbilder/Reinigung.webp'
               },
               {
                 id: 4,
                 title: 'Ausbesserung & Reparatur',
                 description: 'Fachgerechte Ausbesserung von Schäden und Rissen im Dach.',
-                image: '/img/kundenbilder/Entrümpelung.png'
+                image: '/img/kundenbilder/Entrümpelung.webp'
               },
               {
                 id: 5,
                 title: 'Beschichtungsauftrag',
                 description: 'Auftrag der speziellen Dachbeschichtung in mehreren Schichten.',
-                image: '/img/kundenbilder/Dachbeschichtung.png'
+                image: '/img/kundenbilder/Dachbeschichtung.webp'
               },
               {
                 id: 6,
                 title: 'Qualitätskontrolle & Übergabe',
                 description: 'Abschließende Kontrolle und Übergabe der fertiggestellten Dachbeschichtung.',
-                image: '/img/kundenbilder/Dachreinigung Resultat!.png'
+                image: '/img/kundenbilder/Dachreinigung Resultat!.webp'
               }
             ].map((step) => (
               <div 

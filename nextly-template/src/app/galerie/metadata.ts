@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere Projektgalerie mit Vorher‑Nachher‑Bildern unserer professionellen Dienstleistungen.",
     url: "https://www.komfort-gs24.de/galerie",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

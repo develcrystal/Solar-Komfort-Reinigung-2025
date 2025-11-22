@@ -55,7 +55,7 @@ const imageData = [
     category: "Dachreinigung" 
   },
   { 
-    src: "/img/flux/dach-reinigung-prozess6.jpg", 
+    src: "/img/flux/dach-reinigung-prozess6.webp", 
     alt: "Dach Reinigung Prozess 6", 
     category: "Dachreinigung" 
   },
@@ -111,12 +111,12 @@ const imageData = [
     category: "Solaranlagenreinigung" 
   },
   { 
-    src: "/img/flux/solaranlagenreinigung-prozess.jpg", 
+    src: "/img/flux/solaranlagenreinigung-prozess.webp", 
     alt: "Solaranlagenreinigung Prozess", 
     category: "Solaranlagenreinigung" 
   },
   { 
-    src: "/img/flux/solaranlagenreinigung-prozess2.png", 
+    src: "/img/flux/solaranlagenreinigung-prozess2.webp", 
     alt: "Solaranlagenreinigung Prozess 2", 
     category: "Solaranlagenreinigung" 
   },
@@ -185,7 +185,7 @@ const imageData = [
   
   // Team
   { 
-    src: "/img/flux/team-geschaeftsfuehrer.png", 
+    src: "/img/flux/team-geschaeftsfuehrer.webp", 
     alt: "Team Geschäftsführer", 
     category: "Team" 
   },

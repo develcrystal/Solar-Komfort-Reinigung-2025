@@ -6,6 +6,6 @@ export const metadata = {
     title: "Angebot – Komfort Gebäudeservice24",
     description: "Entdecken Sie unser umfassendes Serviceangebot für Gebäudereinigung und mehr.",
     url: "https://www.komfort-gs24.de/angebot",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

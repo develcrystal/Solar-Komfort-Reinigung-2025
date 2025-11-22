@@ -234,7 +234,7 @@ export default function Kostenrechner() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Dachreinigung Resultat!.png"
+            src="/img/kundenbilder/Dachreinigung Resultat!.webp"
             alt="Kostenrechner - Solar Komfort"
             fill
             className="object-cover brightness-50"

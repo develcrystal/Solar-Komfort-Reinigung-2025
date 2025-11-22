@@ -42,7 +42,7 @@ export default function Gartenpflege() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Gartenpflege (1).png"
+            src="/img/kundenbilder/Gartenpflege (1).webp"
             alt="Gartenpflege - Professionelle Gartenbetreuung in Darmstadt"
             fill
             className="object-cover brightness-50"

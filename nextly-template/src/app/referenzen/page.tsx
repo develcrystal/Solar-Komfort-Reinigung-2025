@@ -71,15 +71,15 @@ export default function Referenzen() {
   // Bildslider für Firmenfahrzeuge
   const firmenfahrzeugeImages = [
     {
-      src: "/img/flux/einsatz-beim-kunden1.png",
+      src: "/img/flux/einsatz-beim-kunden1.webp",
       alt: "Einsatz beim Kunden mit Firmenfahrzeug"
     },
     {
-      src: "/img/flux/firmenfahrzeug-solar-komfort4.png",
+      src: "/img/flux/firmenfahrzeug-solar-komfort4.webp",
       alt: "Firmenfahrzeug Solar Komfort"
     },
     {
-      src: "/img/flux/unser-furhpark.png",
+      src: "/img/flux/unser-furhpark.webp",
       alt: "Unser Fuhrpark"
     }
   ];
@@ -89,7 +89,7 @@ export default function Referenzen() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/flux/einsatz-beim-kunden1.png"
+            src="/img/flux/einsatz-beim-kunden1.webp"
             alt="Referenzen - Solar Komfort"
             fill
             className="object-cover brightness-50"

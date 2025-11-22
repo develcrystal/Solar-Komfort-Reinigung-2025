@@ -17,7 +17,7 @@ export default function Fassadenreinigung() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Fassaden-Reingung.png"
+            src="/img/kundenbilder/Fassaden-Reingung.webp"
             alt="Fassadenreinigung & Impregnierung - Professioneller Arbeiter reinigt Fassade"
             fill
             className="object-cover brightness-[0.8]"

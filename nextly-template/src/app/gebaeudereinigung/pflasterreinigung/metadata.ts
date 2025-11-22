@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässige Pflasterreinigung für saubere und gepflegte Außenbereiche.",
     url: "https://www.komfort-gs24.de/pflasterreinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

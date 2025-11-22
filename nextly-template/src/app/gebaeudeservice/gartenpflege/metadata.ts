@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässigen Gartenpflegedienste für gesunde und schöne Grünanlagen.",
     url: "https://www.komfort-gs24.de/gartenpflege",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

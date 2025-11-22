@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Lernen Sie das Unternehmen hinter Komfort Gebäudeservice24 kennen – Werte, Team und Servicequalität.",
     url: "https://www.komfort-gs24.de/unternehmen",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

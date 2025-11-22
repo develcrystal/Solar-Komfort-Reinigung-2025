@@ -51,7 +51,7 @@ export default function Industriereinigung() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Industriereinigung (1).png"
+            src="/img/kundenbilder/Industriereinigung (1).webp"
             alt="Industriereinigung - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"
@@ -255,7 +255,7 @@ export default function Industriereinigung() {
 
       {/* CTA Section - Vollbreites Bild mit Text-Overlay */}
       <CtaSection 
-        backgroundImage="/img/flux/industriereinigung.png"
+        backgroundImage="/img/flux/industriereinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für Industriereinigung"
         title="Bereit für professionelle Industriereinigung?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

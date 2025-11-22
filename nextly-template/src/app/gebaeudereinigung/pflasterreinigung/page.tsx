@@ -141,7 +141,7 @@ export default function Pflasterreinigung() {
       </div>
 
       <CtaSection
-        backgroundImage="/img/kundenbilder/Pflaster-stein-Reinigung.png"
+        backgroundImage="/img/kundenbilder/Pflaster-stein-Reinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für Pflasterreinigung"
         title="Bereit für saubere Außenflächen?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."

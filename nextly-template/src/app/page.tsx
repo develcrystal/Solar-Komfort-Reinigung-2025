@@ -450,7 +450,7 @@ export default function Home() {
               {/* Mobile-Version: Zentrales Bild (lg:hidden) */}
               <div className="lg:hidden relative h-[500px] sm:h-[600px] md:h-[700px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/_a_erstelle_auder_tabel.png"
+                  src="/_a_erstelle_auder_tabel.webp"
                   alt="Der Unterschied ist offensichtlich - Vergleich Komfort Gebäudeservice24"
                   fill
                   className="object-cover"
@@ -468,7 +468,7 @@ export default function Home() {
         <section className="relative py-20 sm:py-24 md:py-28 lg:py-32 w-full">
           <div className="absolute inset-0 z-0">
             <Image 
-              src="/img/kundenbilder/buero-reinigung-profi.png"
+              src="/img/kundenbilder/buero-reinigung-profi.webp"
               alt="Professionelle Gebäudereinigung Darmstadt Frankfurt - Komfort Gebäudeservice24 Qualitätsversprechen"
               fill
               className="object-cover brightness-50"
@@ -602,7 +602,7 @@ export default function Home() {
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 1</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/img/flux/kunden-dachreinigung-vorher-nachher-1.jpg"
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-1.webp"
                   alt="Echtes Kundenprojekt: Dachreinigung Vorher/Nachher - dramatische Verbesserung"
                   width={600}
                   height={400}
@@ -618,7 +618,7 @@ export default function Home() {
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 2</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/img/flux/kunden-dachreinigung-vorher-nachher-2.jpg"
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-2.webp"
                   alt="Weiteres echtes Kundenprojekt: Dachreinigung Vorher/Nachher"
                   width={600}
                   height={400}
@@ -634,7 +634,7 @@ export default function Home() {
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">Dachreinigung Projekt 3</h3>
               <div className="relative overflow-hidden rounded-xl shadow-lg">
                 <Image
-                  src="/img/flux/kunden-dachreinigung-vorher-nachher-3.jpg"
+                  src="/img/flux/kunden-dachreinigung-vorher-nachher-3.webp"
                   alt="Drittes echtes Kundenprojekt: Dachreinigung Vorher/Nachher"
                   width={600}
                   height={400}
@@ -702,7 +702,7 @@ export default function Home() {
       {/* Call-to-Action - Fullwidth Layout */}
       <div id="kontakt" className="w-full">
         <CtaSection
-          backgroundImage="/img/kundenbilder/buero-reinigung-profi.png"
+          backgroundImage="/img/kundenbilder/buero-reinigung-profi.webp"
           backgroundAlt="Professionelle Büroreinigung - Kontaktieren Sie uns für Ihr kostenloses Angebot"
           title="Bereit für professionelle Gebäudereinigung?"
           description="Vereinbaren Sie noch heute Ihren kostenlosen Beratungstermin! Unsere Gründer Mohamed Kaddouri & Abdelhafid Hajjout vereinen jahrelange Erfahrung aus Handwerk, Solartechnik und professioneller Gebäudebetreuung. Als Tochterunternehmen der Solar Komfort GmbH sind wir Ihr zuverlässiger Partner."

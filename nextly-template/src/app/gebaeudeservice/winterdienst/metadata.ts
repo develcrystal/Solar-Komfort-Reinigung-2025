@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unseren professionellen Winterdienst für sichere und schnee‑freie Zugänge.",
     url: "https://www.komfort-gs24.de/winterdienst",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

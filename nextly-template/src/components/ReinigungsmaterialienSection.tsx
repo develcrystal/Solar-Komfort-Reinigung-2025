@@ -20,7 +20,7 @@ export const ReinigungsmaterialienSection = () => {
           <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 text-center hover-tile">
             <div className="relative h-32 mb-4">
               <Image
-                src="/img/logos/meyer-logo.png" // Annahme: Logo hinzufügen oder Platzhalter
+                src="/img/logos/meyer-logo.webp" // Annahme: Logo hinzufügen oder Platzhalter
                 alt="Meyer Reinigungsmittel"
                 fill
                 className="object-contain mx-auto"
@@ -36,7 +36,7 @@ export const ReinigungsmaterialienSection = () => {
           <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 text-center hover-tile">
             <div className="relative h-32 mb-4">
               <Image
-                src="/img/logos/cvs-logo.png" // Annahme: Logo hinzufügen
+                src="/img/logos/cvs-logo.webp" // Annahme: Logo hinzufügen
                 alt="CVS Desinfektionsmittel"
                 fill
                 className="object-contain mx-auto"
@@ -52,7 +52,7 @@ export const ReinigungsmaterialienSection = () => {
           <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 text-center hover-tile">
             <div className="relative h-32 mb-4">
               <Image
-                src="/img/logos/tuev-logo.png" // Annahme: Logo hinzufügen
+                src="/img/logos/tuev-logo.webp" // Annahme: Logo hinzufügen
                 alt="TÜV Zertifizierung"
                 fill
                 className="object-contain mx-auto"

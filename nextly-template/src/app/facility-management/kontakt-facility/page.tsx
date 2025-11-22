@@ -10,7 +10,7 @@ export default function KontaktFacility() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Reinigung.png"
+            src="/img/kundenbilder/Reinigung.webp"
             alt="Kontakt für Facility Management - Direkter Kundenbezug"
             fill
             className="object-cover brightness-[0.8]"

@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere professionellen Industriereinigungs‑Dienstleistungen für höchste Sauberkeit in Ihrem Betrieb.",
     url: "https://www.komfort-gs24.de/industriereinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

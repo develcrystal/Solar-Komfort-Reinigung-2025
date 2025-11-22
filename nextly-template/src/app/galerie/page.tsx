@@ -18,7 +18,7 @@ export default function Galerie() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg"
+            src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).webp"
             alt="Bildergalerie - Referenzen unserer Arbeit"
             fill
             className="object-cover brightness-[0.8]"

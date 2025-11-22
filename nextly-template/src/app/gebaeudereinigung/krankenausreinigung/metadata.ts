@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere professionelle Krankenausreinigung für ein sicheres und sauberes Umfeld in Gesundheitseinrichtungen.",
     url: "https://www.komfort-gs24.de/krankenausreinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

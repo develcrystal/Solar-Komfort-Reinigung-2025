@@ -23,7 +23,7 @@ export default function Dachreinigung() {
       step: 2,
       title: "Schonende Reinigung beginnt",
       description: "Professionelle Reinigung mit schonenden Niederdruckverfahren. Die Verschmutzungen werden systematisch entfernt, ohne die Dachziegel zu beschädigen.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).jpg",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (2).webp",
       imageAlt: "Kundenprojekt: Dachreinigung in Arbeit mit professioneller Technik",
       bgColor: "bg-green-600"
     },
@@ -31,7 +31,7 @@ export default function Dachreinigung() {
       step: 3,
       title: "Zwischenergebnis sichtbar",
       description: "Deutlicher Fortschritt erkennbar - ein Großteil der Verschmutzungen ist bereits entfernt. Das Dach zeigt wieder seine ursprüngliche Farbe.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).webp",
       imageAlt: "Kundenprojekt: Dachreinigung Zwischenergebnis mit deutlicher Verbesserung",
       bgColor: "bg-orange-600"
     },
@@ -39,7 +39,7 @@ export default function Dachreinigung() {
       step: 4,
       title: "Feinschliff und Details",
       description: "Nach dem Zwischenergebnis werden schwer zugängliche Stellen und feine Details professionell bearbeitet, um ein perfektes Zwischenresultat zu erreichen.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (5).jpg",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (5).webp",
       imageAlt: "Kundenprojekt: Feinschliff und Detailarbeit bei der Dachreinigung",
       bgColor: "bg-yellow-600"
     },
@@ -47,7 +47,7 @@ export default function Dachreinigung() {
       step: 5,
       title: "Solaranlagen-Installation",
       description: "Montage auf gereinigtem und beschichtetem Dach für optimale Stabilität und Langlebigkeit der Anlage.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (4).jpg",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (4).webp",
       imageAlt: "Kundenprojekt: Solaranlagen-Installation auf gereinigtem und beschichtetem Dach",
       bgColor: "bg-purple-600"
     },
@@ -55,7 +55,7 @@ export default function Dachreinigung() {
       step: 6,
       title: "Perfektes Endergebnis",
       description: "Makelloses Dach wie neu. Qualität der Reinigung sichtbar.",
-      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (6).jpg",
+      imageSrc: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (6).webp",
       imageAlt: "Kundenprojekt: Perfekt gereinigtes Dach - Endergebnis der professionellen Dachreinigung",
       bgColor: "bg-red-600"
     }
@@ -67,7 +67,7 @@ export default function Dachreinigung() {
       <ServiceHeader
         title="DACHREINIGUNG & BESCHICHTUNG"
         description="Professionelle Dachreinigung und Beschichtung für ein gepflegtes Erscheinungsbild und längere Haltbarkeit Ihres Daches."
-        imageSrc="/img/kundenbilder/Dachreinigung.png"
+        imageSrc="/img/kundenbilder/Dachreinigung.webp"
         imageAlt="Dachreinigung Vorher/Nachher - Beeindruckende Transformation durch professionelle Dachreinigung"
       />
 
@@ -172,7 +172,7 @@ export default function Dachreinigung() {
 
       {/* Call-to-Action */}
       <CtaSection
-        backgroundImage="/img/kundenbilder/Dachreinigung.png"
+        backgroundImage="/img/kundenbilder/Dachreinigung.webp"
         backgroundAlt="Kontaktieren Sie uns für professionelle Dachreinigung"
         title="Bereit für ein sauberes Dach?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin für Ihre Dachreinigung."

@@ -139,7 +139,7 @@ export default function UeberUns() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center text-center">
                   <Image 
-                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).jpg"
+                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).webp"
                     alt="Unsere Reinigungskräfte bei der Arbeit an einer Fassade"
                     width={180}
                     height={180}
@@ -153,7 +153,7 @@ export default function UeberUns() {
                 
                 <div className="flex flex-col items-center text-center">
                   <Image 
-                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).jpg"
+                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).webp"
                     alt="Unser Team bei der professionellen Reinigung"
                     width={180}
                     height={180}
@@ -196,7 +196,7 @@ export default function UeberUns() {
               {/* Linke Spalte - Großes Bild */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/img/kundenbilder/team-model-reinigung.png"
+                  src="/img/kundenbilder/team-model-reinigung.webp"
                   alt="Unser freundliches Teammitglied bei der Reinigungsarbeit"
                   fill
                   className="object-cover"
@@ -321,7 +321,7 @@ export default function UeberUns() {
                 <div>
                   <div className="relative h-80 mb-6">
                     <Image 
-                      src="/img/flux/firmenfahrzeug-solar-komfort4.png"
+                      src="/img/flux/firmenfahrzeug-solar-komfort4.webp"
                       alt="Firmenfahrzeug Solar Komfort"
                       fill
                       className="rounded-xl object-cover"

@@ -42,7 +42,7 @@ export default function Entrümpelung() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Entrümpelung.png"
+            src="/img/kundenbilder/Entrümpelung.webp"
             alt="Entrümpelung - HK Komfort Facility & Gebäudeservice GmbH"
             fill
             className="object-cover brightness-50"

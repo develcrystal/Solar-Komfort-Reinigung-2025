@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie eine Auswahl an Vorher‑Nachher‑Bildern unserer professionellen Reinigungs- und Serviceleistungen.",
     url: "https://www.komfort-gs24.de/referenzen/galerie",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

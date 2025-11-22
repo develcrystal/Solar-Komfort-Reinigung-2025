@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässigen Entrümpelungs‑ und Entsorgungsservices für ein sauberes Umfeld.",
     url: "https://www.komfort-gs24.de/entruempelung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

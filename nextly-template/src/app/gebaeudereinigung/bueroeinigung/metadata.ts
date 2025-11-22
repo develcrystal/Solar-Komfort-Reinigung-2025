@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description:
       "Professionelle Büroreinigung für Unternehmen. Zuverlässig, gründlich und flexibel nach Ihren Bedürfnissen.",
     images: [
-      "https://komfort-gebaeudeservice24.de/img/flux/bueroeinigung-twitter.jpg"
+      "https://komfort-gebaeudeservice24.de/img/flux/bueroeinigung-twitter.webp"
     ]
   },
   alternates: {

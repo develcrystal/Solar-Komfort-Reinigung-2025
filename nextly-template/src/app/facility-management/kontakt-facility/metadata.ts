@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Nehmen Sie Kontakt auf für professionelle Facility‑Service‑Leistungen.",
     url: "https://www.komfort-gs24.de/kontakt-facility",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

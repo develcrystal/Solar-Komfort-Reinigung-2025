@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässige Fassadenreinigung für ein gepflegtes Außenbild.",
     url: "https://www.komfort-gs24.de/fassadenreinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

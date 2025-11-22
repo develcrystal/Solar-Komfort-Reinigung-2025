@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässige Haushaltsreinigung für ein strahlend sauberes Zuhause.",
     url: "https://www.komfort-gs24.de/haushaltsreinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

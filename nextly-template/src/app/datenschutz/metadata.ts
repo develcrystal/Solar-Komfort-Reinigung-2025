@@ -8,6 +8,6 @@ export const metadata = {
     description:
       "Erfahren Sie, wie wir Ihre Daten schützen und welche Rechte Sie im Rahmen des Datenschutzes haben.",
     url: "https://www.komfort-gs24.de/datenschutz",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

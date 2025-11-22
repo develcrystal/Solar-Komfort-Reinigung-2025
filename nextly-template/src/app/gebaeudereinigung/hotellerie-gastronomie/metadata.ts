@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere professionellen Reinigungsservices für Hotels und Gastronomiebetriebe.",
     url: "https://www.komfort-gs24.de/hotellerie-gastronomie",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

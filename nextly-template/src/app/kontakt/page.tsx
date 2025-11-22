@@ -36,7 +36,7 @@ export default function Kontakt() {
       <div className="relative h-[35vh] sm:h-[40vh] md:h-[45vh] min-h-[280px] sm:min-h-[300px] md:min-h-[350px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Gartenpflege (1).png"
+            src="/img/kundenbilder/Gartenpflege (1).webp"
             alt="Kontakt - Clean Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"

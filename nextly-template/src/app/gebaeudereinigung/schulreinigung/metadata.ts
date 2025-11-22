@@ -9,6 +9,6 @@ export const metadata = {
     description:
       "Entdecken Sie unsere zuverlässige Schulreinigung für sichere und hygienische Lernräume.",
     url: "https://www.komfort-gs24.de/schulreinigung",
-    images: [{ url: "/img/hero.png" }],
+    images: [{ url: "/img/hero.webp" }],
   },
 };

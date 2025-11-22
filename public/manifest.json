@@ -1,0 +1,43 @@
+{
+  "name": "Komfort Gebäudeservice24 - Professionelle Gebäudereinigung",
+  "short_name": "Komfort Service24",
+  "description": "Professionelle Gebäudereinigung, Büroreinigung, Industriereinigung und Hausmeisterservice in Darmstadt und dem Rhein-Main-Gebiet",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["business", "utilities"],
+  "lang": "de",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon_sk_blue.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon_sk_blue.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kostenrechner",
+      "short_name": "Kosten",
+      "description": "Berechnen Sie die Kosten für Ihre Reinigung",
+      "url": "/kostenrechner",
+      "icons": [{ "src": "/favicon_sk_blue.webp", "sizes": "96x96" }]
+    },
+    {
+      "name": "Kontakt",
+      "short_name": "Kontakt",
+      "description": "Kontaktieren Sie uns für ein Angebot",
+      "url": "/kontakt",
+      "icons": [{ "src": "/favicon_sk_blue.webp", "sizes": "96x96" }]
+    }
+  ]
+}

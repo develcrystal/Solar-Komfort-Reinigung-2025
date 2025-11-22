@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "vision-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vision-mcp-server"
+      ],
+      "env": {
+        "MODELSCOPE_TOKEN": "ms-e4a70e9c-400c-4137-ba49-3e73b577a6de",
+        "MODELSCOPE_MODEL": "Qwen/Qwen3-VL-30B-A3B-Instruct"
+      }
+    }
+  }
+}

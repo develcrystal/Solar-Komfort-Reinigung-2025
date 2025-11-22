@@ -1,0 +1,438 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import global section spacing */
+@import '../styles/sectionSpacing.module.css';
+
+
+
+@layer base {
+  html,
+  body {
+    @apply bg-white dark:bg-gray-900;
+  }
+}
+
+
+/* Mobile-first responsive padding adjustments */
+.main-content {
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-top: 1rem;
+  }
+}
+/* Navbar background with class-based dark mode support */
+.navbar-container {
+  @apply bg-white dark:bg-gray-900 w-full;
+}
+
+/* Navbar specific styles to avoid global CSS conflicts */
+.navbar-container .flex {
+  display: flex !important;
+}
+
+/* Ensure flex items don't get compressed */
+.navbar-container .flex > * {
+  flex-shrink: 0 !important;
+  min-width: 0 !important;
+}
+
+/* Specific fix for navigation items */
+.navbar-container nav .flex.gap-x-8 > * {
+  flex-shrink: 0 !important;
+  min-width: auto !important;
+}
+
+/* Ensure navbar container doesn't restrict width */
+.navbar-container nav {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Fix for Popover.Group inside navbar */
+.navbar-container .flex.gap-x-8 {
+  display: flex !important;
+  gap: 2rem !important;
+  align-items: center !important;
+}
+
+/* Ensure individual nav items don't shrink */
+.navbar-container .flex.gap-x-8 > * {
+  flex-shrink: 0 !important;
+  min-width: auto !important;
+}
+
+/* Pulsing animation for service cards */
+@keyframes pulse-once {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.1);
+  }
+  70% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* Hover effects for linked tiles and cards */
+.hover-tile {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.hover-tile:hover {
+  @apply shadow-lg transform -translate-y-1;
+  animation: pulse-once 1.5s ease-out;
+}
+
+.animate-pulse-once:hover {
+  animation: pulse-once 1.5s ease-out;
+}
+
+/* Global equal height for grid-cols-2 boxes in desktop mode */
+@media (min-width: 768px) {
+  [class*="grid-cols-2"]:not(.navbar-container *) > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Equal height for ExtendedProcessSteps cards */
+@media (min-width: 1024px) {
+  .grid-xl\\:grid-cols-6 {
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+  .ProcessStepCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .ProcessStepCard > div:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Global text length rules for boxes and cards */
+.ProcessStepCard h3 {
+  max-height: 3em;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.ProcessStepCard p {
+  max-height: 6em;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/* For other box texts */
+.grid > div p {
+  line-height: 1.5;
+  max-height: 6em;
+  overflow: hidden;
+}
+
+.grid > div h3 {
+  max-height: 3em;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+/* ===== GLOBAL MOBILE TEXT OVERFLOW FIX ===== */
+/* Prevent text overflow on very small mobile screens (320px - 480px) */
+
+@media (max-width: 480px) {
+  /* Force text wrapping for all text elements */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  /* Paragraph text wrapping */
+  p, span, div {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Container overflow protection */
+  .container, [class*="container"] {
+    overflow-x: hidden;
+    word-wrap: break-word;
+  }
+
+  /* Text content in cards and boxes */
+  [class*="card"]:not(.navbar-container *), [class*="box"]:not(.navbar-container *), .grid > div:not(.navbar-container *), .flex > div:not(.navbar-container *):not(nav *) {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: auto; /* Prevent flex/grid items from overflowing */
+  }
+
+  /* Specific component fixes */
+  .TwoColContent p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Service grid responsiveness */
+  .grid-cols-1 > div, .grid-cols-2 > div, .grid-cols-3 > div {
+    min-width: 0;
+    word-wrap: break-word;
+  }
+
+  /* Prevent button text overflow */
+  button, .btn {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* List items */
+  li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Text content with max-width for very long words */
+  .ProcessStepCard h3, .ProcessStepCard p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Global text container overflow */
+  .text-content, [class*="text"] {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+/* Additional fixes for small mobile screens (480px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+  /* Moderate text wrapping for medium-small screens */
+  h1, h2, h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Container protection */
+  .container {
+    overflow-x: hidden;
+  }
+}
+
+/* ===== GLOBAL RESPONSIVE TEXT SIZES ===== */
+/* Ensure text remains readable on very small screens */
+@media (max-width: 380px) {
+  /* Reduce heading sizes significantly for very small screens */
+  h1 {
+    @apply text-xl;
+    font-size: 1.25rem !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    @apply text-lg;
+    font-size: 1.125rem !important;
+    line-height: 1.3;
+  }
+
+  h3 {
+    @apply text-base;
+    font-size: 1rem !important;
+    line-height: 1.3;
+  }
+
+  h4 {
+    @apply text-sm;
+    font-size: 0.875rem !important;
+    line-height: 1.4;
+  }
+
+  h5, h6 {
+    @apply text-xs;
+    font-size: 0.75rem !important;
+    line-height: 1.4;
+  }
+}
+
+/* ===== GLOBAL CONTAINER IMPROVEMENTS ===== */
+/* Better container behavior across all screen sizes */
+.container {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1400px; /* Increased max width for better navigation space */
+  }
+}
+
+/* Navbar specific container */
+.navbar-container {
+  max-width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .navbar-container {
+    max-width: 1600px; /* Even wider for navbar */
+  }
+}
+
+/* ===== ENHANCED MOBILE TEXT OVERFLOW FIXES ===== */
+/* Additional comprehensive fixes for very small mobile screens */
+
+/* Fix for long service titles and headings on very small screens */
+@media (max-width: 380px) {
+  /* Service titles and main headings */
+  .service-title, .section-title h2, .section-title h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Text content in service cards */
+  .service-description, .feature-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Button text on very small screens */
+  .btn-text, button span {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+}
+
+/* Fix for medium-small screens (381px - 480px) */
+@media (min-width: 381px) and (max-width: 480px) {
+  /* Moderate text adjustments */
+  .service-title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .service-description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Enhanced container overflow protection */
+@media (max-width: 640px) {
+  /* All containers should prevent horizontal overflow */
+  .container, [class*="container"], .max-w-6xl, .max-w-4xl, .max-w-3xl {
+    overflow-x: hidden;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Grid items should not overflow */
+  .grid > div:not(.navbar-container *):not(nav *), .flex > div:not(.navbar-container *):not(nav *) {
+    min-width: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Service card content */
+  .service-card h3, .service-card h4 {
+    word-break: break-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  .service-card p {
+    word-break: break-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Specific fixes for LeistungenImUberblick component */
+@media (max-width: 480px) {
+  .leistungen-title {
+    font-size: 1.75rem !important;
+    line-height: 1.2;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .leistungen-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .service-card-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .service-card-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* ===== GLOBAL TEXT WRAPPING UTILITIES ===== */
+/* Utility classes for manual text overflow control */
+.text-wrap-mobile {
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.text-ellipsis-mobile {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Force break very long words */
+.break-all-mobile {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+/* ===== GLOBAL RESPONSIVE IMPROVEMENTS ===== */
+/* Ensure all text elements respect container boundaries */
+
+/* Override for images to maintain aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
+}

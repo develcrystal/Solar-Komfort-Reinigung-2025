@@ -1,0 +1,178 @@
+import { Container } from "@/components/Container";
+import { SectionTitle } from "@/components/SectionTitle";
+import { Benefits } from "@/components/Benefits";
+import { Video } from "@/components/Video";
+import { Testimonials } from "@/components/Testimonials";
+import { Faq } from "@/components/Faq";
+import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+import { CtaSection } from "@/components/CtaSection";
+import { ProcessStep } from "@/components/ProcessStep";
+import { ImageSlider } from "@/components/ImageSlider";
+
+import { benefitOne, benefitTwo } from "@/components/data";
+
+export const metadata: Metadata = {
+  title: "Solar Komfort GmbH - Dach- & Fassadenreinigung Experten",
+  description: "Professionelle Dach- und Fassadenreinigung mit modernster Technik. Verlängern Sie die Lebensdauer Ihrer Immobilie mit unseren spezialisierten Reinigungsverfahren.",
+  keywords: "Dachreinigung, Fassadenreinigung, Dachbeschichtung, Darmstadt, Nano-Effekt, Immobilienpflege",
+  openGraph: {
+    title: "Solar Komfort GmbH - Dach- & Fassadenreinigung Experten",
+    description: "Professionelle Dach- und Fassadenreinigung mit modernster Technik. Verlängern Sie die Lebensdauer Ihrer Immobilie mit unseren spezialisierten Reinigungsverfahren.",
+    url: "https://solar-komfort.de/startseite2",
+    siteName: "Solar Komfort GmbH",
+    locale: "de_DE",
+    type: "website",
+  },
+};
+
+const processSteps = [
+  {
+    step: 1,
+    title: "Vorbereitung & Reinigung",
+    description: "Gründliche Reinigung des Daches von Moos, Flechten und Verschmutzungen. Reparatur kleiner Schäden und sorgfältige Vorbereitung der Oberfläche für optimale Haftung.",
+    imageSrc: "/img/flux/dach-reinigung-prozess1.webp",
+    imageAlt: "Vorbereitung und Reinigung"
+  },
+  {
+    step: 2,
+    title: "Grundierung",
+    description: "Auftragen einer speziellen Grundierung, die tief in die Dachoberfläche eindringt. Diese schafft die perfekte Basis für die nachfolgende Beschichtung und verbessert die Haftung.",
+    imageSrc: "/img/flux/dach-beschichtung-prozess2.webp",
+    imageAlt: "Grundierung"
+  },
+  {
+    step: 3,
+    title: "Zweifache Beschichtung",
+    description: "Auftragen von zwei Schichten hochwertiger Nano-Beschichtung für maximalen Schutz. Diese sorgt für Wasserabweisung, UV-Beständigkeit und verhindert neue Moosbildung für viele Jahre.",
+    imageSrc: "/img/flux/dach-beschichtung-prozess3.webp",
+    imageAlt: "Zweifache Beschichtung"
+  }
+];
+
+const referenceImages = [
+  "/img/flux/referenz-einfamilienhaus2.webp",
+  "/img/flux/referenz-einfamilienhaus3.webp",
+  "/img/flux/referenz-einfamilienhaus4.webp",
+  "/img/flux/referenz-einfamilienhaus5.webp",
+  "/img/flux/referenz-gewerbeobjekt1.webp",
+  "/img/flux/referenz-gewerbeobjekt2.webp",
+  "/img/flux/referenz-gewerbeobjekt3.webp"
+];
+
+export default function Startseite2() {
+  return (
+    <>
+      {/* Moderner Hero-Bereich mit klarem Fokus */}
+      <div className="relative h-[80vh] min-h-[600px] w-full">
+        {/* Hintergrundbild mit Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/img/flux/referenz-einfamilienhaus2.webp"
+            alt="Solar Komfort - Dachreinigung und Dachbeschichtung"
+            fill
+            className="object-cover brightness-[0.85]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-900/40"></div>
+        </div>
+        
+        {/* Hero-Content */}
+        <Container className="relative z-10 h-full flex items-center">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white uppercase mb-4 drop-shadow-lg">
+              Professionelle<br />
+              Dachreinigung &<br />
+              Dachbeschichtung
+            </h1>
+            <p className="text-xl md:text-2xl text-white mb-8 drop-shadow-md">
+              Verlängern Sie die Lebensdauer Ihres Daches mit unserer professionellen Reinigung und Nano-Beschichtung.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/kontakt" 
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all"
+              >
+                Kostenfreies Angebot
+              </Link>
+              <Link 
+                href="/dienstleistungen" 
+                className="px-8 py-4 text-lg font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition-all"
+              >
+                Mehr erfahren
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      <Container>
+        {/* Referenzen Slider */}
+        <div className="py-16">
+          <SectionTitle
+            preTitle="Unsere Referenzen"
+            title="Erfolgreich umgesetzte Projekte"
+          >
+            Sehen Sie sich unsere bisherigen Projekte an und überzeugen Sie sich selbst von unserer Arbeit.
+          </SectionTitle>
+          <ImageSlider images={referenceImages} />
+        </div>
+
+        {/* Prozess-Sektion */}
+        <div id="prozess" className="py-16">
+          <SectionTitle
+            preTitle="Unser Prozess"
+            title="So gehen wir bei der Dachbeschichtung vor"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {processSteps.map((step) => (
+              <ProcessStep key={step.step} {...step} />
+            ))}
+          </div>
+        </div>
+
+        {/* Vorteile-Sektion */}
+        <div id="vorteile" className="py-16">
+          <SectionTitle
+            preTitle="Unsere Vorteile"
+            title="Warum Solar Komfort?"
+          />
+          <Benefits data={benefitOne} />
+          <Benefits imgPos="right" data={benefitTwo} />
+        </div>
+
+        {/* Video-Sektion */}
+        <div className="py-16">
+          <Video 
+            videoId="rKtfqb3sKww" 
+            title="Sehen Sie unsere Dachbeschichtung in Aktion"
+          />
+        </div>
+
+        {/* Kundenstimmen */}
+        <div id="kundenstimmen" className="py-16">
+          <SectionTitle
+            preTitle="Kundenstimmen"
+            title="Das sagen unsere Kunden"
+          />
+          <Testimonials />
+        </div>
+
+        {/* FAQ */}
+        <div id="faq" className="py-16">
+          <SectionTitle preTitle="FAQ" title="Häufig gestellte Fragen" />
+          <Faq />
+        </div>
+      </Container>
+      
+      {/* CTA-Sektion */}
+      <CtaSection 
+        backgroundImage="/img/flux/dach-reinigung-prozess3.webp"
+        backgroundAlt="Kontaktieren Sie uns für ein Angebot zur Dachreinigung"
+        title="Bereit für eine professionelle Dachreinigung und Dachbeschichtung?"
+        description="Kontaktieren Sie uns noch heute für eine unverbindliche Beratung zu Ihrer Dachpflege."
+      />
+    </>
+  );
+}

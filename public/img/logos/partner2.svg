@@ -1,0 +1,7 @@
+<svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="80" fill="white"/>
+  <circle cx="75" cy="40" r="25" stroke="#3B82F6" stroke-width="3"/>
+  <path d="M60 40L75 25L90 40" stroke="#3B82F6" stroke-width="3"/>
+  <path d="M75 25V55" stroke="#3B82F6" stroke-width="3"/>
+  <text x="75" y="70" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">ENERGIE PRO</text>
+</svg>

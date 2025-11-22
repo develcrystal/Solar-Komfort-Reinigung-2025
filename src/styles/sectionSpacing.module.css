@@ -1,0 +1,58 @@
+/* Standard section spacing according to CLAUDE.md guidelines */
+.section {
+  @apply py-16 sm:py-20 md:py-24 lg:py-28;
+}
+
+/* Smaller sections with less vertical padding */
+.section-sm {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+/* Larger sections with more vertical padding */
+.section-lg {
+  @apply py-20 md:py-28 lg:py-32;
+}
+
+/* Extra large sections for hero or key sections */
+.section-xl {
+  @apply py-24 md:py-32 lg:py-40;
+}
+
+/* Section with top margin only */
+.section-mt {
+  @apply mt-16 sm:mt-20 md:mt-24 lg:mt-28;
+}
+
+/* Section with bottom margin only */
+.section-mb {
+  @apply mb-16 md:mb-24 lg:mb-28;
+}
+
+/* Consistent gap between sections */
+.section-gap {
+  @apply space-y-16 md:space-y-20 lg:space-y-24;
+}
+
+/* Nested sections with reduced spacing */
+.section-nested {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+/* Add smooth transition for section hovers */
+.section-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Mobile-first responsive spacing - already handled by Tailwind classes above */
+
+/* Add subtle background pattern to alternate sections */
+.section-pattern {
+  @apply relative overflow-hidden;
+}
+
+.section-pattern::before {
+  content: '';
+  @apply absolute inset-0 bg-[url('/img/pattern.svg')] opacity-5 pointer-events-none;
+  background-size: 120px 120px;
+  z-index: -1;
+}

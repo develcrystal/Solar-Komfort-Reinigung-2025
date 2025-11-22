@@ -1,0 +1,94 @@
+{
+  "ide": {
+    "hasSeenNudge": true,
+    "enabled": true
+  },
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@atxtechbro/filesystem-mcp-server"
+      ]
+    },
+    "browsermcp": {
+      "command": "npx",
+      "args": [
+        "@browsermcp/mcp@latest"
+      ]
+    },
+    "bash": {
+      "command": "C:\\Users\\Hill\\.qwen\\mcp\\mcp-bash\\.venv\\Scripts\\uv.exe",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\Users\\Hill\\.qwen\\mcp\\mcp-bash\\server.py"
+      ],
+      "description": "Bash MCP Server - Execute bash commands"
+    },
+    "ssh-mcp": {
+      "command": "npx",
+      "args": [
+        "ssh-mcp",
+        "-y",
+        "--",
+        "--host=ssh4.vast.ai",
+        "--port=19756",
+        "--user=root",
+        "--key=F:\\108Coding\\n8n\\Vast-setup\\vast_key",
+        "--timeout=30000",
+        "--maxChars=none"
+      ]
+    },
+    "vision-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vision-mcp-server"
+      ],
+      "env": {
+        "MODELSCOPE_TOKEN": "ms-e4a70e9c-400c-4137-ba49-3e73b577a6de",
+        "MODELSCOPE_MODEL": "Qwen/Qwen3-VL-30B-A3B-Instruct"
+      }
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "qwen-oauth"
+    },
+    "autoApprove": {
+      "shell": true,
+      "commands": [
+        "ls",
+        "pwd",
+        "cd",
+        "echo",
+        "cat",
+        "grep",
+        "find",
+        "ps",
+        "kill",
+        "mkdir",
+        "cp",
+        "mv",
+        "rm",
+        "chmod",
+        "chown",
+        "dir",
+        "type",
+        "copy",
+        "move",
+        "del",
+        "ping",
+        "ipconfig",
+        "netstat",
+        "tasklist",
+        "taskkill"
+      ]
+    }
+  },
+  "$version": 2
+}

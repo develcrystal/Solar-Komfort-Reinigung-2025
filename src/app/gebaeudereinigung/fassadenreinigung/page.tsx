@@ -17,8 +17,8 @@ export default function Fassadenreinigung() {
       <div className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] min-h-[350px] sm:min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/kundenbilder/Fassaden-Reingung.webp"
-            alt="Fassadenreinigung & Impregnierung - Professioneller Arbeiter reinigt Fassade"
+            src="/img/flux/fassadenreinigung-prozess.webp"
+            alt="Fassadenreinigung & Impregnierung - Professioneller Arbeiter mit Hochdruckreiniger auf Hebebühne reinigt Gebäudefassade"
             fill
             className="object-cover brightness-[0.8]"
             priority
@@ -280,19 +280,19 @@ export default function Fassadenreinigung() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/img/kundenbilder/Fassaden-Reinigung.webp",
-                alt: "Fassadenreinigung Vorher/Nachher - Links verschmutzte Fassade mit Algen und Schmutz, rechts saubere, helle Fassade",
-                label: "Transformation durch Reinigung"
-              },
-              {
-                src: "/img/kundenbilder/Fassaden-Reingung.webp",
-                alt: "Professionelle Fassadenreinigung in Aktion - Arbeiter mit modernem Equipment bei der Niederdruckreinigung",
+                src: "/img/flux/fassadenreinigung-prozess.webp",
+                alt: "Professionelle Fassadenreinigung in Aktion - Arbeiter mit Hochdruckreiniger auf Hebebühne reinigt Gebäudefassade",
                 label: "Professionelle Ausführung"
               },
               {
-                src: "/img/flux/fassadenreinigung.webp",
-                alt: "Saubere Fassade nach professioneller Reinigung - Gebäude strahlt in neuem Glanz",
-                label: "Glänzendes Endergebnis"
+                src: "/img/flux/fassaden-reinigung.webp",
+                alt: "Saubere und glänzende Gebäudefassade nach professioneller Reinigung mit großen Glasfenstern",
+                label: "Sauberes Ergebnis"
+              },
+              {
+                src: "/img/flux/fassadenreinigung-vorher-nachher.webp",
+                alt: "Fassadenreinigung Vorher/Nachher - Links verschmutzte Fassade mit dunklen Flecken und Algen, rechts strahlend weiße, saubere Fassade",
+                label: "Transformation durch Reinigung"
               }
             ].map((image, idx) => (
               <div key={idx} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 sm:h-72">

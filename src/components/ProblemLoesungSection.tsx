@@ -2,6 +2,7 @@
 
 import { Container } from './Container';
 import { SectionTitle } from './SectionTitle';
+import Image from 'next/image';
 
 const ProblemLoesungSection = () => {
   const probleme = [
@@ -86,34 +87,53 @@ const ProblemLoesungSection = () => {
         </SectionTitle>
 
         <div className="mt-12">
-          {/* Problem Section */}
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 mb-12 border-l-4 border-red-500">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-              <svg className="w-8 h-8 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-              Sie kennen das bestimmt...
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {probleme[0].details.map((detail, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <p className="text-gray-700 dark:text-gray-300">{detail}</p>
-                </div>
-              ))}
+          {/* Desktop: Banner Image + Erklärungstext */}
+          <div className="hidden md:block">
+            <div className="mb-12 rounded-2xl overflow-hidden shadow-lg h-80 relative">
+              <Image
+                src="/img/flux/banner-fassadenreinigung.webp"
+                alt="Fassadenreinigung Banner - Das Problem vs. Komfort Gebäudeservice24 Lösung"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 100vw"
+              />
+            </div>
+
+            {/* Erklärungstext unter dem Banner (nur Desktop) */}
+            <div className="mb-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Wir machen es anders - professioneller!
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed">
+                Der Unterschied ist offensichtlich: Während andere Reinigungsfirmen oberflächlich arbeiten und Qualitätsmängel ignorieren,
+                setzen wir auf Transparenz, Zuverlässigkeit und professionelle Tiefenreinigung. Als Tochterfirma der Solar Komfort GmbH
+                mit über 15 Jahren Erfahrung in Handwerk und Gebäudemanagement bringen wir eine komplett andere Herangehensweise mit.
+                Ihre Zufriedenheit ist nicht nur ein Versprechen – sie ist unser Standard.
+              </p>
             </div>
           </div>
 
-          {/* Lösung Section */}
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          {/* Mobile: Banner Table Image */}
+          <div className="md:hidden mb-12 rounded-2xl overflow-hidden shadow-lg relative">
+            <Image
+              src="/img/flux/problem-loesung-tabelle.webp"
+              alt="Problem vs. Lösung Vergleichstabelle - Komfort Gebäudeservice24 vs. andere Reinigungsfirmen"
+              width={600}
+              height={400}
+              className="w-full h-auto object-contain"
+              sizes="(max-width: 768px) 100vw"
+            />
+          </div>
+
+          {/* Mobile: Erklärungstext */}
+          <div className="md:hidden mb-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Wir machen es anders - professioneller!
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Als Tochterfirma der Solar Komfort GmbH haben wir über 15 Jahre daran gearbeitet,
-              diese typischen Branchenprobleme zu lösen. Das macht uns zu Ihrem zuverlässigen Partner.
+            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+              Der Unterschied ist offensichtlich: Während andere Reinigungsfirmen oberflächlich arbeiten und Qualitätsmängel ignorieren,
+              setzen wir auf Transparenz, Zuverlässigkeit und professionelle Tiefenreinigung. Als Tochterfirma der Solar Komfort GmbH
+              mit über 15 Jahren Erfahrung bringen wir eine komplett andere Herangehensweise mit.
             </p>
           </div>
 

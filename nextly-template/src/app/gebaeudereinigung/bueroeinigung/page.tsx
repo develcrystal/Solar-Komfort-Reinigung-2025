@@ -308,6 +308,55 @@ export default function Bueroreinigung() {
       {/* Garantie Section - Eigenständiger Bereich */}
       <GarantieSection />
 
+      {/* Projektgalerie - Büroreinigungen in der Praxis */}
+      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-4">
+              Unsere Büroreinigungsprojekte
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Sehen Sie, wie wir Büroumgebungen in produktive und hygienische Arbeitsräume verwandeln.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                src: "/img/kundenbilder/Büro-Reinigung (1).webp",
+                alt: "Büroreinigung Projekt - Professionelle Reinigung eines modernen Büroumfelds",
+                label: "Moderne Büroräume"
+              },
+              {
+                src: "/img/kundenbilder/Büro-Reinigung (2).webp",
+                alt: "Büroreinigung in Aktion - Fachkraft bei der gründlichen Reinigung von Arbeitsplätzen",
+                label: "Gründliche Arbeitsplatz-Pflege"
+              },
+              {
+                src: "/img/kundenbilder/Büro-Reinigung (3).webp",
+                alt: "Sauberes Büro nach Reinigung - Glänzender Boden und makellose Oberflächen",
+                label: "Glänzende Ergebnisse"
+              }
+            ].map((image, idx) => (
+              <div key={idx} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 sm:h-72">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                  <p className="text-white text-sm font-semibold text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {image.label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
+
       {/* Related Services - Internal Linking für SEO */}
       <RelatedServices
         currentService="bueroeinigung"

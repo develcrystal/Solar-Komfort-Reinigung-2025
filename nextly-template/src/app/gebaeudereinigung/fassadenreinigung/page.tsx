@@ -267,9 +267,56 @@ export default function Fassadenreinigung() {
         </Container>
       </div>
 
+      {/* Projektgalerie - Vorher/Nachher Beispiele */}
+      <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
+        <Container>
+          <SectionTitle
+            preTitle="Unsere Arbeiten"
+            title="Fassadenreinigung in der Praxis"
+          >
+            Überzeugen Sie sich von den Ergebnissen unserer professionellen Fassadenreinigungen und Imprägnierungen.
+          </SectionTitle>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                src: "/img/flux/fassadenreinigung-prozess.webp",
+                alt: "Professionelle Fassadenreinigung in Aktion - Arbeiter mit Hochdruckreiniger auf Hebebühne reinigt Gebäudefassade",
+                label: "Professionelle Ausführung"
+              },
+              {
+                src: "/img/flux/fassaden-reinigung.webp",
+                alt: "Saubere und glänzende Gebäudefassade nach professioneller Reinigung mit großen Glasfenstern",
+                label: "Sauberes Ergebnis"
+              },
+              {
+                src: "/img/flux/fassadenreinigung-vorher-nachher.webp",
+                alt: "Fassadenreinigung Vorher/Nachher - Links verschmutzte Fassade mit dunklen Flecken und Algen, rechts strahlend weiße, saubere Fassade",
+                label: "Transformation durch Reinigung"
+              }
+            ].map((image, idx) => (
+              <div key={idx} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 sm:h-72">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                  <p className="text-white text-sm font-semibold text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {image.label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </div>
+
       {/* Related Services - Internal Linking für SEO */}
-      <RelatedServices 
-        currentService="fassadenreinigung" 
+      <RelatedServices
+        currentService="fassadenreinigung"
         category="gebaeudereinigung"
         maxServices={4}
       />

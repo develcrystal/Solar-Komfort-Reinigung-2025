@@ -191,6 +191,54 @@ export default function Entrümpelung() {
           </div>
         </Section>
 
+        {/* Projekt-Galerie Section */}
+        <div className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-20 md:py-24">
+          <Section id="galerie">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Projekt-Ergebnisse</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Sehen Sie die beeindruckenden Transformationen unserer Entrümpelung-Projekte. Vorher und Nachher - von vollgestellt zu besenrein.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  src: "/img/kundenbilder/Entrümpelung.webp",
+                  alt: "Entrümpelung Vorher/Nachher - Raum mit Unordnung transformiert zu geräumtem, besenreinem Zustand",
+                  label: "Komplette Raumräumung"
+                },
+                {
+                  src: "/img/kundenbilder/Grundreinigung.webp",
+                  alt: "Entrümpelung & Gründliche Reinigung - Raum nach professioneller Räumung und Grundreinigung",
+                  label: "Räumung & Reinigung"
+                },
+                {
+                  src: "/img/kundenbilder/Reinigung (1).webp",
+                  alt: "Entrümpelung Arbeitsteam - Professionelle Fachkräfte bei fachgerechter Räumung und Entsorgung",
+                  label: "Professionelle Ausführung"
+                }
+              ].map((image, idx) => (
+                <div key={idx} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 sm:h-72">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                    <p className="text-white text-sm font-semibold text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {image.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        </div>
+
         {/* Prozess Section */}
         <Section id="prozess" className="py-16">
           <div className="max-w-4xl mx-auto text-center mb-16">

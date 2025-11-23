@@ -7,6 +7,7 @@ import { ExtendedProcessSteps } from '@/components/ExtendedProcessSteps';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { RelatedServices } from '@/components/RelatedServices';
 import ServiceLeistungenGrid from '@/components/ServiceLeistungenGrid';
+import Image from 'next/image';
 
 export default function Dachreinigung() {
   // 6-Schritte Komplett-Prozess für Dachreinigung
@@ -156,6 +157,56 @@ export default function Dachreinigung() {
                   Langfristige Werterhaltung Ihrer Immobilie durch regelmäßige professionelle Dachpflege.
                 </p>
               </div>
+            </div>
+          </Section>
+        </Container>
+      </div>
+
+      {/* Vorher/Nachher Galerie */}
+      <div className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-20 md:py-24">
+        <Container>
+          <Section id="galerie">
+            <div className="max-w-4xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Unsere Projekt-Ergebnisse</h2>
+              <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Sehen Sie die beeindruckenden Transformationen unserer Kundenprojekte. Vorher und Nachher - die Qualität unserer Arbeit.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  src: "/img/kundenbilder/Dachreinigung Resultat!.webp",
+                  alt: "Dachreinigung Vorher/Nachher - Links verschmutzt mit Moos und Algen, rechts sauberes Dach",
+                  label: "Vorher/Nachher Transformation"
+                },
+                {
+                  src: "/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).webp",
+                  alt: "Dachreinigung Projekt in Arbeit - Draufsicht mit professioneller Reinigungstechnik",
+                  label: "Reinigung in Progress"
+                },
+                {
+                  src: "/img/kundenbilder/Dachbeschichtung.webp",
+                  alt: "Fachkraft bei professioneller Dachreinigung mit Sicherheitsausrüstung und Schutzkleidung",
+                  label: "Professionelle Ausführung"
+                }
+              ].map((image, idx) => (
+                <div key={idx} className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 sm:h-72">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                    <p className="text-white text-sm font-semibold text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {image.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </Section>
         </Container>

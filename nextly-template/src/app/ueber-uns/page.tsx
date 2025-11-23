@@ -131,51 +131,51 @@ export default function UeberUns() {
           </div>
         </Section>
         
-        {/* Trust-Elemente Section */}
+        {/* Trust-Elemente Section - Siegel & Zertifizierungen */}
         <Section id="vertrauen" className="mt-0 mb-12">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
             <div className="p-8 md:p-12">
               <h2 className="text-4xl font-bold mb-10 uppercase tracking-wide text-center">WARUM UNS VERTRAUEN?</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Siegel 1: Qualität */}
                 <div className="flex flex-col items-center text-center">
-                  <Image 
-                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (1).webp"
-                    alt="Unsere Reinigungskräfte bei der Arbeit an einer Fassade"
-                    width={180}
-                    height={180}
-                    className="mb-6"
-                  />
-                  <h3 className="text-2xl font-bold mb-3">Premium Qualität</h3>
+                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center mb-6 shadow-lg">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-blue-600 dark:text-blue-300">✓</div>
+                      <div className="text-sm font-semibold text-blue-600 dark:text-blue-300 mt-1">ZERTIFIZIERT</div>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">SCC & Sachkunde</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Wir verwenden ausschließlich hochwertige Materialien und arbeiten mit modernsten Techniken für ein optimales Ergebnis.
+                    Zertifizierte Fachkräfte mit gültigen Sachkundenachweisen und Sicherheitsschulungen. Regelmäßige Auffrischung garantiert.
                   </p>
                 </div>
-                
+
+                {/* Siegel 2: Erfahrung */}
                 <div className="flex flex-col items-center text-center">
-                  <Image 
-                    src="/img/kundenbilder/Kunden Bilder Reinigung Beschichtung (3).webp"
-                    alt="Unser Team bei der professionellen Reinigung"
-                    width={180}
-                    height={180}
-                    className="mb-6"
-                  />
-                  <h3 className="text-2xl font-bold mb-3">10 Jahre Erfahrung</h3>
+                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900 dark:to-green-800 flex items-center justify-center mb-6 shadow-lg">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-green-600 dark:text-green-300">10+</div>
+                      <div className="text-sm font-semibold text-green-600 dark:text-green-300 mt-1">JAHRE</div>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">10+ Jahre Erfahrung</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Seit über einem Jahrzehnt sind wir Ihr zuverlässiger Partner für alle Dach- und Fassadenarbeiten in der Region.
+                    Über ein Jahrzehnt Erfahrung in professioneller Gebäudereinigung, Dachbetreuung und technischem Service. Bewährt & zuverlässig.
                   </p>
                 </div>
-                
+
+                {/* Siegel 3: Zufriedenheit */}
                 <div className="flex flex-col items-center text-center">
-                  <Image 
-                    src="/img/flux/badge-kundenzufriedenheit.webp"
-                    alt="100% Kundenzufriedenheit"
-                    width={180}
-                    height={180}
-                    className="mb-6"
-                  />
+                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900 dark:to-purple-800 flex items-center justify-center mb-6 shadow-lg">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-purple-600 dark:text-purple-300">100%</div>
+                      <div className="text-sm font-semibold text-purple-600 dark:text-purple-300 mt-1">ZUFRIEDENHEIT</div>
+                    </div>
+                  </div>
                   <h3 className="text-2xl font-bold mb-3">100% Kundenzufriedenheit</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Die Zufriedenheit unserer Kunden steht für uns an erster Stelle. Wir arbeiten erst dann ab, wenn Sie vollständig zufrieden sind.
+                    Persönliche Betreuung & sofortige Reaktion. Zufriedenheit garantiert oder Geld zurück. Ihre Zufriedenheit ist unser Anspruch.
                   </p>
                 </div>
               </div>

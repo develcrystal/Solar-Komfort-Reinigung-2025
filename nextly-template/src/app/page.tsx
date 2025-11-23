@@ -136,7 +136,7 @@ export default function Home() {
           <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="max-w-4xl ml-4 sm:ml-8 lg:ml-48">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.2] tracking-tight text-white uppercase mb-4 sm:mb-6 drop-shadow-lg">
-              KOMFORT GEBÄUDESERVICE24 GMBH<br />
+              CLEAN KOMFORT GEBÄUDESERVICE24 GMBH<br />
               IHRE GEBÄUDEREINIGUNG ALS KOMPLETTLÖSUNG
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 drop-shadow-md">
@@ -369,7 +369,7 @@ export default function Home() {
               href="/kostenrechner"
               className="inline-flex items-center justify-center px-8 md:px-12 py-3 md:py-4 text-base md:text-lg font-semibold text-gray-900 bg-white border-2 border-blue-600 rounded-lg hover:bg-blue-50 focus:ring-4 focus:ring-blue-300 transition-all min-h-[44px] touch-manipulation"
             >
-              → Kosten berechnen (Schnell & kostenlös)
+              → Kosten berechnen (Schnell & kostenlos)
             </Link>
           </div>
         </Container>
@@ -450,8 +450,8 @@ export default function Home() {
               {/* Mobile-Version: Zentrales Bild (lg:hidden) */}
               <div className="lg:hidden relative h-[500px] sm:h-[600px] md:h-[700px] w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/_a_erstelle_auder_tabel.webp"
-                  alt="Der Unterschied ist offensichtlich - Vergleich Komfort Gebäudeservice24"
+                  src="/img/kundenbilder/Dachreinigung Resultat!.webp"
+                  alt="Vorher/Nachher Vergleich - Dachreinigung Transformation mit Komfort Gebäudeservice24"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 90vw, (max-width: 768px) 85vw, 100vw"

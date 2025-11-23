@@ -108,22 +108,30 @@ Zeile 152: href: "/gebaeudeservice/hauswartservice"
 
 ---
 
-## 📋 NEXT STEPS
+## 📋 CURRENT WORK - PHASE 6: Fassadenreinigung Image Generation (23.11.2025)
 
-### SOFORT (Nach Meeting):
-1. ☐ Git Push der Bug-Fixes zu GitHub
-2. ☐ Vercel Redeploy triggern
-3. ☐ Production URL testen
+### STATUS: 🔄 IN PROGRESS
+**Task**: Generate & optimize facade-specific Ideogram.ai images for Fassadenreinigung gallery
 
-### DANACH:
-4. ☐ Menü-Duplikate entfernen (data.tsx Bereinigung)
-5. ☐ CSS Layout Audit & Fixes (bei Bedarf)
-6. ☐ Fake Links entweder implementieren oder entfernen
+### COMPLETED ✅
+1. ✅ Fassadenreinigung page gallery updated - Image paths changed to `/img/flux/`
+2. ✅ optimize-fassaden-images.js script created (ready to run)
+3. ✅ Page code ready for new images
 
-### OPTIONAL:
-- Performance Audit (Lighthouse)
-- Mobile-Responsive Check
-- Dark Mode Testing
+### PENDING ⏳
+1. ⏳ User generating 3 images via Ideogram.ai in lmarena
+2. ⏳ Save images to `/public/img/flux/`:
+   - fassadenreinigung-prozess.webp (1920x1080)
+   - fassaden-reinigung.webp (1080x1080)
+   - fassadenreinigung-vorher-nachher.webp (1200x800)
+3. ⏳ Run optimization: `node optimize-fassaden-images.js`
+4. ⏳ Build & deploy
+
+### NEXT STEPS (When Images Ready):
+1. Run: `node optimize-fassaden-images.js`
+2. Run: `npm run build`
+3. Git commit & push
+4. Verify on production
 
 ---
 

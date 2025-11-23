@@ -1,13 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git reset:*)",
-      "Bash(npm run build:*)",
-      "Bash(curl:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(node fix-corporate-identity.js:*)",
-      "Bash(node copy-testimonial-photos.js:*)"
+      "Bash(pwsh.exe:*)",
+      "Bash(node optimize-fassaden-images.js:*)",
+      "Bash(node optimize-all-new-images.js:*)",
+      "Bash(node:*)",
+      "Bash(if [ -f \".next/static/BUILD_ID\" ])",
+      "Bash(then echo \"✅ Build erfolgreich\")",
+      "Bash(else npm run build)",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

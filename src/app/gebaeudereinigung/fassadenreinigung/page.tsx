@@ -280,18 +280,18 @@ export default function Fassadenreinigung() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/img/flux/fassadenreinigung-prozess.webp",
-                alt: "Professionelle Fassadenreinigung in Aktion - Arbeiter mit Hochdruckreiniger auf Hebebühne reinigt Gebäudefassade",
+                src: "/img/flux/fassaden-prozess1.webp",
+                alt: "Professionelle Fassadenreinigung - Hochdruckstrahl mit Teleskop-Ausrüstung reinigt großflächige Gebäudefassade",
                 label: "Professionelle Ausführung"
               },
               {
-                src: "/img/flux/fassaden-reinigung.webp",
-                alt: "Saubere und glänzende Gebäudefassade nach professioneller Reinigung mit großen Glasfenstern",
+                src: "/img/flux/fassaden-ergebnis1.webp",
+                alt: "Glänzende, strahlend weiße Gebäudefassade nach professioneller Reinigung - wie neu",
                 label: "Sauberes Ergebnis"
               },
               {
-                src: "/img/flux/fassadenreinigung-vorher-nachher.webp",
-                alt: "Fassadenreinigung Vorher/Nachher - Links verschmutzte Fassade mit dunklen Flecken und Algen, rechts strahlend weiße, saubere Fassade",
+                src: "/img/flux/fassaden-vornachher1.webp",
+                alt: "Fassadenreinigung Vorher/Nachher - Transformation von verschmutzter zu glänzender Fassade",
                 label: "Transformation durch Reinigung"
               }
             ].map((image, idx) => (

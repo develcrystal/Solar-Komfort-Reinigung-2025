@@ -17,7 +17,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({
   title = "PROFESSIONELLE GEBÄUDEREINIGUNG",
   subtitle = "Solar Komfort Tochterfirma - Komplettlösungen für Büro, Industrie und Facility Management aus einer Hand.",
-  backgroundImage = "/img/flux/komfort-team-cleaning.webp",
+  backgroundImage = "/img/flux/team-gruppenfoto-neu.webp",
   backgroundAlt = "Komfort Gebäudeservice24 - Team bei der professionellen Gebäudereinigung",
   ctaText = "Kostenlos anfragen",
   ctaLink = "/kontakt",

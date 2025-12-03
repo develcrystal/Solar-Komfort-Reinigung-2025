@@ -63,61 +63,43 @@ export default function Fassadenreinigung() {
               {
                 title: "Schonende Niederdruckreinigung",
                 description: "Vorsichtige Reinigung der Fassaden ohne Beschädigung der Oberflächen.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V3a1 1 0 011-1h8a1 1 0 011 1v1m-10 0h10m-10 0v12a1 1 0 001 1h8a1 1 0 001-1V4m-10 0H5a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V5a1 1 0 00-1-1h-1m-6 0h2m0 0V9m0 0v2m0-2h2m-2 0h2" />
-                  </svg>
-                ),
+                imageSrc: "/img/flux/fassaden-prozess1-alt.webp",
+                imageAlt: "Professionelle Fassadenreinigung mit modernster Niederdrucktechnik",
                 color: "bg-blue-600"
               },
               {
                 title: "Entfernung von Algen, Moos und Schmutz",
                 description: "Umfassende Beseitigung von biologischen Verunreinigungen und Verschmutzungen.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2zm0 0l3 3m0 0l3-3m-3 3v10m0 0l3-3m-3 3l3 3m6-9v10m0 0l3-3m-3 3l3 3M3 7h18" />
-                  </svg>
-                ),
+                imageSrc: "/img/flux/fassaden-ergebnis1-alt.webp",
+                imageAlt: "Saubere, glänzende Fassade nach gründlicher Reinigung",
                 color: "bg-green-600"
               },
               {
                 title: "Reinigung von Gehwegen und Einfahrten",
                 description: "Gründliche Pflege der umliegenden Flächen für einheitliches Erscheinungsbild.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageAlt: "Saubere und gepflegte Außenbereiche und Gehwege",
                 color: "bg-yellow-600"
               },
               {
                 title: "Steinversiegelung auf Wunsch",
                 description: "Schutzimprägnierung für langanhaltende Sauberkeit und Witterungsbeständigkeit.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+                imageAlt: "Versiegelte Steinoberfläche mit langanhaltender Schutzwirkung",
                 color: "bg-purple-600"
               },
               {
                 title: "Umweltschonende Verfahren",
                 description: "Nachhaltige Reinigungsmethoden ohne schädliche Chemikalien.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0 9c-1.657 0-3-4.03-3-9s1.343-9 3-9m0 18c1.657 0 3-4.03 3-9s-1.343-9-3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageAlt: "Umweltfreundliche Reinigung mit professionellen Methoden",
                 color: "bg-red-600"
               },
               {
                 title: "Langanhaltende Schutzimprägnierung",
                 description: "Professionelle Nachsorge zur Vorbeugung zukünftiger Verschmutzungen und Algenbildung.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/flux/fassaden-vornachher-alt1.webp",
+                imageAlt: "Vorher/Nachher Vergleich - Transformation durch Imprägnierschutz",
                 color: "bg-indigo-600"
               }
             ]}
@@ -130,51 +112,43 @@ export default function Fassadenreinigung() {
               {
                 title: "Gepflegtes Außenerscheinungsbild",
                 description: "Saubere Fassaden heben Ihre Immobilie hervor und schaffen einen positiven ersten Eindruck.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung (1).webp",
+                imageAlt: "Sauberes, gepflegtes Gebäude mit professionellem Erscheinungsbild",
                 color: "bg-green-600"
               },
               {
                 title: "Rutschsicherheit wird erhöht",
                 description: "Saubere Oberflächen reduzieren das Risiko von Stürzen und verbessern die Sicherheit.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Industriereinigung.webp",
+                imageAlt: "Sichere, saubere Gehwege und Außenbereiche",
                 color: "bg-green-600"
               },
               {
                 title: "Werterhaltung der Immobilie",
                 description: "Regelmäßige Pflege verlängert die Lebensdauer Ihrer Fassade und erhält den Wert.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
+                imageAlt: "Gepflegtes Gebäude mit hohem Pflegstandard",
                 color: "bg-green-600"
               },
               {
                 title: "Schnelle und effiziente Arbeitsweise",
                 description: "Professionelle Technik für minimale Störung und schnelle Ergebnisse.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
+                imageSrc: "/img/flux/fassaden-prozess2-alt.webp",
+                imageAlt: "Effiziente Arbeitsvorgänge mit moderner Ausrüstung",
                 color: "bg-green-600"
               },
               {
                 title: "Faire und transparente Preise",
                 description: "Klare Kosten ohne versteckte Gebühren und verständliche Preisstruktur.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                ),
+                imageSrc: "/img/flux/fassaden-ergebnis2-alt.webp",
+                imageAlt: "Hochwertiges Reinigungsergebnis für transparente Kosten",
+                color: "bg-green-600"
+              },
+              {
+                title: "Zuverlässiger Service",
+                description: "Pünktlich, zuverlässig und mit garantierter Qualität bei jeder Fassadenreinigung.",
+                imageSrc: "/img/flux/fassaden-ergebnis3-alt.webp",
+                imageAlt: "Perfekt gereinigtes Gebäude - zuverlässige Ergebnisse",
                 color: "bg-green-600"
               }
             ]}

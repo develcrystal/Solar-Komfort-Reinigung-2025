@@ -180,6 +180,26 @@ export default function Unternehmen() {
                   </svg>
                 ),
                 color: "bg-yellow-600"
+              },
+              {
+                title: "Digitale Kompetenz",
+                description: "Einsatz moderner Technologien für effiziente und transparente Dienstleistungen.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5h.01" />
+                  </svg>
+                ),
+                color: "bg-blue-600"
+              },
+              {
+                title: "Soziale Verantwortung",
+                description: "Engagement für faire Arbeitsbedingungen und gesellschaftliches Verantwortungsbewusstsein.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 12H9m4.5-5.5h.01" />
+                  </svg>
+                ),
+                color: "bg-purple-600"
               }
             ]}
           />

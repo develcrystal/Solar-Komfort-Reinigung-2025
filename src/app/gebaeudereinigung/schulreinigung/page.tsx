@@ -5,7 +5,7 @@ import { CtaSection } from '@/components/CtaSection'
 import { Container } from '@/components/Container'
 import { SectionTitle } from '@/components/SectionTitle'
 import { ServiceHeader } from '@/components/ServiceHeader'
-import ServiceLeistungenGrid from '@/components/ServiceLeistungenGrid'
+import { ServiceShowcase } from '@/components/ServiceShowcase'
 
 export const metadata: Metadata = {
   title: 'Schulreinigung - Komfort Gebäudeservice24 GmbH',
@@ -42,10 +42,11 @@ export default function Schulreinigung() {
 
       <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
         <Container>
-          <ServiceLeistungenGrid
+          <ServiceShowcase
             title="Unsere Leistungen"
             subtitle="Professionelle Reinigungsdienste speziell für Schulen und Bildungseinrichtungen."
-            leistungen={[
+            mode="features"
+            items={[
               {
                 title: "Tägliche Klassenzimmerreinigung",
                 description: "Gründliche Reinigung der Klassenzimmer und Lernräume für ein sauberes Lernumfeld.",
@@ -91,10 +92,11 @@ export default function Schulreinigung() {
             ]}
           />
 
-          <ServiceLeistungenGrid
+          <ServiceShowcase
             title="Ihre Vorteile"
             subtitle="Warum unsere Schulreinigung die richtige Wahl für Ihre Einrichtung ist."
-            leistungen={[
+            mode="benefits"
+            items={[
               {
                 title: "Hygienisch einwandfreie Lernumgebung",
                 description: "Saubere Räume reduzieren Krankheitsrisiken und fördern die Konzentration.",
@@ -112,7 +114,7 @@ export default function Schulreinigung() {
               {
                 title: "Flexible Reinigungszeiten außerhalb der Schulzeiten",
                 description: "Reinigung passend zu Ihrem Stundenplan, ohne Unterrichtsstörung.",
-                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageSrc: "/img/kundenbilder/Büro-Reinigung (1).webp",
                 imageAlt: "Flexible Schulreinigung außerhalb der Unterrichtszeiten",
                 color: "bg-green-600"
               },
@@ -133,46 +135,48 @@ export default function Schulreinigung() {
               {
                 title: "Regelmäßige Qualitätskontrollen",
                 description: "Kontinuierliche Überprüfung der Reinigungsqualität für gleichbleibend hohe Standards.",
-                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageSrc: "/img/kundenbilder/Industriereinigung.webp",
                 imageAlt: "Regelmäßige Qualitätskontrolle der Schulreinigung",
                 color: "bg-blue-600"
               }
             ]}
           />
-
-          <div className="mt-8 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Fenster- und Glasreinigung</h3>
-            <p className="text-gray-600 dark:text-gray-300">Kristallklare Sicht durch saubere Fenster und Glastüren in Schulgebäuden für besseres Licht.</p>
-          </div>
         </Container>
       </div>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Unser Reinigungsprozess für Schulen
-          </h2>
-          <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-16">
-            Ein systematischer Ansatz, der Sauberkeit und Effizienz garantiert – Schritt für Schritt abgestimmt auf den Schulumgang.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Beratung & Planung</h3>
-              <p className="text-gray-600 dark:text-gray-300">Persönliche Vor-Ort-Besichtigung und Erstellung eines individuellen Reinigungsplans.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Tägliche Umsetzung</h3>
-              <p className="text-gray-600 dark:text-gray-300">Professionelle Reinigung nach festem Zeitplan mit Fokus auf Hygiene und Sauberkeit.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Kontrolle & Optimierung</h3>
-              <p className="text-gray-600 dark:text-gray-300">Regelmäßige Qualitätschecks und Anpassungen basierend auf Feedback von Schulpersonal.</p>
-            </div>
-          </div>
-        </div>
+      <section className="bg-gray-50 dark:bg-gray-800">
+        <ServiceShowcase
+          title="Unser Reinigungsprozess für Schulen"
+          subtitle="Ein systematischer Ansatz, der Sauberkeit und Effizienz garantiert – Schritt für Schritt abgestimmt auf den Schulumgang."
+          mode="process"
+          className="bg-gray-50 dark:bg-gray-800"
+          items={[
+            {
+              step: 1,
+              title: "Gründliche Reinigung",
+              description: "Professionelle Tiefenreinigung aller Schulräume mit speziellen Verfahren für Klassenzimmer, Flure und Gemeinschaftsbereiche.",
+              imageSrc: "/img/kundenbilder/Reinigung.webp",
+              imageAlt: "Gründliche Schulreinigung - Vorbereitung und Umsetzung",
+              color: "bg-blue-600"
+            },
+            {
+              step: 2,
+              title: "Hygiene-Desinfektion",
+              description: "Intensive Desinfektion von Sanitärbereichen, Türgriffen und Oberflächen nach höchsten Hygienestandards für sichere Lernumgebungen.",
+              imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
+              imageAlt: "Hygiene-Desinfektion in Schulen - Sanitärbereich und Oberflächendesinfizierung",
+              color: "bg-green-600"
+            },
+            {
+              step: 3,
+              title: "Qualitätskontrolle",
+              description: "Regelmäßige Qualitätschecks und Dokumentation für kontinuierliche Verbesserung basierend auf Feedback von Schulpersonal.",
+              imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+              imageAlt: "Qualitätskontrolle der Schulreinigung - Inspektionsprozess",
+              color: "bg-purple-600"
+            }
+          ]}
+        />
       </section>
 
       <RelatedServices 

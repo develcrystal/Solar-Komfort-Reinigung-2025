@@ -42,9 +42,6 @@ export default function Schulreinigung() {
 
       <div className="bg-white dark:bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20">
         <Container>
-          <SectionTitle preTitle="Unser Service" title="Schulreinigung">
-            Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards.
-          </SectionTitle>
           <ServiceLeistungenGrid
             title="Unsere Leistungen"
             subtitle="Professionelle Reinigungsdienste speziell für Schulen und Bildungseinrichtungen."
@@ -52,61 +49,43 @@ export default function Schulreinigung() {
               {
                 title: "Tägliche Klassenzimmerreinigung",
                 description: "Gründliche Reinigung der Klassenzimmer und Lernräume für ein sauberes Lernumfeld.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2zM12 10v6m-3-3h6" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageAlt: "Professionelle Klassenzimmerreinigung - saubere Lernumgebung",
                 color: "bg-blue-600"
               },
               {
                 title: "Hygienereinigung von Sanitärbereichen",
                 description: "Desinfektion und Reinigung von Toiletten und Waschräumen nach höchsten Hygienestandards.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l3-3L7.07 7.07 9 9l-1.07 1.07-1.93-1.93L5 10zm0 4l3-3L7.07 11.07 9 13l-1.07 1.07-1.93-1.93L5 14zm4 0l3-3L11.07 11.07 13 13l-1.07 1.07-1.93-1.93L9 14zm4 0l3-3L15.07 11.07 17 13l-1.07 1.07-1.93-1.93L13 14z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
+                imageAlt: "Hygienereinigung von Schul-Sanitäranlagen nach höchsten Standards",
                 color: "bg-green-600"
               },
               {
                 title: "Flächenreinigung in Korridoren & Pausenräumen",
                 description: "Sichere und gründliche Reinigung der Verkehrswege und Gemeinschaftsräume.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageAlt: "Gründliche Flächenreinigung in Schulkorridoren und Pausenräumen",
                 color: "bg-yellow-600"
               },
               {
                 title: "Spezialreinigung von Sporthallen & Werkstätten",
                 description: "Professionelle Reinigung sportlicher und technischer Räume mit speziellen Mitteln.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Industriereinigung.webp",
+                imageAlt: "Spezialreinigung von Sporthallen und Werkstätten",
                 color: "bg-purple-600"
               },
               {
                 title: "Professionelle Müllentsorgung & Abfallmanagement",
                 description: "Effiziente Entsorgung und Recyclingkonzepte für schulische Abfälle.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+                imageAlt: "Professionelles Abfallmanagement und Müllentsorgung für Schulen",
                 color: "bg-red-600"
               },
               {
                 title: "Fenster- und Glasreinigung",
                 description: "Kristallklare Sicht durch saubere Fenster und Glastüren in Schulgebäuden.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung (1).webp",
+                imageAlt: "Professionelle Fenster- und Glasreinigung in Schulgebäuden",
                 color: "bg-indigo-600"
               }
             ]}
@@ -119,61 +98,43 @@ export default function Schulreinigung() {
               {
                 title: "Hygienisch einwandfreie Lernumgebung",
                 description: "Saubere Räume reduzieren Krankheitsrisiken und fördern die Konzentration.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageAlt: "Hygienisch saubere Lernumgebung für Schulen",
                 color: "bg-green-600"
               },
               {
                 title: "Geprüfte und geschulte Reinigungskräfte",
                 description: "Unser Team ist speziell für schulische Umgebungen geschult.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageAlt: "Professionell geschulte Reinigungskräfte für Schulen",
                 color: "bg-green-600"
               },
               {
                 title: "Flexible Reinigungszeiten außerhalb der Schulzeiten",
                 description: "Reinigung passend zu Ihrem Stundenplan, ohne Unterrichtsstörung.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageAlt: "Flexible Schulreinigung außerhalb der Unterrichtszeiten",
                 color: "bg-green-600"
               },
               {
                 title: "Zertifizierte Reinigungsmittel und -verfahren",
                 description: "Umweltfreundliche und kindersichere Produkte für maximale Sicherheit.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
+                imageAlt: "Zertifizierte und kindersichere Reinigungsverfahren",
                 color: "bg-green-600"
               },
               {
                 title: "Individuell angepasste Reinigungskonzepte",
                 description: "Maßgeschneiderte Pläne für Ihre spezifischen Bedürfnisse.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+                imageAlt: "Individuelle Reinigungskonzepte für Schulen",
                 color: "bg-green-600"
               },
               {
                 title: "Regelmäßige Qualitätskontrollen",
                 description: "Kontinuierliche Überprüfung der Reinigungsqualität für gleichbleibend hohe Standards.",
-                icon: (
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                  </svg>
-                ),
+                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageAlt: "Regelmäßige Qualitätskontrolle der Schulreinigung",
                 color: "bg-blue-600"
               }
             ]}
@@ -185,75 +146,6 @@ export default function Schulreinigung() {
           </div>
         </Container>
       </div>
-
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Vorteile unserer Schulreinigung
-          </h2>
-          <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-            Mit über 20 Jahren Erfahrung bieten wir maßgeschneiderte Reinigungslösungen, die den speziellen Anforderungen von Schulen gerecht werden.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Kindgerechte Reinigung</h3>
-              <p className="text-gray-600 dark:text-gray-300">Sichere, umweltfreundliche Reinigungsmittel, die für Kinder und Jugendliche geeignet sind – ohne schädliche Rückstände.</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Hygienestandards</h3>
-              <p className="text-gray-600 dark:text-gray-300">Strenge Einhaltung von Schul- und Gesundheitsvorschriften für maximale Hygiene und Infektionsprävention.</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Flexibler Zeitplan</h3>
-              <p className="text-gray-600 dark:text-gray-300">Reinigung außerhalb der Unterrichtszeiten – nachmittags, abends oder in Ferienzeiten, passend zu Ihrem Schulplan.</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Zertifizierte Teams</h3>
-              <p className="text-gray-600 dark:text-gray-300">Geschulte Mitarbeiter mit Fokus auf Pädagogik und Hygiene – zuverlässig und diskret im Schulalltag.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">

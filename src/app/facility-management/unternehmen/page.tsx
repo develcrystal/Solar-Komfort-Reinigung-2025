@@ -103,6 +103,16 @@ export default function Unternehmen() {
                   </svg>
                 ),
                 color: "bg-red-600"
+              },
+              {
+                title: "Zertifizierte Qualitätsstandards",
+                description: "Geprüfte Prozesse und Zertifizierungen garantieren erstklassige Dienstleistungen.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ),
+                color: "bg-indigo-600"
               }
             ]}
           />
@@ -160,6 +170,16 @@ export default function Unternehmen() {
                   </svg>
                 ),
                 color: "bg-green-600"
+              },
+              {
+                title: "Vertrauen und Zuverlässigkeit",
+                description: "Auf uns können Sie sich verlassen - pünktlich, diskret und professionell.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                ),
+                color: "bg-yellow-600"
               }
             ]}
           />

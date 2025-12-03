@@ -94,10 +94,20 @@ export default function Schulreinigung() {
                 description: "Effiziente Entsorgung und Recyclingkonzepte für schulische Abfälle.",
                 icon: (
                   <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h18M3 8h18M3 12h18M3 16h18M3 20h18M3 4l1.5 4.5M7.5 4l1.5 4.5M12 4l1.5 4.5M16.5 4l1.5 4.5M21 4l-1.5 4.5M3 8l1.5 4.5M7.5 8l1.5 4.5M12 8l1.5 4.5M16.5 8l1.5 4.5M21 8l-1.5 4.5M3 12l1.5 4.5M7.5 12l1.5 4.5M12 12l1.5 4.5M16.5 12l1.5 4.5M21 12l-1.5 4.5M3 16l1.5 4.5M7.5 16l1.5 4.5M12 16l1.5 4.5M16.5 16l1.5 4.5M21 16l-1.5 4.5M3 20l1.5 4.5M7.5 20l1.5 4.5M12 20l1.5 4.5M16.5 20l1.5 4.5M21 20l-1.5 4.5" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                   </svg>
                 ),
                 color: "bg-red-600"
+              },
+              {
+                title: "Fenster- und Glasreinigung",
+                description: "Kristallklare Sicht durch saubere Fenster und Glastüren in Schulgebäuden.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                ),
+                color: "bg-indigo-600"
               }
             ]}
           />
@@ -155,6 +165,16 @@ export default function Schulreinigung() {
                   </svg>
                 ),
                 color: "bg-green-600"
+              },
+              {
+                title: "Regelmäßige Qualitätskontrollen",
+                description: "Kontinuierliche Überprüfung der Reinigungsqualität für gleichbleibend hohe Standards.",
+                icon: (
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                ),
+                color: "bg-blue-600"
               }
             ]}
           />

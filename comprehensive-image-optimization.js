@@ -67,6 +67,25 @@ const imagesToOptimize = [
     targetSize: 200,
     quality: 85
   },
+  // Team und Vorher-Nachher Bilder
+  {
+    input: 'public/img/flux/gemini-3-pro-image-preview (nano-banana-pro)_a_Split_image_showing_.png',
+    output: 'public/img/flux/fassaden-vornachher-split.webp',
+    targetSize: 200,
+    quality: 85
+  },
+  {
+    input: 'public/img/flux/Team Group Photo1763904784387-019ab0ea-a724-7ade-851b-935896baa86b.png',
+    output: 'public/img/flux/team-gruppenfoto.webp',
+    targetSize: 300,
+    quality: 85
+  },
+  {
+    input: 'public/img/flux/team_in_action_1763904653140-019ab0e8-a432-757b-99e6-5a5612a2ae67.png',
+    output: 'public/img/flux/team-in-action.webp',
+    targetSize: 300,
+    quality: 85
+  },
   {
     input: 'public/img/flux/Ergebnis-Bild (Saubere Fassade1763902899170-019ab0ce-1910-7cbf-8a6c-f8f78497bf2d.png',
     output: 'public/img/flux/fassaden-ergebnis1-alt.webp',

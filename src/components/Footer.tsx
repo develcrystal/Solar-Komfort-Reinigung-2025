@@ -65,8 +65,8 @@ export function Footer() {
             </div>
           </div>
           <div className="sm:col-span-2 lg:col-span-1 text-center sm:text-left">
-            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-0">Folgen Sie uns</div>
-            <div className="flex justify-center sm:justify-start mt-0 space-x-4 sm:space-x-5 text-gray-400 dark:text-gray-500">
+            <div className="font-semibold text-gray-800 dark:text-gray-200 mb-4">Folgen Sie uns</div>
+            <div className="flex justify-center sm:justify-start mt-2 space-x-4 sm:space-x-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://facebook.com/"
                 target="_blank"

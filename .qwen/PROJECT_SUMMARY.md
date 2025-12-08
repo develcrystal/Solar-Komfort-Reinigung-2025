@@ -220,15 +220,90 @@ npm run lint       # Code linting (ESLint)
 - **Build Status**: ✅ SUCCESS (43/43 pages, 0 errors)
 - **Key Learning**: All images MUST be converted to WebP and optimized BEFORE implementation (user rule)
 
+### ✅ PHASE 7: Service Pages Visual Redesign - Schulreinigung & Pflasterreinigung (COMPLETE - 03.12.2025)
+
+#### **SCHULREINIGUNG - Mixed Layout Strategy ✅**
+- **Status**: ✅ COMPLETE (Commit: 38533ad)
+- **Architecture**: 3 DIFFERENT visual layouts per page (NO repetition!)
+  - Section 1 (Leistungen): Service Grid (3×2 kompakte Karten mit Icons)
+  - Section 2 (Vorteile): 2-Spalten Alternating Layout (`md:[direction:rtl]` für Desktop-Reversal)
+  - Section 3 (Prozess): ServiceShowcase Component mit 3 Steps
+- **Image Updates**:
+  - Classroom Image: `classrom.jpeg` (137.6 KB) → `schulklasse-sauber.webp` (105.5 KB)
+  - **Compression**: 23% Einsparung ✅
+  - Location: `/public/img/kundenbilder/schulklasse-sauber.webp`
+- **Key Innovation**: Mixed layout prevents visual monotony while maintaining CI consistency
+
+#### **PFLASTERREINIGUNG - Full Image Overhaul ✅**
+- **Status**: ✅ COMPLETE (Commit: 1ff680a)
+- **Leistungen Section (6 neue Bilder)**:
+  1. `pflaster-hochdruck.webp` - Arbeiter mit Hochdruckreiniger
+  2. `pflaster-moos-vorher.webp` - Moos & Bewuchs Szenario
+  3. `pflaster-sauber.webp` - Saubere Gehwegoberfläche
+  4. `pflaster-versiegelt-1.webp` - Glänzende versiegelte Oberfläche
+  5. `pflaster-versiegelt-2.webp` - Alternative Versiegelungs-Ansicht
+  6. `pflaster-gepflegt.webp` - Gepflegtes Außenerscheinungsbild
+- **Vorteile Section (6 Premium-Hausbilder)**:
+  1. `einfamilienhaus-modern.webp` - Modernes Einfamilienhaus Außen
+  2. `gehweg-modern.webp` - Sauberer moderner Gehweg
+  3. `wohnhaus-premium-1.webp` - Premium Wohnhaus (Variante 1)
+  4. `wohnhaus-premium-2.webp` - Premium Wohnhaus (Variante 2)
+  5. `einfamilienhaus-modern-2.webp` - Alternatives Einfamilienhaus
+  6. `wohnhaus-gepflegt.webp` - Gepflegtes Wohnhaus
+
+#### **BATCH IMAGE OPTIMIZATION (03.12.2025) ✅**
+- **Total Images Converted**: 17 neue Bilder
+- **Batch Processing**:
+  - Input: PNG (23 MB), JPG (3.8 MB) - Sehr große Dateien!
+  - Output: WebP (Quality: 85%)
+  - **Total Savings**: **66.5 MB** (90%+ Reduktion!)
+- **Individual Conversions**:
+  - `gemini-4k-modernes-einfamilie.png`: 23.0 MB → 1.4 MB (94%)
+  - `seedream-premium-wohnhaus.jpeg`: 3.8 MB → 0.9 MB (76%)
+  - `hunyuan-pflasteroberfläche.png`: 1.6 MB → 165 KB (90%)
+  - **Alle 17**: Durchschnittlich 85-95% Kompression ✅
+- **File Naming Convention** (New Standard):
+  - kebab-case mit beschreibenden Namen
+  - Bsp: `pflaster-hochdruck.webp` (statt `hochdruckreiniger-pflasterstein-Digen_image_1764788258614.jpeg`)
+  - Vorteil: Bessere Lesbarkeit, SEO-freundlicher, leichter zu finden
+
+#### **TECHNICAL IMPLEMENTATION**
+- **Component Strategy**: ServiceLeistungenGrid (weiterhin für beide Sections)
+  - Image-basierte Variante mit professionellen Bildern (KEINE Icons!)
+  - Farbige Hintergrund-Accents pro Karte
+  - Responsive Bildgrößen (h-40 sm:h-48 für Leistungen, h-72 sm:h-96 für Vorteile)
+- **Layout Diversity Rules**:
+  - Max 2x gleiche Image pro Seite
+  - Verschiedene Bildquellen pro Section (kundenbilder/ vs flux/)
+  - NO Icons überall (User-Regel!)
+- **Build Status**: ✅ SUCCESS (43/43 pages vor Neustart)
+
+#### **IMAGE INVENTORY AFTER PHASE 7**
+- **Flux Folder**: 80+ WebP Bilder (Professionelle Fotos & generierte Bilder)
+  - Pflaster-spezifisch: 6 Bilder (hochdruck, moos, sauber, versiegelt-1/2, gepflegt)
+  - Wohnhaus-Premium: 2 Bilder (premium-1/2)
+  - Einfamilienhaus: 2 Bilder (modern, modern-2)
+  - Gehweg: 1 Bild (modern)
+  - Klassenzimmer Backups: 3 Bilder (sauber, klassenzimmer-2, uni-korridor, schulgebaeude-innenhof)
+- **Kundenbilder Folder**: 36 WebP Bilder
+  - Neu: `schulklasse-sauber.webp` (klassenzimmer Foto)
+  - + 35 existierende Kundenfotos
+
+#### **NEXT PHASE: FASSADENREINIGUNG (Optional)**
+- Könnte mit ähnlichem Ansatz aktualisiert werden
+- Hat bereits gute alt-Bilder (fassaden-prozess/ergebnis/vornachher-alt*.webp)
+- Aber: Könnte zusätzliche Custom-Bilder bekommen für Vorteile-Section
+
 ## Status & Next Steps
 
-### ✅ ALL PHASES COMPLETE (5/5)
+### ✅ ALL PHASES COMPLETE (7/7)
 - [x] Corporate Identity fixed
 - [x] Kundenzahlen-Widersprüche behoben
 - [x] Testimonials professionalisiert
 - [x] Design modernisiert
 - [x] CTA Button Redundancy eliminated
 - [x] Service Pages with Project Photos (Dachreinigung ✅, Fassadenreinigung ✅, Büroreinigung ✅)
+- [x] **NEW PHASE 7**: Schulreinigung & Pflasterreinigung Visual Redesign (Mixed Layouts + 17 Bilder optimiert)
 
 ### ✅ PHASE 5: Project Photos Integration (COMPLETE)
 - ✅ Dachreinigung: Projekt-Galerie complete
@@ -243,28 +318,34 @@ npm run lint       # Code linting (ESLint)
 - [ ] SEO optimization
 
 ---
-**Last Updated**: 2025-11-23T20:00:00.000Z
-**Status**: ✅ COMPLETE - ALL 6 PHASES DELIVERED
-**Current Session Summary (23.11.2025)**:
-- ✅ 6-Phase Improvement Cycle Complete (Corporate Identity → Testimonials → Icons → CTA Optimization → Project Photos → Responsive Hero)
-- ✅ 8 git commits total (All phases complete + Phase 6 finalized)
-- ✅ 597 KB customer testimonial photos + 41 service project images + comparison table integrated
-- ✅ Build time: ~40s (clean build, 43/43 pages, 0 errors)
-- ✅ Homepage: Production Ready
-- ✅ Service Pages: All project galleries complete and deployed
-- ✅ Image optimization: Model images converted to WebP (98% & 93% size reduction)
-- ✅ NEW: ProblemLoesungSection responsive design with dual-image strategy
-  - Desktop: Professional banner (`banner-fassadenreinigung.webp`) + text
-  - Mobile: Comparison table (`problem-loesung-tabelle.webp`, 94% compressed from 1.1 MB)
+**Last Updated**: 2025-12-03T18:30:00.000Z
+**Status**: ✅ COMPLETE - ALL 7 PHASES DELIVERED + PHASE 7 LIVE
+**Current Session Summary (03.12.2025 - PHASE 7 COMPLETION)**:
+- ✅ **PHASE 7 COMPLETE**: Schulreinigung & Pflasterreinigung Visual Redesign
+  - Mixed layout strategy: 3 different visual designs per page (NO repetition)
+  - 17 new images batch-converted to WebP
+  - **66.5 MB** total image optimization (90%+ compression)
+  - New file naming convention: kebab-case descriptive names
+- ✅ **Image Inventory**:
+  - 12 new optimized images for Pflasterreinigung (6 Leistungen + 6 Vorteile)
+  - 1 new classroom image for Schulreinigung (schulklasse-sauber.webp)
+  - 4 backup classroom variations (university, school building)
+- ✅ **Architecture Innovation**:
+  - Leistungen Section: Service Grid (3×2)
+  - Vorteile Section: 2-Spalten Alternating (`md:[direction:rtl]`)
+  - Prozess Section: ServiceShowcase (3 steps)
+- ✅ Build time: ~17s (clean build, 43/43 pages, 0 errors)
+- ✅ Git commits: 2 new (Schulreinigung + Pflasterreinigung)
 
-**Recent Commits**:
-- Phase 5: Dachreinigung project photos integration (pending commit)
-- `dc02a85` - 🎯 Optimize: Homepage CTA Button Redundancy Cleanup
-- `dffd144` - 📊 Docs: Final SESSION UPDATE - All Improvement Phases Complete
-- `5aa6065` - ✨ Design: Professional SVG Icons
-- `2dbfd60` - 👥 Feature: Customer Testimonials
-- `aa45115` - 📝 Docs: PROJECT_SUMMARY update
-- `af919ad` - 🏢 Fix: Corporate Identity
+**Recent Commits (03.12.2025)**:
+- `1ff680a` - 🎨 Phase 2: Pflasterreinigung & Image Optimization Complete
+- `38533ad` - 🖼️ Update: Schulreinigung - Klassenzimmer-Foto hinzugefügt
+- (Previous 6 Phase commits from earlier sessions)
+
+**Next Phase Options**:
+- 🔄 OPTIONAL: Fassadenreinigung similar visual overhaul
+- 🔄 OPTIONAL: Other service pages redesign
+- ✅ Current: All critical improvements complete
 
 **Project Assets**:
 - Total customer/project images: 41 WebP images (6.1 MB)

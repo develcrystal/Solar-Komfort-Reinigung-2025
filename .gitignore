@@ -46,6 +46,20 @@ desktop.ini
 Thumbs.db
 *.tmp
 .tmp.driveupload/
+ehthumbs.db
+Icon?
+Network Trash Folder
+archivesspace/
+*.lnk
+*.doc
+*.pdf
+*.zip
+*.rar
+
+# Verzeichnisse zu ignorieren
+.history/
+.hspagit/
+.DS_Store?
 
 # Entwicklungs-Müll
 nul

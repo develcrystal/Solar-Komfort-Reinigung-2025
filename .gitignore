@@ -40,6 +40,9 @@ yarn-error.log*
 # Build cache
 .next/
 .next/**
+*.old
+*.bak
+*.temp
 
 # Windows-spezifische Dateien (IGNORIEREN!)
 desktop.ini

@@ -45,6 +45,7 @@ export default function Entrümpelung() {
             src="/img/kundenbilder/Entrümpelung.webp"
             alt="Entrümpelung - Clean Komfort Gebäudeservice24 GmbH"
             fill
+            sizes="100vw"
             className="object-cover brightness-50"
             priority
           />

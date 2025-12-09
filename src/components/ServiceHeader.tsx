@@ -21,6 +21,7 @@ export const ServiceHeader: React.FC<ServiceHeaderProps> = ({
         src={imageSrc}
         alt={imageAlt}
         fill
+        sizes="100vw"
         className="object-cover brightness-[0.8]"
         priority
       />

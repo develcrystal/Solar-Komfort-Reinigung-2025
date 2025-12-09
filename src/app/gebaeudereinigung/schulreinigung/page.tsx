@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Schulreinigung - Saubere Lernumgebungen | Komfort Gebäudeservice24',
     description: 'Professionelle Reinigung für Schulen – hygienisch und kindgerecht. Fordern Sie jetzt Ihr Angebot an!',
-    images: ['/img/kundenbilder/Reinigung.webp'],
+    images: ['/img/kundenbilder/schulklasse-sauber.webp'],
     type: 'website',
     locale: 'de_DE',
     siteName: 'Komfort Gebäudeservice24 GmbH',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Schulreinigung - Komfort Gebäudeservice24',
     description: 'Saubere Schulen für gesundes Lernen. Professionelle Reinigungsdienste.',
-    images: ['/img/kundenbilder/Reinigung.webp'],
+    images: ['/img/kundenbilder/schulklasse-sauber.webp'],
   },
 }
 
@@ -37,8 +37,8 @@ export default function Schulreinigung() {
       <ServiceHeader
         title="SCHULREINIGUNG"
         description="Saubere und hygienische Lernumgebungen für Ihre Schüler – zuverlässig, kindgerecht und nach höchsten Hygienestandards."
-        imageSrc="/img/kundenbilder/Reinigung.webp"
-        imageAlt="Schulreinigung - Saubere und hygienische Lernumgebungen"
+        imageSrc="/img/kundenbilder/schulklasse-sauber.webp"
+        imageAlt="Schulreinigung - Saubere und hygienische Lernumgebungen in Schulen"
       />
 
       {/* SECTION 1: Leistungen - Service Grid Layout (kompakte 3x2 Karten) */}
@@ -58,7 +58,7 @@ export default function Schulreinigung() {
               {
                 title: "Tägliche Klassenzimmerreinigung",
                 description: "Gründliche Reinigung der Klassenzimmer und Lernräume für ein sauberes Lernumfeld.",
-                imageSrc: "/img/kundenbilder/Büro-Reinigung.webp",
+                imageSrc: "/img/kundenbilder/schulklasse-sauber.webp",
                 imageAlt: "Professionelle Klassenzimmerreinigung - saubere Lernumgebung"
               },
               {
@@ -70,25 +70,25 @@ export default function Schulreinigung() {
               {
                 title: "Flächenreinigung in Korridoren & Pausenräumen",
                 description: "Sichere und gründliche Reinigung der Verkehrswege und Gemeinschaftsräume.",
-                imageSrc: "/img/kundenbilder/Reinigung.webp",
+                imageSrc: "/img/flux/corridor uni.webp",
                 imageAlt: "Gründliche Flächenreinigung in Schulkorridoren und Pausenräumen"
               },
               {
                 title: "Spezialreinigung von Sporthallen & Werkstätten",
                 description: "Professionelle Reinigung sportlicher und technischer Räume mit speziellen Mitteln.",
-                imageSrc: "/img/kundenbilder/Industriereinigung.webp",
+                imageSrc: "/img/flux/classrom.webp",
                 imageAlt: "Spezialreinigung von Sporthallen und Werkstätten"
               },
               {
                 title: "Professionelle Müllentsorgung & Abfallmanagement",
                 description: "Effiziente Entsorgung und Recyclingkonzepte für schulische Abfälle.",
-                imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+                imageSrc: "/img/kundenbilder/Entrümpelung.webp",
                 imageAlt: "Professionelles Abfallmanagement und Müllentsorgung für Schulen"
               },
               {
                 title: "Fenster- und Glasreinigung",
                 description: "Kristallklare Sicht durch saubere Fenster und Glastüren in Schulgebäuden.",
-                imageSrc: "/img/kundenbilder/Büro-Reinigung (1).webp",
+                imageSrc: "/img/flux/classrom2.webp",
                 imageAlt: "Professionelle Fenster- und Glasreinigung in Schulgebäuden"
               }
             ].map((item, index) => (
@@ -98,6 +98,7 @@ export default function Schulreinigung() {
                     src={item.imageSrc}
                     alt={item.imageAlt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
@@ -156,8 +157,8 @@ export default function Schulreinigung() {
               {
                 title: "Individuell angepasste Reinigungskonzepte",
                 description: "Maßgeschneiderte Pläne für Ihre spezifischen Bedürfnisse und Anforderungen. Wir beraten Sie persönlich zur besten Lösung.",
-                imageSrc: "/img/flux/team-beratung-neu.webp",
-                imageAlt: "Individuelle Beratung für Schulen"
+                imageSrc: "/img/kundenbilder/schulklasse-sauber.webp",
+                imageAlt: "Individuell angepasstes Reinigungskonzept für Schulen - sauberes Klassenzimmer"
               },
               {
                 title: "Regelmäßige Qualitätskontrollen",
@@ -172,6 +173,7 @@ export default function Schulreinigung() {
                     src={item.imageSrc}
                     alt={item.imageAlt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -200,7 +202,7 @@ export default function Schulreinigung() {
               step: 1,
               title: "Gründliche Reinigung",
               description: "Professionelle Tiefenreinigung aller Schulräume mit speziellen Verfahren für Klassenzimmer, Flure und Gemeinschaftsbereiche.",
-              imageSrc: "/img/kundenbilder/Reinigung.webp",
+              imageSrc: "/img/flux/team-bei-der-arbeit1741879901018.webp",
               imageAlt: "Gründliche Schulreinigung - Vorbereitung und Umsetzung",
               color: "bg-blue-600"
             },
@@ -216,7 +218,7 @@ export default function Schulreinigung() {
               step: 3,
               title: "Qualitätskontrolle",
               description: "Regelmäßige Qualitätschecks und Dokumentation für kontinuierliche Verbesserung basierend auf Feedback von Schulpersonal.",
-              imageSrc: "/img/kundenbilder/Grundreinigung.webp",
+              imageSrc: "/img/flux/team-gruppenfoto1.webp",
               imageAlt: "Qualitätskontrolle der Schulreinigung - Inspektionsprozess",
               color: "bg-purple-600"
             }
@@ -231,8 +233,8 @@ export default function Schulreinigung() {
       />
 
       <CtaSection
-        backgroundImage="/img/kundenbilder/Reinigung.webp"
-        backgroundAlt="Kontaktieren Sie uns für Schulreinigung"
+        backgroundImage="/img/kundenbilder/schulklasse-sauber.webp"
+        backgroundAlt="Kontaktieren Sie uns für professionelle Schulreinigung"
         title="Bereit für eine saubere Schule?"
         description="Vereinbaren Sie noch heute einen unverbindlichen Beratungstermin."
         buttonText="Jetzt Beratung anfordern"

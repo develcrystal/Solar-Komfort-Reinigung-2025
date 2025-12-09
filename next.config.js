@@ -45,6 +45,7 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,
   },
+  outputFileTracingRoot: require('path').join(__dirname, '../'),
   // swcMinify is enabled by default in Next.js 14+, so this line is redundant
   // swcMinify: true,
 };

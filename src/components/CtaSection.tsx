@@ -39,6 +39,7 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
           src={backgroundImage}
           alt={backgroundAlt}
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50"></div>

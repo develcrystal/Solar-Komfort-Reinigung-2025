@@ -168,12 +168,13 @@ export default function Fassadenreinigung() {
           
           <div className="mt-8 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="relative h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg">
-              <Image 
-                src="/img/flux/fassadenreinigung-prozess.webp"
-                alt="Fassadenreinigung Prozess - Arbeiter mit Schutzausrüstung reinigt Gebäudefassade"
-                fill
+              <Image
+              src="/img/flux/fassadenreinigung-prozess.webp"
+              alt="Fassadenreinigung Prozess - Arbeiter mit Schutzausrüstung reinigt Gebäudefassade"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
-              />
+          />
             </div>
             
             <div className="space-y-4 sm:space-y-6">

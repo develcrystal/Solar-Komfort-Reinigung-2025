@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Fragment, useRef } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { clearMenuTimeout, setMenuTimeout } from "../utils/menuTimeoutManager";
 
 type MenuItem = {
   name: string;
@@ -20,25 +21,24 @@ type MegaMenuProps = {
 
 export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
   const menuRef = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
+    clearMenuTimeout(); // Clear any existing timeouts from other menus
     const button = menuRef.current?.querySelector('button') as HTMLElement;
-    if (button && button.getAttribute('data-headlessui-state') !== 'open') {
+    if (button && !button.getAttribute('data-headlessui-state')?.includes('open')) {
       button.click();
     }
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
+    // Set timeout to close menu after delay
+    setMenuTimeout(() => {
       const button = menuRef.current?.querySelector('button') as HTMLElement;
-      if (button && button.getAttribute('data-headlessui-state') === 'open') {
+      if (button && button.getAttribute('data-headlessui-state')?.includes('open')) {
         button.click();
       }
-    }, 250);
+    }, 300); // Consistent timeout with panel
   };
 
   return (
@@ -78,11 +78,16 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
               <Popover.Panel
                 className={`absolute left-1/2 z-10 mt-3 w-screen ${columns === 4 ? 'max-w-6xl' : 'max-w-4xl'} -translate-x-1/2 transform px-4 sm:px-0`}
                 onMouseEnter={() => {
-                  if (timeoutRef.current) {
-                    clearTimeout(timeoutRef.current);
-                  }
+                  clearMenuTimeout(); // Clear any existing timeouts when entering panel
                 }}
-                onMouseLeave={handleMouseLeave}
+                onMouseLeave={() => {
+                  setMenuTimeout(() => {
+                    const button = menuRef.current?.querySelector('button') as HTMLElement;
+                    if (button && button.getAttribute('data-headlessui-state') === 'open') {
+                      button.click();
+                    }
+                  }, 300); // Consistent timeout
+                }}
               >
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className={`relative grid gap-6 bg-white dark:bg-gray-800 p-6 auto-rows-fr ${columns === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>

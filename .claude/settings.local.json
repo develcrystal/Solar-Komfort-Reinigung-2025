@@ -3,7 +3,8 @@
     "allow": [
       "Bash(powershell -Command:*)",
       "mcp__browsermcp-cline__browser_screenshot",
-      "Bash(\")"
+      "Bash(\")",
+      "Bash(pwsh.exe:*)"
     ],
     "deny": [],
     "ask": []

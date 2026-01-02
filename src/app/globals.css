@@ -4,71 +4,211 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   DESIGN TOKENS - CSS CUSTOM PROPERTIES
+   ============================================ */
+:root {
+  /* Colors - Primary */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
 
+  /* Colors - Neutral */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
 
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
 
+  /* Typography - Fluid */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.6;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+  --container-navbar: 1600px;
+}
+
+/* Dark Mode Tokens */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-neutral-50: #111827;
+    --color-neutral-100: #1f2937;
+    --color-neutral-200: #374151;
+    --color-neutral-300: #4b5563;
+    --color-neutral-400: #6b7280;
+    --color-neutral-500: #9ca3af;
+    --color-neutral-600: #d1d5db;
+    --color-neutral-700: #e5e7eb;
+    --color-neutral-800: #f3f4f6;
+    --color-neutral-900: #f9fafb;
+  }
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-  html,
   body {
-    @apply bg-white dark:bg-gray-900;
+    background-color: var(--color-neutral-50);
+    color: var(--color-neutral-900);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+  }
+
+  /* Focus Styles */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
+/* ============================================
+   COMPONENT: NAVBAR
+   ============================================ */
+.navbar {
+  background-color: var(--color-neutral-50);
+  width: 100%;
+  max-width: var(--container-navbar);
+  margin-inline: auto;
+  contain: layout style;
+}
 
-/* Mobile-first responsive padding adjustments */
+.navbar__flex {
+  display: flex;
+}
+
+.navbar__flex > * {
+  flex-shrink: 0;
+  min-inline-size: 0;
+}
+
+.navbar__nav {
+  width: 100%;
+  max-width: none;
+}
+
+.navbar__nav-items {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.navbar__nav-item {
+  flex-shrink: 0;
+  min-inline-size: auto;
+}
+
+/* ============================================
+   COMPONENT: MAIN CONTENT
+   ============================================ */
 .main-content {
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--breakpoint-md)) {
   .main-content {
-    padding-top: 1rem;
+    padding-block-start: var(--spacing-md);
   }
 }
 
-/* Navbar background with class-based dark mode support */
-.navbar-container {
-  @apply bg-white dark:bg-gray-900 w-full;
+/* ============================================
+   COMPONENT: HOVER TILE
+   ============================================ */
+.hover-tile {
+  transition: all var(--transition-base);
 }
 
-/* Navbar specific styles to avoid global CSS conflicts */
-.navbar-container .flex {
-  display: flex !important;
+.hover-tile:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-0.25rem);
 }
 
-/* Ensure flex items don't get compressed */
-.navbar-container .flex>* {
-  flex-shrink: 0 !important;
-  min-width: 0 !important;
-}
-
-/* Specific fix for navigation items */
-.navbar-container nav .flex.gap-x-8>* {
-  flex-shrink: 0 !important;
-  min-width: auto !important;
-}
-
-/* Ensure navbar container doesn't restrict width */
-.navbar-container nav {
-  width: 100% !important;
-  max-width: none !important;
-}
-
-/* Fix for Popover.Group inside navbar */
-.navbar-container .flex.gap-x-8 {
-  display: flex !important;
-  gap: 2rem !important;
-  align-items: center !important;
-}
-
-/* Ensure individual nav items don't shrink */
-.navbar-container .flex.gap-x-8>* {
-  flex-shrink: 0 !important;
-  min-width: auto !important;
-}
-
-/* Pulsing animation for service cards */
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 @keyframes pulse-once {
   0% {
     transform: scale(1);
@@ -86,43 +226,40 @@
   }
 }
 
-/* Hover effects for linked tiles and cards */
-.hover-tile {
-  @apply transition-all duration-300 ease-in-out;
-}
-
-.hover-tile:hover {
-  @apply shadow-lg transform -translate-y-1;
+.hover-tile--animated:hover {
   animation: pulse-once 1.5s ease-out;
 }
 
-.animate-pulse-once:hover {
-  animation: pulse-once 1.5s ease-out;
+@media (prefers-reduced-motion: reduce) {
+  .hover-tile--animated:hover {
+    animation: none;
+  }
 }
 
-/* Global equal height for grid-cols-2 boxes in desktop mode */
-@media (min-width: 768px) {
-  [class*="grid-cols-2"]:not(.navbar-container *)>div {
+/* ============================================
+   GRID EQUAL HEIGHT
+   ============================================ */
+@media (min-width: var(--breakpoint-md)) {
+  .grid--equal-height > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 }
 
-/* Equal height for ExtendedProcessSteps cards */
-@media (min-width: 1024px) {
-  .grid-xl\:grid-cols-6 {
+@media (min-width: var(--breakpoint-lg)) {
+  .grid--process-steps {
     display: grid;
     grid-auto-rows: 1fr;
   }
 
-  .ProcessStepCard {
+  .process-step-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    block-size: 100%;
   }
 
-  .ProcessStepCard>div:last-child {
+  .process-step-card > div:last-child {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -130,332 +267,126 @@
   }
 }
 
-/* Global text length rules for boxes and cards */
-.ProcessStepCard h3 {
-  max-height: 3em;
+/* ============================================
+   TEXT LENGTH CONTROL
+   ============================================ */
+.process-step-card__title {
+  max-block-size: 3em;
   overflow: hidden;
-  line-height: 1.4;
+  line-height: var(--line-height-snug);
 }
 
-.ProcessStepCard p {
-  max-height: 6em;
+.process-step-card__description {
+  max-block-size: 6em;
   overflow: hidden;
-  line-height: 1.5;
+  line-height: var(--line-height-relaxed);
 }
 
-/* For other box texts */
-.grid>div p {
-  line-height: 1.5;
-  max-height: 6em;
+.grid__item-title {
+  max-block-size: 3em;
+  overflow: hidden;
+  line-height: var(--line-height-snug);
+}
+
+.grid__item-description {
+  line-height: var(--line-height-relaxed);
+  max-block-size: 6em;
   overflow: hidden;
 }
 
-.grid>div h3 {
-  max-height: 3em;
-  overflow: hidden;
-  line-height: 1.4;
-}
-
-/* ===== GLOBAL MOBILE TEXT OVERFLOW FIX ===== */
-/* Prevent text overflow on very small mobile screens (320px - 480px) */
-
+/* ============================================
+   RESPONSIVE TEXT OVERFLOW
+   ============================================ */
 @media (max-width: 480px) {
-
-  /* Force text wrapping for all text elements */
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
-    word-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
-
-  /* Paragraph text wrapping */
+  h6,
   p,
   span,
   div {
-    word-wrap: break-word;
-    word-break: break-word;
     overflow-wrap: break-word;
+    word-break: break-word;
     hyphens: auto;
   }
 
-  /* Container overflow protection */
   .container,
   [class*="container"] {
     overflow-x: hidden;
-    word-wrap: break-word;
-  }
-
-  /* Text content in cards and boxes */
-  [class*="card"]:not(.navbar-container *),
-  [class*="box"]:not(.navbar-container *),
-  .grid>div:not(.navbar-container *),
-  .flex>div:not(.navbar-container *):not(nav *) {
-    word-wrap: break-word;
     overflow-wrap: break-word;
-    min-width: auto;
-    /* Prevent flex/grid items from overflowing */
   }
 
-  /* Specific component fixes */
-  .TwoColContent p {
-    word-break: break-word;
+  [class*="card"]:not(.navbar *),
+  [class*="box"]:not(.navbar *),
+  .grid > div:not(.navbar *),
+  .flex > div:not(.navbar *):not(nav *) {
     overflow-wrap: break-word;
-    hyphens: auto;
+    min-inline-size: auto;
   }
 
-  /* Service grid responsiveness */
-  .grid-cols-1>div,
-  .grid-cols-2>div,
-  .grid-cols-3>div {
-    min-width: 0;
-    word-wrap: break-word;
-  }
-
-  /* Prevent button text overflow */
   button,
   .btn {
     white-space: normal;
     word-break: break-word;
   }
-
-  /* List items */
-  li {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Text content with max-width for very long words */
-  .ProcessStepCard h3,
-  .ProcessStepCard p {
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Global text container overflow */
-  .text-content,
-  [class*="text"] {
-    max-width: 100%;
-    overflow-wrap: break-word;
-    word-break: break-word;
-  }
 }
 
-/* Additional fixes for small mobile screens (480px - 640px) */
-@media (min-width: 481px) and (max-width: 640px) {
-
-  /* Moderate text wrapping for medium-small screens */
-  h1,
-  h2,
-  h3 {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Container protection */
-  .container {
-    overflow-x: hidden;
-  }
-}
-
-/* ===== GLOBAL RESPONSIVE TEXT SIZES ===== */
-/* Ensure text remains readable on very small screens */
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
 @media (max-width: 380px) {
-
-  /* Reduce heading sizes significantly for very small screens */
   h1 {
-    @apply text-xl;
-    font-size: 1.25rem !important;
-    line-height: 1.2;
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-tight);
   }
 
   h2 {
-    @apply text-lg;
-    font-size: 1.125rem !important;
-    line-height: 1.3;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-snug);
   }
 
   h3 {
-    @apply text-base;
-    font-size: 1rem !important;
-    line-height: 1.3;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-snug);
   }
 
   h4 {
-    @apply text-sm;
-    font-size: 0.875rem !important;
-    line-height: 1.4;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
   }
 
   h5,
   h6 {
-    @apply text-xs;
-    font-size: 0.75rem !important;
-    line-height: 1.4;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-normal);
   }
 }
 
-/* ===== GLOBAL CONTAINER IMPROVEMENTS ===== */
-/* Better container behavior across all screen sizes */
+/* ============================================
+   CONTAINER IMPROVEMENTS
+   ============================================ */
 .container {
-  max-width: 100%;
+  max-inline-size: 100%;
+  margin-inline: auto;
   overflow-wrap: break-word;
-  word-wrap: break-word;
+  contain: layout style;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: var(--breakpoint-xl)) {
   .container {
-    max-width: 1400px;
-    /* Increased max width for better navigation space */
+    max-inline-size: var(--container-2xl);
   }
 }
 
-/* Navbar specific container */
-.navbar-container {
-  max-width: 100%;
-}
-
-@media (min-width: 1280px) {
-  .navbar-container {
-    max-width: 1600px;
-    /* Even wider for navbar */
-  }
-}
-
-/* ===== ENHANCED MOBILE TEXT OVERFLOW FIXES ===== */
-/* Additional comprehensive fixes for very small mobile screens */
-
-/* Fix for long service titles and headings on very small screens */
-@media (max-width: 380px) {
-
-  /* Service titles and main headings */
-  .service-title,
-  .section-title h2,
-  .section-title h3 {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  /* Text content in service cards */
-  .service-description,
-  .feature-description {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  /* Button text on very small screens */
-  .btn-text,
-  button span {
-    font-size: 0.9rem;
-    word-break: break-word;
-  }
-}
-
-/* Fix for medium-small screens (381px - 480px) */
-@media (min-width: 381px) and (max-width: 480px) {
-
-  /* Moderate text adjustments */
-  .service-title {
-    font-size: 1.75rem;
-    line-height: 1.3;
-    word-break: break-word;
-  }
-
-  .service-description {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-}
-
-/* Enhanced container overflow protection */
-@media (max-width: 640px) {
-
-  /* All containers should prevent horizontal overflow */
-  .container,
-  [class*="container"],
-  .max-w-6xl,
-  .max-w-4xl,
-  .max-w-3xl {
-    overflow-x: hidden;
-    word-wrap: break-word;
-    hyphens: auto;
-  }
-
-  /* Grid items should not overflow */
-  .grid>div:not(.navbar-container *):not(nav *),
-  .flex>div:not(.navbar-container *):not(nav *) {
-    min-width: auto;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* Service card content */
-  .service-card h3,
-  .service-card h4 {
-    word-break: break-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
-
-  .service-card p {
-    word-break: break-word;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
-}
-
-/* Specific fixes for LeistungenImUberblick component */
-@media (max-width: 480px) {
-  .leistungen-title {
-    font-size: 1.75rem !important;
-    line-height: 1.2;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  .leistungen-description {
-    font-size: 1rem;
-    line-height: 1.4;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  .service-card-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3;
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  .service-card-description {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    word-break: break-word;
-    hyphens: auto;
-  }
-}
-
-/* ===== GLOBAL TEXT WRAPPING UTILITIES ===== */
-/* Utility classes for manual text overflow control */
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 .text-wrap-mobile {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   word-break: break-word;
   hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 .text-ellipsis-mobile {
@@ -466,17 +397,95 @@
   text-overflow: ellipsis;
 }
 
-/* Force break very long words */
 .break-all-mobile {
   word-break: break-all;
   overflow-wrap: anywhere;
 }
 
-/* ===== GLOBAL RESPONSIVE IMPROVEMENTS ===== */
-/* Ensure all text elements respect container boundaries */
-
-/* Override for images to maintain aspect ratio */
+/* ============================================
+   IMAGE RESPONSIVENESS
+   ============================================ */
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
+  block-size: auto;
   height: auto;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary-500: #1d4ed8;
+    --color-primary-600: #1e40af;
+  }
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  inset-block-start: -100%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary-600);
+  color: white;
+  z-index: 9999;
+  transition: inset-block-start var(--transition-fast);
+}
+
+.skip-link:focus {
+  inset-block-start: var(--spacing-sm);
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+/* CSS Containment for better performance */
+.card,
+.box,
+.service-card {
+  contain: layout style paint;
+}
+
+/* Will-change sparingly */
+.hover-tile:hover {
+  will-change: transform, box-shadow;
+}
+
+/* ============================================
+   MODERN CSS FEATURES
+   ============================================ */
+/* Logical Properties */
+.section {
+  padding-block: var(--spacing-3xl);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .section {
+    padding-block: var(--spacing-4xl);
+  }
+}
+
+/* Aspect Ratio for images */
+.image-container {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image-container--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* :is() and :where() for cleaner selectors */
+:is(.card, .box, .service-card) h3 {
+  max-block-size: 3em;
+  overflow: hidden;
+  line-height: var(--line-height-snug);
+}
+
+:where(.grid > div) p {
+  line-height: var(--line-height-relaxed);
+  max-block-size: 6em;
+  overflow: hidden;
 }

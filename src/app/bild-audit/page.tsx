@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import remark from 'remark';
-import html from 'remark-html';
+import { remark } from 'remark';
+import { default as html } from 'remark-html';
 
 export const metadata: Metadata = {
     title: 'Bild Audit Abschlussbericht',

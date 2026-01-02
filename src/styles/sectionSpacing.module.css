@@ -1,58 +1,136 @@
-/* Standard section spacing according to CLAUDE.md guidelines */
+/* ============================================
+   SECTION SPACING MODULE
+   ============================================ */
+
+/* Design Tokens for Spacing */
+:root {
+  --section-padding-sm: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+  --section-padding-md: clamp(4rem, 3rem + 5vw, 6rem);
+  --section-padding-lg: clamp(5rem, 3.5rem + 7.5vw, 8rem);
+  --section-padding-xl: clamp(6rem, 4rem + 10vw, 10rem);
+}
+
+/* Standard section spacing */
 .section {
-  @apply py-16 sm:py-20 md:py-24 lg:py-28;
+  padding-block: var(--section-padding-md);
 }
 
 /* Smaller sections with less vertical padding */
-.section-sm {
-  @apply py-12 md:py-16 lg:py-20;
+.section--sm {
+  padding-block: var(--section-padding-sm);
 }
 
 /* Larger sections with more vertical padding */
-.section-lg {
-  @apply py-20 md:py-28 lg:py-32;
+.section--lg {
+  padding-block: var(--section-padding-lg);
 }
 
 /* Extra large sections for hero or key sections */
-.section-xl {
-  @apply py-24 md:py-32 lg:py-40;
+.section--xl {
+  padding-block: var(--section-padding-xl);
 }
 
 /* Section with top margin only */
-.section-mt {
-  @apply mt-16 sm:mt-20 md:mt-24 lg:mt-28;
+.section--mt {
+  margin-block-start: var(--section-padding-md);
 }
 
 /* Section with bottom margin only */
-.section-mb {
-  @apply mb-16 md:mb-24 lg:mb-28;
+.section--mb {
+  margin-block-end: var(--section-padding-lg);
 }
 
 /* Consistent gap between sections */
-.section-gap {
-  @apply space-y-16 md:space-y-20 lg:space-y-24;
+.section--gap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-padding-md);
 }
 
 /* Nested sections with reduced spacing */
-.section-nested {
-  @apply py-12 md:py-16 lg:py-20;
+.section--nested {
+  padding-block: var(--section-padding-sm);
 }
 
 /* Add smooth transition for section hovers */
-.section-hover {
-  @apply transition-all duration-300 ease-in-out;
+.section--hover {
+  transition: all var(--transition-base);
 }
-
-/* Mobile-first responsive spacing - already handled by Tailwind classes above */
 
 /* Add subtle background pattern to alternate sections */
-.section-pattern {
-  @apply relative overflow-hidden;
+.section--pattern {
+  position: relative;
+  overflow: hidden;
 }
 
-.section-pattern::before {
+.section--pattern::before {
   content: '';
-  @apply absolute inset-0 bg-[url('/img/pattern.svg')] opacity-5 pointer-events-none;
+  position: absolute;
+  inset: 0;
+  background-image: url('/img/pattern.svg');
+  opacity: 0.05;
+  pointer-events: none;
   background-size: 120px 120px;
   z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--section-padding-lg);
+  }
+
+  .section--sm {
+    padding-block: var(--section-padding-md);
+  }
+
+  .section--lg {
+    padding-block: var(--section-padding-xl);
+  }
+
+  .section--mt {
+    margin-block-start: var(--section-padding-lg);
+  }
+
+  .section--mb {
+    margin-block-end: var(--section-padding-xl);
+  }
+
+  .section--gap {
+    gap: var(--section-padding-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: var(--section-padding-xl);
+  }
+
+  .section--sm {
+    padding-block: var(--section-padding-lg);
+  }
+
+  .section--lg {
+    padding-block: var(--section-padding-xl);
+  }
+
+  .section--mt {
+    margin-block-start: var(--section-padding-xl);
+  }
+
+  .section--mb {
+    margin-block-end: var(--section-padding-xl);
+  }
+
+  .section--gap {
+    gap: var(--section-padding-xl);
+  }
+}
+
+/* Performance optimization with CSS containment */
+.section,
+.section--sm,
+.section--lg,
+.section--xl {
+  contain: layout style;
 }

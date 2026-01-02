@@ -136,11 +136,11 @@ export default function HaushaltsreinigungPage() {
           Wir schützen Ihre Privatsphäre und respektieren Ihr Hausrecht in jedem Schritt.
         </SectionTitle>
         <TwoColContent
-          title="DSGVO-konforme Haushaltsreinigung"
-          textLeft="Gemäß DSGVO gestalten wir Verträge und Prozesse datenschutzkonform. Keine Speicherung persönlicher Daten ohne Einwilligung – volle Transparenz."
-          textRight="Hausrecht-Respektierung: Unsere Teams arbeiten diskret und respektieren Ihre Regeln. Haustier-sichere Mittel und Methoden für familienfreundliche Reinigung."
-          image="/img/compliance-placeholder.webp"
-          alt="DSGVO und Hausrecht Icons für Haushaltsreinigung"
+          title="Haushaltsreinigung nach VOB-Standards"
+          textLeft="Gemäß VOB/C koordinieren wir alle Reinigungsarbeiten professionell. Strikte Einhaltung von Qualitätsstandards und Terminzusagen für zuverlässige Ergebnisse."
+          textRight="Haushalts-Expertise: Wir verstehen die besonderen Anforderungen privater Haushalte. Professionelle Durchführung und diskrete Arbeitsweise für Ihre Zufriedenheit."
+          image="/img/flux/professionelle-ausruestung1.webp"
+          alt="Professionelle Haushaltsreinigung - Ausrüstung und Materialien"
           className="max-w-6xl mx-auto"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">

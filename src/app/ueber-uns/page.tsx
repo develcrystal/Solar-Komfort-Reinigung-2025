@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Über uns - Clean Komfort Gebäudeservice24 GmbH | Facility Management & Gebäudereinigung",
-    description: "Lernen Sie das Team der Clean Komfort Gebäudeservice24 GmbH kennen. Erfahrene Experten für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.",
-    images: ["/img/flux/team-gruppenfoto1.webp"]
+    card: 'summary_large_image',
+    title: 'Über uns - Komfort Gebäudeservice24 GmbH',
+    description: 'Lernen Sie unser Team kennen. Professionelle Gebäudereinigung seit über 10 Jahren.',
+    images: ["/img/flux/team-gruppenfoto-neu.webp"]
   },
   alternates: {
     canonical: "https://komfort-gebaeudeservice24.de/ueber-uns"
@@ -34,21 +34,21 @@ export default function UeberUns() {
       <div className="relative h-[50vh] min-h-[400px] w-full">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/flux/team-gruppenfoto1.webp"
-            alt="Clean Komfort Gebäudeservice24 GmbH - Unser motiviertes Team für professionelle Gebäudereinigung und Service"
+            src="/img/flux/team-gruppenfoto-neu.webp"
+            alt="Komfort Gebäudeservice24 Team"
             fill
             className="object-cover brightness-50"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         </div>
-        
+
         <Container className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight uppercase text-white drop-shadow-lg">ÜBER UNS</h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-xl text-gray-100 drop-shadow-md">
-                Clean Komfort Gebäudeservice24 GmbH ist Ihr zuverlässiger Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management. 
+                Clean Komfort Gebäudeservice24 GmbH ist Ihr zuverlässiger Partner für ganzheitliche Gebäudereinigung, technischen Service und intelligentes Facility Management.
                 Als Tochterunternehmen der Solar Komfort GmbH vereinen wir jahrelange Erfahrung aus Handwerk, Reinigung, Technik und Objektmanagement.
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function UeberUns() {
             </div>
           </div>
         </Section>
-        
+
         {/* Trust-Elemente Section - Siegel & Zertifizierungen */}
         <Section id="vertrauen" className="mt-0 mb-12">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
@@ -182,16 +182,16 @@ export default function UeberUns() {
             </div>
           </div>
         </Section>
-        
+
         {/* Team Section - Neu gestaltet mit modernem Layout */}
         <Section id="team" className="mt-0 mb-12 !py-0">
           <h2 className="text-4xl font-bold mb-10 uppercase tracking-wide text-center">UNSER TEAM</h2>
-          
-          
+
+
           {/* Team-Gruppenfotos mit interaktivem Layout */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">Unser Gesamtteam</h3>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Linke Spalte - Großes Bild */}
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
@@ -208,7 +208,7 @@ export default function UeberUns() {
                   </p>
                 </div>
               </div>
-              
+
               {/* Rechte Spalte - Infos und kleinere Bilder */}
               <div className="flex flex-col justify-between">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
@@ -222,7 +222,7 @@ export default function UeberUns() {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Team-Statistiken */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-blue-600 text-white rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center">
@@ -237,7 +237,7 @@ export default function UeberUns() {
               </div>
             </div>
           </div>
-          
+
           {/* Fachbereiche - Moderne Darstellung mit Icons */}
           <div>
             <h3 className="text-2xl font-bold mb-8 text-blue-600 dark:text-blue-400 text-center">Unsere Fachbereiche</h3>
@@ -254,7 +254,7 @@ export default function UeberUns() {
                   Unsere Dachdecker-Experten sorgen für fachgerechte Reinigung und Instandhaltung aller Dachtypen.
                 </p>
               </div>
-              
+
               {/* Maler */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 text-center transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                 <div className="w-16 h-16 mx-auto mb-4 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
@@ -267,7 +267,7 @@ export default function UeberUns() {
                   Spezialisiert auf langlebige und witterungsbeständige Dach- und Fassadenbeschichtungen.
                 </p>
               </div>
-              
+
               {/* Gebäudereiniger */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 text-center transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                 <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
@@ -280,7 +280,7 @@ export default function UeberUns() {
                   Professionelle Reinigung von Fassaden und Solaranlagen mit umweltfreundlichen Verfahren.
                 </p>
               </div>
-              
+
               {/* Techniker */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 text-center transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                 <div className="w-16 h-16 mx-auto mb-4 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
@@ -297,7 +297,7 @@ export default function UeberUns() {
             </div>
           </div>
         </Section>
-        
+
         {/* Ausrüstung Section */}
         <Section id="ausruestung" className="mt-0 mb-12">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
@@ -306,7 +306,7 @@ export default function UeberUns() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
                   <div className="relative h-80 mb-6">
-                    <Image 
+                    <Image
                       src="/img/flux/professionelle-ausruestung1.webp"
                       alt="Professionelle Ausrüstung für Dachreinigung"
                       fill
@@ -320,7 +320,7 @@ export default function UeberUns() {
                 </div>
                 <div>
                   <div className="relative h-80 mb-6">
-                    <Image 
+                    <Image
                       src="/img/flux/firmenfahrzeug-solar-komfort4.webp"
                       alt="Firmenfahrzeug Solar Komfort"
                       fill
@@ -336,7 +336,7 @@ export default function UeberUns() {
             </div>
           </div>
         </Section>
-        
+
         {/* Philosophie Section */}
         <Section id="philosophie" className="mt-0 mb-12">
           <div className="bg-blue-600 dark:bg-blue-800 text-white rounded-2xl shadow-xl overflow-hidden">
@@ -347,11 +347,11 @@ export default function UeberUns() {
                   Wir arbeiten nach dem Grundsatz: &ldquo;Qualität ist kein Zufall, sondern das Ergebnis intelligenter Bemühungen.&rdquo;
                 </p>
                 <p className="text-xl mb-6">
-                  Unser Ziel ist es, nicht nur die Erwartungen unserer Kunden zu erfüllen, sondern sie zu übertreffen. 
+                  Unser Ziel ist es, nicht nur die Erwartungen unserer Kunden zu erfüllen, sondern sie zu übertreffen.
                   Wir setzen auf nachhaltige Lösungen, die sowohl für unsere Kunden als auch für die Umwelt von Vorteil sind.
                 </p>
                 <p className="text-xl">
-                  Kontinuierliche Verbesserung und Innovation sind Teil unserer DNA. Wir bilden uns ständig weiter, 
+                  Kontinuierliche Verbesserung und Innovation sind Teil unserer DNA. Wir bilden uns ständig weiter,
                   um Ihnen die besten Lösungen und Dienstleistungen anbieten zu können.
                 </p>
               </div>
@@ -359,8 +359,8 @@ export default function UeberUns() {
           </div>
         </Section>
       </Container>
-      
-      <CtaSection 
+
+      <CtaSection
         backgroundImage="/img/flux/firmenfahrzeug-solar-komfort1.webp"
         backgroundAlt="Kontaktieren Sie uns für ein persönliches Gespräch"
         title="Bereit für die Experten von Clean Komfort Gebäudeservice24?"

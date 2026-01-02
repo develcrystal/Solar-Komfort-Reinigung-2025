@@ -16,8 +16,8 @@ export default function Dachreinigung() {
       step: 1,
       title: "Ausgangszustand dokumentieren",
       description: "Dokumentation des verschmutzten Dachs vor der Reinigung. Das Dach zeigt deutliche Verschmutzung durch Moos, Algen und jahrelange Witterungseinflüsse.",
-      imageSrc: "/img/flux/team-beratung1.webp",
-      imageAlt: "Team-Beratung",
+      imageSrc: "/img/flux/team-beratung-neu.webp",
+      imageAlt: "Team-Beratung und Dokumentation",
       bgColor: "bg-blue-600"
     },
     {

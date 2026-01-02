@@ -64,7 +64,7 @@ export default function Schulreinigung() {
               {
                 title: "Hygienereinigung von Sanitärbereichen",
                 description: "Desinfektion und Reinigung von Toiletten und Waschräumen nach höchsten Hygienestandards.",
-                imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
+                imageSrc: "/img/flux/professionelle-ausruestung3.webp",
                 imageAlt: "Hygienereinigung von Schul-Sanitäranlagen nach höchsten Standards"
               },
               {
@@ -76,7 +76,7 @@ export default function Schulreinigung() {
               {
                 title: "Spezialreinigung von Sporthallen & Werkstätten",
                 description: "Professionelle Reinigung sportlicher und technischer Räume mit speziellen Mitteln.",
-                imageSrc: "/img/flux/classrom.webp",
+                imageSrc: "/img/flux/schulgebaeude-innenhof.webp",
                 imageAlt: "Spezialreinigung von Sporthallen und Werkstätten"
               },
               {
@@ -163,8 +163,8 @@ export default function Schulreinigung() {
               {
                 title: "Regelmäßige Qualitätskontrollen",
                 description: "Kontinuierliche Überprüfung der Reinigungsqualität für gleichbleibend hohe Standards. Ihre Zufriedenheit ist unser Qualitätsmerkmal.",
-                imageSrc: "/img/flux/team-bei-arbeit-neu.webp",
-                imageAlt: "Qualitätskontrolle durch professionelle Überwachung"
+                imageSrc: "/img/flux/team-vor-ort.webp",
+                imageAlt: "Qualitätskontrolle durch professionelle Überwachung - Team vor Ort"
               }
             ].map((item, index) => (
               <div key={index} className={`grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center ${index % 2 === 1 ? 'md:[direction:rtl]' : ''}`}>
@@ -202,32 +202,32 @@ export default function Schulreinigung() {
               step: 1,
               title: "Gründliche Reinigung",
               description: "Professionelle Tiefenreinigung aller Schulräume mit speziellen Verfahren für Klassenzimmer, Flure und Gemeinschaftsbereiche.",
-              imageSrc: "/img/flux/team-bei-der-arbeit1741879901018.webp",
-              imageAlt: "Gründliche Schulreinigung - Vorbereitung und Umsetzung",
+              imageSrc: "/img/flux/classrom.webp",
+              imageAlt: "Gründliche Schulreinigung - Klassenzimmer und Lernräume",
               color: "bg-blue-600"
             },
             {
               step: 2,
               title: "Hygiene-Desinfektion",
               description: "Intensive Desinfektion von Sanitärbereichen, Türgriffen und Oberflächen nach höchsten Hygienestandards für sichere Lernumgebungen.",
-              imageSrc: "/img/kundenbilder/Krankenhausreinigung.webp",
-              imageAlt: "Hygiene-Desinfektion in Schulen - Sanitärbereich und Oberflächendesinfizierung",
+              imageSrc: "/img/flux/professionelle-ausruestung3.webp",
+              imageAlt: "Hygiene-Desinfektion in Schulen - Professionelle Reinigungsausrüstung",
               color: "bg-green-600"
             },
             {
               step: 3,
               title: "Qualitätskontrolle",
               description: "Regelmäßige Qualitätschecks und Dokumentation für kontinuierliche Verbesserung basierend auf Feedback von Schulpersonal.",
-              imageSrc: "/img/flux/team-gruppenfoto1.webp",
-              imageAlt: "Qualitätskontrolle der Schulreinigung - Inspektionsprozess",
+              imageSrc: "/img/flux/team-gruppenfoto-neu.webp",
+              imageAlt: "Qualitätskontrolle der Schulreinigung - Professionelles Team",
               color: "bg-purple-600"
             }
           ]}
         />
       </section>
 
-      <RelatedServices 
-        currentService="schulreinigung" 
+      <RelatedServices
+        currentService="schulreinigung"
         category="gebaeudereinigung"
         maxServices={4}
       />

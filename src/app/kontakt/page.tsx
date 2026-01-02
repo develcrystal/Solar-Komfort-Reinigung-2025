@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kontakt - Clean Komfort Gebäudeservice24 GmbH | Kostenloses Angebot",
     description: "Kontaktieren Sie Clean Komfort Gebäudeservice24 für professionelle Gebäudereinigung, Unterhaltsreinigung und Facility Management. Kostenloses Angebot anfordern!",
-    images: ["/img/flux/team-gruppenfoto1.webp"]
+    images: ["/img/flux/team-gruppenfoto-neu.webp"]
   },
   alternates: {
     canonical: "https://komfort-gebaeudeservice24.de/kontakt"
@@ -44,13 +44,13 @@ export default function Kontakt() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent"></div>
         </div>
-        
+
         <Container className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 tracking-tight uppercase text-white drop-shadow-lg">KONTAKT</h1>
             <div className="max-w-3xl mx-auto">
               <p className="text-base sm:text-lg md:text-xl text-gray-100 drop-shadow-md">
-                Haben Sie Fragen zu unseren Dienstleistungen oder möchten Sie ein unverbindliches Angebot? 
+                Haben Sie Fragen zu unseren Dienstleistungen oder möchten Sie ein unverbindliches Angebot?
                 Kontaktieren Sie uns - wir beraten Sie gerne persönlich.
               </p>
             </div>
@@ -64,34 +64,33 @@ export default function Kontakt() {
             preTitle="Kontaktieren Sie uns"
             title="Wir freuen uns auf Ihre Nachricht"
           >
-            Füllen Sie einfach das Formular aus oder kontaktieren Sie uns direkt über unsere Kontaktdaten. 
+            Füllen Sie einfach das Formular aus oder kontaktieren Sie uns direkt über unsere Kontaktdaten.
             Wir melden uns schnellstmöglich bei Ihnen zurück.
           </SectionTitle>
 
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-8 sm:mt-12">
             <ContactForm />
-            
+
             <div>
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 mb-6 sm:mb-8">
                 <div className="flex flex-col items-center mb-6 sm:mb-8">
                   <Image
-                    src="/img/flux/team-beratung1.webp"
-                    alt="Team Clean Komfort Gebäudeservice24 GmbH"
-                    width={300}
-                    height={300}
-                    className="mb-4 sm:mb-6 w-48 h-48 sm:w-64 sm:h-64 object-contain"
+                    src="/img/flux/team-beratung-neu.webp"
+                    alt="Professionelle Beratung"
+                    fill
+                    className="object-cover rounded-lg"
                   />
                   <h3 className="text-xl sm:text-2xl font-bold mb-2">Unsere Kontaktdaten</h3>
                 </div>
-                
+
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Clean Komfort Gebäudeservice24 GmbH</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Musterstraße 12</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">64283 Darmstadt</p>
-                
+
                 <h3 className="text-lg sm:text-xl font-semibold mb-3">Kontaktdaten</h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Telefon: 06151 / 15 465 92</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6">E-Mail: info@komfort-facility.de</p>
-                
+
                 <h3 className="text-lg sm:text-xl font-semibold mb-3">Öffnungszeiten</h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2">Montag - Freitag: 8:00 - 17:00 Uhr</p>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">Samstag & Sonntag: Geschlossen</p>
@@ -108,7 +107,7 @@ export default function Kontakt() {
           >
             Besuchen Sie uns gerne persönlich an unserem Standort. Wir freuen uns auf Ihren Besuch!
           </SectionTitle>
-          
+
           <div className="max-w-5xl mx-auto mt-6 sm:mt-8">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <div className="bg-gray-200 dark:bg-gray-700 flex items-center justify-center" style={{ height: "300px" }}>

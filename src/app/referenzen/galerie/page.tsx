@@ -19,252 +19,252 @@ const categories = [
 // Bilderzuordnung zu Kategorien mit relativen Pfaden
 const imageData = [
   // Dachreinigung
-  { 
-    src: "/img/flux/Vorher-Nachher Dachreinigung.webp", 
-    alt: "Vorher Nachher Dachreinigung", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/Vorher-Nachher Dachreinigung.webp",
+    alt: "Vorher Nachher Dachreinigung",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/quer_Vorher-Nachher Dachreinigung.webp", 
-    alt: "Quer Vorher Nachher Dachreinigung", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/quer_Vorher-Nachher Dachreinigung.webp",
+    alt: "Quer Vorher Nachher Dachreinigung",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess1.webp", 
-    alt: "Dach Reinigung Prozess 1", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess1.webp",
+    alt: "Dach Reinigung Prozess 1",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess2.webp", 
-    alt: "Dach Reinigung Prozess 2", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess2.webp",
+    alt: "Dach Reinigung Prozess 2",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess3.webp", 
-    alt: "Dach Reinigung Prozess 3", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess3.webp",
+    alt: "Dach Reinigung Prozess 3",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess4.webp", 
-    alt: "Dach Reinigung Prozess 4", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess4.webp",
+    alt: "Dach Reinigung Prozess 4",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess5.webp", 
-    alt: "Dach Reinigung Prozess 5", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess5.webp",
+    alt: "Dach Reinigung Prozess 5",
+    category: "Dachreinigung"
   },
-  { 
-    src: "/img/flux/dach-reinigung-prozess6.webp", 
-    alt: "Dach Reinigung Prozess 6", 
-    category: "Dachreinigung" 
+  {
+    src: "/img/flux/dach-reinigung-prozess6.webp",
+    alt: "Dach Reinigung Prozess 6",
+    category: "Dachreinigung"
   },
-  
+
   // Dachbeschichtung
-  { 
-    src: "/img/flux/dachbeschichtung-prozess.webp", 
-    alt: "Dachbeschichtung Prozess", 
-    category: "Dachbeschichtung" 
+  {
+    src: "/img/flux/dachbeschichtung-prozess.webp",
+    alt: "Dachbeschichtung Prozess",
+    category: "Dachbeschichtung"
   },
-  { 
-    src: "/img/flux/dach-beschichtung-prozess2.webp", 
-    alt: "Dach Beschichtung Prozess 2", 
-    category: "Dachbeschichtung" 
+  {
+    src: "/img/flux/dach-beschichtung-prozess2.webp",
+    alt: "Dach Beschichtung Prozess 2",
+    category: "Dachbeschichtung"
   },
-  { 
-    src: "/img/flux/dach-beschichtung-prozess2-2.webp", 
-    alt: "Dach Beschichtung Prozess 2-2", 
-    category: "Dachbeschichtung" 
+  {
+    src: "/img/flux/dach-beschichtung-prozess2-2.webp",
+    alt: "Dach Beschichtung Prozess 2-2",
+    category: "Dachbeschichtung"
   },
-  { 
-    src: "/img/flux/dach-beschichtung-prozess3.webp", 
-    alt: "Dach Beschichtung Prozess 3", 
-    category: "Dachbeschichtung" 
+  {
+    src: "/img/flux/dach-beschichtung-prozess3.webp",
+    alt: "Dach Beschichtung Prozess 3",
+    category: "Dachbeschichtung"
   },
-  { 
-    src: "/img/flux/dach-beschichtung-prozess3-1.webp", 
-    alt: "Dach Beschichtung Prozess 3-1", 
-    category: "Dachbeschichtung" 
+  {
+    src: "/img/flux/dach-beschichtung-prozess3-1.webp",
+    alt: "Dach Beschichtung Prozess 3-1",
+    category: "Dachbeschichtung"
   },
-  
+
   // Fassadenreinigung
-  { 
-    src: "/img/flux/fassadenreinigung-vorher-nachher.webp", 
-    alt: "Fassadenreinigung Vorher Nachher", 
-    category: "Fassadenreinigung" 
+  {
+    src: "/img/flux/fassadenreinigung-vorher-nachher.webp",
+    alt: "Fassadenreinigung Vorher Nachher",
+    category: "Fassadenreinigung"
   },
-  { 
-    src: "/img/flux/fassadenreinigung-prozess.webp", 
-    alt: "Fassadenreinigung Prozess", 
-    category: "Fassadenreinigung" 
+  {
+    src: "/img/flux/fassadenreinigung-prozess.webp",
+    alt: "Fassadenreinigung Prozess",
+    category: "Fassadenreinigung"
   },
-  { 
-    src: "/img/flux/fassadenreinigung-prozess1.webp", 
-    alt: "Fassadenreinigung Prozess 1", 
-    category: "Fassadenreinigung" 
+  {
+    src: "/img/flux/fassadenreinigung-prozess1.webp",
+    alt: "Fassadenreinigung Prozess 1",
+    category: "Fassadenreinigung"
   },
-  
+
   // Solaranlagenreinigung
-  { 
-    src: "/img/flux/solaranlagenreinigung-vorher-nachher.webp", 
-    alt: "Solaranlagenreinigung Vorher Nachher", 
-    category: "Solaranlagenreinigung" 
+  {
+    src: "/img/flux/solaranlagenreinigung-vorher-nachher.webp",
+    alt: "Solaranlagenreinigung Vorher Nachher",
+    category: "Solaranlagenreinigung"
   },
-  { 
-    src: "/img/flux/solaranlagenreinigung-prozess.webp", 
-    alt: "Solaranlagenreinigung Prozess", 
-    category: "Solaranlagenreinigung" 
+  {
+    src: "/img/flux/solaranlagenreinigung-prozess.webp",
+    alt: "Solaranlagenreinigung Prozess",
+    category: "Solaranlagenreinigung"
   },
-  { 
-    src: "/img/flux/solaranlagenreinigung-prozess2.webp", 
-    alt: "Solaranlagenreinigung Prozess 2", 
-    category: "Solaranlagenreinigung" 
+  {
+    src: "/img/flux/solaranlagenreinigung-prozess2.webp",
+    alt: "Solaranlagenreinigung Prozess 2",
+    category: "Solaranlagenreinigung"
   },
-  
+
   // Referenzen
-  { 
-    src: "/img/flux/referenz-einfamilienhaus2.webp", 
-    alt: "Referenz Einfamilienhaus 2", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-einfamilienhaus2.webp",
+    alt: "Referenz Einfamilienhaus 2",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-einfamilienhaus3.webp", 
-    alt: "Referenz Einfamilienhaus 3", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-einfamilienhaus3.webp",
+    alt: "Referenz Einfamilienhaus 3",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-einfamilienhaus4.webp", 
-    alt: "Referenz Einfamilienhaus 4", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-einfamilienhaus4.webp",
+    alt: "Referenz Einfamilienhaus 4",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-einfamilienhaus5.webp", 
-    alt: "Referenz Einfamilienhaus 5", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-einfamilienhaus5.webp",
+    alt: "Referenz Einfamilienhaus 5",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-gewerbeobjekt1.webp", 
-    alt: "Referenz Gewerbeobjekt 1", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-gewerbeobjekt1.webp",
+    alt: "Referenz Gewerbeobjekt 1",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-gewerbeobjekt2.webp", 
-    alt: "Referenz Gewerbeobjekt 2", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-gewerbeobjekt2.webp",
+    alt: "Referenz Gewerbeobjekt 2",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-gewerbeobjekt3.webp", 
-    alt: "Referenz Gewerbeobjekt 3", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-gewerbeobjekt3.webp",
+    alt: "Referenz Gewerbeobjekt 3",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-mehrfamilienhaus1.webp", 
-    alt: "Referenz Mehrfamilienhaus 1", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-mehrfamilienhaus1.webp",
+    alt: "Referenz Mehrfamilienhaus 1",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-mehrfamilienhaus2.webp", 
-    alt: "Referenz Mehrfamilienhaus 2", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-mehrfamilienhaus2.webp",
+    alt: "Referenz Mehrfamilienhaus 2",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-mehrfamilienhaus3.webp", 
-    alt: "Referenz Mehrfamilienhaus 3", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-mehrfamilienhaus3.webp",
+    alt: "Referenz Mehrfamilienhaus 3",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-mehrfamilienhaus4.webp", 
-    alt: "Referenz Mehrfamilienhaus 4", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-mehrfamilienhaus4.webp",
+    alt: "Referenz Mehrfamilienhaus 4",
+    category: "Referenzen"
   },
-  { 
-    src: "/img/flux/referenz-mehrfamilienhaus5.webp", 
-    alt: "Referenz Mehrfamilienhaus 5", 
-    category: "Referenzen" 
+  {
+    src: "/img/flux/referenz-mehrfamilienhaus5.webp",
+    alt: "Referenz Mehrfamilienhaus 5",
+    category: "Referenzen"
   },
-  
+
   // Team
-  { 
-    src: "/img/flux/team-geschaeftsfuehrer.webp", 
-    alt: "Team Geschäftsführer", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-geschaeftsfuehrer.webp",
+    alt: "Team Geschäftsführer",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-geschaeftsfuehrerteam1.webp", 
-    alt: "Team Geschäftsführerteam 1", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-geschaeftsfuehrerteam1.webp",
+    alt: "Team Geschäftsführerteam 1",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-projektleiterimage.webp", 
-    alt: "Team Projektleiter", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-projektleiterimage.webp",
+    alt: "Team Projektleiter",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-technischer-leiterimage.webp", 
-    alt: "Team Technischer Leiter", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-technischer-leiterimage.webp",
+    alt: "Team Technischer Leiter",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-technischer-leiter1image.webp", 
-    alt: "Team Technischer Leiter 1", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-technischer-leiter1image.webp",
+    alt: "Team Technischer Leiter 1",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-gruppenfoto1.webp", 
-    alt: "Team Gruppenfoto 1", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-gruppenfoto-neu.webp",
+    alt: "Unser professionelles Team",
+    category: "team"
   },
-  { 
-    src: "/img/flux/team-gruppenfoto2.webp", 
-    alt: "Team Gruppenfoto 2", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-gruppenfoto2.webp",
+    alt: "Team Gruppenfoto 2",
+    category: "Team"
   },
-  { 
-    src: "/img/flux/team-beratung1.webp", 
-    alt: "Team Beratung 1", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-beratung-neu.webp",
+    alt: "Beratung vor Ort",
+    category: "team"
   },
-  { 
-    src: "/img/flux/team-bei-der-arbeitwebp.webp", 
-    alt: "Team bei der Arbeit", 
-    category: "Team" 
+  {
+    src: "/img/flux/team-bei-der-arbeitwebp.webp",
+    alt: "Team bei der Arbeit",
+    category: "Team"
   },
-  
+
   // Ausrüstung
-  { 
-    src: "/img/flux/firmenfahrzeug-solar-komfort1.webp", 
-    alt: "Firmenfahrzeug Solar Komfort 1", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/firmenfahrzeug-solar-komfort1.webp",
+    alt: "Firmenfahrzeug Solar Komfort 1",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/firmenfahrzeug-solar-komfort2.webp", 
-    alt: "Firmenfahrzeug Solar Komfort 2", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/firmenfahrzeug-solar-komfort2.webp",
+    alt: "Firmenfahrzeug Solar Komfort 2",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/firmenfahrzeug-solar-komfort3.webp", 
-    alt: "Firmenfahrzeug Solar Komfort 3", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/firmenfahrzeug-solar-komfort3.webp",
+    alt: "Firmenfahrzeug Solar Komfort 3",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/firmenfahrzeug-solar-komfort4.webp", 
-    alt: "Firmenfahrzeug Solar Komfort 4", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/firmenfahrzeug-solar-komfort4.webp",
+    alt: "Firmenfahrzeug Solar Komfort 4",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/professionelle-ausruestung1.webp", 
-    alt: "Professionelle Ausrüstung 1", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/professionelle-ausruestung1.webp",
+    alt: "Professionelle Ausrüstung 1",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/professionelle-ausruestung2.webp", 
-    alt: "Professionelle Ausrüstung 2", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/professionelle-ausruestung2.webp",
+    alt: "Professionelle Ausrüstung 2",
+    category: "Ausrüstung"
   },
-  { 
-    src: "/img/flux/professionelle-ausruestung3.webp", 
-    alt: "Professionelle Ausrüstung 3", 
-    category: "Ausrüstung" 
+  {
+    src: "/img/flux/professionelle-ausruestung3.webp",
+    alt: "Professionelle Ausrüstung 3",
+    category: "Ausrüstung"
   }
 ];
 
@@ -293,7 +293,7 @@ export default function GaleriePage() {
           Unsere Bildergalerie
         </h1>
         <p className="text-xl text-center text-gray-600 dark:text-gray-400 mb-12 max-w-3xl">
-          Entdecken Sie unsere Projekte, unser Team und unsere Ausrüstung in dieser Bildergalerie. 
+          Entdecken Sie unsere Projekte, unser Team und unsere Ausrüstung in dieser Bildergalerie.
           Filtern Sie nach Kategorien, um genau das zu finden, was Sie interessiert.
         </p>
 
@@ -303,11 +303,10 @@ export default function GaleriePage() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
                   ? "bg-indigo-600 text-white"
                   : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -348,11 +347,11 @@ export default function GaleriePage() {
 
         {/* Lightbox */}
         {selectedImage && (
-          <div 
+          <div
             className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
             onClick={closeLightbox}
           >
-            <button 
+            <button
               className="absolute top-4 right-4 text-white text-4xl"
               onClick={closeLightbox}
             >

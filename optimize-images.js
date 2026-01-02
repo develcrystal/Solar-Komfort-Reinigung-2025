@@ -2,118 +2,146 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-// Bilder, die optimiert werden sollen (Homepage Service Grid)
-const imagesToOptimize = [
-  {
-    input: 'public/img/flux/Fassaden-Reinigung.webp',
-    output: 'public/img/flux/Fassaden-Reinigung.webp',
-    targetSize: 80 // KB
-  },
-  {
-    input: 'public/img/flux/Büro-Reinigung.webp',
-    output: 'public/img/flux/Büro-Reinigung.webp',
-    targetSize: 70 // KB
-  },
-  {
-    input: 'public/img/kundenbilder/Krankenhausreinigung (1).webp',
-    output: 'public/img/kundenbilder/Krankenhausreinigung (1).webp',
-    targetSize: 75 // KB
-  },
-  {
-    input: 'public/img/flux/Grundreinigung.webp',
-    output: 'public/img/flux/Grundreinigung.webp',
-    targetSize: 80 // KB
-  },
-  {
-    input: 'public/img/kundenbilder/Haus.png',
-    output: 'public/img/kundenbilder/Haus.webp',
-    targetSize: 60 // KB
-  },
-  {
-    input: 'public/img/flux/Pflaster-stein-Reinigung.webp',
-    output: 'public/img/flux/Pflaster-stein-Reinigung.webp',
-    targetSize: 85 // KB
-  }
-];
+// Konfiguration
+const ROOT_DIR = process.cwd();
+const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
+const IMG_DIR = path.join(PUBLIC_DIR, 'img');
+const BACKUP_DIR_NAME = `img_backup_${new Date().toISOString().replace(/[:.]/g, '-')}`;
+const BACKUP_DIR = path.join(PUBLIC_DIR, BACKUP_DIR_NAME);
 
-async function optimizeImage(inputPath, outputPath, targetSizeKB) {
+/**
+ * Dynamisch alle Bilddateien finden, sichern und optimieren.
+ */
+
+// Hilfsfunktion: Rekursives Sammeln von Bilddateien
+function collectImages(dir) {
+  let results = [];
   try {
-    const targetSizeBytes = targetSizeKB * 1024;
-    
-    // Prüfen ob Datei existiert
-    if (!fs.existsSync(inputPath)) {
-      console.log(`❌ Datei nicht gefunden: ${inputPath}`);
-      return;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+
+      // Ignoriere Backup-Ordner, falls er im Scan-Pfad liegt
+      if (fullPath.includes(BACKUP_DIR_NAME)) continue;
+
+      if (entry.isDirectory()) {
+        results.push(...collectImages(fullPath));
+      } else if (entry.isFile()) {
+        const ext = path.extname(entry.name).toLowerCase();
+        // Unterstützte Formate
+        if (['.webp', '.png', '.jpg', '.jpeg'].includes(ext)) {
+          results.push(fullPath);
+        }
+      }
     }
-    
-    // Aktuelle Größe prüfen
+  } catch (err) {
+    console.warn(`Warnung beim Lesen von ${dir}: ${err.message}`);
+  }
+  return results;
+}
+
+async function optimizeImage(filePath) {
+  try {
+    const relativePath = path.relative(IMG_DIR, filePath);
+    const backupPath = path.join(BACKUP_DIR, relativePath);
+    const backupDir = path.dirname(backupPath);
+
+    // 1. Backup sicherstellen
+    if (!fs.existsSync(backupDir)) {
+      fs.mkdirSync(backupDir, { recursive: true });
+    }
+    // Kopiere Original ins Backup (nur wenn noch nicht vorhanden, um Originalzustand zu wahren)
+    if (!fs.existsSync(backupPath)) {
+      fs.copyFileSync(filePath, backupPath);
+    }
+
+    // 2. Optimierung vorbereiten
+    // Wir lesen vom Backup (Quelle) und schreiben in die Original-Location (Ziel)
+    // Damit umgehen wir den "Input same as Output"-Fehler von sharp
+    const inputPath = backupPath;
+    const outputPath = filePath.replace(/\.(png|jpe?g)$/i, '.webp'); // Erzwinge .webp
+
     const currentStats = fs.statSync(inputPath);
     const currentSizeKB = Math.round(currentStats.size / 1024);
-    
-    console.log(`\n📸 Optimiere: ${path.basename(inputPath)}`);
-    console.log(`   Aktuelle Größe: ${currentSizeKB} KB`);
-    console.log(`   Zielgröße: ${targetSizeKB} KB`);
-    
-    // Bild optimieren
+
+    // Zielgröße definieren (WebP/AVIF: 80KB, andere: 100KB als Basis)
+    const isWebp = path.extname(outputPath).toLowerCase() === '.webp';
+    const targetSizeKB = isWebp ? 80 : 100;
+
+    console.log(`\n📸 Verarbeite: ${relativePath}`);
+    console.log(`   Original (${currentSizeKB} KB) gesichert nach: .../${BACKUP_DIR_NAME}/${relativePath}`);
+
+    // 3. Optimieren
     await sharp(inputPath)
-      .webp({ 
+      .webp({
         quality: 75,
         effort: 6,
         smartSubsample: true
       })
       .toFile(outputPath);
-    
-    // Neue Größe prüfen
+
+    // 4. Alte Datei löschen, falls Erweiterung geändert wurde (z.B. png -> webp)
+    if (filePath !== outputPath && fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+      console.log(`   🗑️  Alte Datei gelöscht (Format konvertiert): ${path.basename(filePath)}`);
+    }
+
+    // 5. Statistik berechnen
     const newStats = fs.statSync(outputPath);
     const newSizeKB = Math.round(newStats.size / 1024);
     const savedKB = currentSizeKB - newSizeKB;
-    const savedPercent = Math.round((savedKB / currentSizeKB) * 100);
-    
-    console.log(`   ✅ Neue Größe: ${newSizeKB} KB`);
-    console.log(`   💰 Gespart: ${savedKB} KB (${savedPercent}%)`);
-    
+    const savedPercent = currentSizeKB > 0 ? Math.round((savedKB / currentSizeKB) * 100) : 0;
+
+    console.log(`   ✅ Optimiert auf: ${newSizeKB} KB`);
+
+    if (savedKB > 0) {
+      console.log(`   💰 Gespart: ${savedKB} KB (${savedPercent}%)`);
+    } else {
+      console.log(`   ℹ️  Keine Einsparung (Bild war bereits optimiert/klein)`);
+    }
+
+    return { initial: currentSizeKB, final: newSizeKB };
+
   } catch (error) {
-    console.error(`❌ Fehler bei ${inputPath}:`, error.message);
+    console.error(`❌ Fehler bei ${path.basename(filePath)}:`, error.message);
+    return { initial: 0, final: 0 };
   }
 }
 
 async function main() {
-  console.log('🚀 Starte Bildoptimierung - Phase 1');
-  console.log('=====================================\n');
-  
-  let totalSavedKB = 0;
-  let initialTotalKB = 0;
-  
-  for (const image of imagesToOptimize) {
-    if (fs.existsSync(image.input)) {
-      const stats = fs.statSync(image.input);
-      initialTotalKB += Math.round(stats.size / 1024);
-    }
+  console.log('🚀 Starte sichere Bildoptimierung (mit Backup)');
+  console.log(`📂 Bilder-Quelle: ${IMG_DIR}`);
+  console.log(`📦 Backup-Ziel:   ${BACKUP_DIR}`);
+  console.log('==============================================\n');
+
+  // Backup-Verzeichnis erstellen
+  if (!fs.existsSync(BACKUP_DIR)) {
+    fs.mkdirSync(BACKUP_DIR, { recursive: true });
   }
-  
-  console.log(`📊 Ausgangsgröße: ${initialTotalKB} KB\n`);
-  
-  for (const image of imagesToOptimize) {
-    await optimizeImage(image.input, image.output, image.targetSize);
+
+  // Bilder sammeln
+  const allImages = collectImages(IMG_DIR);
+  console.log(`� Gefunden: ${allImages.length} Bild-Dateien`);
+
+  let totalInitialKB = 0;
+  let totalFinalKB = 0;
+
+  for (const imgPath of allImages) {
+    const result = await optimizeImage(imgPath);
+    totalInitialKB += result.initial;
+    totalFinalKB += result.final;
   }
-  
-  // Finale Statistik
-  let finalTotalKB = 0;
-  for (const image of imagesToOptimize) {
-    if (fs.existsSync(image.output)) {
-      const stats = fs.statSync(image.output);
-      finalTotalKB += Math.round(stats.size / 1024);
-    }
-  }
-  
-  totalSavedKB = initialTotalKB - finalTotalKB;
-  
-  console.log('\n📈 Optimierungsergebnisse:');
-  console.log('==========================');
-  console.log(`Vorher: ${initialTotalKB} KB`);
-  console.log(`Nachher: ${finalTotalKB} KB`);
-  console.log(`Gespart: ${totalSavedKB} KB (${Math.round((totalSavedKB / initialTotalKB) * 100)}%)`);
-  console.log('\n✅ Phase 1 abgeschlossen!');
+
+  const totalSavedKB = totalInitialKB - totalFinalKB;
+  const totalSavedPercent = totalInitialKB > 0 ? Math.round((totalSavedKB / totalInitialKB) * 100) : 0;
+
+  console.log('\n📈 GESAMT-Statistik:');
+  console.log('=====================');
+  console.log(`Vorher:  ${totalInitialKB} KB`);
+  console.log(`Nachher: ${totalFinalKB} KB`);
+  console.log(`Gespart: ${totalSavedKB} KB (${totalSavedPercent}%)`);
+  console.log('\n✅ Optimierung abgeschlossen!');
+  console.log(`ℹ️  Backups befinden sich in: ${BACKUP_DIR}`);
 }
 
 main().catch(console.error);

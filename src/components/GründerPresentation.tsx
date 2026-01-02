@@ -19,8 +19,8 @@ export const GründerPresentation = () => {
           <div className="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 sm:p-8 text-center">
             <div className="relative mx-auto mb-6 w-32 h-32 sm:w-40 sm:h-40">
               <Image
-                src="/img/flux/team-gruppenfoto1.webp"
-                alt="Mohamed Kaddouri - Gründer der Clean Komfort Gebäudeservice24 GmbH"
+                src="/img/flux/team-gruppenfoto-neu.webp"
+                alt="Gründer Mohamed Kaddouri und Abdelhafid Hajjout"
                 fill
                 className="object-cover rounded-full"
               />

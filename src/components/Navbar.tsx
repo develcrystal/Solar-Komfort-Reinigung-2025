@@ -2,7 +2,7 @@
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Popover } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import { useTheme } from 'next-themes';
 import { navigation } from './data'; // Import navigation data
@@ -71,8 +71,9 @@ export const Navbar = () => {
 
         {/* Desktop Mega Menu - Centered */}
         <div className="hidden xl:flex xl:items-center flex-1 justify-center">
-          <ul className="items-center justify-center flex list-none gap-2">
+          <Popover.Group as="ul" className="items-center justify-center flex list-none gap-2">
             {navigation.map((menu, index) => (
+
               <li key={index}>
                 {menu.submenu ? (
                   <MegaMenu title={menu.name} items={menu.submenu} columns={menu.name === 'Gebäudereinigung' ? 4 : 3} />
@@ -86,15 +87,16 @@ export const Navbar = () => {
                 )}
               </li>
             ))}
-          </ul>
+          </Popover.Group>
         </div>
+
 
         {/* Right Block: Button, Theme, Mobile Menu */}
         <div className="flex items-center gap-3 ml-auto">
           {/* Kostenrechner Button - Desktop */}
           <div className="hidden xl:block">
-            <Link 
-              href="/kostenrechner" 
+            <Link
+              href="/kostenrechner"
               className="px-6 py-2 text-base font-medium text-black bg-accent rounded-md hover:bg-accent/90 transition-colors whitespace-nowrap"
             >
               Kostenrechner
@@ -137,15 +139,15 @@ export const Navbar = () => {
                         <div key={index} className="w-full">
                           {item.submenu ? (
                             <div>
-                              <button 
+                              <button
                                 onClick={() => toggleDropdown(item.name)}
                                 className="w-full px-3 py-3 text-left font-medium text-neutral-600 dark:text-neutral-200 rounded-md hover:text-primary focus:text-primary focus:bg-primary/10 dark:focus:bg-neutral-800 focus:outline-none flex items-center justify-between touch-manipulation"
                               >
                                 {item.name}
-                                <svg 
-                                  className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} 
-                                  fill="none" 
-                                  stroke="currentColor" 
+                                <svg
+                                  className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}
+                                  fill="none"
+                                  stroke="currentColor"
                                   viewBox="0 0 24 24"
                                 >
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
@@ -177,7 +179,7 @@ export const Navbar = () => {
                           )}
                         </div>
                       ))}
-                      <Link href="/kostenrechner" onClick={() => close()} className="w-full px-6 py-3 mt-3 text-center text-black bg-accent rounded-md hover:bg-accent/90 transition-colors touch-manipulation">         
+                      <Link href="/kostenrechner" onClick={() => close()} className="w-full px-6 py-3 mt-3 text-center text-black bg-accent rounded-md hover:bg-accent/90 transition-colors touch-manipulation">
                         Kostenrechner
                       </Link>
                     </div>

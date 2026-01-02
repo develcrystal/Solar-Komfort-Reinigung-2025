@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ImageSlider } from '@/components/ImageSlider';
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
-import '@/app/globals.css';
+
 
 interface Service {
   title: string;

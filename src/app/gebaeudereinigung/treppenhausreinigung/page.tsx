@@ -100,29 +100,29 @@ export default function TreppenhausreinigungPage() {
             step={1}
             title="WEG-Abstimmung & Planung"
             description="Koordination mit Hausverwaltung und Erstellung hausordnungskonformer Reinigungspläne."
-            imageSrc="/img/flux/team-beratung1.webp"
-            imageAlt="WEG-Abstimmung und Planung Icon"
+            imageSrc="/img/flux/team-beratung-neu.webp"
+            imageAlt="WEG-Abstimmung und Planung - Professionelle Beratung"
           />
           <ProcessStep
             step={2}
             title="Lärmschutz-konforme Ausführung"
             description="Professionelle Reinigung werktags 8-20 Uhr: Treppen, Geländer, Eingänge ohne Störung."
-            imageSrc="/img/flux/team-beratung1.webp"
-            imageAlt="Lärmschutz-konforme Ausführung Icon"
+            imageSrc="/img/flux/team-bei-arbeit-neu.webp"
+            imageAlt="Lärmschutz-konforme Ausführung - Team bei der Arbeit"
           />
           <ProcessStep
             step={3}
             title="Qualitätskontrolle & Mängeldokumentation"
             description="Finale Inspektion und Protokollerstellung für WEG-Verwaltung mit Qualitätsgarantie."
-            imageSrc="/img/flux/team-beratung1.webp"
-            imageAlt="Qualitätskontrolle und Mängeldokumentation Icon"
+            imageSrc="/img/flux/firmenfahrzeug-solar-komfort1.webp"
+            imageAlt="Qualitätskontrolle - Professionelles Firmenfahrzeug"
           />
           <ProcessStep
             step={4}
             title="Mieter-Feedback & Nachsorge"
             description="Regelmäßige Kontrollen und Mieter-Feedback für kontinuierliche Verbesserung."
-            imageSrc="/img/flux/team-beratung1.webp"
-            imageAlt="Mieter-Feedback und Nachsorge Icon"
+            imageSrc="/img/flux/team-gruppenfoto-neu.webp"
+            imageAlt="Mieter-Feedback - Professionelles Team"
           />
         </div>
       </Section>
@@ -139,8 +139,8 @@ export default function TreppenhausreinigungPage() {
           title="WEG-konforme Treppenhausreinigung"
           textLeft="Gemäß WEG-Gesetz §21 koordinieren wir alle Reinigungsarbeiten mit der Hausverwaltung. Strikte Einhaltung von Hausordnungen und Lärmschutz-Zeiten für ungestörtes Wohnen."
           textRight="Mehrfamilienhaus-Expertise: Wir verstehen die besonderen Anforderungen von Wohngemeinschaften. Professionelle Protokollierung und direkter Kontakt zu Verwaltungen für reibungslose Abläufe."
-          image="/img/compliance-placeholder.webp"
-          alt="WEG und Hausordnung Icons für Treppenhausreinigung"
+          image="/img/flux/team-vor-ort.webp"
+          alt="WEG-konforme Treppenhausreinigung - Team vor Ort"
           className="max-w-6xl mx-auto"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">

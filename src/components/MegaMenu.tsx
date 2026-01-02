@@ -24,7 +24,17 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
-    clearMenuTimeout(); // Clear any existing timeouts from other menus
+    // Force close any other open popovers in the group before opening this one
+    // This prevents the overlapping issue caused by clearing the timeout
+    const otherOpenButtons = document.querySelectorAll('button[data-headlessui-state*="open"]');
+    otherOpenButtons.forEach((btn) => {
+      const buttonEl = btn as HTMLElement;
+      if (buttonEl !== menuRef.current?.querySelector('button')) {
+        buttonEl.click();
+      }
+    });
+
+    clearMenuTimeout(); // Clear any existing timeouts
     const button = menuRef.current?.querySelector('button') as HTMLElement;
     if (button && !button.getAttribute('data-headlessui-state')?.includes('open')) {
       button.click();
@@ -38,8 +48,9 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
       if (button && button.getAttribute('data-headlessui-state')?.includes('open')) {
         button.click();
       }
-    }, 300); // Consistent timeout with panel
+    }, 150); // Reduced delay for snappier response
   };
+
 
   return (
     <Popover className="relative">
@@ -106,6 +117,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                               width={20}
                               height={20}
                               className="h-5 w-5"
+                              unoptimized
                             />
                           ) : (
                             <span className="text-lg">{item.icon}</span>
@@ -124,25 +136,26 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                       </Link>
                     ))}
                   </div>
-                  <div className="bg-gray-50 dark:bg-gray-700 p-6">
+                  <div className="bg-gray-50 dark:bg-gray-700 p-6 border-t border-gray-100 dark:border-gray-600">
                     <div className="text-center">
                       <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-4">Unsere Hauptleistungen</h3>
-                      <div className="grid grid-cols-3 gap-4">
+                      <div className="grid grid-cols-3 gap-6">
                         {/* Gebäudereinigung */}
                         <Link
                           href="/gebaeudereinigung/dachreinigung"
-                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                          onClick={() => close()}
+                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white dark:hover:bg-gray-600 transition-all duration-200 group shadow-sm hover:shadow-md"
                         >
-                          <div className="mb-2">
+                          <div className="mb-3 relative w-20 h-16 overflow-hidden rounded-lg">
                             <Image
-                              src="/img/kundenbilder/Dachreinigung.webp"
-                              alt="Dachreinigung"
-                              width={80}
-                              height={60}
-                              className="rounded object-cover"
+                              src="/img/kundenbilder/Reinigung.webp"
+                              alt="Gebäudereinigung"
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-300"
+                              unoptimized
                             />
                           </div>
-                          <span className="text-sm font-medium text-center text-blue-600 dark:text-blue-400 group-hover:underline">
+                          <span className="text-sm font-bold text-center text-blue-700 dark:text-blue-300 group-hover:text-blue-600">
                             Gebäudereinigung
                           </span>
                         </Link>
@@ -150,18 +163,19 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                         {/* Gebäudeservice */}
                         <Link
                           href="/gebaeudeservice/hausmeisterservice"
-                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                          onClick={() => close()}
+                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white dark:hover:bg-gray-600 transition-all duration-200 group shadow-sm hover:shadow-md"
                         >
-                          <div className="mb-2">
+                          <div className="mb-3 relative w-20 h-16 overflow-hidden rounded-lg">
                             <Image
                               src="/img/kundenbilder/Haus.webp"
                               alt="Gebäudeservice"
-                              width={80}
-                              height={60}
-                              className="rounded object-cover"
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-300"
+                              unoptimized
                             />
                           </div>
-                          <span className="text-sm font-medium text-center text-blue-600 dark:text-blue-400 group-hover:underline">
+                          <span className="text-sm font-bold text-center text-blue-700 dark:text-blue-300 group-hover:text-blue-600">
                             Gebäudeservice
                           </span>
                         </Link>
@@ -170,18 +184,18 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                         <Link
                           href="/facility-management/angebot"
                           onClick={() => close()}
-                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                          className="flex flex-col items-center p-3 rounded-lg hover:bg-white dark:hover:bg-gray-600 transition-all duration-200 group shadow-sm hover:shadow-md"
                         >
-                          <div className="mb-2">
+                          <div className="mb-3 relative w-20 h-16 overflow-hidden rounded-lg">
                             <Image
                               src="/img/kundenbilder/Industriereinigung.webp"
                               alt="Facility Management"
-                              width={80}
-                              height={60}
-                              className="rounded object-cover"
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-300"
+                              unoptimized
                             />
                           </div>
-                          <span className="text-sm font-medium text-center text-blue-600 dark:text-blue-400 group-hover:underline">
+                          <span className="text-sm font-bold text-center text-blue-700 dark:text-blue-300 group-hover:text-blue-600">
                             Facility Management
                           </span>
                         </Link>
@@ -189,6 +203,7 @@ export const MegaMenu = ({ title, items, columns = 3 }: MegaMenuProps) => {
                     </div>
                   </div>
                 </div>
+
               </Popover.Panel>
             </Transition>
           </div>

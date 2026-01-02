@@ -130,17 +130,17 @@ export default function FensterreinigungPage() {
       {/* Compliance-Section: Branchenspezifische Vorschriften + Garantien */}
       <Section className="py-4 sm:py-8 md:py-12 lg:py-16 bg-gray-50">
         <SectionTitle
-          preTitle="Sicherheit & Zertifizierung"
-          title="Compliance-Standards in der Fensterreinigung"
+          preTitle="Qualität & Professionalität"
+          title="Fensterreinigung nach VOB-Standards"
         >
           Unsere Höhenarbeiten sind voll versichert und zertifiziert, um höchste Sicherheit zu gewährleisten.
         </SectionTitle>
         <TwoColContent
-          title="Höhenarbeits-Zertifizierung"
-          textLeft="Gemäß DGUV Regel 101-005 und SCC-Zertifizierung führen wir alle Arbeiten durch. Expertise für Glasarten und Rahmen-Materialien, mit Fokus auf Prävention von Unfällen."
-          textRight="Höhenarbeits-Versicherung bis 3 Mio. €: Wir schützen Sie und unser Team. Dokumentierte Schulungen und Ausrüstung für sichere, streifenfreie Reinigung in jeder Höhe."
-          image="/img/compliance-placeholder.webp"
-          alt="DGUV und SCC Icons für Fensterreinigung"
+          title="Fensterreinigung nach VOB-Standards"
+          textLeft="Gemäß VOB/C koordinieren wir alle Reinigungsarbeiten professionell. Strikte Einhaltung von Qualitätsstandards und Sicherheitsvorschriften für streifenfreie Ergebnisse."
+          textRight="Fenster-Expertise: Wir verstehen die besonderen Anforderungen der Glasreinigung. Professionelle Ausführung mit modernster Technik für kristallklare Fenster."
+          image="/img/flux/professionelle-ausruestung2.webp"
+          alt="Professionelle Fensterreinigung - Ausrüstung und Technik"
           className="max-w-6xl mx-auto"
         />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
